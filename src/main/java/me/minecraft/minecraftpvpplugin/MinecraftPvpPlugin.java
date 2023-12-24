@@ -11,7 +11,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
-    public World world = new WorldCreator("Lobby").createWorld();
+
     @Override
     public void onEnable() {
         // Plugin startup logic
@@ -27,7 +27,7 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         event.setJoinMessage(ChatColor.AQUA + "Welcome "+ player.getName());
         player.getInventory().clear();
         player.getInventory().setItem(0, DiamondSword);
-        World Lobby = Bukkit.getWorld("world");
+        World Lobby = Bukkit.getWorld("Lobby");
         if(Lobby == null) {
             System.out.print("World " + " is invalid!");
             return;
