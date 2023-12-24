@@ -27,9 +27,9 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         event.setJoinMessage(ChatColor.AQUA + "Welcome "+ player.getName());
         player.getInventory().clear();
         player.getInventory().setItem(0, DiamondSword);
-        World Lobby = Bukkit.getWorld("Lobby");
+        World Lobby = Bukkit.getServer().getWorld("lobby");
         if(Lobby == null) {
-            System.out.print("World " + " is invalid!");
+            System.out.print("World" + " is invalid!");
             return;
         }
         Location loc = new Location(Lobby, 100, 100, 100);
