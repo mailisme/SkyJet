@@ -6,18 +6,13 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.world.WorldLoadEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
-
-
-    // 獲取Lobby世界
-    World lobbyWorld = Bukkit.getWorld("Lobby");
-    Location targetLocation = new Location(lobbyWorld, 100, 64, 100);
-
 
 
     @Override
@@ -42,18 +37,18 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
     @EventHandler
     public void Join(PlayerJoinEvent event){
         Player player = event.getPlayer();
+        Location lobby = new Location(Bukkit.getWorld("Lobby"), 110.5, 74, 95.5);
         ItemStack DiamondSword = new ItemStack(Material.DIAMOND_SWORD);
         event.setJoinMessage(ChatColor.AQUA + "Welcome "+ player.getName());
         player.getInventory().clear();
         player.getInventory().setItem(0, DiamondSword);
-        World Lobby = Bukkit.getServer().getWorld("Lobby");
-        if(Lobby == null) {
-            System.out.print(Lobby);
-        }
-        else {
-            System.out.print(Lobby);
-        }
         System.out.print(player.getName()+" join the server");
+        player.teleport(lobby);
+    }
+
+    public void Click(PlayerInteractEvent event){
+        
     }
 
 }
+
