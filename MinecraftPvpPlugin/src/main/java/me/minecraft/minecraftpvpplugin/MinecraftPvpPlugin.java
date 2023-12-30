@@ -85,16 +85,12 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
 
         if (event.getItem() != null) {
             if (event.getAction()==Action.LEFT_CLICK_AIR && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))){
-                System.out.print("Click!");
                 player.openInventory(gui);
             } else if (event.getAction()==Action.LEFT_CLICK_BLOCK && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
-                System.out.print("Click!");
                 player.openInventory(gui);
             } else if (event.getAction()==Action.RIGHT_CLICK_AIR && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
-                System.out.print("Click!");
                 player.openInventory(gui);
             } else if (event.getAction()==Action.RIGHT_CLICK_BLOCK && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
-                System.out.print("Click!");
                 player.openInventory(gui);
             }
         }
@@ -102,10 +98,12 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
     @EventHandler
     public void onPlayerDropItem(PlayerDropItemEvent event){
         Player player = event.getPlayer();
-        player.sendMessage("U cant drop any item ok?");
-        event.getItemDrop().remove();
-        player.getInventory().clear();
-        player.getInventory().setItem(0, event.getItemDrop().getItemStack());
+        if(Bukkit.getWorld("Lobby")==player.getWorld()){
+            player.sendMessage("U cant drop any item ok?");
+            event.getItemDrop().remove();
+            player.getInventory().setItem(0, event.getItemDrop().getItemStack());
+        }
+
     }
 
 }
