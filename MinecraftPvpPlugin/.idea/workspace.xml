@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17758a80-0c85-4e1c-9ee7-0bf4385df7a6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/GuiEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/MinecraftPvpPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/MinecraftPvpPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/MinecraftPvpPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/MinecraftPvpPlugin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/data/villages.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat" afterDir="false" />
@@ -71,7 +71,6 @@
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/server.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/spigot.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/spigot.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/usercache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +104,11 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="me.minecraft.minecraftpvpplugin" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="MinecraftPvpPlugin package" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>

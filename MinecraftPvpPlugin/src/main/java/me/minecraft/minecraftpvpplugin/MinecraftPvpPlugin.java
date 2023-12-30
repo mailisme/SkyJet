@@ -8,14 +8,20 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.entity.EntityEvent;
+import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.world.WorldLoadEvent;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.awt.event.ActionListener;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
 
@@ -29,6 +35,7 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         getServer().getPluginManager().registerEvents(this, this);
         Bukkit.getPluginManager().registerEvents(this, this);
         World lobbyWorld = Bukkit.createWorld(new WorldCreator("Lobby"));
+        World PVPWorld1 = Bukkit.createWorld(new WorldCreator("PVP1"));
 
         if (lobbyWorld != null) {
             getLogger().info("Lobby world loaded successfully.");
@@ -38,6 +45,8 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         for (World world : Bukkit.getWorlds()) {
             getLogger().info("Loaded world: " + world.getName());
         }
+
+        getServer().getPluginManager().registerEvents(new GuiEvent(), this);
 
     }
 
@@ -68,15 +77,34 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
 
     public void Click(PlayerInteractEvent event){
         this.event = event;
+        Player player = event.getPlayer();
+        Inventory gui = Bukkit.createInventory(player, 9, ChatColor.AQUA+"Join Game");
+        ItemStack StartGame = new ItemStack(Material.DIAMOND_AXE);
+        ItemStack[] menu = {StartGame};
+        gui.setContents(menu);
+
+
         if (event.getAction()==Action.LEFT_CLICK_AIR && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))){
             System.out.print("Click!");
+            player.openInventory(gui);
         } else if (event.getAction()==Action.LEFT_CLICK_BLOCK && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
             System.out.print("Click!");
+            player.openInventory(gui);
         } else if (event.getAction()==Action.RIGHT_CLICK_AIR && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
             System.out.print("Click!");
+            player.openInventory(gui);
         } else if (event.getAction()==Action.RIGHT_CLICK_BLOCK && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
             System.out.print("Click!");
+            player.openInventory(gui);
         }
+    }
+    @EventHandler
+    public void onPlayerDropItem(PlayerDropItemEvent event){
+        Player player = event.getPlayer();
+        player.sendMessage("U cant drop any item ok?");
+        event.getItemDrop().remove();
+        player.getInventory().clear();
+        player.getInventory().setItem(0, event.getItemDrop().getItemStack());
     }
 
 }
