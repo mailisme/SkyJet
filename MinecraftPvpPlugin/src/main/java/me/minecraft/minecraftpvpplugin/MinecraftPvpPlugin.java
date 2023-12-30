@@ -83,19 +83,20 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         ItemStack[] menu = {StartGame};
         gui.setContents(menu);
 
-
-        if (event.getAction()==Action.LEFT_CLICK_AIR && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))){
-            System.out.print("Click!");
-            player.openInventory(gui);
-        } else if (event.getAction()==Action.LEFT_CLICK_BLOCK && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
-            System.out.print("Click!");
-            player.openInventory(gui);
-        } else if (event.getAction()==Action.RIGHT_CLICK_AIR && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
-            System.out.print("Click!");
-            player.openInventory(gui);
-        } else if (event.getAction()==Action.RIGHT_CLICK_BLOCK && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
-            System.out.print("Click!");
-            player.openInventory(gui);
+        if (event.getItem() != null) {
+            if (event.getAction()==Action.LEFT_CLICK_AIR && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))){
+                System.out.print("Click!");
+                player.openInventory(gui);
+            } else if (event.getAction()==Action.LEFT_CLICK_BLOCK && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
+                System.out.print("Click!");
+                player.openInventory(gui);
+            } else if (event.getAction()==Action.RIGHT_CLICK_AIR && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
+                System.out.print("Click!");
+                player.openInventory(gui);
+            } else if (event.getAction()==Action.RIGHT_CLICK_BLOCK && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
+                System.out.print("Click!");
+                player.openInventory(gui);
+            }
         }
     }
     @EventHandler

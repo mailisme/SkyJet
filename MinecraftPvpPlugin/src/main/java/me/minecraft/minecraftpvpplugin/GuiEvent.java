@@ -15,13 +15,15 @@ public class GuiEvent implements Listener {
         Player player = (Player) event.getWhoClicked();
         World PVP1 = Bukkit.getWorld("PVP1");
         Location PVP1Location = new Location(PVP1, 110.5, 67, 95.5);
-        if (event.getClickedInventory().getTitle().equalsIgnoreCase(ChatColor.AQUA+"Join Game")){
-            switch (event.getCurrentItem().getType()){
-                case DIAMOND_AXE:
-                    player.closeInventory();
-                    player.teleport(PVP1Location);
+        if (event.getClickedInventory() != null) {
+            if (event.getClickedInventory().getTitle().equalsIgnoreCase(ChatColor.AQUA+"Join Game")){
+                switch (event.getCurrentItem().getType()){
+                    case DIAMOND_AXE:
+                        player.closeInventory();
+                        player.teleport(PVP1Location);
+                }
+                event.setCancelled(true);
             }
-            event.setCancelled(true);
         }
     }
 }
