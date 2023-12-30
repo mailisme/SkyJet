@@ -5,6 +5,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -12,8 +13,12 @@ import org.bukkit.event.world.WorldLoadEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.awt.event.ActionListener;
+
 public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
 
+
+    private PlayerInteractEvent event;
 
     @Override
     public void onEnable() {
@@ -46,8 +51,15 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         player.teleport(lobby);
     }
 
+    @EventHandler
+
     public void Click(PlayerInteractEvent event){
-        
+        this.event = event;
+        if (event.getAction()==Action.LEFT_CLICK_AIR && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))){
+            System.out.print("Click!");
+        } else if (event.getAction()==Action.LEFT_CLICK_BLOCK && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
+
+        }
     }
 
 }
