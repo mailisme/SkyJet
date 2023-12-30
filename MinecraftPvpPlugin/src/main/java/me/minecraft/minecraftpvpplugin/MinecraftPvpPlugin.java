@@ -1,6 +1,8 @@
 package me.minecraft.minecraftpvpplugin;
 
 import org.bukkit.*;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.HandlerList;
@@ -39,6 +41,17 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
 
     }
 
+    @Override
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args){
+        Location lobby = new Location(Bukkit.getWorld("Lobby"), 110.5, 74, 95.5);
+        if (command.getName().equalsIgnoreCase("lobby")){
+            Player player = (Player) sender;
+            player.teleport(lobby);
+        }
+        return true;
+    }
+
+
     @EventHandler
     public void Join(PlayerJoinEvent event){
         Player player = event.getPlayer();
@@ -58,7 +71,11 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         if (event.getAction()==Action.LEFT_CLICK_AIR && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))){
             System.out.print("Click!");
         } else if (event.getAction()==Action.LEFT_CLICK_BLOCK && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
-
+            System.out.print("Click!");
+        } else if (event.getAction()==Action.RIGHT_CLICK_AIR && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
+            System.out.print("Click!");
+        } else if (event.getAction()==Action.RIGHT_CLICK_BLOCK && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
+            System.out.print("Click!");
         }
     }
 
