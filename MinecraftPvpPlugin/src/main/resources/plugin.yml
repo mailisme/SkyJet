@@ -1,0 +1,11 @@
+name: MinecraftPvpPlugin
+version: '${project.version}'
+main: me.minecraft.minecraftpvpplugin.MinecraftPvpPlugin
+commands:
+  lobby:
+    description: go back to lobby
+    usage: /lobby
+    aliases:
+      - l
+      - LOBBY
+      - Lobby

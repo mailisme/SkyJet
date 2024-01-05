@@ -1,0 +1,11 @@
+name: MinecraftPvpPlugin
+version: '1.0-SNAPSHOT'
+main: me.minecraft.minecraftpvpplugin.MinecraftPvpPlugin
+commands:
+  lobby:
+    description: go back to lobby
+    usage: /lobby
+    aliases:
+      - l
+      - LOBBY
+      - Lobby
