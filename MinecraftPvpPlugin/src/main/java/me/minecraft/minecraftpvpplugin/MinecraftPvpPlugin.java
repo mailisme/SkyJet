@@ -9,10 +9,8 @@ import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.EntityEvent;
-import org.bukkit.event.player.PlayerDropItemEvent;
-import org.bukkit.event.player.PlayerEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.player.*;
 import org.bukkit.event.world.WorldLoadEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -116,5 +114,26 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
 
     }
 
+    @EventHandler
+    public void PlayerDeathEvent(PlayerDeathEvent event) {
+        ItemStack DiamondSword = new ItemStack(Material.DIAMOND_SWORD);
+        Player player = event.getEntity();
+        player.getInventory().clear();
+        player.getInventory().setItem(0, DiamondSword);
+    }
+
+    @EventHandler
+    public void PlayerChangedWorldEvent(PlayerChangedWorldEvent event) {
+        Player player = event.getPlayer();
+        player.getInventory().clear();
+        if (event.getPlayer().getWorld() == Bukkit.getWorld("PVP1")) {
+            ItemStack IronSword = new ItemStack(Material.IRON_SWORD);
+            player.getInventory().setItem(0, IronSword);
+        }
+        else if (event.getPlayer().getWorld() == Bukkit.getWorld("Lobby")) {
+            ItemStack DiamondSword = new ItemStack(Material.DIAMOND_SWORD);
+            player.getInventory().setItem(0, DiamondSword);
+        }
+    }
 }
 
