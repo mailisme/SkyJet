@@ -28,6 +28,7 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
 
     private PlayerInteractEvent event;
 
+
     @Override
     public void onEnable() {
         // Plugin startup logic
@@ -61,11 +62,13 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
     }
 
 
+
+
     @EventHandler
     public void Join(PlayerJoinEvent event){
         Player player = event.getPlayer();
-        Location lobby = new Location(Bukkit.getWorld("Lobby"), 110.5, 74, 95.5);
         ItemStack DiamondSword = new ItemStack(Material.DIAMOND_SWORD);
+        Location lobby = new Location(Bukkit.getWorld("Lobby"), 110.5, 74, 95.5);
         event.setJoinMessage(ChatColor.AQUA + "Welcome "+ player.getName());
         player.getInventory().clear();
         player.getInventory().setItem(0, DiamondSword);
@@ -78,21 +81,26 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
     public void Click(PlayerInteractEvent event){
         this.event = event;
         Player player = event.getPlayer();
-        Inventory gui = Bukkit.createInventory(player, 9, ChatColor.AQUA+"Join Game");
-        ItemStack StartGame = new ItemStack(Material.DIAMOND_AXE);
-        ItemStack[] menu = {StartGame};
-        gui.setContents(menu);
+        if(player.getWorld()==Bukkit.getWorld("Lobby")){
+            Inventory gui = Bukkit.createInventory(player, 9, ChatColor.AQUA+"Join Game");
+            ItemStack StartGame = new ItemStack(Material.DIAMOND_AXE);
+            ItemStack[] menu = {StartGame};
+            gui.setContents(menu);
 
-        if (event.getItem() != null) {
-            if (event.getAction()==Action.LEFT_CLICK_AIR && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))){
-                player.openInventory(gui);
-            } else if (event.getAction()==Action.LEFT_CLICK_BLOCK && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
-                player.openInventory(gui);
-            } else if (event.getAction()==Action.RIGHT_CLICK_AIR && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
-                player.openInventory(gui);
-            } else if (event.getAction()==Action.RIGHT_CLICK_BLOCK && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
-                player.openInventory(gui);
+            if (event.getItem() != null) {
+                if (event.getAction()==Action.LEFT_CLICK_AIR && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))){
+                    player.openInventory(gui);
+                } else if (event.getAction()==Action.LEFT_CLICK_BLOCK && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
+                    player.openInventory(gui);
+                } else if (event.getAction()==Action.RIGHT_CLICK_AIR && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
+                    player.openInventory(gui);
+                } else if (event.getAction()==Action.RIGHT_CLICK_BLOCK && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
+                    player.openInventory(gui);
+                }
             }
+        }
+        else{
+            return;
         }
     }
     @EventHandler
