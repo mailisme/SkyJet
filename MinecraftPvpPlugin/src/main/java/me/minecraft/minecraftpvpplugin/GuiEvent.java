@@ -2,13 +2,22 @@ package me.minecraft.minecraftpvpplugin;
 
 import net.md_5.bungee.api.chat.ClickEvent;
 import org.bukkit.*;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
-public class GuiEvent implements Listener {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
+import static org.bukkit.Bukkit.getServer;
+
+public class GuiEvent implements Listener {
+    List<Player> players = new ArrayList<Player>();
 
     @EventHandler
     public void ClickEvent(InventoryClickEvent event){
@@ -20,10 +29,29 @@ public class GuiEvent implements Listener {
                 switch (event.getCurrentItem().getType()){
                     case DIAMOND_AXE:
                         player.closeInventory();
-                        player.teleport(PVP1Location);
+                        if (players.size() >= 2) {
+                            player.sendMessage("Too many people");
+                        }
+                        else {
+                            players.add(player);
+                            player.teleport(PVP1Location);
+                        }
                 }
                 event.setCancelled(true);
             }
         }
+    }
+
+    @EventHandler
+    public void PlayerDeathEvent(PlayerDeathEvent event) {
+        event.getEntity().sendMessage(ChatColor.DARK_BLUE + "You Lose...");
+        players.remove(event.getEntity());
+        players.getFirst().sendMessage(ChatColor.GOLD + "You Won!");
+        Location lobby = new Location(Bukkit.getWorld("Lobby"), 110.5, 74, 95.5);
+        players.getFirst().teleport(lobby);
+        players.removeFirst();
+
+        World world = event.getEntity().getWorld();
+        List<Entity> entList = world.getEntities();//get all entities in the world
     }
 }
