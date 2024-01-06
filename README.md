@@ -27,3 +27,16 @@
 | 雙面刃            | 防禦升高，攻擊力降低。血量越低，攻擊力越高，防禦力越低                                       |
 | 瞬間治癒          | 立即回復隨機量的生命值。如果回復量超過可以回復的量，則從原本的量倒扣超過的量 (EX: 15 + 7 -> 13)|
 | 回收再利用        | 讓道具有50%的機率用完後繼續存在                                                            |
+
+## 如何貢獻PVP地圖
+
+1. 裝 Java 21、Java JDK 21
+2. `git clone https://github.com/mailisme/MinecraftPvpPlugin.git -b world` (如果之前就有 clone git 的 repo 最好先備份起來)
+3. 進入 `MinecraftPvpPlugin/MinecraftServer` -> 執行 `start.bat`
+4. 打開 Minecraft 1.8.x 版本，多人 -> 連上 `localhost` 伺服器
+5. 進入大廳後，握著鑽石劍點右鍵，會有一個選單出現，請點上面唯一一個選項(應該是斧頭)，以傳送到PVP世界
+6. 更改地圖
+7. 當你告一個段落，將`MinecraftServer/PVP1/region`裡的所有檔案利用 Github UI 上傳至 `world` branch 的 `MinecraftServer/PVP1/region`，並取一個適當的commit名稱
+8. 大功告成！
+     
+註：若有人更動了地圖並上傳至Github了，請在自己更動前先`git pull`同步地圖
