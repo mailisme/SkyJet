@@ -1,14 +1,15 @@
-[00:00:22] [Server thread/INFO]: MAIL__TW issued server command: /fill 118 64 87 82 64 123 minecraft:sea_lantern
-[00:00:22] [Server thread/INFO]: [MAIL__TW: 1080 blocks filled]
-[00:05:44] [Server thread/INFO]: MAIL__TW issued server command: /l
-[00:06:58] [Server thread/INFO]: MAIL__TW lost connection: Disconnected
-[00:06:58] [Server thread/INFO]: MAIL__TW left the game.
-[00:07:04] [Server thread/INFO]: Stopping the server
-[00:07:04] [Server thread/INFO]: Stopping server
-[00:07:04] [Server thread/INFO]: [MinecraftPvpPlugin] Disabling MinecraftPvpPlugin v1.0-SNAPSHOT
-[00:07:04] [Server thread/INFO]: Saving players
-[00:07:04] [Server thread/INFO]: Saving worlds
-[00:07:04] [Server thread/INFO]: Saving chunks for level 'Lobby'/Overworld
-[00:07:04] [Server thread/INFO]: Saving chunks for level 'Lobby_nether'/Nether
-[00:07:04] [Server thread/INFO]: Saving chunks for level 'Lobby_the_end'/The End
-[00:07:04] [Server thread/INFO]: Saving chunks for level 'PVP1'/Overworld
+[12:01:01] [Server thread/INFO]: Starting minecraft server version 1.8.8
+[12:01:01] [Server thread/INFO]: Loading properties
+[12:01:01] [Server thread/INFO]: Default game type: SURVIVAL
+[12:01:01] [Server thread/INFO]: This server is running CraftBukkit version git-Spigot-21fe707-741a1bd (MC: 1.8.8) (Implementing API version 1.8.8-R0.1-SNAPSHOT)
+[12:01:01] [Server thread/INFO]: Debug logging is disabled
+[12:01:01] [Server thread/INFO]: Server Ping Player Sample Count: 12
+
+[12:01:01] [Server thread/INFO]: Using 4 threads for Netty based IO
+[12:01:01] [Server thread/INFO]: Generating keypair
+[12:01:01] [Server thread/INFO]: Starting Minecraft server on *:25565
+[12:01:01] [Server thread/INFO]: Using default channel type
+[12:01:01] [Server thread/INFO]: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+[12:01:01] [Server thread/INFO]: Set PluginClassLoader as parallel capable
+[12:01:01] [Server thread/INFO]: [MinecraftPvpPlugin] Loading MinecraftPvpPlugin v1.0-SNAPSHOT
+[12:01:01] [Server thread/INFO]: **** Beginning UUID conversion, this may take A LONG time ****
