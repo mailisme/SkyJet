@@ -4,5 +4,11 @@
     "name": "MAIL__TW",
     "level": 4,
     "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "7bddcbf5-cb89-4cb9-ac25-837980bba3df",
+    "name": "ELEPOT",
+    "level": 4,
+    "bypassesPlayerLimit": false
   }
 ]
