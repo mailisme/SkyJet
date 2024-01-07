@@ -28,7 +28,8 @@ public class GuiEvent implements Listener {
             if (event.getClickedInventory().getTitle().equalsIgnoreCase(ChatColor.AQUA+"Join Game")){
                 switch (event.getCurrentItem().getType()){
                     case DIAMOND_AXE:
-                        player.closeInventory();
+                        player
+.closeInventory();
                         if (players.size() >= 2) {
                             player.sendMessage("Too many people");
                         }
