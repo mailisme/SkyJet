@@ -19,22 +19,25 @@ public class PvpPlace implements Listener {
         Player player = (Player) event.getWhoClicked();
         World PVP1 = Bukkit.getWorld("PVP1");
         Location PVP1Location = new Location(PVP1, 110.5, 67, 95.5);
+
         if (event.getClickedInventory() != null) {
             if (event.getClickedInventory().getTitle().equalsIgnoreCase(ChatColor.AQUA+"Join Game")){
                 switch (event.getCurrentItem().getType()){
                     case DIAMOND_AXE:
-                        player
-.closeInventory();
-                        if (players.size() >= 2) {
+                        player.closeInventory();
+
+                        if (this.players.size() >= 2) {
                             player.sendMessage("Too many people");
                             System.out.println(players);
                         }
                         else {
-                            players.add(player);
+                            this.players.add(player);
                             player.teleport(PVP1Location);
                             System.out.println(players);
                         }
+                        break;
                 }
+
                 event.setCancelled(true);
             }
         }

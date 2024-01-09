@@ -38,7 +38,6 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
             getLogger().info("Loaded world: " + world.getName());
         }
 
-        getServer().getPluginManager().registerEvents(new PvpPlace(), this);
         lobbyWorld.setPVP(false);
         PVPWorld1.setPVP(true);
 
