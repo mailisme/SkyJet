@@ -5,25 +5,18 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
-import org.bukkit.event.entity.EntityEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.*;
-import org.bukkit.event.world.WorldLoadEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.awt.event.ActionListener;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 
 public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
 
-
+    PvpPlace Pvp = new PvpPlace();
     private PlayerInteractEvent event;
 
 
@@ -35,7 +28,7 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         Bukkit.getPluginManager().registerEvents(this, this);
         World lobbyWorld = Bukkit.createWorld(new WorldCreator("Lobby"));
         World PVPWorld1 = Bukkit.createWorld(new WorldCreator("PVP1"));
-
+        getServer().getPluginManager().registerEvents(Pvp, this);
         if (lobbyWorld != null) {
             getLogger().info("Lobby world loaded successfully.");
         } else {
@@ -45,7 +38,7 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
             getLogger().info("Loaded world: " + world.getName());
         }
 
-        getServer().getPluginManager().registerEvents(new GuiEvent(), this);
+        getServer().getPluginManager().registerEvents(new PvpPlace(), this);
         lobbyWorld.setPVP(false);
         PVPWorld1.setPVP(true);
 
@@ -57,6 +50,8 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         if (command.getName().equalsIgnoreCase("lobby")){
             Player player = (Player) sender;
             player.teleport(lobby);
+            Pvp.players.remove(player);
+            System.out.println(Pvp.players);
         }
         return true;
     }
@@ -71,13 +66,12 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         Location lobby = new Location(Bukkit.getWorld("Lobby"), 110.5, 74, 95.5);
         event.setJoinMessage(ChatColor.AQUA + "Welcome "+ player.getName());
         player.getInventory().clear();
+        player.teleport(lobby);
         player.getInventory().setItem(0, DiamondSword);
         System.out.print(player.getName()+" join the server");
-        player.teleport(lobby);
     }
 
     @EventHandler
-
     public void Click(PlayerInteractEvent event){
         this.event = event;
         Player player = event.getPlayer();
