@@ -13,21 +13,31 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
 
     PvpPlace Pvp = new PvpPlace();
     private PlayerInteractEvent event;
 
+    List<World> PVPWorlds = new ArrayList<World>();
 
     @Override
     public void onEnable() {
         // Plugin startup logic
         System.out.println("MAGIC PVP v.0.0.0");
         getServer().getPluginManager().registerEvents(this, this);
-        Bukkit.getPluginManager().registerEvents(this, this);
         World lobbyWorld = Bukkit.createWorld(new WorldCreator("Lobby"));
-        World PVPWorld1 = Bukkit.createWorld(new WorldCreator("PVP1"));
+
+        for (int i = 0; i < 3; i++) {
+            World world = Bukkit.createWorld(new WorldCreator(String.format("PVP%d", i)));
+            world.setPVP(true);
+            PVPWorlds.add(world);
+        }
+
         getServer().getPluginManager().registerEvents(Pvp, this);
         if (lobbyWorld != null) {
             getLogger().info("Lobby world loaded successfully.");
@@ -39,8 +49,6 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         }
 
         lobbyWorld.setPVP(false);
-        PVPWorld1.setPVP(true);
-
     }
 
     @Override
@@ -49,20 +57,19 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         if (command.getName().equalsIgnoreCase("lobby")){
             Player player = (Player) sender;
             for(int i = 0; i < 2; i++) {
-                if(Pvp.players.get(i)==player){
+                if (Pvp.players.get(i) == player) {
                     Pvp.players.remove(player);
                     player.teleport(lobby);
                 }
-                if(Pvp.players1.get(i)==player){
+                if (Pvp.players1.get(i) == player) {
                     Pvp.players1.remove(player);
                     player.teleport(lobby);
                 }
-                if(Pvp.players2.get(i)==player){
+                if (Pvp.players2.get(i) == player) {
                     Pvp.players2.remove(player);
                     player.teleport(lobby);
                 }
             }
-
         }
         return true;
     }
@@ -131,7 +138,7 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
     public void PlayerChangedWorldEvent(PlayerChangedWorldEvent event) {
         Player player = event.getPlayer();
         player.getInventory().clear();
-        if (event.getPlayer().getWorld() == Bukkit.getWorld("PVP1")) {
+        if (PVPWorlds.contains(event.getPlayer().getWorld())) {
             ItemStack IronSword = new ItemStack(Material.IRON_SWORD);
             player.getInventory().setItem(0, IronSword);
             player.setGameMode(GameMode.ADVENTURE);

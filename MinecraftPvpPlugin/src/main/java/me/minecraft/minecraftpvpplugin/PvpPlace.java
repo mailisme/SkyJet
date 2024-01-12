@@ -14,20 +14,18 @@ import java.util.List;
 
 
 public class PvpPlace implements Listener {
-    List<Player> players = new ArrayList<Player>();
-    List<Player> players1 = new ArrayList<Player>();
-    List<Player> players2 = new ArrayList<Player>();
+    List<List<Player>> players = new ArrayList<>();
+
     @EventHandler
     public void ClickEvent(InventoryClickEvent event){
         Player player = (Player) event.getWhoClicked();
-        World PVP1 = Bukkit.getWorld("PVP1");
-        World PVP2 = Bukkit.getWorld("PVP2");
-        World PVP3 = Bukkit.getWorld("PVP3");
+
         if (event.getClickedInventory() != null) {
             if (event.getClickedInventory().getTitle().equalsIgnoreCase(ChatColor.AQUA+"Join Game")){
                 switch (event.getCurrentItem().getType()){
                     case DIAMOND_AXE:
                         player.closeInventory();
+
 
                         if (this.players.size() >= 2) {
                             if(players1.size() >= 2){
