@@ -48,9 +48,21 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         Location lobby = new Location(Bukkit.getWorld("Lobby"), 110.5, 74, 95.5);
         if (command.getName().equalsIgnoreCase("lobby")){
             Player player = (Player) sender;
-            player.teleport(lobby);
-            Pvp.players.remove(player);
-            System.out.println(Pvp.players);
+            for(int i = 0; i < 2; i++) {
+                if(Pvp.players.get(i)==player){
+                    Pvp.players.remove(player);
+                    player.teleport(lobby);
+                }
+                if(Pvp.players1.get(i)==player){
+                    Pvp.players1.remove(player);
+                    player.teleport(lobby);
+                }
+                if(Pvp.players2.get(i)==player){
+                    Pvp.players2.remove(player);
+                    player.teleport(lobby);
+                }
+            }
+
         }
         return true;
     }
@@ -132,4 +144,3 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         }
     }
 }
-
