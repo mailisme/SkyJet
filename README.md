@@ -40,3 +40,12 @@
 8. 大功告成！
      
 註：若有人更動了地圖並上傳至Github了，請在自己更動前先`git pull`同步地圖
+
+## Bug(遊玩特色)
+1. 玩家飢餓值reset
+2. player /l error
+3. multi pvp place bug
+4. PVP還是會生怪
+5. remove item
+6. 目前用劍在進PVP的時候如果有方塊在可及範圍內就會偵測不到(not very important)
+
