@@ -122,7 +122,7 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         if (event.getPlayer().getWorld() == Bukkit.getWorld("PVP1")) {
             ItemStack IronSword = new ItemStack(Material.IRON_SWORD);
             player.getInventory().setItem(0, IronSword);
-            player.setGameMode(GameMode.SURVIVAL);
+            player.setGameMode(GameMode.ADVENTURE);
         }
         else if (event.getPlayer().getWorld() == Bukkit.getWorld("Lobby")) {
             ItemStack DiamondSword = new ItemStack(Material.DIAMOND_SWORD);

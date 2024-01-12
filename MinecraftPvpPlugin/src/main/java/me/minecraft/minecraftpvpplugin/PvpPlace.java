@@ -18,7 +18,8 @@ public class PvpPlace implements Listener {
     public void ClickEvent(InventoryClickEvent event){
         Player player = (Player) event.getWhoClicked();
         World PVP1 = Bukkit.getWorld("PVP1");
-        Location PVP1Location = new Location(PVP1, 110.5, 67, 95.5);
+        Location PVP1Location1 = new Location(PVP1, 118.5, 98, 54.5);
+        Location PVP1Location2 = new Location(PVP1, 118.5, 98, 84.5);
 
         if (event.getClickedInventory() != null) {
             if (event.getClickedInventory().getTitle().equalsIgnoreCase(ChatColor.AQUA+"Join Game")){
@@ -32,7 +33,7 @@ public class PvpPlace implements Listener {
                         }
                         else {
                             this.players.add(player);
-                            player.teleport(PVP1Location);
+                            player.teleport(PVP1Location1);
                             System.out.println(players);
                         }
                         break;
