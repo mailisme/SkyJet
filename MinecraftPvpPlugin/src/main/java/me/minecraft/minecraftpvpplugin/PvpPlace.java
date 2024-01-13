@@ -50,24 +50,59 @@ public class PvpPlace implements Listener {
             return;
         }
 
+        if (GetPlayerByIndex(players0, PlayerIndex) == player) {
+            if (Win(GetPlayerByIndex(players1, PlayerIndex))) {
+                Lose(player);
+            }
+        }
+
+        else {
+            if(Win(GetPlayerByIndex(players0, PlayerIndex))) {
+                Lose(player);
+            }
+        }
+
         player.getWorld().getEntities().forEach((e) -> {
             if (e instanceof Item) {
                 e.remove();
             }
         });
 
-        if (PlayerIndex < players0.size()) {
-            players0.get(PlayerIndex).teleport(Locations.lobby);
-            MinecraftPvpPlugin.ToLobby(players0.get(PlayerIndex));
-            players0.remove(PlayerIndex);
+        TeleportBackToLobby(GetPlayerByIndex(players0, PlayerIndex));
+        TeleportBackToLobby(GetPlayerByIndex(players1, PlayerIndex));
+    }
 
-            PvpPlayerCount -= 1;
+    static boolean Lose(Player player) {
+        if (player != null) {
+            player.sendTitle(ChatColor.AQUA + "You Lose", ChatColor.DARK_BLUE + ":(");
+            return true;
         }
+        return false;
+    }
 
-        if (PlayerIndex < players1.size()) {
-            players1.get(PlayerIndex).teleport(Locations.lobby);
-            MinecraftPvpPlugin.ToLobby(players1.get(PlayerIndex));
-            players1.remove(PlayerIndex);
+    static boolean Win(Player player) {
+        if (player != null) {
+            player.sendTitle(ChatColor.GOLD + "You Win !!", ChatColor.RED + ":D");
+            return true;
+        }
+        return false;
+    }
+
+    static Player GetPlayerByIndex(List<Player> player, int index) {
+        if (index < player.size()) {
+            return player.get(index);
+        }
+        else {
+            return null;
+        }
+    }
+
+    static void TeleportBackToLobby(Player player) {
+        if (player != null) {
+            player.teleport(Locations.lobby);
+            MinecraftPvpPlugin.ToLobby(player);
+            players0.remove(player);
+            players1.remove(player);
 
             PvpPlayerCount -= 1;
         }

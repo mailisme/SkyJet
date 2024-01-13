@@ -121,7 +121,6 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         player.spigot().respawn();
         PvpPlace.RemovePlayer(player);
         event.setKeepInventory(true);
-        Lose(player);
     }
 
     @EventHandler
@@ -133,33 +132,34 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
     }
 
     static void ToLobby(Player player) {
-        System.out.println("To Lobby " + player.getName());
-        player.getInventory().clear();
-        Items.SwordItemMeta.setDisplayName(ChatColor.AQUA + "Join");
-        Items.SwordItemMeta.spigot().setUnbreakable(true);
-        Items.DiamondSword.setItemMeta(Items.SwordItemMeta);
-        player.getInventory().setItem(0, Items.DiamondSword);
-        player.getInventory().setHelmet(null);
-        player.getInventory().setChestplate(null);
-        player.getInventory().setLeggings(null);
-        player.getInventory().setBoots(null);
-        player.setHealth(20);
-        player.setFoodLevel(20);
-        player.setGameMode(GameMode.ADVENTURE);
+        if (player != null) {
+            System.out.println("To Lobby " + player.getName());
+            player.getInventory().clear();
+            Items.SwordItemMeta.setDisplayName(ChatColor.AQUA + "Join");
+            Items.SwordItemMeta.spigot().setUnbreakable(true);
+            Items.DiamondSword.setItemMeta(Items.SwordItemMeta);
+            player.getInventory().setItem(0, Items.DiamondSword);
+            player.getInventory().setHelmet(null);
+            player.getInventory().setChestplate(null);
+            player.getInventory().setLeggings(null);
+            player.getInventory().setBoots(null);
+            player.setHealth(20);
+            player.setFoodLevel(20);
+            player.setGameMode(GameMode.ADVENTURE);
+        }
     }
 
     static void ToPVP(Player player) {
-        player.getInventory().clear();
-        player.getInventory().setItem(0, Items.IronSword);
-        player.setHealth(20);
-        player.setFoodLevel(20);
-        player.getInventory().setHelmet(Items.IronHelmet);
-        player.getInventory().setChestplate(Items.IronChestplate);
-        player.getInventory().setLeggings(Items.IronLeggings);
-        player.getInventory().setBoots(Items.IronBoots);
-        player.setGameMode(GameMode.ADVENTURE);
-    }
-    static void Lose(Player player) {
-        player.sendTitle("You Lose", ":(");
+        if (player != null) {
+            player.getInventory().clear();
+            player.getInventory().setItem(0, Items.IronSword);
+            player.setHealth(20);
+            player.setFoodLevel(20);
+            player.getInventory().setHelmet(Items.IronHelmet);
+            player.getInventory().setChestplate(Items.IronChestplate);
+            player.getInventory().setLeggings(Items.IronLeggings);
+            player.getInventory().setBoots(Items.IronBoots);
+            player.setGameMode(GameMode.ADVENTURE);
+        }
     }
 }
