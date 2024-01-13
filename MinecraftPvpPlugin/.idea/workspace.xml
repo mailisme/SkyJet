@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17758a80-0c85-4e1c-9ee7-0bf4385df7a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Locations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_1_13__12_10__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_1_13__12_10__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/MinecraftPvpPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/MinecraftPvpPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/PvpPlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/PvpPlace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,20 +33,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.MinecraftPvpPlugin package.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Shell Script.copy_binary.executor": "Run",
-    "Shell Script.run_server.executor": "Run",
-    "git-widget-placeholder": "code-for-mailchen",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Dev/java/MinecraftPvpPlugin/MinecraftServer",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.MinecraftPvpPlugin package.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Shell Script.copy_binary.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.run_server.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;code-for-mailchen&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Dev/java/MinecraftPvpPlugin/MinecraftServer&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="me.minecraft.minecraftpvpplugin" />
@@ -131,7 +125,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-f98dd351" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-249ae16d76d6-a618e4d4" />
       </set>
     </attachedChunks>
   </component>

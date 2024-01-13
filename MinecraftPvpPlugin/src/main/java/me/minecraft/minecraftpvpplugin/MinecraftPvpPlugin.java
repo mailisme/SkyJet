@@ -12,6 +12,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.*;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
@@ -135,6 +136,9 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         System.out.println("To Lobby " + player.getName());
         player.getInventory().clear();
         ItemStack DiamondSword = new ItemStack(Material.DIAMOND_SWORD);
+        ItemMeta SwordItemMeta = DiamondSword.getItemMeta();
+        SwordItemMeta.spigot().setUnbreakable(true);
+        DiamondSword.setItemMeta(SwordItemMeta);
         DiamondSword.setDurability((short) 1);
         player.getInventory().setItem(0, DiamondSword);
         player.setHealth(20);
