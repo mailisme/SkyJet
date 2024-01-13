@@ -82,6 +82,7 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         System.out.print(player.getName() + " join the server");
         player.teleport(Locations.lobby);
         ToLobby(player);
+        PvpPlace.GameStart(player);
     }
 
     @EventHandler

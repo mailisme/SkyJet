@@ -31,14 +31,31 @@ public class PvpPlace implements Listener {
                 pvp = new Location(MinecraftPvpPlugin.PVPWorlds.get(WorldIndex), 118.5, 98.0, 84.5, (float) 180, 0);
             }
 
-            PvpPlayerCount += 1;
+        PvpPlayerCount += 1;
 
-            player.teleport(pvp);
-            MinecraftPvpPlugin.ToPVP(player);
+        player.teleport(pvp);
+        MinecraftPvpPlugin.ToPVP(player);
         }
 
         else {
             player.sendMessage("Server full :(");
+        }
+    }
+
+    public static void GameStart(Player player){
+        for (int i = 0; i < 3; i++) {
+            if(player == players1.get(i)){
+                for (int j = 0; j < 3; j++) {
+                    players0.get(i).teleport(new Location(players0.get(i).getWorld(), 118.5, 98, 54.5));
+                    players1.get(i).teleport(new Location(players1.get(i).getWorld(), 118.5, 98.0, 84.5, (float) 180, 0));
+                    try {
+                        players1.get(i).sendTitle("The game will start in", String.valueOf(j));
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            }
         }
     }
 
