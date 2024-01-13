@@ -8,22 +8,19 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.*;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
 
-    PvpPlace Pvp = new PvpPlace();
-    private PlayerInteractEvent event;
-
-    List<World> PVPWorlds = new ArrayList<World>();
+    static List<World> PVPWorlds = new ArrayList<World>();
 
     @Override
     public void onEnable() {
@@ -38,7 +35,6 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
             PVPWorlds.add(world);
         }
 
-        getServer().getPluginManager().registerEvents(Pvp, this);
         if (lobbyWorld != null) {
             getLogger().info("Lobby world loaded successfully.");
         } else {
@@ -51,47 +47,45 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         lobbyWorld.setPVP(false);
     }
 
-    @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args){
-        Location lobby = new Location(Bukkit.getWorld("Lobby"), 110.5, 74, 95.5);
-        if (command.getName().equalsIgnoreCase("lobby")){
-            Player player = (Player) sender;
-            for(int i = 0; i < 2; i++) {
-                if (Pvp.players.get(i) == player) {
-                    Pvp.players.remove(player);
-                    player.teleport(lobby);
+    @EventHandler
+    public void ClickEvent(InventoryClickEvent event){
+        Player player = (Player) event.getWhoClicked();
+
+        if (event.getClickedInventory() != null) {
+            if (event.getClickedInventory().getTitle().equalsIgnoreCase(ChatColor.AQUA+"Join Game")){
+                switch (event.getCurrentItem().getType()){
+                    case DIAMOND_AXE:
+                        PvpPlace.AddPlayer(player);
+                        player.closeInventory();
+                        break;
                 }
-                if (Pvp.players1.get(i) == player) {
-                    Pvp.players1.remove(player);
-                    player.teleport(lobby);
-                }
-                if (Pvp.players2.get(i) == player) {
-                    Pvp.players2.remove(player);
-                    player.teleport(lobby);
-                }
+                event.setCancelled(true);
             }
         }
-        return true;
     }
 
+    @Override
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args){
+        if (command.getName().equalsIgnoreCase("lobby")) {
+            Player player = (Player) sender;
+            PvpPlace.RemovePlayer(player);
+            ToLobby(player);
+        }
 
-
+        return true;
+    }
 
     @EventHandler
     public void Join(PlayerJoinEvent event){
         Player player = event.getPlayer();
-        ItemStack DiamondSword = new ItemStack(Material.DIAMOND_SWORD);
-        Location lobby = new Location(Bukkit.getWorld("Lobby"), 110.5, 74, 95.5);
-        event.setJoinMessage(ChatColor.AQUA + "Welcome "+ player.getName());
-        player.getInventory().clear();
-        player.teleport(lobby);
-        player.getInventory().setItem(0, DiamondSword);
-        System.out.print(player.getName()+" join the server");
+        event.setJoinMessage(ChatColor.AQUA + "Welcome " + player.getName());
+        System.out.print(player.getName() + " join the server");
+        player.teleport(Locations.lobby);
+        ToLobby(player);
     }
 
     @EventHandler
     public void Click(PlayerInteractEvent event){
-        this.event = event;
         Player player = event.getPlayer();
         if(player.getWorld()==Bukkit.getWorld("Lobby")){
             Inventory gui = Bukkit.createInventory(player, 9, ChatColor.AQUA+"Join Game");
@@ -100,14 +94,10 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
             gui.setContents(menu);
 
             if (event.getItem() != null) {
-                if (event.getAction()==Action.LEFT_CLICK_AIR && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))){
-                    player.openInventory(gui);
-                } else if (event.getAction()==Action.LEFT_CLICK_BLOCK && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
-                    player.openInventory(gui);
-                } else if (event.getAction()==Action.RIGHT_CLICK_AIR && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
-                    player.openInventory(gui);
-                } else if (event.getAction()==Action.RIGHT_CLICK_BLOCK && event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
-                    player.openInventory(gui);
+                if (event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
+                    if (event.getAction() != Action.PHYSICAL) {
+                        player.openInventory(gui);
+                    }
                 }
             }
         }
@@ -123,31 +113,41 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
             event.getItemDrop().remove();
             player.getInventory().setItem(0, event.getItemDrop().getItemStack());
         }
-
     }
 
     @EventHandler
     public void PlayerDeathEvent(PlayerDeathEvent event) {
-        ItemStack DiamondSword = new ItemStack(Material.DIAMOND_SWORD);
         Player player = event.getEntity();
-        player.getInventory().clear();
-        player.getInventory().setItem(0, DiamondSword);
+        player.spigot().respawn();
+        PvpPlace.RemovePlayer(player);
+        event.setKeepInventory(true);
     }
 
     @EventHandler
-    public void PlayerChangedWorldEvent(PlayerChangedWorldEvent event) {
+    public void PlayerQuitEvent(PlayerQuitEvent event) {
         Player player = event.getPlayer();
+        if (PVPWorlds.contains(player.getWorld())) {
+            PvpPlace.RemovePlayer(player);
+        }
+    }
+
+    static void ToLobby(Player player) {
+        System.out.println("To Lobby " + player.getName());
         player.getInventory().clear();
-        if (PVPWorlds.contains(event.getPlayer().getWorld())) {
-            ItemStack IronSword = new ItemStack(Material.IRON_SWORD);
-            player.getInventory().setItem(0, IronSword);
-            player.setGameMode(GameMode.ADVENTURE);
-        }
-        else if (event.getPlayer().getWorld() == Bukkit.getWorld("Lobby")) {
-            ItemStack DiamondSword = new ItemStack(Material.DIAMOND_SWORD);
-            player.getInventory().setItem(0, DiamondSword);
-            player.setHealth(20);
-            player.setGameMode(GameMode.ADVENTURE);
-        }
+        ItemStack DiamondSword = new ItemStack(Material.DIAMOND_SWORD);
+        DiamondSword.setDurability((short) 1);
+        player.getInventory().setItem(0, DiamondSword);
+        player.setHealth(20);
+        player.setFoodLevel(20);
+        player.setGameMode(GameMode.ADVENTURE);
+    }
+
+    static void ToPVP(Player player) {
+        player.getInventory().clear();
+        ItemStack IronSword = new ItemStack(Material.IRON_SWORD);
+        player.getInventory().setItem(0, IronSword);
+        player.setHealth(20);
+        player.setFoodLevel(20);
+        player.setGameMode(GameMode.ADVENTURE);
     }
 }

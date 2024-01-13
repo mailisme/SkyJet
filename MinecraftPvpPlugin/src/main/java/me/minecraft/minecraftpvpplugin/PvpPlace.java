@@ -2,42 +2,66 @@ package me.minecraft.minecraftpvpplugin;
 
 import org.bukkit.*;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.PlayerDeathEvent;
-import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class PvpPlace implements Listener {
-    List<List<Player>> players = new ArrayList<>();
+    static List<Player> players0 = new ArrayList<>();
+    static List<Player> players1 = new ArrayList<>();
 
-    @EventHandler
-    public void ClickEvent(InventoryClickEvent event){
-        Player player = (Player) event.getWhoClicked();
+    static int PvpPlayerCount;
 
-        if (event.getClickedInventory() != null) {
-            if (event.getClickedInventory().getTitle().equalsIgnoreCase(ChatColor.AQUA+"Join Game")){
-                switch (event.getCurrentItem().getType()){
-                    case DIAMOND_AXE:
-                        player.closeInventory();
-                        break;
-                }
+    public static void AddPlayer(Player player) {
+        Location pvp;
 
-                event.setCancelled(true);
+        if (PvpPlayerCount < MinecraftPvpPlugin.PVPWorlds.size() * 2) {
+            if (PvpPlayerCount % 2 == 0) {
+                players0.add(player);
+                int WorldIndex = players0.indexOf(player);
+                pvp = new Location(MinecraftPvpPlugin.PVPWorlds.get(WorldIndex), 118.5, 98, 54.5);
             }
+
+            else {
+                players1.add(player);
+                int WorldIndex = players1.indexOf(player);
+                pvp = new Location(MinecraftPvpPlugin.PVPWorlds.get(WorldIndex), 118.5, 98, 84.5);
+            }
+
+            PvpPlayerCount += 1;
+
+            player.teleport(pvp);
+            MinecraftPvpPlugin.ToPVP(player);
+        }
+
+        else {
+            player.sendMessage("Server full :(");
         }
     }
 
-    @EventHandler
-    public void PlayerDeathEvent(PlayerDeathEvent event) {
+    public static void RemovePlayer(Player player) {
+        int PlayerIndex = Math.max(players0.indexOf(player), players1.indexOf(player));
 
-    }
-    @EventHandler
-    public void PlayerLeaveInPVP(PlayerQuitEvent event){
+        if (PlayerIndex == -1) {
+            player.sendMessage("You are already in lobby!");
+        }
 
+        if (PlayerIndex < players0.size()) {
+            players0.get(PlayerIndex).teleport(Locations.lobby);
+            MinecraftPvpPlugin.ToLobby(players0.get(PlayerIndex));
+            players0.remove(PlayerIndex);
+
+            PvpPlayerCount -= 1;
+        }
+
+        if (PlayerIndex < players1.size()) {
+            players1.get(PlayerIndex).teleport(Locations.lobby);
+            MinecraftPvpPlugin.ToLobby(players1.get(PlayerIndex));
+            players1.remove(PlayerIndex);
+
+            PvpPlayerCount -= 1;
+        }
     }
 }
