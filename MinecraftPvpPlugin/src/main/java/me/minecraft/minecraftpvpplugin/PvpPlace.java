@@ -27,7 +27,7 @@ public class PvpPlace implements Listener {
             else {
                 players1.add(player);
                 int WorldIndex = players1.indexOf(player);
-                pvp = new Location(MinecraftPvpPlugin.PVPWorlds.get(WorldIndex), 118.5, 98, 84.5);
+                pvp = new Location(MinecraftPvpPlugin.PVPWorlds.get(WorldIndex), 118.5, 98.0, 84.5, (float) 0, 180);
             }
 
             PvpPlayerCount += 1;
