@@ -95,7 +95,7 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
             gui.setContents(menu);
 
             if (event.getItem() != null) {
-                if (event.getItem().equals(new ItemStack(Material.DIAMOND_SWORD))) {
+                if (event.getItem().equals(Item.DiamondSword)) {
                     if (event.getAction() != Action.PHYSICAL) {
                         player.openInventory(gui);
                     }
@@ -135,12 +135,10 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
     static void ToLobby(Player player) {
         System.out.println("To Lobby " + player.getName());
         player.getInventory().clear();
-        ItemStack DiamondSword = new ItemStack(Material.DIAMOND_SWORD);
-        ItemMeta SwordItemMeta = DiamondSword.getItemMeta();
-        SwordItemMeta.spigot().setUnbreakable(true);
-        DiamondSword.setItemMeta(SwordItemMeta);
-        DiamondSword.setDurability((short) 1);
-        player.getInventory().setItem(0, DiamondSword);
+        Item.SwordItemMeta.setDisplayName(ChatColor.AQUA + "Join");
+        Item.SwordItemMeta.spigot().setUnbreakable(true);
+        Item.DiamondSword.setItemMeta(Item.SwordItemMeta);
+        player.getInventory().setItem(0, Item.DiamondSword);
         player.setHealth(20);
         player.setFoodLevel(20);
         player.setGameMode(GameMode.ADVENTURE);
@@ -148,8 +146,7 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
 
     static void ToPVP(Player player) {
         player.getInventory().clear();
-        ItemStack IronSword = new ItemStack(Material.IRON_SWORD);
-        player.getInventory().setItem(0, IronSword);
+        player.getInventory().setItem(0, Item.IronSword);
         player.setHealth(20);
         player.setFoodLevel(20);
         player.setGameMode(GameMode.ADVENTURE);
