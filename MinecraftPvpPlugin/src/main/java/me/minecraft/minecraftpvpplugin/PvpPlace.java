@@ -47,7 +47,14 @@ public class PvpPlace implements Listener {
 
         if (PlayerIndex == -1) {
             player.sendMessage("You are already in lobby!");
+            return;
         }
+
+        player.getWorld().getEntities().forEach((e) -> {
+            if (e instanceof Item) {
+                e.remove();
+            }
+        });
 
         if (PlayerIndex < players0.size()) {
             players0.get(PlayerIndex).teleport(Locations.lobby);
@@ -64,6 +71,5 @@ public class PvpPlace implements Listener {
 
             PvpPlayerCount -= 1;
         }
-        player.getWorld().getEntities().remove(player.getWorld().getEntities());
     }
 }

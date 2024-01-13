@@ -12,7 +12,6 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.*;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
@@ -90,12 +89,12 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         Player player = event.getPlayer();
         if(player.getWorld()==Bukkit.getWorld("Lobby")){
             Inventory gui = Bukkit.createInventory(player, 9, ChatColor.AQUA+"Join Game");
-            ItemStack StartGame = Item.DiamondPickaxe;
+            ItemStack StartGame = Items.DiamondPickaxe;
             ItemStack[] menu = {StartGame};
             gui.setContents(menu);
 
             if (event.getItem() != null) {
-                if (event.getItem().equals(Item.DiamondSword)) {
+                if (event.getItem().equals(Items.DiamondSword)) {
                     if (event.getAction() != Action.PHYSICAL) {
                         player.openInventory(gui);
                     }
@@ -135,10 +134,10 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
     static void ToLobby(Player player) {
         System.out.println("To Lobby " + player.getName());
         player.getInventory().clear();
-        Item.SwordItemMeta.setDisplayName(ChatColor.AQUA + "Join");
-        Item.SwordItemMeta.spigot().setUnbreakable(true);
-        Item.DiamondSword.setItemMeta(Item.SwordItemMeta);
-        player.getInventory().setItem(0, Item.DiamondSword);
+        Items.SwordItemMeta.setDisplayName(ChatColor.AQUA + "Join");
+        Items.SwordItemMeta.spigot().setUnbreakable(true);
+        Items.DiamondSword.setItemMeta(Items.SwordItemMeta);
+        player.getInventory().setItem(0, Items.DiamondSword);
         player.getInventory().setHelmet(null);
         player.getInventory().setChestplate(null);
         player.getInventory().setLeggings(null);
@@ -150,13 +149,13 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
 
     static void ToPVP(Player player) {
         player.getInventory().clear();
-        player.getInventory().setItem(0, Item.IronSword);
+        player.getInventory().setItem(0, Items.IronSword);
         player.setHealth(20);
         player.setFoodLevel(20);
-        player.getInventory().setHelmet(Item.IronHelmet);
-        player.getInventory().setChestplate(Item.IronChestplate);
-        player.getInventory().setLeggings(Item.IronLeggings);
-        player.getInventory().setBoots(Item.IronBoots);
+        player.getInventory().setHelmet(Items.IronHelmet);
+        player.getInventory().setChestplate(Items.IronChestplate);
+        player.getInventory().setLeggings(Items.IronLeggings);
+        player.getInventory().setBoots(Items.IronBoots);
         player.setGameMode(GameMode.ADVENTURE);
     }
 }
