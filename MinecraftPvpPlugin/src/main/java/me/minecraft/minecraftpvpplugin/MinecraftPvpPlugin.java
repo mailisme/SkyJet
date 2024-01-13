@@ -90,7 +90,7 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         Player player = event.getPlayer();
         if(player.getWorld()==Bukkit.getWorld("Lobby")){
             Inventory gui = Bukkit.createInventory(player, 9, ChatColor.AQUA+"Join Game");
-            ItemStack StartGame = new ItemStack(Material.DIAMOND_AXE);
+            ItemStack StartGame = Item.DiamondPickaxe;
             ItemStack[] menu = {StartGame};
             gui.setContents(menu);
 
@@ -139,6 +139,10 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         Item.SwordItemMeta.spigot().setUnbreakable(true);
         Item.DiamondSword.setItemMeta(Item.SwordItemMeta);
         player.getInventory().setItem(0, Item.DiamondSword);
+        player.getInventory().setHelmet(null);
+        player.getInventory().setChestplate(null);
+        player.getInventory().setLeggings(null);
+        player.getInventory().setBoots(null);
         player.setHealth(20);
         player.setFoodLevel(20);
         player.setGameMode(GameMode.ADVENTURE);

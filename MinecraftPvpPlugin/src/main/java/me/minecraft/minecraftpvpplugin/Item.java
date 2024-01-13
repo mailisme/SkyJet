@@ -7,6 +7,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 public class Item {
     static ItemStack IronSword = new ItemStack(Material.IRON_SWORD);
     static ItemStack DiamondSword = new ItemStack(Material.DIAMOND_SWORD);
+
+    static ItemStack DiamondPickaxe = new ItemStack(Material.DIAMOND_AXE);
     static ItemMeta SwordItemMeta = Item.DiamondSword.getItemMeta();
     static ItemStack IronHelmet = new ItemStack(Material.IRON_HELMET);
     static ItemStack IronChestplate = new ItemStack(Material.IRON_CHESTPLATE);
