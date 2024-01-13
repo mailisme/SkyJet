@@ -44,7 +44,7 @@
 註：若有人更動了地圖並上傳至Github了，請在自己更動前先`git pull`同步地圖
 
 ## Bug(遊玩特色)
-1. 玩家飢餓值reset
+1. ~~玩家飢餓值reset~~
 2. ~~player /l error~~
 3. multi pvp place bug(未確定)
 4. PVP還是會生怪
