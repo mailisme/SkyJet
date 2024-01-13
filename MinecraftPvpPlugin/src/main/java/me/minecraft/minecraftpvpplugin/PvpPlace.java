@@ -1,6 +1,7 @@
 package me.minecraft.minecraftpvpplugin;
 
 import org.bukkit.*;
+import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 
@@ -63,5 +64,6 @@ public class PvpPlace implements Listener {
 
             PvpPlayerCount -= 1;
         }
+        player.getWorld().getEntities().remove(player.getWorld().getEntities());
     }
 }
