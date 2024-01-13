@@ -149,6 +149,10 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         player.getInventory().setItem(0, Item.IronSword);
         player.setHealth(20);
         player.setFoodLevel(20);
+        player.getInventory().setHelmet(Item.IronHelmet);
+        player.getInventory().setChestplate(Item.IronChestplate);
+        player.getInventory().setLeggings(Item.IronLeggings);
+        player.getInventory().setBoots(Item.IronBoots);
         player.setGameMode(GameMode.ADVENTURE);
     }
 }
