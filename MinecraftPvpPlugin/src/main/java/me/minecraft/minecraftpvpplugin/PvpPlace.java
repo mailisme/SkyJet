@@ -7,6 +7,8 @@ import org.bukkit.event.Listener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class PvpPlace implements Listener {
@@ -29,12 +31,14 @@ public class PvpPlace implements Listener {
                 players1.add(player);
                 int WorldIndex = players1.indexOf(player);
                 pvp = new Location(MinecraftPvpPlugin.PVPWorlds.get(WorldIndex), 118.5, 98.0, 84.5, (float) 180, 0);
+
+                GameStart(WorldIndex);
             }
 
-        PvpPlayerCount += 1;
+            PvpPlayerCount += 1;
 
-        player.teleport(pvp);
-        MinecraftPvpPlugin.ToPVP(player);
+            player.teleport(pvp);
+            MinecraftPvpPlugin.ToPVP(player);
         }
 
         else {
@@ -42,22 +46,31 @@ public class PvpPlace implements Listener {
         }
     }
 
-    public static void GameStart(Player player){
-        for (int i = 0; i < 3; i++) {
-            if(player == players1.get(i)){
-                for (int j = 0; j < 3; j++) {
-                    players0.get(i).teleport(new Location(players0.get(i).getWorld(), 118.5, 98, 54.5));
-                    players1.get(i).teleport(new Location(players1.get(i).getWorld(), 118.5, 98.0, 84.5, (float) 180, 0));
-                    try {
-                        players1.get(i).sendTitle("The game will start in", String.valueOf(j));
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
+    public static void GameStart(int WorldIndex){
+
+        TimerTask CountDown = new TimerTask() {
+            int LeftSeconds = 3;
+            @Override
+            public void run() {
+                players0.get(WorldIndex).teleport(new Location(MinecraftPvpPlugin.PVPWorlds.get(WorldIndex), 118.5, 98, 54.5));
+                players1.get(WorldIndex).teleport(new Location(players1.get(WorldIndex).getWorld(), 118.5, 98.0, 84.5, (float) 180, 0));
+
+                players0.get(WorldIndex).sendTitle("The game will start in", String.valueOf(LeftSeconds));
+                players1.get(WorldIndex).sendTitle("The game will start in", String.valueOf(LeftSeconds));
+
+                if (LeftSeconds == 0) {
+                    this.cancel();
                 }
+
+                LeftSeconds -= 1;
             }
-        }
+        };
+
+        Timer t = new Timer();
+        t.schedule(CountDown, 0, 1000);
     }
+
+
 
     public static void RemovePlayer(Player player) {
         int PlayerIndex = Math.max(players0.indexOf(player), players1.indexOf(player));
