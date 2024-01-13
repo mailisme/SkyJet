@@ -1,0 +1,64 @@
+<changelist name="Uncommitted_changes_before_Update_at_1_13_2024_8_49_PM_[Changes]1" date="1705150172367" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_13_2024_8_49_PM_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 1/13/2024 8:49 PM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="../MinecraftServer/Lobby_the_end/session.lock" />
+    <option name="AFTER_PATH" value="../MinecraftServer/Lobby_the_end/session.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_13_2024_8_49_PM_[Changes]1/session.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="../MinecraftServer/Lobby_the_end/DIM1/region/r.-1.-1.mca" />
+    <option name="AFTER_PATH" value="../MinecraftServer/Lobby_the_end/DIM1/region/r.-1.-1.mca" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_13_2024_8_49_PM_[Changes]1/r.-1.-1.mca" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="../MinecraftServer/PVP0/region/r.0.-1.mca" />
+    <option name="AFTER_PATH" value="../MinecraftServer/PVP0/region/r.0.-1.mca" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_13_2024_8_49_PM_[Changes]1/r.0.-1.mca" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="../MinecraftServer/Lobby_the_end/level.dat_old" />
+    <option name="AFTER_PATH" value="../MinecraftServer/Lobby_the_end/level.dat_old" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_13_2024_8_49_PM_[Changes]1/level.dat_old" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="../MinecraftServer/PVP1/level.dat" />
+    <option name="AFTER_PATH" value="../MinecraftServer/PVP1/level.dat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_13_2024_8_49_PM_[Changes]1/level.dat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="../MinecraftServer/Lobby/data/villages.dat" />
+    <option name="AFTER_PATH" value="../MinecraftServer/Lobby/data/villages.dat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_13_2024_8_49_PM_[Changes]1/villages.dat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" />
+    <option name="AFTER_PATH" value="target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_13_2024_8_49_PM_[Changes]1/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" />
+    <option name="AFTER_PATH" value="target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_13_2024_8_49_PM_[Changes]1/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="../MinecraftServer/PVP2/region/r.-1.0.mca" />
+    <option name="AFTER_PATH" value="../MinecraftServer/PVP2/region/r.-1.0.mca" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_13_2024_8_49_PM_[Changes]1/r.-1.0.mca" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="../MinecraftServer/Lobby_nether/DIM-1/region/r.0.0.mca" />
+    <option name="AFTER_PATH" value="../MinecraftServer/Lobby_nether/DIM-1/region/r.0.0.mca" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_13_2024_8_49_PM_[Changes]1/r.0.0.mca" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="../MinecraftServer/Lobby/playerdata/dfeb3c93-3855-4e66-b3d1-25aa25312082.dat" />
+    <option name="AFTER_PATH" value="../MinecraftServer/Lobby/playerdata/dfeb3c93-3855-4e66-b3d1-25aa25312082.dat" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_13_2024_8_49_PM_[Changes]1/dfeb3c93-3855-4e66-b3d1-25aa25312082.dat" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" />
+    <option name="AFTER_PATH" value="target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_13_2024_8_49_PM_[Changes]1/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" />
+  </binary>
+</changelist>
