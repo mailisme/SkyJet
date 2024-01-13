@@ -121,6 +121,7 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         player.spigot().respawn();
         PvpPlace.RemovePlayer(player);
         event.setKeepInventory(true);
+        Lose(player);
     }
 
     @EventHandler
@@ -157,5 +158,8 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         player.getInventory().setLeggings(Items.IronLeggings);
         player.getInventory().setBoots(Items.IronBoots);
         player.setGameMode(GameMode.ADVENTURE);
+    }
+    static void Lose(Player player) {
+        player.sendTitle("You Lose", ":(");
     }
 }
