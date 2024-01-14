@@ -57,7 +57,9 @@ public class PvpPlace implements Listener {
                 world_of_players[WorldIndex][0].sendTitle("The game will start in", String.valueOf(LeftSeconds));
                 world_of_players[WorldIndex][1].sendTitle("The game will start in", String.valueOf(LeftSeconds));
 
-                if (LeftSeconds == 0) {
+                if (LeftSeconds == 1) {
+                    world_of_players[WorldIndex][0].sendTitle("START", ":D");
+                    world_of_players[WorldIndex][1].sendTitle("START", ":D");
                     this.cancel();
                 }
 
