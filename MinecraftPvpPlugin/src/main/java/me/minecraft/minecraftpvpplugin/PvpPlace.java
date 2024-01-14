@@ -7,6 +7,7 @@ import org.bukkit.event.Listener;
 
 import java.lang.reflect.AnnotatedArrayType;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 
 public class PvpPlace implements Listener {
@@ -128,5 +129,9 @@ public class PvpPlace implements Listener {
             return true;
         }
         return false;
+    }
+    static void Invisible(Player player) throws InterruptedException {
+        TimeUnit.SECONDS.sleep(5);
+        player.sendMessage("隱形結束");
     }
 }

@@ -16,4 +16,6 @@ public class Items {
     static ItemStack IronBoots = new ItemStack(Material.IRON_BOOTS);
     static ItemStack FishingRod = new ItemStack(Material.FISHING_ROD);
     static ItemStack Gapple = new ItemStack(Material.GOLDEN_APPLE, 5);
+    static ItemStack Invisible = new ItemStack(Material.STAINED_GLASS_PANE);
+    static ItemMeta InvisibleMeta = Invisible.getItemMeta();
 }

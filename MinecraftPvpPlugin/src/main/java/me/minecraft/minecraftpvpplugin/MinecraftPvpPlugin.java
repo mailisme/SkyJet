@@ -18,6 +18,7 @@ import org.bukkit.potion.PotionEffectType;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 
 public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
@@ -87,9 +88,10 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
     }
 
     @EventHandler
-    public void Click(PlayerInteractEvent event){
+    public void Click(PlayerInteractEvent event) throws InterruptedException {
         Player player = event.getPlayer();
-        if(player.getWorld()==Bukkit.getWorld("Lobby")){
+        Boolean StopAble = false;
+        if(player.getWorld() == Bukkit.getWorld("Lobby")){
             Inventory gui = Bukkit.createInventory(player, 9, ChatColor.AQUA+"Join Game");
             ItemStack StartGame = Items.DiamondPickaxe;
             ItemStack[] menu = {StartGame};
@@ -103,8 +105,25 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
                 }
             }
         }
-        else{
-            return;
+        else if (player.getWorld() != Bukkit.getWorld("Lobby")){
+            if (event.getItem() != null) {
+                if (event.getItem().equals(Items.Invisible)) {
+                    if (event.getAction() != Action.PHYSICAL) {
+                        ArrayList a = new ArrayList<>();
+                        a.clear();
+                        player.getInventory().setHelmet(null);
+                        player.getInventory().setChestplate(null);
+                        player.getInventory().setLeggings(null);
+                        player.getInventory().setBoots(null);
+                        PvpPlace.Invisible(player);
+                        player.addPotionEffect(Effect.InvisibleEffect);
+                        while ((ArrayList) player.getActivePotionEffects() == a){
+                            System.out.println("HI");
+                        }
+
+                    }
+                }
+            }
         }
     }
     @EventHandler
@@ -154,10 +173,13 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
 
     static void ToPVP(Player player) {
         if (player != null) {
+            Items.InvisibleMeta.setDisplayName("虛影斗篷");
+            Items.Invisible.setItemMeta(Items.InvisibleMeta);
             player.getInventory().clear();
             player.getInventory().setItem(0, Items.IronSword);
             player.getInventory().setItem(1, Items.FishingRod);
             player.getInventory().setItem(8, Items.Gapple);
+            player.getInventory().setItem(2, Items.Invisible);
             player.setHealth(20);
             player.setFoodLevel(20);
             player.getInventory().setHelmet(Items.IronHelmet);
