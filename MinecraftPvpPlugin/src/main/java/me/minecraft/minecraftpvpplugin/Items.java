@@ -14,4 +14,6 @@ public class Items {
     static ItemStack IronChestplate = new ItemStack(Material.IRON_CHESTPLATE);
     static ItemStack IronLeggings = new ItemStack(Material.IRON_LEGGINGS);
     static ItemStack IronBoots = new ItemStack(Material.IRON_BOOTS);
+    static ItemStack FishingRod = new ItemStack(Material.FISHING_ROD);
+    static ItemStack Gapple = new ItemStack(Material.GOLDEN_APPLE, 5);
 }
