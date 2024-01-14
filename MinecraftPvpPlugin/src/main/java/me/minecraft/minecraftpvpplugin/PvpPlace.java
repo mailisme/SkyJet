@@ -5,44 +5,41 @@ import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.lang.reflect.AnnotatedArrayType;
+import java.util.*;
 
 
 public class PvpPlace implements Listener {
-    static List<Player> players0 = new ArrayList<>();
-    static List<Player> players1 = new ArrayList<>();
 
-    static int PvpPlayerCount;
+    // Two lists so that the Players with the index 0 is at PVP0 world.
+    static Player[][] world_of_players = new Player[3][2];
 
+    // Adds Player to players list, and teleports them to the right world.
     public static void AddPlayer(Player player) {
-        Location pvp;
+        boolean FoundEmptyPlayerSlot = false;
 
-        if (PvpPlayerCount < MinecraftPvpPlugin.PVPWorlds.size() * 2) {
-            if (PvpPlayerCount % 2 == 0) {
-                players0.add(player);
-                int WorldIndex = players0.indexOf(player);
-                pvp = new Location(MinecraftPvpPlugin.PVPWorlds.get(WorldIndex), 118.5, 98, 54.5);
-            }
+        for (int WorldIndex = 0; WorldIndex < world_of_players.length; WorldIndex++) {
+            World PVPWorld = MinecraftPvpPlugin.PVPWorlds.get(WorldIndex);
 
-            else {
-                players1.add(player);
-                int WorldIndex = players1.indexOf(player);
-                pvp = new Location(MinecraftPvpPlugin.PVPWorlds.get(WorldIndex), 118.5, 98.0, 84.5, (float) 180, 0);
-
+            if (world_of_players[WorldIndex][0] == null) {
+                player.teleport(new Location(PVPWorld, 118.5, 98, 54.5));
+                world_of_players[WorldIndex][0] = player;
+                FoundEmptyPlayerSlot = true;
+                break;
+            } else if (world_of_players[WorldIndex][1] == null) {
+                player.teleport(new Location(PVPWorld, 118.5, 98.0, 84.5, (float) 180, 0));
+                world_of_players[WorldIndex][1] = player;
                 GameStart(WorldIndex);
+                FoundEmptyPlayerSlot = true;
+                break;
             }
-
-            PvpPlayerCount += 1;
-
-            player.teleport(pvp);
-            MinecraftPvpPlugin.ToPVP(player);
         }
 
+        if (FoundEmptyPlayerSlot) {
+            MinecraftPvpPlugin.ToPVP(player);
+        }
         else {
-            player.sendMessage("Server full :(");
+            player.sendMessage("Server is full :(");
         }
     }
 
@@ -52,13 +49,17 @@ public class PvpPlace implements Listener {
             int LeftSeconds = 3;
             @Override
             public void run() {
-                players0.get(WorldIndex).teleport(new Location(MinecraftPvpPlugin.PVPWorlds.get(WorldIndex), 118.5, 98, 54.5));
-                players1.get(WorldIndex).teleport(new Location(players1.get(WorldIndex).getWorld(), 118.5, 98.0, 84.5, (float) 180, 0));
+                World PVPWorld = MinecraftPvpPlugin.PVPWorlds.get(WorldIndex);
 
-                players0.get(WorldIndex).sendTitle("The game will start in", String.valueOf(LeftSeconds));
-                players1.get(WorldIndex).sendTitle("The game will start in", String.valueOf(LeftSeconds));
+                world_of_players[WorldIndex][0].teleport(new Location(PVPWorld, 118.5, 98, 54.5));
+                world_of_players[WorldIndex][1].teleport(new Location(PVPWorld, 118.5, 98.0, 84.5, (float) 180, 0));
 
-                if (LeftSeconds == 0) {
+                world_of_players[WorldIndex][0].sendTitle("The game will start in", String.valueOf(LeftSeconds));
+                world_of_players[WorldIndex][1].sendTitle("The game will start in", String.valueOf(LeftSeconds));
+
+                if (LeftSeconds == 1) {
+                    world_of_players[WorldIndex][0].sendTitle("START", ":D");
+                    world_of_players[WorldIndex][1].sendTitle("START", ":D");
                     this.cancel();
                 }
 
@@ -71,35 +72,46 @@ public class PvpPlace implements Listener {
     }
 
 
-
+    // Marks input Player as loser, and the opponent of the Player as winner. Remove them from the players list and teleport them back to lobby.
     public static void RemovePlayer(Player player) {
-        int PlayerIndex = Math.max(players0.indexOf(player), players1.indexOf(player));
+        for (int WorldIndex = 0; WorldIndex < world_of_players.length; WorldIndex++) {
+            for (int PlayerIndex = 0; PlayerIndex < 2; PlayerIndex++) {
+                if (world_of_players[WorldIndex][PlayerIndex] == player) {
+                    int AnotherPlayerIndex;
+                    if (PlayerIndex == 0) {
+                        AnotherPlayerIndex = 1;
+                    } else {
+                        AnotherPlayerIndex = 0;
+                    }
 
-        if (PlayerIndex == -1) {
-            player.sendMessage("You are already in lobby!");
-            return;
-        }
+                    Player AnotherPlayer = world_of_players[WorldIndex][AnotherPlayerIndex];
 
-        if (GetPlayerByIndex(players0, PlayerIndex) == player) {
-            if (Win(GetPlayerByIndex(players1, PlayerIndex))) {
-                Lose(player);
+                    if (AnotherPlayer != null) {
+                        Lose(player);
+                        Win(AnotherPlayer);
+                    }
+
+                    if (player != null) {
+                        player.teleport(Locations.lobby);
+                        MinecraftPvpPlugin.ToLobby(player);
+                    }
+
+                    if (AnotherPlayer != null) {
+                        AnotherPlayer.teleport(Locations.lobby);
+                        MinecraftPvpPlugin.ToLobby(AnotherPlayer);
+                    }
+
+                    world_of_players[WorldIndex][0] = null;
+                    world_of_players[WorldIndex][1] = null;
+
+                    MinecraftPvpPlugin.PVPWorlds.get(WorldIndex).getEntities().forEach((e) -> {
+                        if (e instanceof Item) {
+                            e.remove();
+                        }
+                    });
+                }
             }
         }
-
-        else {
-            if(Win(GetPlayerByIndex(players0, PlayerIndex))) {
-                Lose(player);
-            }
-        }
-
-        player.getWorld().getEntities().forEach((e) -> {
-            if (e instanceof Item) {
-                e.remove();
-            }
-        });
-
-        TeleportBackToLobby(GetPlayerByIndex(players0, PlayerIndex));
-        TeleportBackToLobby(GetPlayerByIndex(players1, PlayerIndex));
     }
 
     static boolean Lose(Player player) {
@@ -116,25 +128,5 @@ public class PvpPlace implements Listener {
             return true;
         }
         return false;
-    }
-
-    static Player GetPlayerByIndex(List<Player> player, int index) {
-        if (index < player.size()) {
-            return player.get(index);
-        }
-        else {
-            return null;
-        }
-    }
-
-    static void TeleportBackToLobby(Player player) {
-        if (player != null) {
-            player.teleport(Locations.lobby);
-            MinecraftPvpPlugin.ToLobby(player);
-            players0.remove(player);
-            players1.remove(player);
-
-            PvpPlayerCount -= 1;
-        }
     }
 }
