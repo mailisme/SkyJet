@@ -12,16 +12,21 @@ import java.util.TimerTask;
 
 
 public class PvpPlace implements Listener {
+
+    // Two lists so that the Players with the index 0 is at PVP0 world.
     static List<Player> players0 = new ArrayList<>();
     static List<Player> players1 = new ArrayList<>();
 
-    static int PvpPlayerCount;
+    static int TotalPvpPlayerCount;
 
+    // Adds Player to players list, and teleports them to the right world.
     public static void AddPlayer(Player player) {
         Location pvp;
 
-        if (PvpPlayerCount < MinecraftPvpPlugin.PVPWorlds.size() * 2) {
-            if (PvpPlayerCount % 2 == 0) {
+        if (TotalPvpPlayerCount < MinecraftPvpPlugin.PVPWorlds.size() * 2) { // Check if the server is full. (empty player slots = num of PVP worlds x 2)
+            TotalPvpPlayerCount += 1;
+
+            if (TotalPvpPlayerCount % 2 == 1) {
                 players0.add(player);
                 int WorldIndex = players0.indexOf(player);
                 pvp = new Location(MinecraftPvpPlugin.PVPWorlds.get(WorldIndex), 118.5, 98, 54.5);
@@ -32,10 +37,9 @@ public class PvpPlace implements Listener {
                 int WorldIndex = players1.indexOf(player);
                 pvp = new Location(MinecraftPvpPlugin.PVPWorlds.get(WorldIndex), 118.5, 98.0, 84.5, (float) 180, 0);
 
-                GameStart(WorldIndex);
+                GameStart(WorldIndex); // If the total player num is even (meaning that there is a new pair of players), start the game.
             }
 
-            PvpPlayerCount += 1;
 
             player.teleport(pvp);
             MinecraftPvpPlugin.ToPVP(player);
@@ -53,7 +57,7 @@ public class PvpPlace implements Listener {
             @Override
             public void run() {
                 players0.get(WorldIndex).teleport(new Location(MinecraftPvpPlugin.PVPWorlds.get(WorldIndex), 118.5, 98, 54.5));
-                players1.get(WorldIndex).teleport(new Location(players1.get(WorldIndex).getWorld(), 118.5, 98.0, 84.5, (float) 180, 0));
+                players1.get(WorldIndex).teleport(new Location(MinecraftPvpPlugin.PVPWorlds.get(WorldIndex), 118.5, 98.0, 84.5, (float) 180, 0));
 
                 players0.get(WorldIndex).sendTitle("The game will start in", String.valueOf(LeftSeconds));
                 players1.get(WorldIndex).sendTitle("The game will start in", String.valueOf(LeftSeconds));
@@ -71,8 +75,9 @@ public class PvpPlace implements Listener {
     }
 
 
-
+    // Marks input Player as loser, and the opponent of the Player as winner. Remove them from the players list and teleport them back to lobby.
     public static void RemovePlayer(Player player) {
+        // This will be the player index or -1 if player isn't in either of the lists.
         int PlayerIndex = Math.max(players0.indexOf(player), players1.indexOf(player));
 
         if (PlayerIndex == -1) {
@@ -134,7 +139,7 @@ public class PvpPlace implements Listener {
             players0.remove(player);
             players1.remove(player);
 
-            PvpPlayerCount -= 1;
+            TotalPvpPlayerCount -= 1;
         }
     }
 }
