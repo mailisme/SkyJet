@@ -13,6 +13,8 @@ import org.bukkit.event.player.*;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -145,6 +147,7 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
             player.getInventory().setBoots(null);
             player.setHealth(20);
             player.setFoodLevel(20);
+            ClearEffects(player);
             player.setGameMode(GameMode.ADVENTURE);
         }
     }
@@ -162,6 +165,12 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
             player.getInventory().setLeggings(Items.IronLeggings);
             player.getInventory().setBoots(Items.IronBoots);
             player.setGameMode(GameMode.ADVENTURE);
+        }
+    }
+
+    static void ClearEffects (Player player){
+        for (PotionEffect effect :player.getActivePotionEffects ()){
+            player.removePotionEffect (effect.getType ());
         }
     }
 }
