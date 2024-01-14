@@ -46,8 +46,8 @@
 ## Bug(遊玩特色)
 1. ~~玩家飢餓值reset~~
 2. ~~player /l error~~
-3. multi pvp place bug(未確定)
-4. PVP還是會生怪
+3. ~~multi pvp place bug(未確定)~~
+4. ~~PVP還是會生怪~~
 5. ~~remove item~~
 6. 目前用劍在進PVP的時候如果有方塊在可及範圍內就會偵測不到(not very important)
 7. ~~鑽石劍耐用度恢復~~
