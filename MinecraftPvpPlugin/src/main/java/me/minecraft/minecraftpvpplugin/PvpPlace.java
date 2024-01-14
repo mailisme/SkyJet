@@ -134,10 +134,11 @@ public class PvpPlace implements Listener {
 
     static void TeleportBackToLobby(Player player) {
         if (player != null) {
+            int WorldIndex = players0.indexOf(player);
             player.teleport(Locations.lobby);
             MinecraftPvpPlugin.ToLobby(player);
-            players0.remove(player);
-            players1.remove(player);
+            players0.set(WorldIndex, null);
+            players1.set(WorldIndex, null);
 
             TotalPvpPlayerCount -= 1;
         }

@@ -1,0 +1,997 @@
+Index: ../MinecraftServer/Lobby/stats/dfeb3c93-3855-4e66-b3d1-25aa25312082.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\"stat.beaconInteraction\":4,\"stat.chestOpened\":1,\"stat.useItem.minecraft.quartz_block\":56,\"stat.useItem.minecraft.stone\":3,\"stat.leaveGame\":68,\"stat.useItem.minecraft.log2\":13,\"stat.useItem.minecraft.diamond_sword\":44,\"stat.jump\":1125,\"stat.swimOneCm\":734,\"stat.useItem.minecraft.planks\":207,\"stat.climbOneCm\":24002,\"stat.fallOneCm\":15519,\"stat.crouchOneCm\":6626,\"stat.useItem.minecraft.dirt\":2,\"achievement.exploreAllBiomes\":{\"value\":0,\"progress\":[\"Roofed Forest\",\"River\",\"Forest\",\"Plains\"]},\"stat.useItem.minecraft.glass\":1,\"stat.useItem.minecraft.leaves2\":20,\"stat.useItem.minecraft.vine\":7,\"stat.useItem.minecraft.dark_oak_fence\":19,\"stat.damageTaken\":6158,\"stat.flyOneCm\":492855,\"stat.damageDealt\":15550,\"stat.killEntity.Rabbit\":2,\"stat.useItem.minecraft.wool\":5,\"stat.timeSinceDeath\":1360,\"stat.useItem.minecraft.sign\":1,\"stat.useItem.minecraft.spawn_egg\":5,\"stat.killEntity.Pig\":1,\"stat.walkOneCm\":421077,\"stat.playerKills\":5,\"stat.useItem.minecraft.leaves\":2,\"stat.useItem.minecraft.diamond_block\":1,\"stat.sprintOneCm\":180688,\"stat.useItem.minecraft.fence\":122,\"stat.useItem.minecraft.glass_pane\":61,\"achievement.openInventory\":48,\"stat.useItem.minecraft.iron_sword\":153,\"stat.mobKills\":9,\"stat.deaths\":17,\"stat.drop\":93,\"stat.playOneMinute\":195423,\"stat.killEntity.Sheep\":1,\"stat.useItem.minecraft.ladder\":1,\"stat.killEntity.Zombie\":5,\"stat.mineBlock.minecraft.tallgrass\":1,\"stat.diveOneCm\":5376}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../MinecraftServer/Lobby/stats/dfeb3c93-3855-4e66-b3d1-25aa25312082.json b/../MinecraftServer/Lobby/stats/dfeb3c93-3855-4e66-b3d1-25aa25312082.json
+--- a/../MinecraftServer/Lobby/stats/dfeb3c93-3855-4e66-b3d1-25aa25312082.json	(revision 05db01e68e2590c714f1b74bec16c4f538cf06c9)
++++ b/../MinecraftServer/Lobby/stats/dfeb3c93-3855-4e66-b3d1-25aa25312082.json	(date 1705150237469)
+@@ -1,1 +1,1 @@
+-{"stat.beaconInteraction":4,"stat.chestOpened":1,"stat.useItem.minecraft.quartz_block":56,"stat.useItem.minecraft.stone":3,"stat.leaveGame":68,"stat.useItem.minecraft.log2":13,"stat.useItem.minecraft.diamond_sword":44,"stat.jump":1125,"stat.swimOneCm":734,"stat.useItem.minecraft.planks":207,"stat.climbOneCm":24002,"stat.fallOneCm":15519,"stat.crouchOneCm":6626,"stat.useItem.minecraft.dirt":2,"achievement.exploreAllBiomes":{"value":0,"progress":["Roofed Forest","River","Forest","Plains"]},"stat.useItem.minecraft.glass":1,"stat.useItem.minecraft.leaves2":20,"stat.useItem.minecraft.vine":7,"stat.useItem.minecraft.dark_oak_fence":19,"stat.damageTaken":6158,"stat.flyOneCm":492855,"stat.damageDealt":15550,"stat.killEntity.Rabbit":2,"stat.useItem.minecraft.wool":5,"stat.timeSinceDeath":1360,"stat.useItem.minecraft.sign":1,"stat.useItem.minecraft.spawn_egg":5,"stat.killEntity.Pig":1,"stat.walkOneCm":421077,"stat.playerKills":5,"stat.useItem.minecraft.leaves":2,"stat.useItem.minecraft.diamond_block":1,"stat.sprintOneCm":180688,"stat.useItem.minecraft.fence":122,"stat.useItem.minecraft.glass_pane":61,"achievement.openInventory":48,"stat.useItem.minecraft.iron_sword":153,"stat.mobKills":9,"stat.deaths":17,"stat.drop":93,"stat.playOneMinute":195423,"stat.killEntity.Sheep":1,"stat.useItem.minecraft.ladder":1,"stat.killEntity.Zombie":5,"stat.mineBlock.minecraft.tallgrass":1,"stat.diveOneCm":5376}
+\ No newline at end of file
++{"stat.beaconInteraction":4,"stat.chestOpened":1,"stat.useItem.minecraft.quartz_block":56,"stat.useItem.minecraft.stone":3,"stat.leaveGame":69,"stat.useItem.minecraft.log2":13,"stat.useItem.minecraft.diamond_sword":44,"stat.jump":1143,"stat.swimOneCm":734,"stat.useItem.minecraft.planks":207,"stat.climbOneCm":24002,"stat.fallOneCm":15519,"stat.crouchOneCm":6626,"stat.useItem.minecraft.dirt":2,"achievement.exploreAllBiomes":{"value":0,"progress":["Roofed Forest","River","Forest","Plains"]},"stat.useItem.minecraft.glass":1,"stat.useItem.minecraft.leaves2":20,"stat.useItem.minecraft.vine":7,"stat.useItem.minecraft.dark_oak_fence":19,"stat.damageTaken":6158,"stat.flyOneCm":503559,"stat.damageDealt":15550,"stat.killEntity.Rabbit":2,"stat.useItem.minecraft.wool":5,"stat.timeSinceDeath":1969,"stat.useItem.minecraft.sign":1,"stat.useItem.minecraft.spawn_egg":5,"stat.killEntity.Pig":1,"stat.walkOneCm":422044,"stat.playerKills":5,"stat.useItem.minecraft.leaves":2,"stat.useItem.minecraft.diamond_block":1,"stat.sprintOneCm":181509,"stat.useItem.minecraft.fence":122,"stat.useItem.minecraft.glass_pane":61,"achievement.openInventory":48,"stat.useItem.minecraft.iron_sword":153,"stat.mobKills":9,"stat.deaths":17,"stat.drop":93,"stat.playOneMinute":196032,"stat.killEntity.Sheep":1,"stat.useItem.minecraft.ladder":1,"stat.killEntity.Zombie":5,"stat.mineBlock.minecraft.tallgrass":1,"stat.diveOneCm":5376}
+\ No newline at end of file
+Index: ../MinecraftServer/logs/latest.log
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[19:51:17] [Server thread/INFO]: Starting minecraft server version 1.8.8\r\n[19:51:17] [Server thread/INFO]: Loading properties\r\n[19:51:17] [Server thread/INFO]: Default game type: SURVIVAL\r\n[19:51:17] [Server thread/INFO]: This server is running CraftBukkit version git-Spigot-21fe707-741a1bd (MC: 1.8.8) (Implementing API version 1.8.8-R0.1-SNAPSHOT)\r\n[19:51:17] [Server thread/INFO]: Debug logging is disabled\r\n[19:51:17] [Server thread/INFO]: Using 4 threads for Netty based IO\r\n[19:51:17] [Server thread/INFO]: Server Ping Player Sample Count: 12\r\n\r\n[19:51:17] [Server thread/INFO]: Generating keypair\r\n[19:51:17] [Server thread/INFO]: Starting Minecraft server on *:25565\r\n[19:51:17] [Server thread/INFO]: Using default channel type\r\n[19:51:17] [Server thread/INFO]: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.\r\n[19:51:17] [Server thread/INFO]: Set PluginClassLoader as parallel capable\r\n[19:51:17] [Server thread/INFO]: [MinecraftPvpPlugin] Loading MinecraftPvpPlugin v1.0-SNAPSHOT\r\n[19:51:17] [Server thread/INFO]: **** Beginning UUID conversion, this may take A LONG time ****\r\n[19:51:17] [Server thread/INFO]: Preparing level \"Lobby\"\r\n[19:51:17] [Server thread/INFO]: -------- World Settings For [Lobby] --------\r\n[19:51:17] [Server thread/INFO]: View Distance: 10\r\n[19:51:17] [Server thread/INFO]: Item Merge Radius: 2.5\r\n[19:51:17] [Server thread/INFO]: Item Despawn Rate: 6000\r\n[19:51:17] [Server thread/INFO]: Arrow Despawn Rate: 1200\r\n[19:51:17] [Server thread/INFO]: Cactus Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Cane Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Melon Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Mushroom Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Pumpkin Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Sapling Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Wheat Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: NetherWart Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Max Entity Collisions: 8\r\n[19:51:17] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617\r\n[19:51:17] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64\r\n[19:51:17] [Server thread/INFO]: Structure Info Saving: true\r\n[19:51:17] [Server thread/INFO]: Max TNT Explosions: 100\r\n[19:51:17] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms\r\n[19:51:17] [Server thread/INFO]: Nerfing mobs spawned from spawners: false\r\n[19:51:17] [Server thread/INFO]: Mob Spawn Range: 4\r\n[19:51:17] [Server thread/INFO]: Sending up to 10 chunks per packet\r\n[19:51:17] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16\r\n[19:51:17] [Server thread/INFO]: Random Lighting Updates: false\r\n[19:51:17] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1\r\n[19:51:17] [Server thread/INFO]: Anti X-Ray: true\r\n[19:51:17] [Server thread/INFO]: \tEngine Mode: 1\r\n[19:51:17] [Server thread/INFO]: \tHidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]\r\n[19:51:17] [Server thread/INFO]: \tReplace Blocks: [1, 5]\r\n[19:51:17] [Server thread/INFO]: Experience Merge Radius: 3.0\r\n[19:51:17] [Server thread/INFO]: Chunks to Grow per Tick: 650\r\n[19:51:17] [Server thread/INFO]: Clear tick list: false\r\n[19:51:17] [Server thread/INFO]: Zombie Aggressive Towards Villager: true\r\n[19:51:17] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true\r\n[19:51:17] [Server thread/INFO]: -------- World Settings For [Lobby_nether] --------\r\n[19:51:17] [Server thread/INFO]: View Distance: 10\r\n[19:51:17] [Server thread/INFO]: Item Merge Radius: 2.5\r\n[19:51:17] [Server thread/INFO]: Item Despawn Rate: 6000\r\n[19:51:17] [Server thread/INFO]: Arrow Despawn Rate: 1200\r\n[19:51:17] [Server thread/INFO]: Cactus Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Cane Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Melon Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Mushroom Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Pumpkin Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Sapling Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Wheat Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: NetherWart Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Max Entity Collisions: 8\r\n[19:51:17] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617\r\n[19:51:17] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64\r\n[19:51:17] [Server thread/INFO]: Structure Info Saving: true\r\n[19:51:17] [Server thread/INFO]: Max TNT Explosions: 100\r\n[19:51:17] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms\r\n[19:51:17] [Server thread/INFO]: Nerfing mobs spawned from spawners: false\r\n[19:51:17] [Server thread/INFO]: Mob Spawn Range: 4\r\n[19:51:17] [Server thread/INFO]: Sending up to 10 chunks per packet\r\n[19:51:17] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16\r\n[19:51:17] [Server thread/INFO]: Random Lighting Updates: false\r\n[19:51:17] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1\r\n[19:51:17] [Server thread/INFO]: Anti X-Ray: true\r\n[19:51:17] [Server thread/INFO]: \tEngine Mode: 1\r\n[19:51:17] [Server thread/INFO]: \tHidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]\r\n[19:51:17] [Server thread/INFO]: \tReplace Blocks: [1, 5]\r\n[19:51:17] [Server thread/INFO]: Experience Merge Radius: 3.0\r\n[19:51:17] [Server thread/INFO]: Chunks to Grow per Tick: 650\r\n[19:51:17] [Server thread/INFO]: Clear tick list: false\r\n[19:51:17] [Server thread/INFO]: Zombie Aggressive Towards Villager: true\r\n[19:51:17] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true\r\n[19:51:17] [Server thread/INFO]: -------- World Settings For [Lobby_the_end] --------\r\n[19:51:17] [Server thread/INFO]: View Distance: 10\r\n[19:51:17] [Server thread/INFO]: Item Merge Radius: 2.5\r\n[19:51:17] [Server thread/INFO]: Item Despawn Rate: 6000\r\n[19:51:17] [Server thread/INFO]: Arrow Despawn Rate: 1200\r\n[19:51:17] [Server thread/INFO]: Cactus Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Cane Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Melon Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Mushroom Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Pumpkin Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Sapling Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Wheat Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: NetherWart Growth Modifier: 100%\r\n[19:51:17] [Server thread/INFO]: Max Entity Collisions: 8\r\n[19:51:17] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617\r\n[19:51:17] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64\r\n[19:51:17] [Server thread/INFO]: Structure Info Saving: true\r\n[19:51:17] [Server thread/INFO]: Max TNT Explosions: 100\r\n[19:51:17] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms\r\n[19:51:17] [Server thread/INFO]: Nerfing mobs spawned from spawners: false\r\n[19:51:17] [Server thread/INFO]: Mob Spawn Range: 4\r\n[19:51:17] [Server thread/INFO]: Sending up to 10 chunks per packet\r\n[19:51:17] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16\r\n[19:51:17] [Server thread/INFO]: Random Lighting Updates: false\r\n[19:51:17] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1\r\n[19:51:17] [Server thread/INFO]: Anti X-Ray: true\r\n[19:51:17] [Server thread/INFO]: \tEngine Mode: 1\r\n[19:51:17] [Server thread/INFO]: \tHidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]\r\n[19:51:17] [Server thread/INFO]: \tReplace Blocks: [1, 5]\r\n[19:51:17] [Server thread/INFO]: Experience Merge Radius: 3.0\r\n[19:51:17] [Server thread/INFO]: Chunks to Grow per Tick: 650\r\n[19:51:17] [Server thread/INFO]: Clear tick list: false\r\n[19:51:17] [Server thread/INFO]: Zombie Aggressive Towards Villager: true\r\n[19:51:17] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true\r\n[19:51:17] [Server thread/INFO]: Preparing start region for level 0 (Seed: -4444818278965242618)\r\n[19:51:17] [Server thread/INFO]: Preparing start region for level 1 (Seed: 7365026278184994534)\r\n[19:51:18] [Server thread/INFO]: Preparing start region for level 2 (Seed: 7365026278184994534)\r\n[19:51:18] [Server thread/INFO]: [MinecraftPvpPlugin] Enabling MinecraftPvpPlugin v1.0-SNAPSHOT\r\n[19:51:18] [Server thread/INFO]: MAGIC PVP v.0.0.0\r\n\r\n[19:51:18] [Server thread/INFO]: -------- World Settings For [PVP0] --------\r\n[19:51:18] [Server thread/INFO]: View Distance: 10\r\n[19:51:18] [Server thread/INFO]: Item Merge Radius: 2.5\r\n[19:51:18] [Server thread/INFO]: Item Despawn Rate: 6000\r\n[19:51:18] [Server thread/INFO]: Arrow Despawn Rate: 1200\r\n[19:51:18] [Server thread/INFO]: Cactus Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Cane Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Melon Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Mushroom Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Pumpkin Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Sapling Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Wheat Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: NetherWart Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Max Entity Collisions: 8\r\n[19:51:18] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617\r\n[19:51:18] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64\r\n[19:51:18] [Server thread/INFO]: Structure Info Saving: true\r\n[19:51:18] [Server thread/INFO]: Max TNT Explosions: 100\r\n[19:51:18] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms\r\n[19:51:18] [Server thread/INFO]: Nerfing mobs spawned from spawners: false\r\n[19:51:18] [Server thread/INFO]: Mob Spawn Range: 4\r\n[19:51:18] [Server thread/INFO]: Sending up to 10 chunks per packet\r\n[19:51:18] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16\r\n[19:51:18] [Server thread/INFO]: Random Lighting Updates: false\r\n[19:51:18] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1\r\n[19:51:18] [Server thread/INFO]: Anti X-Ray: true\r\n[19:51:18] [Server thread/INFO]: \tEngine Mode: 1\r\n[19:51:18] [Server thread/INFO]: \tHidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]\r\n[19:51:18] [Server thread/INFO]: \tReplace Blocks: [1, 5]\r\n[19:51:18] [Server thread/INFO]: Experience Merge Radius: 3.0\r\n[19:51:18] [Server thread/INFO]: Chunks to Grow per Tick: 650\r\n[19:51:18] [Server thread/INFO]: Clear tick list: false\r\n[19:51:18] [Server thread/INFO]: Zombie Aggressive Towards Villager: true\r\n[19:51:18] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true\r\n[19:51:18] [Server thread/INFO]: Preparing start region for level 3 (Seed: -5227594981380140816)\r\n[19:51:18] [Server thread/INFO]: -------- World Settings For [PVP1] --------\r\n[19:51:18] [Server thread/INFO]: View Distance: 10\r\n[19:51:18] [Server thread/INFO]: Item Merge Radius: 2.5\r\n[19:51:18] [Server thread/INFO]: Item Despawn Rate: 6000\r\n[19:51:18] [Server thread/INFO]: Arrow Despawn Rate: 1200\r\n[19:51:18] [Server thread/INFO]: Cactus Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Cane Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Melon Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Mushroom Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Pumpkin Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Sapling Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Wheat Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: NetherWart Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Max Entity Collisions: 8\r\n[19:51:18] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617\r\n[19:51:18] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64\r\n[19:51:18] [Server thread/INFO]: Structure Info Saving: true\r\n[19:51:18] [Server thread/INFO]: Max TNT Explosions: 100\r\n[19:51:18] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms\r\n[19:51:18] [Server thread/INFO]: Nerfing mobs spawned from spawners: false\r\n[19:51:18] [Server thread/INFO]: Mob Spawn Range: 4\r\n[19:51:18] [Server thread/INFO]: Sending up to 10 chunks per packet\r\n[19:51:18] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16\r\n[19:51:18] [Server thread/INFO]: Random Lighting Updates: false\r\n[19:51:18] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1\r\n[19:51:18] [Server thread/INFO]: Anti X-Ray: true\r\n[19:51:18] [Server thread/INFO]: \tEngine Mode: 1\r\n[19:51:18] [Server thread/INFO]: \tHidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]\r\n[19:51:18] [Server thread/INFO]: \tReplace Blocks: [1, 5]\r\n[19:51:18] [Server thread/INFO]: Experience Merge Radius: 3.0\r\n[19:51:18] [Server thread/INFO]: Chunks to Grow per Tick: 650\r\n[19:51:18] [Server thread/INFO]: Clear tick list: false\r\n[19:51:18] [Server thread/INFO]: Zombie Aggressive Towards Villager: true\r\n[19:51:18] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true\r\n[19:51:18] [Server thread/INFO]: Preparing start region for level 4 (Seed: -5227594981380140816)\r\n[19:51:18] [Server thread/INFO]: -------- World Settings For [PVP2] --------\r\n[19:51:18] [Server thread/INFO]: View Distance: 10\r\n[19:51:18] [Server thread/INFO]: Item Merge Radius: 2.5\r\n[19:51:18] [Server thread/INFO]: Item Despawn Rate: 6000\r\n[19:51:18] [Server thread/INFO]: Arrow Despawn Rate: 1200\r\n[19:51:18] [Server thread/INFO]: Cactus Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Cane Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Melon Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Mushroom Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Pumpkin Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Sapling Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Wheat Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: NetherWart Growth Modifier: 100%\r\n[19:51:18] [Server thread/INFO]: Max Entity Collisions: 8\r\n[19:51:18] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617\r\n[19:51:18] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64\r\n[19:51:18] [Server thread/INFO]: Structure Info Saving: true\r\n[19:51:18] [Server thread/INFO]: Max TNT Explosions: 100\r\n[19:51:18] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms\r\n[19:51:18] [Server thread/INFO]: Nerfing mobs spawned from spawners: false\r\n[19:51:18] [Server thread/INFO]: Mob Spawn Range: 4\r\n[19:51:18] [Server thread/INFO]: Sending up to 10 chunks per packet\r\n[19:51:18] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16\r\n[19:51:18] [Server thread/INFO]: Random Lighting Updates: false\r\n[19:51:18] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1\r\n[19:51:18] [Server thread/INFO]: Anti X-Ray: true\r\n[19:51:18] [Server thread/INFO]: \tEngine Mode: 1\r\n[19:51:18] [Server thread/INFO]: \tHidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]\r\n[19:51:18] [Server thread/INFO]: \tReplace Blocks: [1, 5]\r\n[19:51:18] [Server thread/INFO]: Experience Merge Radius: 3.0\r\n[19:51:18] [Server thread/INFO]: Chunks to Grow per Tick: 650\r\n[19:51:18] [Server thread/INFO]: Clear tick list: false\r\n[19:51:18] [Server thread/INFO]: Zombie Aggressive Towards Villager: true\r\n[19:51:18] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true\r\n[19:51:18] [Server thread/INFO]: Preparing start region for level 5 (Seed: -5227594981380140816)\r\n[19:51:18] [Server thread/INFO]: [MinecraftPvpPlugin] Lobby world loaded successfully.\r\n[19:51:18] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: Lobby\r\n[19:51:18] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: Lobby_nether\r\n[19:51:18] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: Lobby_the_end\r\n[19:51:18] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: PVP0\r\n[19:51:18] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: PVP1\r\n[19:51:18] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: PVP2\r\n[19:51:18] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it\r\n[19:51:18] [Server thread/INFO]: Done (1.491s)! For help, type \"help\" or \"?\"\r\n[19:51:22] [User Authenticator #1/INFO]: UUID of player ELEPOT is 7bddcbf5-cb89-4cb9-ac25-837980bba3df\r\n[19:51:22] [Server thread/INFO]: ELEPOT join the server\r\n[19:51:22] [Server thread/INFO]: To Lobby ELEPOT\r\n\r\n[19:51:22] [Server thread/INFO]: ELEPOT[/127.0.0.1:55064] logged in with entity id 405 at ([Lobby]110.5, 74.0, 95.5)\r\n[19:51:33] [User Authenticator #2/INFO]: UUID of player blackangle is ab9d51e7-bdfe-40dd-a930-a8a551af9325\r\n[19:51:33] [Server thread/INFO]: blackangle join the server\r\n[19:51:33] [Server thread/INFO]: To Lobby blackangle\r\n\r\n[19:51:33] [Server thread/INFO]: blackangle[/[0:0:0:0:0:0:0:1]:55070] logged in with entity id 424 at ([Lobby]110.5, 74.0, 95.5)\r\n[19:51:52] [Server thread/INFO]: To Lobby ELEPOT\r\n\r\n[19:51:52] [Server thread/INFO]: To Lobby blackangle\r\n\r\n[19:51:52] [Server thread/INFO]: blackangle was slain by ELEPOT\r\n[19:52:18] [Server thread/INFO]: To Lobby ELEPOT\r\n\r\n[19:52:18] [Server thread/INFO]: To Lobby blackangle\r\n\r\n[19:52:18] [Server thread/INFO]: ELEPOT was slain by blackangle\r\n[19:52:51] [Server thread/INFO]: To Lobby blackangle\r\n\r\n[19:52:51] [Server thread/INFO]: blackangle fell from a high place\r\n[19:53:11] [User Authenticator #3/INFO]: UUID of player MAIL__TW is dfeb3c93-3855-4e66-b3d1-25aa25312082\r\n[19:53:11] [Server thread/INFO]: MAIL__TW join the server\r\n[19:53:11] [Server thread/INFO]: To Lobby MAIL__TW\r\n\r\n[19:53:11] [Server thread/INFO]: MAIL__TW[/[0:0:0:0:0:0:0:1]:55094] logged in with entity id 1080 at ([Lobby]110.5, 74.0, 95.5)\r\n[19:53:27] [Async Chat Thread - #0/INFO]: <MAIL__TW> hI\u001B[m\r\n\r\n[19:53:28] [Server thread/INFO]: To Lobby blackangle\r\n\r\n[19:53:28] [Server thread/INFO]: To Lobby ELEPOT\r\n\r\n[19:53:28] [Server thread/INFO]: ELEPOT was slain by blackangle\r\n[19:53:35] [Async Chat Thread - #0/INFO]: <ELEPOT> hi\u001B[m\r\n\r\n[19:53:39] [Async Chat Thread - #0/INFO]: <ELEPOT> everything works now\u001B[m\r\n\r\n[19:53:51] [Server thread/INFO]: To Lobby blackangle\r\n\r\n[19:53:51] [Server thread/INFO]: To Lobby MAIL__TW\r\n\r\n[19:53:51] [Server thread/INFO]: blackangle fell from a high place\r\n[19:53:54] [Timer-4/WARN]: Exception in thread \"Timer-4\" \r\n[19:53:54] [Timer-4/WARN]: java.lang.IllegalStateException: Asynchronous player tracker clear!\r\n\r\n[19:53:54] [Timer-4/WARN]: \tat org.spigotmc.AsyncCatcher.catchOp(AsyncCatcher.java:14)\r\n\r\n[19:53:54] [Timer-4/WARN]: \tat net.minecraft.server.v1_8_R3.EntityTrackerEntry.clear(EntityTrackerEntry.java:544)\r\n\r\n[19:53:54] [Timer-4/WARN]: \tat net.minecraft.server.v1_8_R3.EntityTracker.untrackPlayer(EntityTracker.java:237)\r\n\r\n[19:53:54] [Timer-4/WARN]: \tat net.minecraft.server.v1_8_R3.PlayerList.moveToWorld(PlayerList.java:510)\r\n\r\n[19:53:54] [Timer-4/WARN]: \tat org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer.teleport(CraftPlayer.java:471)\r\n\r\n[19:53:54] [Timer-4/WARN]: \tat org.bukkit.craftbukkit.v1_8_R3.entity.CraftEntity.teleport(CraftEntity.java:226)\r\n\r\n[19:53:54] [Timer-4/WARN]: \tat me.minecraft.minecraftpvpplugin.PvpPlace$1.run(PvpPlace.java:59)\r\n\r\n[19:53:54] [Timer-4/WARN]: \tat java.base/java.util.TimerThread.mainLoop(Timer.java:566)\r\n\r\n[19:53:54] [Timer-4/WARN]: \tat java.base/java.util.TimerThread.run(Timer.java:516)\r\n\r\n[19:53:57] [Async Chat Thread - #0/INFO]: <ELEPOT> MAIL enter PVP\u001B[m\r\n\r\n[19:54:06] [Server thread/INFO]: ELEPOT issued server command: /l\r\n[19:54:06] [Server thread/INFO]: To Lobby ELEPOT\r\n\r\n[19:54:06] [Server thread/INFO]: To Lobby blackangle\r\n\r\n[19:54:06] [Server thread/INFO]: To Lobby ELEPOT\r\n\r\n[19:54:07] [Timer-5/WARN]: Exception in thread \"Timer-5\" \r\n[19:54:07] [Timer-5/WARN]: java.lang.IllegalStateException: Asynchronous player tracker clear!\r\n\r\n[19:54:07] [Timer-5/WARN]: \tat org.spigotmc.AsyncCatcher.catchOp(AsyncCatcher.java:14)\r\n\r\n[19:54:07] [Timer-5/WARN]: \tat net.minecraft.server.v1_8_R3.EntityTrackerEntry.clear(EntityTrackerEntry.java:544)\r\n\r\n[19:54:07] [Timer-5/WARN]: \tat net.minecraft.server.v1_8_R3.EntityTracker.untrackPlayer(EntityTracker.java:237)\r\n\r\n[19:54:07] [Timer-5/WARN]: \tat net.minecraft.server.v1_8_R3.PlayerList.moveToWorld(PlayerList.java:510)\r\n\r\n[19:54:07] [Timer-5/WARN]: \tat org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer.teleport(CraftPlayer.java:471)\r\n\r\n[19:54:07] [Timer-5/WARN]: \tat org.bukkit.craftbukkit.v1_8_R3.entity.CraftEntity.teleport(CraftEntity.java:226)\r\n\r\n[19:54:07] [Timer-5/WARN]: \tat me.minecraft.minecraftpvpplugin.PvpPlace$1.run(PvpPlace.java:59)\r\n\r\n[19:54:07] [Timer-5/WARN]: \tat java.base/java.util.TimerThread.mainLoop(Timer.java:566)\r\n\r\n[19:54:07] [Timer-5/WARN]: \tat java.base/java.util.TimerThread.run(Timer.java:516)\r\n\r\n[19:54:13] [Server thread/INFO]: MAIL__TW issued server command: /l\r\n[19:54:13] [Server thread/INFO]: To Lobby MAIL__TW\r\n\r\n[19:54:13] [Server thread/INFO]: To Lobby blackangle\r\n\r\n[19:54:13] [Server thread/INFO]: To Lobby MAIL__TW\r\n\r\n[19:54:26] [Server thread/INFO]: ELEPOT issued server command: /l\r\n[19:54:26] [Server thread/INFO]: To Lobby blackangle\r\n\r\n[19:54:26] [Server thread/INFO]: To Lobby ELEPOT\r\n\r\n[19:54:26] [Server thread/INFO]: To Lobby ELEPOT\r\n\r\n[19:54:27] [Timer-7/WARN]: Exception in thread \"Timer-7\" \r\n[19:54:27] [Timer-7/WARN]: java.lang.IllegalStateException: Asynchronous player tracker clear!\r\n\r\n[19:54:27] [Timer-7/WARN]: \tat org.spigotmc.AsyncCatcher.catchOp(AsyncCatcher.java:14)\r\n\r\n[19:54:27] [Timer-7/WARN]: \tat net.minecraft.server.v1_8_R3.EntityTrackerEntry.clear(EntityTrackerEntry.java:544)\r\n\r\n[19:54:27] [Timer-7/WARN]: \tat net.minecraft.server.v1_8_R3.EntityTracker.untrackPlayer(EntityTracker.java:237)\r\n\r\n[19:54:27] [Timer-7/WARN]: \tat net.minecraft.server.v1_8_R3.PlayerList.moveToWorld(PlayerList.java:510)\r\n\r\n[19:54:27] [Timer-7/WARN]: \tat org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer.teleport(CraftPlayer.java:471)\r\n\r\n[19:54:27] [Timer-7/WARN]: \tat org.bukkit.craftbukkit.v1_8_R3.entity.CraftEntity.teleport(CraftEntity.java:226)\r\n\r\n[19:54:27] [Timer-7/WARN]: \tat me.minecraft.minecraftpvpplugin.PvpPlace$1.run(PvpPlace.java:59)\r\n\r\n[19:54:27] [Timer-7/WARN]: \tat java.base/java.util.TimerThread.mainLoop(Timer.java:566)\r\n\r\n[19:54:27] [Timer-7/WARN]: \tat java.base/java.util.TimerThread.run(Timer.java:516)\r\n\r\n[19:54:42] [Async Chat Thread - #0/INFO]: <ELEPOT> why?\u001B[m\r\n\r\n[19:54:47] [Async Chat Thread - #0/INFO]: <MAIL__TW> IDK\u001B[m\r\n\r\n[19:54:49] [Server thread/INFO]: To Lobby MAIL__TW\r\n\r\n[19:54:49] [Server thread/INFO]: To Lobby blackangle\r\n\r\n[19:54:49] [Server thread/INFO]: blackangle fell from a high place\r\n[19:54:50] [Async Chat Thread - #0/INFO]: <ELEPOT> same place\u001B[m\r\n\r\n[19:54:54] [Async Chat Thread - #0/INFO]: <ELEPOT> XD\u001B[m\r\n\r\n[19:55:06] [Async Chat Thread - #0/INFO]: <MAIL__TW> i think that is PVP1\u001B[m\r\n\r\n[19:55:19] [Async Chat Thread - #0/INFO]: <MAIL__TW> and it has a weard bug\u001B[m\r\n\r\n[19:55:25] [Timer-8/WARN]: Exception in thread \"Timer-8\" \r\n[19:55:25] [Timer-8/WARN]: java.lang.IllegalStateException: Asynchronous player tracker clear!\r\n\r\n[19:55:25] [Timer-8/WARN]: \tat org.spigotmc.AsyncCatcher.catchOp(AsyncCatcher.java:14)\r\n\r\n[19:55:25] [Timer-8/WARN]: \tat net.minecraft.server.v1_8_R3.EntityTrackerEntry.clear(EntityTrackerEntry.java:544)\r\n\r\n[19:55:25] [Timer-8/WARN]: \tat net.minecraft.server.v1_8_R3.EntityTracker.untrackPlayer(EntityTracker.java:237)\r\n\r\n[19:55:25] [Timer-8/WARN]: \tat net.minecraft.server.v1_8_R3.PlayerList.moveToWorld(PlayerList.java:510)\r\n\r\n[19:55:25] [Timer-8/WARN]: \tat org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer.teleport(CraftPlayer.java:471)\r\n\r\n[19:55:25] [Timer-8/WARN]: \tat org.bukkit.craftbukkit.v1_8_R3.entity.CraftEntity.teleport(CraftEntity.java:226)\r\n\r\n[19:55:25] [Timer-8/WARN]: \tat me.minecraft.minecraftpvpplugin.PvpPlace$1.run(PvpPlace.java:59)\r\n\r\n[19:55:25] [Timer-8/WARN]: \tat java.base/java.util.TimerThread.mainLoop(Timer.java:566)\r\n\r\n[19:55:25] [Timer-8/WARN]: \tat java.base/java.util.TimerThread.run(Timer.java:516)\r\n\r\n[19:55:41] [Server thread/INFO]: To Lobby ELEPOT\r\n\r\n[19:55:41] [Server thread/INFO]: To Lobby MAIL__TW\r\n\r\n[19:55:41] [Server thread/INFO]: MAIL__TW fell from a high place\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../MinecraftServer/logs/latest.log b/../MinecraftServer/logs/latest.log
+--- a/../MinecraftServer/logs/latest.log	(revision 05db01e68e2590c714f1b74bec16c4f538cf06c9)
++++ b/../MinecraftServer/logs/latest.log	(date 1705150775860)
+@@ -1,411 +1,265 @@
+-[19:51:17] [Server thread/INFO]: Starting minecraft server version 1.8.8
+-[19:51:17] [Server thread/INFO]: Loading properties
+-[19:51:17] [Server thread/INFO]: Default game type: SURVIVAL
+-[19:51:17] [Server thread/INFO]: This server is running CraftBukkit version git-Spigot-21fe707-741a1bd (MC: 1.8.8) (Implementing API version 1.8.8-R0.1-SNAPSHOT)
+-[19:51:17] [Server thread/INFO]: Debug logging is disabled
+-[19:51:17] [Server thread/INFO]: Using 4 threads for Netty based IO
+-[19:51:17] [Server thread/INFO]: Server Ping Player Sample Count: 12
+-
+-[19:51:17] [Server thread/INFO]: Generating keypair
+-[19:51:17] [Server thread/INFO]: Starting Minecraft server on *:25565
+-[19:51:17] [Server thread/INFO]: Using default channel type
+-[19:51:17] [Server thread/INFO]: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+-[19:51:17] [Server thread/INFO]: Set PluginClassLoader as parallel capable
+-[19:51:17] [Server thread/INFO]: [MinecraftPvpPlugin] Loading MinecraftPvpPlugin v1.0-SNAPSHOT
+-[19:51:17] [Server thread/INFO]: **** Beginning UUID conversion, this may take A LONG time ****
+-[19:51:17] [Server thread/INFO]: Preparing level "Lobby"
+-[19:51:17] [Server thread/INFO]: -------- World Settings For [Lobby] --------
+-[19:51:17] [Server thread/INFO]: View Distance: 10
+-[19:51:17] [Server thread/INFO]: Item Merge Radius: 2.5
+-[19:51:17] [Server thread/INFO]: Item Despawn Rate: 6000
+-[19:51:17] [Server thread/INFO]: Arrow Despawn Rate: 1200
+-[19:51:17] [Server thread/INFO]: Cactus Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Cane Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Melon Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Sapling Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Wheat Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Max Entity Collisions: 8
+-[19:51:17] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+-[19:51:17] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+-[19:51:17] [Server thread/INFO]: Structure Info Saving: true
+-[19:51:17] [Server thread/INFO]: Max TNT Explosions: 100
+-[19:51:17] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+-[19:51:17] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+-[19:51:17] [Server thread/INFO]: Mob Spawn Range: 4
+-[19:51:17] [Server thread/INFO]: Sending up to 10 chunks per packet
+-[19:51:17] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+-[19:51:17] [Server thread/INFO]: Random Lighting Updates: false
+-[19:51:17] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+-[19:51:17] [Server thread/INFO]: Anti X-Ray: true
+-[19:51:17] [Server thread/INFO]: 	Engine Mode: 1
+-[19:51:17] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+-[19:51:17] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+-[19:51:17] [Server thread/INFO]: Experience Merge Radius: 3.0
+-[19:51:17] [Server thread/INFO]: Chunks to Grow per Tick: 650
+-[19:51:17] [Server thread/INFO]: Clear tick list: false
+-[19:51:17] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+-[19:51:17] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+-[19:51:17] [Server thread/INFO]: -------- World Settings For [Lobby_nether] --------
+-[19:51:17] [Server thread/INFO]: View Distance: 10
+-[19:51:17] [Server thread/INFO]: Item Merge Radius: 2.5
+-[19:51:17] [Server thread/INFO]: Item Despawn Rate: 6000
+-[19:51:17] [Server thread/INFO]: Arrow Despawn Rate: 1200
+-[19:51:17] [Server thread/INFO]: Cactus Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Cane Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Melon Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Sapling Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Wheat Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Max Entity Collisions: 8
+-[19:51:17] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+-[19:51:17] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+-[19:51:17] [Server thread/INFO]: Structure Info Saving: true
+-[19:51:17] [Server thread/INFO]: Max TNT Explosions: 100
+-[19:51:17] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+-[19:51:17] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+-[19:51:17] [Server thread/INFO]: Mob Spawn Range: 4
+-[19:51:17] [Server thread/INFO]: Sending up to 10 chunks per packet
+-[19:51:17] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+-[19:51:17] [Server thread/INFO]: Random Lighting Updates: false
+-[19:51:17] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+-[19:51:17] [Server thread/INFO]: Anti X-Ray: true
+-[19:51:17] [Server thread/INFO]: 	Engine Mode: 1
+-[19:51:17] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+-[19:51:17] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+-[19:51:17] [Server thread/INFO]: Experience Merge Radius: 3.0
+-[19:51:17] [Server thread/INFO]: Chunks to Grow per Tick: 650
+-[19:51:17] [Server thread/INFO]: Clear tick list: false
+-[19:51:17] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+-[19:51:17] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+-[19:51:17] [Server thread/INFO]: -------- World Settings For [Lobby_the_end] --------
+-[19:51:17] [Server thread/INFO]: View Distance: 10
+-[19:51:17] [Server thread/INFO]: Item Merge Radius: 2.5
+-[19:51:17] [Server thread/INFO]: Item Despawn Rate: 6000
+-[19:51:17] [Server thread/INFO]: Arrow Despawn Rate: 1200
+-[19:51:17] [Server thread/INFO]: Cactus Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Cane Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Melon Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Sapling Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Wheat Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+-[19:51:17] [Server thread/INFO]: Max Entity Collisions: 8
+-[19:51:17] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+-[19:51:17] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+-[19:51:17] [Server thread/INFO]: Structure Info Saving: true
+-[19:51:17] [Server thread/INFO]: Max TNT Explosions: 100
+-[19:51:17] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+-[19:51:17] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+-[19:51:17] [Server thread/INFO]: Mob Spawn Range: 4
+-[19:51:17] [Server thread/INFO]: Sending up to 10 chunks per packet
+-[19:51:17] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+-[19:51:17] [Server thread/INFO]: Random Lighting Updates: false
+-[19:51:17] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+-[19:51:17] [Server thread/INFO]: Anti X-Ray: true
+-[19:51:17] [Server thread/INFO]: 	Engine Mode: 1
+-[19:51:17] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+-[19:51:17] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+-[19:51:17] [Server thread/INFO]: Experience Merge Radius: 3.0
+-[19:51:17] [Server thread/INFO]: Chunks to Grow per Tick: 650
+-[19:51:17] [Server thread/INFO]: Clear tick list: false
+-[19:51:17] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+-[19:51:17] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+-[19:51:17] [Server thread/INFO]: Preparing start region for level 0 (Seed: -4444818278965242618)
+-[19:51:17] [Server thread/INFO]: Preparing start region for level 1 (Seed: 7365026278184994534)
+-[19:51:18] [Server thread/INFO]: Preparing start region for level 2 (Seed: 7365026278184994534)
+-[19:51:18] [Server thread/INFO]: [MinecraftPvpPlugin] Enabling MinecraftPvpPlugin v1.0-SNAPSHOT
+-[19:51:18] [Server thread/INFO]: MAGIC PVP v.0.0.0
+-
+-[19:51:18] [Server thread/INFO]: -------- World Settings For [PVP0] --------
+-[19:51:18] [Server thread/INFO]: View Distance: 10
+-[19:51:18] [Server thread/INFO]: Item Merge Radius: 2.5
+-[19:51:18] [Server thread/INFO]: Item Despawn Rate: 6000
+-[19:51:18] [Server thread/INFO]: Arrow Despawn Rate: 1200
+-[19:51:18] [Server thread/INFO]: Cactus Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Cane Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Melon Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Sapling Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Wheat Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Max Entity Collisions: 8
+-[19:51:18] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+-[19:51:18] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+-[19:51:18] [Server thread/INFO]: Structure Info Saving: true
+-[19:51:18] [Server thread/INFO]: Max TNT Explosions: 100
+-[19:51:18] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+-[19:51:18] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+-[19:51:18] [Server thread/INFO]: Mob Spawn Range: 4
+-[19:51:18] [Server thread/INFO]: Sending up to 10 chunks per packet
+-[19:51:18] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+-[19:51:18] [Server thread/INFO]: Random Lighting Updates: false
+-[19:51:18] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+-[19:51:18] [Server thread/INFO]: Anti X-Ray: true
+-[19:51:18] [Server thread/INFO]: 	Engine Mode: 1
+-[19:51:18] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+-[19:51:18] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+-[19:51:18] [Server thread/INFO]: Experience Merge Radius: 3.0
+-[19:51:18] [Server thread/INFO]: Chunks to Grow per Tick: 650
+-[19:51:18] [Server thread/INFO]: Clear tick list: false
+-[19:51:18] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+-[19:51:18] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+-[19:51:18] [Server thread/INFO]: Preparing start region for level 3 (Seed: -5227594981380140816)
+-[19:51:18] [Server thread/INFO]: -------- World Settings For [PVP1] --------
+-[19:51:18] [Server thread/INFO]: View Distance: 10
+-[19:51:18] [Server thread/INFO]: Item Merge Radius: 2.5
+-[19:51:18] [Server thread/INFO]: Item Despawn Rate: 6000
+-[19:51:18] [Server thread/INFO]: Arrow Despawn Rate: 1200
+-[19:51:18] [Server thread/INFO]: Cactus Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Cane Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Melon Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Sapling Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Wheat Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Max Entity Collisions: 8
+-[19:51:18] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+-[19:51:18] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+-[19:51:18] [Server thread/INFO]: Structure Info Saving: true
+-[19:51:18] [Server thread/INFO]: Max TNT Explosions: 100
+-[19:51:18] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+-[19:51:18] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+-[19:51:18] [Server thread/INFO]: Mob Spawn Range: 4
+-[19:51:18] [Server thread/INFO]: Sending up to 10 chunks per packet
+-[19:51:18] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+-[19:51:18] [Server thread/INFO]: Random Lighting Updates: false
+-[19:51:18] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+-[19:51:18] [Server thread/INFO]: Anti X-Ray: true
+-[19:51:18] [Server thread/INFO]: 	Engine Mode: 1
+-[19:51:18] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+-[19:51:18] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+-[19:51:18] [Server thread/INFO]: Experience Merge Radius: 3.0
+-[19:51:18] [Server thread/INFO]: Chunks to Grow per Tick: 650
+-[19:51:18] [Server thread/INFO]: Clear tick list: false
+-[19:51:18] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+-[19:51:18] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+-[19:51:18] [Server thread/INFO]: Preparing start region for level 4 (Seed: -5227594981380140816)
+-[19:51:18] [Server thread/INFO]: -------- World Settings For [PVP2] --------
+-[19:51:18] [Server thread/INFO]: View Distance: 10
+-[19:51:18] [Server thread/INFO]: Item Merge Radius: 2.5
+-[19:51:18] [Server thread/INFO]: Item Despawn Rate: 6000
+-[19:51:18] [Server thread/INFO]: Arrow Despawn Rate: 1200
+-[19:51:18] [Server thread/INFO]: Cactus Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Cane Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Melon Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Sapling Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Wheat Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+-[19:51:18] [Server thread/INFO]: Max Entity Collisions: 8
+-[19:51:18] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+-[19:51:18] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+-[19:51:18] [Server thread/INFO]: Structure Info Saving: true
+-[19:51:18] [Server thread/INFO]: Max TNT Explosions: 100
+-[19:51:18] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+-[19:51:18] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+-[19:51:18] [Server thread/INFO]: Mob Spawn Range: 4
+-[19:51:18] [Server thread/INFO]: Sending up to 10 chunks per packet
+-[19:51:18] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+-[19:51:18] [Server thread/INFO]: Random Lighting Updates: false
+-[19:51:18] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+-[19:51:18] [Server thread/INFO]: Anti X-Ray: true
+-[19:51:18] [Server thread/INFO]: 	Engine Mode: 1
+-[19:51:18] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+-[19:51:18] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+-[19:51:18] [Server thread/INFO]: Experience Merge Radius: 3.0
+-[19:51:18] [Server thread/INFO]: Chunks to Grow per Tick: 650
+-[19:51:18] [Server thread/INFO]: Clear tick list: false
+-[19:51:18] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+-[19:51:18] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+-[19:51:18] [Server thread/INFO]: Preparing start region for level 5 (Seed: -5227594981380140816)
+-[19:51:18] [Server thread/INFO]: [MinecraftPvpPlugin] Lobby world loaded successfully.
+-[19:51:18] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: Lobby
+-[19:51:18] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: Lobby_nether
+-[19:51:18] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: Lobby_the_end
+-[19:51:18] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: PVP0
+-[19:51:18] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: PVP1
+-[19:51:18] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: PVP2
+-[19:51:18] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+-[19:51:18] [Server thread/INFO]: Done (1.491s)! For help, type "help" or "?"
+-[19:51:22] [User Authenticator #1/INFO]: UUID of player ELEPOT is 7bddcbf5-cb89-4cb9-ac25-837980bba3df
+-[19:51:22] [Server thread/INFO]: ELEPOT join the server
+-[19:51:22] [Server thread/INFO]: To Lobby ELEPOT
+-
+-[19:51:22] [Server thread/INFO]: ELEPOT[/127.0.0.1:55064] logged in with entity id 405 at ([Lobby]110.5, 74.0, 95.5)
+-[19:51:33] [User Authenticator #2/INFO]: UUID of player blackangle is ab9d51e7-bdfe-40dd-a930-a8a551af9325
+-[19:51:33] [Server thread/INFO]: blackangle join the server
+-[19:51:33] [Server thread/INFO]: To Lobby blackangle
+-
+-[19:51:33] [Server thread/INFO]: blackangle[/[0:0:0:0:0:0:0:1]:55070] logged in with entity id 424 at ([Lobby]110.5, 74.0, 95.5)
+-[19:51:52] [Server thread/INFO]: To Lobby ELEPOT
+-
+-[19:51:52] [Server thread/INFO]: To Lobby blackangle
+-
+-[19:51:52] [Server thread/INFO]: blackangle was slain by ELEPOT
+-[19:52:18] [Server thread/INFO]: To Lobby ELEPOT
+-
+-[19:52:18] [Server thread/INFO]: To Lobby blackangle
+-
+-[19:52:18] [Server thread/INFO]: ELEPOT was slain by blackangle
+-[19:52:51] [Server thread/INFO]: To Lobby blackangle
+-
+-[19:52:51] [Server thread/INFO]: blackangle fell from a high place
+-[19:53:11] [User Authenticator #3/INFO]: UUID of player MAIL__TW is dfeb3c93-3855-4e66-b3d1-25aa25312082
+-[19:53:11] [Server thread/INFO]: MAIL__TW join the server
+-[19:53:11] [Server thread/INFO]: To Lobby MAIL__TW
+-
+-[19:53:11] [Server thread/INFO]: MAIL__TW[/[0:0:0:0:0:0:0:1]:55094] logged in with entity id 1080 at ([Lobby]110.5, 74.0, 95.5)
+-[19:53:27] [Async Chat Thread - #0/INFO]: <MAIL__TW> hI[m
+-
+-[19:53:28] [Server thread/INFO]: To Lobby blackangle
+-
+-[19:53:28] [Server thread/INFO]: To Lobby ELEPOT
+-
+-[19:53:28] [Server thread/INFO]: ELEPOT was slain by blackangle
+-[19:53:35] [Async Chat Thread - #0/INFO]: <ELEPOT> hi[m
+-
+-[19:53:39] [Async Chat Thread - #0/INFO]: <ELEPOT> everything works now[m
+-
+-[19:53:51] [Server thread/INFO]: To Lobby blackangle
+-
+-[19:53:51] [Server thread/INFO]: To Lobby MAIL__TW
+-
+-[19:53:51] [Server thread/INFO]: blackangle fell from a high place
+-[19:53:54] [Timer-4/WARN]: Exception in thread "Timer-4" 
+-[19:53:54] [Timer-4/WARN]: java.lang.IllegalStateException: Asynchronous player tracker clear!
+-
+-[19:53:54] [Timer-4/WARN]: 	at org.spigotmc.AsyncCatcher.catchOp(AsyncCatcher.java:14)
+-
+-[19:53:54] [Timer-4/WARN]: 	at net.minecraft.server.v1_8_R3.EntityTrackerEntry.clear(EntityTrackerEntry.java:544)
+-
+-[19:53:54] [Timer-4/WARN]: 	at net.minecraft.server.v1_8_R3.EntityTracker.untrackPlayer(EntityTracker.java:237)
+-
+-[19:53:54] [Timer-4/WARN]: 	at net.minecraft.server.v1_8_R3.PlayerList.moveToWorld(PlayerList.java:510)
+-
+-[19:53:54] [Timer-4/WARN]: 	at org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer.teleport(CraftPlayer.java:471)
+-
+-[19:53:54] [Timer-4/WARN]: 	at org.bukkit.craftbukkit.v1_8_R3.entity.CraftEntity.teleport(CraftEntity.java:226)
+-
+-[19:53:54] [Timer-4/WARN]: 	at me.minecraft.minecraftpvpplugin.PvpPlace$1.run(PvpPlace.java:59)
+-
+-[19:53:54] [Timer-4/WARN]: 	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+-
+-[19:53:54] [Timer-4/WARN]: 	at java.base/java.util.TimerThread.run(Timer.java:516)
+-
+-[19:53:57] [Async Chat Thread - #0/INFO]: <ELEPOT> MAIL enter PVP[m
+-
+-[19:54:06] [Server thread/INFO]: ELEPOT issued server command: /l
+-[19:54:06] [Server thread/INFO]: To Lobby ELEPOT
++[20:49:54] [Server thread/INFO]: Starting minecraft server version 1.8.8
++[20:49:54] [Server thread/INFO]: Loading properties
++[20:49:54] [Server thread/INFO]: Default game type: SURVIVAL
++[20:49:54] [Server thread/INFO]: This server is running CraftBukkit version git-Spigot-21fe707-741a1bd (MC: 1.8.8) (Implementing API version 1.8.8-R0.1-SNAPSHOT)
++[20:49:54] [Server thread/INFO]: Debug logging is disabled
++[20:49:54] [Server thread/INFO]: Server Ping Player Sample Count: 12
+ 
+-[19:54:06] [Server thread/INFO]: To Lobby blackangle
++[20:49:54] [Server thread/INFO]: Using 4 threads for Netty based IO
++[20:49:54] [Server thread/INFO]: Generating keypair
++[20:49:54] [Server thread/INFO]: Starting Minecraft server on *:25565
++[20:49:54] [Server thread/INFO]: Using default channel type
++[20:49:54] [Server thread/INFO]: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
++[20:49:55] [Server thread/INFO]: Set PluginClassLoader as parallel capable
++[20:49:55] [Server thread/INFO]: [MinecraftPvpPlugin] Loading MinecraftPvpPlugin v1.0-SNAPSHOT
++[20:49:55] [Server thread/INFO]: **** Beginning UUID conversion, this may take A LONG time ****
++[20:49:55] [Server thread/INFO]: Preparing level "Lobby"
++[20:49:55] [Server thread/INFO]: -------- World Settings For [Lobby] --------
++[20:49:55] [Server thread/INFO]: Arrow Despawn Rate: 1200
++[20:49:55] [Server thread/INFO]: Chunks to Grow per Tick: 650
++[20:49:55] [Server thread/INFO]: Clear tick list: false
++[20:49:55] [Server thread/INFO]: Item Merge Radius: 2.5
++[20:49:55] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
++[20:49:55] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
++[20:49:55] [Server thread/INFO]: Experience Merge Radius: 3.0
++[20:49:55] [Server thread/INFO]: Item Despawn Rate: 6000
++[20:49:55] [Server thread/INFO]: View Distance: 10
++[20:49:55] [Server thread/INFO]: Anti X-Ray: true
++[20:49:55] [Server thread/INFO]: 	Engine Mode: 1
++[20:49:55] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
++[20:49:55] [Server thread/INFO]: 	Replace Blocks: [1, 5]
++[20:49:55] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
++[20:49:55] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
++[20:49:55] [Server thread/INFO]: Structure Info Saving: true
++[20:49:55] [Server thread/INFO]: Sending up to 10 chunks per packet
++[20:49:55] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
++[20:49:55] [Server thread/INFO]: Max TNT Explosions: 100
++[20:49:55] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
++[20:49:55] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
++[20:49:55] [Server thread/INFO]: Mob Spawn Range: 4
++[20:49:55] [Server thread/INFO]: Cactus Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Cane Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Melon Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Mushroom Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Sapling Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Wheat Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: NetherWart Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
++[20:49:55] [Server thread/INFO]: Random Lighting Updates: false
++[20:49:55] [Server thread/INFO]: Max Entity Collisions: 8
++[20:49:55] [Server thread/INFO]: -------- World Settings For [Lobby_nether] --------
++[20:49:55] [Server thread/INFO]: Arrow Despawn Rate: 1200
++[20:49:55] [Server thread/INFO]: Chunks to Grow per Tick: 650
++[20:49:55] [Server thread/INFO]: Clear tick list: false
++[20:49:55] [Server thread/INFO]: Item Merge Radius: 2.5
++[20:49:55] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
++[20:49:55] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
++[20:49:55] [Server thread/INFO]: Experience Merge Radius: 3.0
++[20:49:55] [Server thread/INFO]: Item Despawn Rate: 6000
++[20:49:55] [Server thread/INFO]: View Distance: 10
++[20:49:55] [Server thread/INFO]: Anti X-Ray: true
++[20:49:55] [Server thread/INFO]: 	Engine Mode: 1
++[20:49:55] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
++[20:49:55] [Server thread/INFO]: 	Replace Blocks: [1, 5]
++[20:49:55] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
++[20:49:55] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
++[20:49:55] [Server thread/INFO]: Structure Info Saving: true
++[20:49:55] [Server thread/INFO]: Sending up to 10 chunks per packet
++[20:49:55] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
++[20:49:55] [Server thread/INFO]: Max TNT Explosions: 100
++[20:49:55] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
++[20:49:55] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
++[20:49:55] [Server thread/INFO]: Mob Spawn Range: 4
++[20:49:55] [Server thread/INFO]: Cactus Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Cane Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Melon Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Mushroom Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Sapling Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Wheat Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: NetherWart Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
++[20:49:55] [Server thread/INFO]: Random Lighting Updates: false
++[20:49:55] [Server thread/INFO]: Max Entity Collisions: 8
++[20:49:55] [Server thread/INFO]: -------- World Settings For [Lobby_the_end] --------
++[20:49:55] [Server thread/INFO]: Arrow Despawn Rate: 1200
++[20:49:55] [Server thread/INFO]: Chunks to Grow per Tick: 650
++[20:49:55] [Server thread/INFO]: Clear tick list: false
++[20:49:55] [Server thread/INFO]: Item Merge Radius: 2.5
++[20:49:55] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
++[20:49:55] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
++[20:49:55] [Server thread/INFO]: Experience Merge Radius: 3.0
++[20:49:55] [Server thread/INFO]: Item Despawn Rate: 6000
++[20:49:55] [Server thread/INFO]: View Distance: 10
++[20:49:55] [Server thread/INFO]: Anti X-Ray: true
++[20:49:55] [Server thread/INFO]: 	Engine Mode: 1
++[20:49:55] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
++[20:49:55] [Server thread/INFO]: 	Replace Blocks: [1, 5]
++[20:49:55] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
++[20:49:55] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
++[20:49:55] [Server thread/INFO]: Structure Info Saving: true
++[20:49:55] [Server thread/INFO]: Sending up to 10 chunks per packet
++[20:49:55] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
++[20:49:55] [Server thread/INFO]: Max TNT Explosions: 100
++[20:49:55] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
++[20:49:55] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
++[20:49:55] [Server thread/INFO]: Mob Spawn Range: 4
++[20:49:55] [Server thread/INFO]: Cactus Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Cane Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Melon Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Mushroom Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Sapling Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Wheat Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: NetherWart Growth Modifier: 100%
++[20:49:55] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
++[20:49:55] [Server thread/INFO]: Random Lighting Updates: false
++[20:49:55] [Server thread/INFO]: Max Entity Collisions: 8
++[20:49:55] [Server thread/INFO]: Preparing start region for level 0 (Seed: -4444818278965242618)
++[20:49:56] [Server thread/INFO]: Preparing start region for level 1 (Seed: 7365026278184994534)
++[20:49:56] [Server thread/INFO]: Preparing start region for level 2 (Seed: 7365026278184994534)
++[20:49:56] [Server thread/INFO]: [MinecraftPvpPlugin] Enabling MinecraftPvpPlugin v1.0-SNAPSHOT
++[20:49:56] [Server thread/INFO]: MAGIC PVP v.0.0.0
+ 
+-[19:54:06] [Server thread/INFO]: To Lobby ELEPOT
++[20:49:56] [Server thread/INFO]: -------- World Settings For [PVP0] --------
++[20:49:56] [Server thread/INFO]: Arrow Despawn Rate: 1200
++[20:49:56] [Server thread/INFO]: Chunks to Grow per Tick: 650
++[20:49:56] [Server thread/INFO]: Clear tick list: false
++[20:49:56] [Server thread/INFO]: Item Merge Radius: 2.5
++[20:49:56] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
++[20:49:56] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
++[20:49:56] [Server thread/INFO]: Experience Merge Radius: 3.0
++[20:49:56] [Server thread/INFO]: Item Despawn Rate: 6000
++[20:49:56] [Server thread/INFO]: View Distance: 10
++[20:49:56] [Server thread/INFO]: Anti X-Ray: true
++[20:49:56] [Server thread/INFO]: 	Engine Mode: 1
++[20:49:56] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
++[20:49:56] [Server thread/INFO]: 	Replace Blocks: [1, 5]
++[20:49:56] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
++[20:49:56] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
++[20:49:56] [Server thread/INFO]: Structure Info Saving: true
++[20:49:56] [Server thread/INFO]: Sending up to 10 chunks per packet
++[20:49:56] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
++[20:49:56] [Server thread/INFO]: Max TNT Explosions: 100
++[20:49:56] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
++[20:49:56] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
++[20:49:56] [Server thread/INFO]: Mob Spawn Range: 4
++[20:49:56] [Server thread/INFO]: Cactus Growth Modifier: 100%
++[20:49:56] [Server thread/INFO]: Cane Growth Modifier: 100%
++[20:49:56] [Server thread/INFO]: Melon Growth Modifier: 100%
++[20:49:56] [Server thread/INFO]: Mushroom Growth Modifier: 100%
++[20:49:56] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
++[20:49:56] [Server thread/INFO]: Sapling Growth Modifier: 100%
++[20:49:56] [Server thread/INFO]: Wheat Growth Modifier: 100%
++[20:49:56] [Server thread/INFO]: NetherWart Growth Modifier: 100%
++[20:49:56] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
++[20:49:56] [Server thread/INFO]: Random Lighting Updates: false
++[20:49:56] [Server thread/INFO]: Max Entity Collisions: 8
++[20:49:56] [Server thread/INFO]: Preparing start region for level 3 (Seed: -5227594981380140816)
++[20:49:57] [Server thread/INFO]: -------- World Settings For [PVP1] --------
++[20:49:57] [Server thread/INFO]: Arrow Despawn Rate: 1200
++[20:49:57] [Server thread/INFO]: Chunks to Grow per Tick: 650
++[20:49:57] [Server thread/INFO]: Clear tick list: false
++[20:49:57] [Server thread/INFO]: Item Merge Radius: 2.5
++[20:49:57] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
++[20:49:57] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
++[20:49:57] [Server thread/INFO]: Experience Merge Radius: 3.0
++[20:49:57] [Server thread/INFO]: Item Despawn Rate: 6000
++[20:49:57] [Server thread/INFO]: View Distance: 10
++[20:49:57] [Server thread/INFO]: Anti X-Ray: true
++[20:49:57] [Server thread/INFO]: 	Engine Mode: 1
++[20:49:57] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
++[20:49:57] [Server thread/INFO]: 	Replace Blocks: [1, 5]
++[20:49:57] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
++[20:49:57] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
++[20:49:57] [Server thread/INFO]: Structure Info Saving: true
++[20:49:57] [Server thread/INFO]: Sending up to 10 chunks per packet
++[20:49:57] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
++[20:49:57] [Server thread/INFO]: Max TNT Explosions: 100
++[20:49:57] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
++[20:49:57] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
++[20:49:57] [Server thread/INFO]: Mob Spawn Range: 4
++[20:49:57] [Server thread/INFO]: Cactus Growth Modifier: 100%
++[20:49:57] [Server thread/INFO]: Cane Growth Modifier: 100%
++[20:49:57] [Server thread/INFO]: Melon Growth Modifier: 100%
++[20:49:57] [Server thread/INFO]: Mushroom Growth Modifier: 100%
++[20:49:57] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
++[20:49:57] [Server thread/INFO]: Sapling Growth Modifier: 100%
++[20:49:57] [Server thread/INFO]: Wheat Growth Modifier: 100%
++[20:49:57] [Server thread/INFO]: NetherWart Growth Modifier: 100%
++[20:49:57] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
++[20:49:57] [Server thread/INFO]: Random Lighting Updates: false
++[20:49:57] [Server thread/INFO]: Max Entity Collisions: 8
++[20:49:57] [Server thread/INFO]: Preparing start region for level 4 (Seed: -5227594981380140816)
++[20:49:58] [Server thread/INFO]: -------- World Settings For [PVP2] --------
++[20:49:58] [Server thread/INFO]: Arrow Despawn Rate: 1200
++[20:49:58] [Server thread/INFO]: Chunks to Grow per Tick: 650
++[20:49:58] [Server thread/INFO]: Clear tick list: false
++[20:49:58] [Server thread/INFO]: Item Merge Radius: 2.5
++[20:49:58] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
++[20:49:58] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
++[20:49:58] [Server thread/INFO]: Experience Merge Radius: 3.0
++[20:49:58] [Server thread/INFO]: Item Despawn Rate: 6000
++[20:49:58] [Server thread/INFO]: View Distance: 10
++[20:49:58] [Server thread/INFO]: Anti X-Ray: true
++[20:49:58] [Server thread/INFO]: 	Engine Mode: 1
++[20:49:58] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
++[20:49:58] [Server thread/INFO]: 	Replace Blocks: [1, 5]
++[20:49:58] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
++[20:49:58] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
++[20:49:58] [Server thread/INFO]: Structure Info Saving: true
++[20:49:58] [Server thread/INFO]: Sending up to 10 chunks per packet
++[20:49:58] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
++[20:49:58] [Server thread/INFO]: Max TNT Explosions: 100
++[20:49:58] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
++[20:49:58] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
++[20:49:58] [Server thread/INFO]: Mob Spawn Range: 4
++[20:49:58] [Server thread/INFO]: Cactus Growth Modifier: 100%
++[20:49:58] [Server thread/INFO]: Cane Growth Modifier: 100%
++[20:49:58] [Server thread/INFO]: Melon Growth Modifier: 100%
++[20:49:58] [Server thread/INFO]: Mushroom Growth Modifier: 100%
++[20:49:58] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
++[20:49:58] [Server thread/INFO]: Sapling Growth Modifier: 100%
++[20:49:58] [Server thread/INFO]: Wheat Growth Modifier: 100%
++[20:49:58] [Server thread/INFO]: NetherWart Growth Modifier: 100%
++[20:49:58] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
++[20:49:58] [Server thread/INFO]: Random Lighting Updates: false
++[20:49:58] [Server thread/INFO]: Max Entity Collisions: 8
++[20:49:58] [Server thread/INFO]: Preparing start region for level 5 (Seed: -5227594981380140816)
++[20:49:58] [Server thread/INFO]: [MinecraftPvpPlugin] Lobby world loaded successfully.
++[20:49:58] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: Lobby
++[20:49:58] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: Lobby_nether
++[20:49:58] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: Lobby_the_end
++[20:49:58] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: PVP0
++[20:49:58] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: PVP1
++[20:49:58] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: PVP2
++[20:49:58] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
++[20:49:58] [Server thread/INFO]: Done (3.617s)! For help, type "help" or "?"
++[20:50:06] [User Authenticator #1/INFO]: UUID of player MAIL__TW is dfeb3c93-3855-4e66-b3d1-25aa25312082
++[20:50:06] [Server thread/INFO]: MAIL__TW join the server
++[20:50:06] [Server thread/INFO]: To Lobby MAIL__TW
+ 
+-[19:54:07] [Timer-5/WARN]: Exception in thread "Timer-5" 
+-[19:54:07] [Timer-5/WARN]: java.lang.IllegalStateException: Asynchronous player tracker clear!
++[20:50:06] [Server thread/INFO]: MAIL__TW[/127.0.0.1:49651] logged in with entity id 426 at ([Lobby]110.5, 74.0, 95.5)
++[20:50:17] [Server thread/INFO]: MAIL__TW issued server command: /gamemode c
++[20:50:17] [Server thread/INFO]: [MAIL__TW: Set own game mode to Creative Mode]
++[20:50:35] [Server thread/INFO]: MAIL__TW issued server command: /l
++[20:50:35] [Server thread/INFO]: To Lobby MAIL__TW
+ 
+-[19:54:07] [Timer-5/WARN]: 	at org.spigotmc.AsyncCatcher.catchOp(AsyncCatcher.java:14)
++[20:50:35] [Server thread/INFO]: To Lobby MAIL__TW
+ 
+-[19:54:07] [Timer-5/WARN]: 	at net.minecraft.server.v1_8_R3.EntityTrackerEntry.clear(EntityTrackerEntry.java:544)
++[20:50:37] [Server thread/INFO]: MAIL__TW lost connection: Disconnected
++[20:50:37] [Server thread/INFO]: MAIL__TW left the game.
++[20:59:32] [Server thread/INFO]: Unknown command. Type "/help" for help.[m
+ 
+-[19:54:07] [Timer-5/WARN]: 	at net.minecraft.server.v1_8_R3.EntityTracker.untrackPlayer(EntityTracker.java:237)
+-
+-[19:54:07] [Timer-5/WARN]: 	at net.minecraft.server.v1_8_R3.PlayerList.moveToWorld(PlayerList.java:510)
+-
+-[19:54:07] [Timer-5/WARN]: 	at org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer.teleport(CraftPlayer.java:471)
+-
+-[19:54:07] [Timer-5/WARN]: 	at org.bukkit.craftbukkit.v1_8_R3.entity.CraftEntity.teleport(CraftEntity.java:226)
+-
+-[19:54:07] [Timer-5/WARN]: 	at me.minecraft.minecraftpvpplugin.PvpPlace$1.run(PvpPlace.java:59)
+-
+-[19:54:07] [Timer-5/WARN]: 	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+-
+-[19:54:07] [Timer-5/WARN]: 	at java.base/java.util.TimerThread.run(Timer.java:516)
+-
+-[19:54:13] [Server thread/INFO]: MAIL__TW issued server command: /l
+-[19:54:13] [Server thread/INFO]: To Lobby MAIL__TW
+-
+-[19:54:13] [Server thread/INFO]: To Lobby blackangle
+-
+-[19:54:13] [Server thread/INFO]: To Lobby MAIL__TW
+-
+-[19:54:26] [Server thread/INFO]: ELEPOT issued server command: /l
+-[19:54:26] [Server thread/INFO]: To Lobby blackangle
+-
+-[19:54:26] [Server thread/INFO]: To Lobby ELEPOT
+-
+-[19:54:26] [Server thread/INFO]: To Lobby ELEPOT
+-
+-[19:54:27] [Timer-7/WARN]: Exception in thread "Timer-7" 
+-[19:54:27] [Timer-7/WARN]: java.lang.IllegalStateException: Asynchronous player tracker clear!
+-
+-[19:54:27] [Timer-7/WARN]: 	at org.spigotmc.AsyncCatcher.catchOp(AsyncCatcher.java:14)
+-
+-[19:54:27] [Timer-7/WARN]: 	at net.minecraft.server.v1_8_R3.EntityTrackerEntry.clear(EntityTrackerEntry.java:544)
+-
+-[19:54:27] [Timer-7/WARN]: 	at net.minecraft.server.v1_8_R3.EntityTracker.untrackPlayer(EntityTracker.java:237)
+-
+-[19:54:27] [Timer-7/WARN]: 	at net.minecraft.server.v1_8_R3.PlayerList.moveToWorld(PlayerList.java:510)
+-
+-[19:54:27] [Timer-7/WARN]: 	at org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer.teleport(CraftPlayer.java:471)
+-
+-[19:54:27] [Timer-7/WARN]: 	at org.bukkit.craftbukkit.v1_8_R3.entity.CraftEntity.teleport(CraftEntity.java:226)
+-
+-[19:54:27] [Timer-7/WARN]: 	at me.minecraft.minecraftpvpplugin.PvpPlace$1.run(PvpPlace.java:59)
+-
+-[19:54:27] [Timer-7/WARN]: 	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+-
+-[19:54:27] [Timer-7/WARN]: 	at java.base/java.util.TimerThread.run(Timer.java:516)
+-
+-[19:54:42] [Async Chat Thread - #0/INFO]: <ELEPOT> why?[m
+-
+-[19:54:47] [Async Chat Thread - #0/INFO]: <MAIL__TW> IDK[m
+-
+-[19:54:49] [Server thread/INFO]: To Lobby MAIL__TW
+-
+-[19:54:49] [Server thread/INFO]: To Lobby blackangle
+-
+-[19:54:49] [Server thread/INFO]: blackangle fell from a high place
+-[19:54:50] [Async Chat Thread - #0/INFO]: <ELEPOT> same place[m
+-
+-[19:54:54] [Async Chat Thread - #0/INFO]: <ELEPOT> XD[m
+-
+-[19:55:06] [Async Chat Thread - #0/INFO]: <MAIL__TW> i think that is PVP1[m
+-
+-[19:55:19] [Async Chat Thread - #0/INFO]: <MAIL__TW> and it has a weard bug[m
+-
+-[19:55:25] [Timer-8/WARN]: Exception in thread "Timer-8" 
+-[19:55:25] [Timer-8/WARN]: java.lang.IllegalStateException: Asynchronous player tracker clear!
+-
+-[19:55:25] [Timer-8/WARN]: 	at org.spigotmc.AsyncCatcher.catchOp(AsyncCatcher.java:14)
+-
+-[19:55:25] [Timer-8/WARN]: 	at net.minecraft.server.v1_8_R3.EntityTrackerEntry.clear(EntityTrackerEntry.java:544)
+-
+-[19:55:25] [Timer-8/WARN]: 	at net.minecraft.server.v1_8_R3.EntityTracker.untrackPlayer(EntityTracker.java:237)
+-
+-[19:55:25] [Timer-8/WARN]: 	at net.minecraft.server.v1_8_R3.PlayerList.moveToWorld(PlayerList.java:510)
+-
+-[19:55:25] [Timer-8/WARN]: 	at org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer.teleport(CraftPlayer.java:471)
+-
+-[19:55:25] [Timer-8/WARN]: 	at org.bukkit.craftbukkit.v1_8_R3.entity.CraftEntity.teleport(CraftEntity.java:226)
+-
+-[19:55:25] [Timer-8/WARN]: 	at me.minecraft.minecraftpvpplugin.PvpPlace$1.run(PvpPlace.java:59)
+-
+-[19:55:25] [Timer-8/WARN]: 	at java.base/java.util.TimerThread.mainLoop(Timer.java:566)
+-
+-[19:55:25] [Timer-8/WARN]: 	at java.base/java.util.TimerThread.run(Timer.java:516)
+-
+-[19:55:41] [Server thread/INFO]: To Lobby ELEPOT
+-
+-[19:55:41] [Server thread/INFO]: To Lobby MAIL__TW
+-
+-[19:55:41] [Server thread/INFO]: MAIL__TW fell from a high place
++[20:59:35] [Server thread/INFO]: Stopping the server
++[20:59:35] [Server thread/INFO]: Stopping server
++[20:59:35] [Server thread/INFO]: [MinecraftPvpPlugin] Disabling MinecraftPvpPlugin v1.0-SNAPSHOT
++[20:59:35] [Server thread/INFO]: Saving players
++[20:59:35] [Server thread/INFO]: Saving worlds
++[20:59:35] [Server thread/INFO]: Saving chunks for level 'Lobby'/Overworld
++[20:59:35] [Server thread/INFO]: Saving chunks for level 'Lobby_nether'/Nether
++[20:59:35] [Server thread/INFO]: Saving chunks for level 'Lobby_the_end'/The End
++[20:59:35] [Server thread/INFO]: Saving chunks for level 'PVP0'/Overworld
++[20:59:35] [Server thread/INFO]: Saving chunks for level 'PVP1'/Overworld
++[20:59:35] [Server thread/INFO]: Saving chunks for level 'PVP2'/Overworld
+Index: ../MinecraftServer/server.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#Minecraft server properties\r\n#Sat Jan 13 19:51:17 CST 2024\r\nallow-flight=false\r\nallow-nether=true\r\nannounce-player-achievements=true\r\nbroadcast-console-to-ops=true\r\ndebug=false\r\ndifficulty=1\r\nenable-command-block=false\r\nenable-query=false\r\nenable-rcon=false\r\nforce-gamemode=false\r\ngamemode=0\r\ngenerate-structures=true\r\ngenerator-settings=\r\nhardcore=false\r\nlevel-name=Lobby\r\nlevel-seed=\r\nlevel-type=DEFAULT\r\nmax-build-height=256\r\nmax-players=20\r\nmax-world-size=29999984\r\nmotd=A Minecraft Server\r\nnetwork-compression-threshold=256\r\nonline-mode=true\r\nop-permission-level=4\r\nplayer-idle-timeout=0\r\npvp=false\r\nresource-pack=\r\nresource-pack-hash=\r\nserver-ip=\r\nserver-port=25565\r\nsnooper-enabled=true\r\nspawn-animals=true\r\nspawn-monsters=true\r\nspawn-npcs=true\r\nspawn-protection=16\r\nview-distance=10\r\nwhite-list=false\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/../MinecraftServer/server.properties b/../MinecraftServer/server.properties
+--- a/../MinecraftServer/server.properties	(revision 05db01e68e2590c714f1b74bec16c4f538cf06c9)
++++ b/../MinecraftServer/server.properties	(date 1705150194840)
+@@ -1,5 +1,5 @@
+ #Minecraft server properties
+-#Sat Jan 13 19:51:17 CST 2024
++#Sat Jan 13 20:49:54 CST 2024
+ allow-flight=false
+ allow-nether=true
+ announce-player-achievements=true
+Index: ../MinecraftServer/usercache.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[{\"name\":\"MAIL__TW\",\"uuid\":\"dfeb3c93-3855-4e66-b3d1-25aa25312082\",\"expiresOn\":\"2024-02-13 19:53:11 +0800\"},{\"name\":\"ELEPOT\",\"uuid\":\"7bddcbf5-cb89-4cb9-ac25-837980bba3df\",\"expiresOn\":\"2024-02-13 19:51:22 +0800\"},{\"name\":\"blackangle\",\"uuid\":\"ab9d51e7-bdfe-40dd-a930-a8a551af9325\",\"expiresOn\":\"2024-02-13 19:51:33 +0800\"}]
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../MinecraftServer/usercache.json b/../MinecraftServer/usercache.json
+--- a/../MinecraftServer/usercache.json	(revision 05db01e68e2590c714f1b74bec16c4f538cf06c9)
++++ b/../MinecraftServer/usercache.json	(date 1705150206428)
+@@ -1,1 +1,1 @@
+-[{"name":"MAIL__TW","uuid":"dfeb3c93-3855-4e66-b3d1-25aa25312082","expiresOn":"2024-02-13 19:53:11 +0800"},{"name":"ELEPOT","uuid":"7bddcbf5-cb89-4cb9-ac25-837980bba3df","expiresOn":"2024-02-13 19:51:22 +0800"},{"name":"blackangle","uuid":"ab9d51e7-bdfe-40dd-a930-a8a551af9325","expiresOn":"2024-02-13 19:51:33 +0800"}]
+\ No newline at end of file
++[{"name":"MAIL__TW","uuid":"dfeb3c93-3855-4e66-b3d1-25aa25312082","expiresOn":"2024-02-13 20:50:06 +0800"},{"name":"blackangle","uuid":"ab9d51e7-bdfe-40dd-a930-a8a551af9325","expiresOn":"2024-02-13 19:51:33 +0800"},{"name":"ELEPOT","uuid":"7bddcbf5-cb89-4cb9-ac25-837980bba3df","expiresOn":"2024-02-13 19:51:22 +0800"}]
+\ No newline at end of file
+Index: ../MinecraftServer/spigot.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># This is the main configuration file for Spigot.\r\n# As you can see, there's tons to configure. Some options may impact gameplay, so use\r\n# with caution, and make sure you know what each option does before configuring.\r\n# For a reference for any variable inside this file, check out the Spigot wiki at\r\n# http://www.spigotmc.org/wiki/spigot-configuration/\r\n# \r\n# If you need help with the configuration or have any questions related to Spigot,\r\n# join us at the IRC or drop by our forums and leave a post.\r\n# \r\n# IRC: #spigot @ irc.spi.gt ( http://www.spigotmc.org/pages/irc/ )\r\n# Forums: http://www.spigotmc.org/\r\n\r\nconfig-version: 8\r\ncommands:\r\n  tab-complete: 0\r\n  silent-commandblock-console: false\r\n  spam-exclusions:\r\n  - /skill\r\n  replace-commands:\r\n  - setblock\r\n  - summon\r\n  - testforblock\r\n  - tellraw\r\n  log: true\r\nsettings:\r\n  save-user-cache-on-stop-only: false\r\n  debug: false\r\n  moved-wrongly-threshold: 0.0625\r\n  filter-creative-items: true\r\n  moved-too-quickly-threshold: 100.0\r\n  user-cache-size: 1000\r\n  int-cache-limit: 1024\r\n  netty-threads: 4\r\n  attribute:\r\n    maxHealth:\r\n      max: 2048.0\r\n    movementSpeed:\r\n      max: 2048.0\r\n    attackDamage:\r\n      max: 2048.0\r\n  player-shuffle: 0\r\n  sample-count: 12\r\n  bungeecord: false\r\n  timeout-time: 60\r\n  restart-on-crash: true\r\n  restart-script: ./start.sh\r\n  late-bind: false\r\nmessages:\r\n  whitelist: You are not whitelisted on this server!\r\n  unknown-command: Unknown command. Type \"/help\" for help.\r\n  server-full: The server is full!\r\n  outdated-client: Outdated client! Please use {0}\r\n  outdated-server: Outdated server! I'm still on {0}\r\n  restart: Server is restarting\r\nstats:\r\n  disable-saving: false\r\n  forced-stats: {}\r\nworld-settings:\r\n  default:\r\n    verbose: true\r\n    view-distance: 10\r\n    merge-radius:\r\n      item: 2.5\r\n      exp: 3.0\r\n    item-despawn-rate: 6000\r\n    arrow-despawn-rate: 1200\r\n    wither-spawn-sound-radius: 0\r\n    hanging-tick-frequency: 100\r\n    growth:\r\n      cactus-modifier: 100\r\n      cane-modifier: 100\r\n      melon-modifier: 100\r\n      mushroom-modifier: 100\r\n      pumpkin-modifier: 100\r\n      sapling-modifier: 100\r\n      wheat-modifier: 100\r\n      netherwart-modifier: 100\r\n    max-entity-collisions: 8\r\n    seed-village: 10387312\r\n    seed-feature: 14357617\r\n    entity-tracking-range:\r\n      players: 48\r\n      animals: 48\r\n      monsters: 48\r\n      misc: 32\r\n      other: 64\r\n    save-structure-info: true\r\n    max-tnt-per-tick: 100\r\n    max-tick-time:\r\n      tile: 50\r\n      entity: 50\r\n    nerf-spawner-mobs: false\r\n    mob-spawn-range: 4\r\n    max-bulk-chunks: 10\r\n    entity-activation-range:\r\n      animals: 32\r\n      monsters: 32\r\n      misc: 16\r\n    random-light-updates: false\r\n    dragon-death-sound-radius: 0\r\n    ticks-per:\r\n      hopper-transfer: 8\r\n      hopper-check: 8\r\n    hopper-amount: 1\r\n    hunger:\r\n      walk-exhaustion: 0.2\r\n      sprint-exhaustion: 0.8\r\n      combat-exhaustion: 0.3\r\n      regen-exhaustion: 3.0\r\n    anti-xray:\r\n      enabled: true\r\n      engine-mode: 1\r\n      hide-blocks:\r\n      - 14\r\n      - 15\r\n      - 16\r\n      - 21\r\n      - 48\r\n      - 49\r\n      - 54\r\n      - 56\r\n      - 73\r\n      - 74\r\n      - 82\r\n      - 129\r\n      - 130\r\n      replace-blocks:\r\n      - 1\r\n      - 5\r\n    chunks-per-tick: 650\r\n    clear-tick-list: false\r\n    zombie-aggressive-towards-villager: true\r\n    enable-zombie-pigmen-portal-spawns: true\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../MinecraftServer/spigot.yml b/../MinecraftServer/spigot.yml
+--- a/../MinecraftServer/spigot.yml	(revision 05db01e68e2590c714f1b74bec16c4f538cf06c9)
++++ b/../MinecraftServer/spigot.yml	(date 1705150198217)
+@@ -14,22 +14,34 @@
+ commands:
+   tab-complete: 0
+   silent-commandblock-console: false
+-  spam-exclusions:
+-  - /skill
++  log: true
+   replace-commands:
+   - setblock
+   - summon
+   - testforblock
+   - tellraw
+-  log: true
++  spam-exclusions:
++  - /skill
++messages:
++  whitelist: You are not whitelisted on this server!
++  unknown-command: Unknown command. Type "/help" for help.
++  server-full: The server is full!
++  outdated-client: Outdated client! Please use {0}
++  outdated-server: Outdated server! I'm still on {0}
++  restart: Server is restarting
+ settings:
+-  save-user-cache-on-stop-only: false
+   debug: false
+-  moved-wrongly-threshold: 0.0625
++  save-user-cache-on-stop-only: false
++  timeout-time: 60
++  restart-on-crash: true
++  restart-script: ./start.sh
++  bungeecord: false
++  late-bind: false
+   filter-creative-items: true
++  moved-wrongly-threshold: 0.0625
+   moved-too-quickly-threshold: 100.0
+-  user-cache-size: 1000
+-  int-cache-limit: 1024
++  sample-count: 12
++  player-shuffle: 0
+   netty-threads: 4
+   attribute:
+     maxHealth:
+@@ -38,96 +50,84 @@
+       max: 2048.0
+     attackDamage:
+       max: 2048.0
+-  player-shuffle: 0
+-  sample-count: 12
+-  bungeecord: false
+-  timeout-time: 60
+-  restart-on-crash: true
+-  restart-script: ./start.sh
+-  late-bind: false
+-messages:
+-  whitelist: You are not whitelisted on this server!
+-  unknown-command: Unknown command. Type "/help" for help.
+-  server-full: The server is full!
+-  outdated-client: Outdated client! Please use {0}
+-  outdated-server: Outdated server! I'm still on {0}
+-  restart: Server is restarting
++  user-cache-size: 1000
++  int-cache-limit: 1024
+ stats:
+   disable-saving: false
+   forced-stats: {}
+ world-settings:
+   default:
+     verbose: true
+-    view-distance: 10
++    arrow-despawn-rate: 1200
++    chunks-per-tick: 650
++    clear-tick-list: false
+     merge-radius:
+       item: 2.5
+       exp: 3.0
++    zombie-aggressive-towards-villager: true
++    enable-zombie-pigmen-portal-spawns: true
+     item-despawn-rate: 6000
+-    arrow-despawn-rate: 1200
+     wither-spawn-sound-radius: 0
+     hanging-tick-frequency: 100
+-    growth:
+-      cactus-modifier: 100
+-      cane-modifier: 100
+-      melon-modifier: 100
+-      mushroom-modifier: 100
+-      pumpkin-modifier: 100
+-      sapling-modifier: 100
+-      wheat-modifier: 100
+-      netherwart-modifier: 100
+-    max-entity-collisions: 8
+-    seed-village: 10387312
+-    seed-feature: 14357617
++    view-distance: 10
++    anti-xray:
++      enabled: true
++      engine-mode: 1
++      hide-blocks:
++      - 14
++      - 15
++      - 16
++      - 21
++      - 48
++      - 49
++      - 54
++      - 56
++      - 73
++      - 74
++      - 82
++      - 129
++      - 130
++      replace-blocks:
++      - 1
++      - 5
++    ticks-per:
++      hopper-transfer: 8
++      hopper-check: 8
++    hopper-amount: 1
++    dragon-death-sound-radius: 0
++    hunger:
++      walk-exhaustion: 0.2
++      sprint-exhaustion: 0.8
++      combat-exhaustion: 0.3
++      regen-exhaustion: 3.0
++    nerf-spawner-mobs: false
++    save-structure-info: true
++    max-bulk-chunks: 10
+     entity-tracking-range:
+       players: 48
+       animals: 48
+       monsters: 48
+       misc: 32
+       other: 64
+-    save-structure-info: true
+     max-tnt-per-tick: 100
+     max-tick-time:
+       tile: 50
+       entity: 50
+-    nerf-spawner-mobs: false
+-    mob-spawn-range: 4
+-    max-bulk-chunks: 10
+     entity-activation-range:
+       animals: 32
+       monsters: 32
+       misc: 16
++    mob-spawn-range: 4
++    growth:
++      cactus-modifier: 100
++      cane-modifier: 100
++      melon-modifier: 100
++      mushroom-modifier: 100
++      pumpkin-modifier: 100
++      sapling-modifier: 100
++      wheat-modifier: 100
++      netherwart-modifier: 100
++    seed-village: 10387312
++    seed-feature: 14357617
+     random-light-updates: false
+-    dragon-death-sound-radius: 0
+-    ticks-per:
+-      hopper-transfer: 8
+-      hopper-check: 8
+-    hopper-amount: 1
+-    hunger:
+-      walk-exhaustion: 0.2
+-      sprint-exhaustion: 0.8
+-      combat-exhaustion: 0.3
+-      regen-exhaustion: 3.0
+-    anti-xray:
+-      enabled: true
+-      engine-mode: 1
+-      hide-blocks:
+-      - 14
+-      - 15
+-      - 16
+-      - 21
+-      - 48
+-      - 49
+-      - 54
+-      - 56
+-      - 73
+-      - 74
+-      - 82
+-      - 129
+-      - 130
+-      replace-blocks:
+-      - 1
+-      - 5
+-    chunks-per-tick: 650
+-    clear-tick-list: false
+-    zombie-aggressive-towards-villager: true
+-    enable-zombie-pigmen-portal-spawns: true
++    max-entity-collisions: 8
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"17758a80-0c85-4e1c-9ee7-0bf4385df7a6\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/PvpPlace$1.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/PvpPlace$1.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/Lobby/data/villages.dat\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/Lobby/data/villages.dat\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat_old\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat_old\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/Lobby/playerdata/dfeb3c93-3855-4e66-b3d1-25aa25312082.dat\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/Lobby/playerdata/dfeb3c93-3855-4e66-b3d1-25aa25312082.dat\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/Lobby/session.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/Lobby/session.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/Lobby/stats/dfeb3c93-3855-4e66-b3d1-25aa25312082.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/Lobby/stats/dfeb3c93-3855-4e66-b3d1-25aa25312082.json\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/Lobby_nether/level.dat\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/Lobby_nether/level.dat\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/Lobby_nether/level.dat_old\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/Lobby_nether/level.dat_old\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/Lobby_nether/session.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/Lobby_nether/session.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/level.dat\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/level.dat\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/level.dat_old\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/level.dat_old\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/session.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/session.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/PVP0/data/villages.dat\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/PVP0/data/villages.dat\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/PVP0/level.dat\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/PVP0/level.dat\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/PVP0/level.dat_old\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/PVP0/level.dat_old\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/PVP0/session.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/PVP0/session.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/PVP1/data/villages.dat\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/PVP1/data/villages.dat\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/PVP1/level.dat\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/PVP1/level.dat\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/PVP1/level.dat_old\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/PVP1/level.dat_old\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/PVP1/session.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/PVP1/session.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/PVP2/data/villages.dat\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/PVP2/data/villages.dat\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/PVP2/level.dat\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/PVP2/level.dat\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/PVP2/level.dat_old\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/PVP2/level.dat_old\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/PVP2/session.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/PVP2/session.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/bukkit.yml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/bukkit.yml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/commands.yml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/commands.yml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/logs/latest.log\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/logs/latest.log\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/ops.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/ops.json\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/plugins/MinecraftPvpPlugin-1.0-SNAPSHOT.jar\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/plugins/MinecraftPvpPlugin-1.0-SNAPSHOT.jar\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/server.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/server.properties\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/spigot.yml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/spigot.yml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../MinecraftServer/usercache.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../MinecraftServer/usercache.json\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 6\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2aDw31mzRm8xfkoEEJe6uIonrsv\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Maven.MinecraftPvpPlugin package.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;Shell Script.copy_binary.executor&quot;: &quot;Run&quot;,\r\n    &quot;Shell Script.run_server.executor&quot;: &quot;Run&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;code&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Dev/java/MinecraftPvpPlugin/MinecraftServer&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"ExtractSuperBase.RECENT_KEYS\">\r\n      <recent name=\"me.minecraft.minecraftpvpplugin\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Shell Script.run_server\">\r\n    <configuration name=\"MinecraftPvpPlugin package\" type=\"MavenRunConfiguration\" factoryName=\"Maven\">\r\n      <MavenSettings>\r\n        <option name=\"myGeneralSettings\" />\r\n        <option name=\"myRunnerSettings\" />\r\n        <option name=\"myRunnerParameters\">\r\n          <MavenRunnerParameters>\r\n            <option name=\"cmdOptions\" />\r\n            <option name=\"profiles\">\r\n              <set />\r\n            </option>\r\n            <option name=\"goals\">\r\n              <list>\r\n                <option value=\"package\" />\r\n              </list>\r\n            </option>\r\n            <option name=\"multimoduleDir\" />\r\n            <option name=\"pomFileName\" />\r\n            <option name=\"profilesMap\">\r\n              <map />\r\n            </option>\r\n            <option name=\"projectsCmdOptionValues\">\r\n              <list />\r\n            </option>\r\n            <option name=\"resolveToWorkspace\" value=\"false\" />\r\n            <option name=\"workingDirPath\" value=\"$PROJECT_DIR$\" />\r\n          </MavenRunnerParameters>\r\n        </option>\r\n      </MavenSettings>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"copy_binary\" type=\"ShConfigurationType\">\r\n      <option name=\"SCRIPT_TEXT\" value=\"Copy-Item MinecraftPvpPlugin/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar MinecraftServer/plugins\" />\r\n      <option name=\"INDEPENDENT_SCRIPT_PATH\" value=\"true\" />\r\n      <option name=\"SCRIPT_PATH\" value=\"\" />\r\n      <option name=\"SCRIPT_OPTIONS\" value=\"\" />\r\n      <option name=\"INDEPENDENT_SCRIPT_WORKING_DIRECTORY\" value=\"false\" />\r\n      <option name=\"SCRIPT_WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/..\" />\r\n      <option name=\"INDEPENDENT_INTERPRETER_PATH\" value=\"true\" />\r\n      <option name=\"INTERPRETER_PATH\" value=\"powershell.exe\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"EXECUTE_IN_TERMINAL\" value=\"false\" />\r\n      <option name=\"EXECUTE_SCRIPT_FILE\" value=\"false\" />\r\n      <envs />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"run_server\" type=\"ShConfigurationType\">\r\n      <option name=\"SCRIPT_TEXT\" value=\"\" />\r\n      <option name=\"INDEPENDENT_SCRIPT_PATH\" value=\"false\" />\r\n      <option name=\"SCRIPT_PATH\" value=\"$PROJECT_DIR$/../MinecraftServer/start.bat\" />\r\n      <option name=\"SCRIPT_OPTIONS\" value=\"\" />\r\n      <option name=\"INDEPENDENT_SCRIPT_WORKING_DIRECTORY\" value=\"false\" />\r\n      <option name=\"SCRIPT_WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/../MinecraftServer\" />\r\n      <option name=\"INDEPENDENT_INTERPRETER_PATH\" value=\"false\" />\r\n      <option name=\"INTERPRETER_PATH\" value=\"$PROJECT_DIR$/../../../../../Windows/System32/WindowsPowerShell/v1.0/powershell.exe\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"EXECUTE_IN_TERMINAL\" value=\"false\" />\r\n      <option name=\"EXECUTE_SCRIPT_FILE\" value=\"true\" />\r\n      <envs />\r\n      <method v=\"2\">\r\n        <option name=\"RunConfigurationTask\" enabled=\"true\" run_configuration_name=\"MinecraftPvpPlugin package\" run_configuration_type=\"MavenRunConfiguration\" />\r\n        <option name=\"RunConfigurationTask\" enabled=\"true\" run_configuration_name=\"copy_binary\" run_configuration_type=\"ShConfigurationType\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Maven.MinecraftPvpPlugin package\" />\r\n      <item itemvalue=\"Shell Script.run_server\" />\r\n      <item itemvalue=\"Shell Script.copy_binary\" />\r\n    </list>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"jdk-21.0.1-openjdk-21.0.1-249ae16d76d6-a618e4d4\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"17758a80-0c85-4e1c-9ee7-0bf4385df7a6\" name=\"Changes\" comment=\"\" />\r\n      <created>1703866254295</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1703866254295</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 05db01e68e2590c714f1b74bec16c4f538cf06c9)
++++ b/.idea/workspace.xml	(date 1705200712753)
+@@ -6,35 +6,49 @@
+   <component name="ChangeListManager">
+     <list default="true" id="17758a80-0c85-4e1c-9ee7-0bf4385df7a6" name="Changes" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/PvpPlace$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/PvpPlace$1.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/data/villages.dat" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat_old" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/playerdata/dfeb3c93-3855-4e66-b3d1-25aa25312082.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/playerdata/dfeb3c93-3855-4e66-b3d1-25aa25312082.dat" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.-1.-1.mca" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.-1.0.mca" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.0.-1.mca" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.0.0.mca" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/session.lock" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/stats/dfeb3c93-3855-4e66-b3d1-25aa25312082.json" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/stats/dfeb3c93-3855-4e66-b3d1-25aa25312082.json" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.-1.-1.mca" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.-1.0.mca" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.0.-1.mca" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.0.0.mca" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/level.dat" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/level.dat_old" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/session.lock" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/DIM1/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/DIM1/region/r.-1.-1.mca" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/DIM1/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/DIM1/region/r.-1.0.mca" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/DIM1/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/DIM1/region/r.0.-1.mca" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/DIM1/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/DIM1/region/r.0.0.mca" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/level.dat" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/level.dat_old" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/session.lock" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/data/villages.dat" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/level.dat" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/level.dat_old" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.-1.-1.mca" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.-1.0.mca" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.0.-1.mca" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.0.0.mca" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/session.lock" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/data/villages.dat" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/level.dat" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/level.dat_old" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/region/r.-1.0.mca" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/region/r.0.0.mca" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/session.lock" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP2/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP2/data/villages.dat" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP2/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP2/level.dat" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP2/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP2/level.dat_old" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP2/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP2/region/r.-1.0.mca" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP2/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP2/region/r.0.0.mca" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP2/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP2/session.lock" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/bukkit.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/bukkit.yml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../MinecraftServer/commands.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/commands.yml" afterDir="false" />
