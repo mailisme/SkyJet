@@ -109,7 +109,7 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
             if (event.getItem() != null) {
                 if (event.getItem().equals(Items.Invisible)) {
                     if (event.getAction() != Action.PHYSICAL) {
-                        ArrayList a = new ArrayList<>();
+                        ArrayList a = new ArrayList<PotionEffect>();
                         a.clear();
                         player.getInventory().setHelmet(null);
                         player.getInventory().setChestplate(null);
@@ -117,8 +117,9 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
                         player.getInventory().setBoots(null);
                         PvpPlace.Invisible(player);
                         player.addPotionEffect(Effect.InvisibleEffect);
-                        while ((ArrayList) player.getActivePotionEffects() == a){
+                        while ((ArrayList) player.getActivePotionEffects() != a){
                             System.out.println("HI");
+                            return;
                         }
 
                     }
