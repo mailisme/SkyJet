@@ -114,19 +114,15 @@ public class PvpPlace implements Listener {
         }
     }
 
-    static boolean Lose(Player player) {
+    static void Lose(Player player) {
         if (player != null) {
             player.sendTitle(ChatColor.AQUA + "You Lose", ChatColor.DARK_BLUE + ":(");
-            return true;
         }
-        return false;
     }
 
-    static boolean Win(Player player) {
+    static void Win(Player player) {
         if (player != null) {
             player.sendTitle(ChatColor.GOLD + "You Win !!", ChatColor.RED + ":D");
-            return true;
         }
-        return false;
     }
 }
