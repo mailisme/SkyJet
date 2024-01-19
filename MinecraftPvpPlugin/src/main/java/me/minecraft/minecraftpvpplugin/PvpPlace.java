@@ -7,6 +7,7 @@ import org.bukkit.event.Listener;
 
 import java.lang.reflect.AnnotatedArrayType;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 
 public class PvpPlace implements Listener {
@@ -86,17 +87,15 @@ public class PvpPlace implements Listener {
 
                     Player AnotherPlayer = world_of_players[WorldIndex][AnotherPlayerIndex];
 
-                    if (AnotherPlayer != null) {
-                        Lose(player);
-                        Win(AnotherPlayer);
-                    }
-
                     if (player != null) {
                         player.teleport(Locations.lobby);
                         MinecraftPvpPlugin.ToLobby(player);
                     }
 
                     if (AnotherPlayer != null) {
+                        Lose(player);
+                        Win(AnotherPlayer);
+
                         AnotherPlayer.teleport(Locations.lobby);
                         MinecraftPvpPlugin.ToLobby(AnotherPlayer);
                     }
