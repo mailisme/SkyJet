@@ -58,7 +58,7 @@ public class PvpPlace implements Listener {
                 world_of_players[WorldIndex][0].sendTitle("The game will start in", String.valueOf(LeftSeconds));
                 world_of_players[WorldIndex][1].sendTitle("The game will start in", String.valueOf(LeftSeconds));
 
-                if (LeftSeconds == 0) {
+                if (LeftSeconds == 1) {
                     world_of_players[WorldIndex][0].sendTitle("START", ":D");
                     world_of_players[WorldIndex][1].sendTitle("START", ":D");
                     this.cancel();
@@ -87,17 +87,15 @@ public class PvpPlace implements Listener {
 
                     Player AnotherPlayer = world_of_players[WorldIndex][AnotherPlayerIndex];
 
-                    if (AnotherPlayer != null) {
-                        Lose(player);
-                        Win(AnotherPlayer);
-                    }
-
                     if (player != null) {
                         player.teleport(Locations.lobby);
                         MinecraftPvpPlugin.ToLobby(player);
                     }
 
                     if (AnotherPlayer != null) {
+                        Lose(player);
+                        Win(AnotherPlayer);
+
                         AnotherPlayer.teleport(Locations.lobby);
                         MinecraftPvpPlugin.ToLobby(AnotherPlayer);
                     }
@@ -115,23 +113,15 @@ public class PvpPlace implements Listener {
         }
     }
 
-    static boolean Lose(Player player) {
+    static void Lose(Player player) {
         if (player != null) {
             player.sendTitle(ChatColor.AQUA + "You Lose", ChatColor.DARK_BLUE + ":(");
-            return true;
         }
-        return false;
     }
 
-    static boolean Win(Player player) {
+    static void Win(Player player) {
         if (player != null) {
             player.sendTitle(ChatColor.GOLD + "You Win !!", ChatColor.RED + ":D");
-            return true;
         }
-        return false;
-    }
-    static void Invisible(Player player) throws InterruptedException {
-        TimeUnit.SECONDS.sleep(5);
-        player.sendMessage("隱形結束");
     }
 }
