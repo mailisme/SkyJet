@@ -1,4 +1,7 @@
+me\minecraft\minecraftpvpplugin\Rebound.class
 me\minecraft\minecraftpvpplugin\Gadgets.class
+me\minecraft\minecraftpvpplugin\Speed.class
+me\minecraft\minecraftpvpplugin\Damage.class
 me\minecraft\minecraftpvpplugin\Locations.class
 me\minecraft\minecraftpvpplugin\MinecraftPvpPlugin$1.class
 me\minecraft\minecraftpvpplugin\GuiEvent.class
