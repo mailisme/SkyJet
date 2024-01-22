@@ -1,11 +1,14 @@
-package me.minecraft.minecraftpvpplugin;
+package me.minecraft.minecraftpvpplugin.gadgets;
 
+import me.minecraft.minecraftpvpplugin.Effect;
+import me.minecraft.minecraftpvpplugin.Gadget;
+import me.minecraft.minecraftpvpplugin.Items;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.plugin.Plugin;
 
-public class Invisible extends Gadget{
+public class Invisible extends Gadget {
 
     public Invisible() {
         super(Material.STAINED_GLASS_PANE, "虛影斗篷", 5);

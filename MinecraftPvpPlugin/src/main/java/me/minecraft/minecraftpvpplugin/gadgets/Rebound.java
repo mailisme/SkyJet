@@ -1,5 +1,6 @@
-package me.minecraft.minecraftpvpplugin;
+package me.minecraft.minecraftpvpplugin.gadgets;
 
+import me.minecraft.minecraftpvpplugin.Gadget;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

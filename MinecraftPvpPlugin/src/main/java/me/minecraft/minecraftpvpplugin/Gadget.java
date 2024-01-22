@@ -17,14 +17,14 @@ import java.util.concurrent.TimeUnit;
 import static org.bukkit.Bukkit.getServer;
 
 abstract public class Gadget extends ItemStack implements Listener {
-    Material material;
+    public Material material;
     public String name;
     public long duration;
 
-    List<Player> PlayersUsingGadget = new ArrayList<>();
+    public List<Player> PlayersUsingGadget = new ArrayList<>();
 
-    abstract void activate(PlayerInteractEvent event);
-    abstract void deactivate(PlayerInteractEvent event);
+    protected abstract void activate(PlayerInteractEvent event);
+    protected abstract void deactivate(PlayerInteractEvent event);
 
 
     public Gadget(Material material, String name, long duration) {
