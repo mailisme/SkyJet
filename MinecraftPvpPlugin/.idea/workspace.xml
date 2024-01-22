@@ -5,10 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17758a80-0c85-4e1c-9ee7-0bf4385df7a6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/MinecraftPvpPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/MinecraftPvpPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_14_2024_7_32_PM_[Changes]1/dfeb3c93-3855-4e66-b3d1-25aa25312082.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_14_2024_7_32_PM_[Changes]1/level.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_14_2024_7_32_PM_[Changes]1/level.dat_old" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_14_2024_7_32_PM_[Changes]1/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_14_2024_7_32_PM_[Changes]1/r.-1.-1.mca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_14_2024_7_32_PM_[Changes]1/r.-1.0.mca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_14_2024_7_32_PM_[Changes]1/r.0.-1.mca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_14_2024_7_32_PM_[Changes]1/r.0.0.mca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_14_2024_7_32_PM_[Changes]1/session.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_14_2024_7_32_PM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_14_2024_7_32_PM_[Changes]1/villages.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_1_14_2024_7_32_PM__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/data/villages.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat_old" afterDir="false" />
@@ -83,20 +92,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.MinecraftPvpPlugin package.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Shell Script.copy_binary.executor": "Run",
-    "Shell Script.run_server.executor": "Run",
-    "git-widget-placeholder": "code",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Dev/java/MinecraftPvpPlugin/MinecraftServer",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.MinecraftPvpPlugin package.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Shell Script.copy_binary.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.run_server.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;code&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Dev/java/MinecraftPvpPlugin/MinecraftServer&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="me.minecraft.minecraftpvpplugin" />
