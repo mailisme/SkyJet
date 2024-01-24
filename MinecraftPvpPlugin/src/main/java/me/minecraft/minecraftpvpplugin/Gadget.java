@@ -1,6 +1,8 @@
 package me.minecraft.minecraftpvpplugin;
 
+import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -12,6 +14,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
 import static org.bukkit.Bukkit.getServer;
@@ -53,15 +56,15 @@ abstract public class Gadget extends ItemStack implements Listener {
                 && !PlayersUsingGadget.contains(player)
         ) {
 
+            PlayersUsingGadget.add(player);
+            activate(event);
+
             if (item.getAmount() == 1) {
                 player.getInventory().setItemInHand(null);
             }
             else {
-                player.getInventory().setItemInHand(this.instance(item.getAmount() - 1));
+                player.getInventory().setItemInHand(instance(item.getAmount() - 1));
             }
-
-            PlayersUsingGadget.add(player);
-            activate(event);
 
             new java.util.Timer().schedule(
                     new java.util.TimerTask() {

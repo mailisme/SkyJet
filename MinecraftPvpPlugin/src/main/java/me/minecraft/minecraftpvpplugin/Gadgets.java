@@ -1,9 +1,7 @@
 package me.minecraft.minecraftpvpplugin;
 
-import me.minecraft.minecraftpvpplugin.gadgets.Damage;
-import me.minecraft.minecraftpvpplugin.gadgets.Invisible;
-import me.minecraft.minecraftpvpplugin.gadgets.Rebound;
-import me.minecraft.minecraftpvpplugin.gadgets.Speed;
+import me.minecraft.minecraftpvpplugin.gadgets.*;
+import org.bukkit.entity.Item;
 import org.bukkit.inventory.ItemStack;
 
 public class Gadgets {
@@ -11,4 +9,6 @@ public class Gadgets {
     static ItemStack Damage = new Damage().instance(1);
     static ItemStack Speed = new Speed().instance(1);
     static ItemStack Rebound = new Rebound().instance(1);
+    static ItemStack Anchor = new Anchor().instance(1);
+    static ItemStack Freeze = new Freeze().instance(1);
 }
