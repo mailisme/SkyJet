@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17758a80-0c85-4e1c-9ee7-0bf4385df7a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/ThrowableGadget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Gadget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Gadget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Items.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Anchor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Anchor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Damage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Damage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Freeze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Freeze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Invisible.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Invisible.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Rebound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Rebound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Speed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Speed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/ThrowableGadget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/ThrowableGadget.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

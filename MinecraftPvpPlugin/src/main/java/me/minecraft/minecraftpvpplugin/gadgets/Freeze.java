@@ -1,23 +1,26 @@
 package me.minecraft.minecraftpvpplugin.gadgets;
 
-import me.minecraft.minecraftpvpplugin.Effect;
-import me.minecraft.minecraftpvpplugin.Gadget;
-import org.bukkit.Location;
+import me.minecraft.minecraftpvpplugin.ThrowableGadget;
 import org.bukkit.Material;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.event.entity.ProjectileHitEvent;
+import org.bukkit.event.entity.ProjectileLaunchEvent;
 
-import java.util.*;
-
-public class Freeze extends Gadget implements Listener {
+public class Freeze extends ThrowableGadget implements Listener {
     double distance = 3;
 
     public Freeze() {
-        super(Material.SNOW_BALL, "冷陸氣團", 5);
+        super(Material.SNOW_BALL, "冷陸氣團");
+    }
+
+    @Override
+    public void onThrow(ProjectileLaunchEvent event){
+        System.out.println("Throw");
     }
 
 
+    @Override
+    public void onHit(ProjectileHitEvent event){
+        System.out.println("Hit");
+    }
 }

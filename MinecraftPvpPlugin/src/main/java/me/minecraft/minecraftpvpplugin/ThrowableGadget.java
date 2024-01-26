@@ -6,7 +6,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.event.entity.ProjectileLaunchEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -17,14 +16,14 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
     public String name;
 
     protected abstract void onThrow(ProjectileLaunchEvent event);
-    protected abstract void onHit(PlayerInteractEvent event);
+    protected abstract void onHit(ProjectileHitEvent event);
 
     public ThrowableGadget(Material material, String name) {
-        if (
-                material != Material.FISHING_ROD
-                && material != Material.EXP_BOTTLE
-                && material != Material.POTION
-        )
+//        if (
+//                material != Material.FISHING_ROD
+//                && material != Material.EXP_BOTTLE
+//                && material != Material.POTION
+//        )
         this.material = material;
         this.name = name;
 
@@ -40,13 +39,24 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
     @EventHandler
     void Throw(ProjectileLaunchEvent event) {
         if (event.getEntity() instanceof Player)  {
-
+            onThrow(event);
         }
-        onThrow(event);
     }
 
     @EventHandler
     void Hit(ProjectileHitEvent event) {
         onHit(event);
+    }
+
+    public ItemStack instance(int amount) {
+        ItemStack stack = this.clone();
+        stack.setAmount(amount);
+        return stack;
+    }
+
+    public ItemStack instance() {
+        ItemStack stack = this.clone();
+        stack.setAmount(1);
+        return stack;
     }
 }
