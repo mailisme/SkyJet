@@ -39,6 +39,9 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
     @EventHandler
     void Throw(ProjectileLaunchEvent event) {
         if (event.getEntity() instanceof Player)  {
+            return;
+        }
+        else {
             onThrow(event);
         }
     }
