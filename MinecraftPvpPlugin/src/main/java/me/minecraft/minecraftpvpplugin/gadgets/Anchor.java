@@ -16,13 +16,13 @@ public class Anchor extends Gadget {
     }
 
     @Override
-    public void activate(PlayerInteractEvent event) {
+    public void onActivate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         AnviledLocation.put(player, player.getLocation());
     }
 
     @Override
-    public void deactivate(PlayerInteractEvent event) {
+    public void onDeactivate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         player.teleport(AnviledLocation.get(player));
         AnviledLocation.remove(player);

@@ -10,11 +10,11 @@ public class Speed extends Gadget {
     public Speed() {
         super(Material.LEATHER_BOOTS, "風行之靴", 10);
     }
-    public void activate(PlayerInteractEvent event) {
+    public void onActivate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         player.addPotionEffect(Effect.SpeedEffect);
     }
 
-    public void deactivate(PlayerInteractEvent event) {
+    public void onDeactivate(PlayerInteractEvent event) {
     }
 }

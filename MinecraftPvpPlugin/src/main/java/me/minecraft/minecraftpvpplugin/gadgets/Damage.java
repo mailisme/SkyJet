@@ -10,11 +10,11 @@ public class Damage extends Gadget {
     public Damage() {
         super(Material.LAPIS_ORE, "劍魂之石", 10);
     }
-    public void activate(PlayerInteractEvent event) {
+    public void onActivate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         player.addPotionEffect(Effect.DamageEffect);
     }
 
-    public void deactivate(PlayerInteractEvent event) {
+    public void onDeactivate(PlayerInteractEvent event) {
     }
 }

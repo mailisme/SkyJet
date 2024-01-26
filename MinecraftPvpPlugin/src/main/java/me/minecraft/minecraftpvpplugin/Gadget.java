@@ -1,8 +1,6 @@
 package me.minecraft.minecraftpvpplugin;
 
-import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -14,26 +12,33 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.TimerTask;
-import java.util.concurrent.TimeUnit;
 
 import static org.bukkit.Bukkit.getServer;
 
 abstract public class Gadget extends ItemStack implements Listener {
     public Material material;
     public String name;
-    public long duration;
+    public long duration; // this will only do any effect when SwitchLike = false
+
+    boolean activating;
+
+    // Switch Like:
+    //     false: player click -> activate() -> delete item -> wait for `duration` s  -> deactivate()
+    //     true: player click -> activate() -> player click -> deactivate() -> delete item
+
+    public boolean SwitchLike;
 
     public List<Player> PlayersUsingGadget = new ArrayList<>();
 
-    protected abstract void activate(PlayerInteractEvent event);
-    protected abstract void deactivate(PlayerInteractEvent event);
+    protected abstract void onActivate(PlayerInteractEvent event);
+    protected abstract void onDeactivate(PlayerInteractEvent event);
 
 
-    public Gadget(Material material, String name, long duration) {
+    public Gadget(Material material, String name, long duration, boolean SwitchLike) {
         this.material = material;
         this.name = name;
         this.duration = duration;
+        this.SwitchLike = SwitchLike;
 
         this.setType(material);
 
@@ -44,7 +49,22 @@ abstract public class Gadget extends ItemStack implements Listener {
         getServer().getPluginManager().registerEvents(this, getServer().getPluginManager().getPlugin("MinecraftPvpPlugin"));
     }
 
-    @EventHandler
+    public Gadget(Material material, String name, long duration) {
+        this.material = material;
+        this.name = name;
+        this.duration = duration;
+        this.SwitchLike = false;
+
+        this.setType(material);
+
+        ItemMeta meta = this.getItemMeta();
+        meta.setDisplayName(name);
+        this.setItemMeta(meta);
+
+        getServer().getPluginManager().registerEvents(this, getServer().getPluginManager().getPlugin("MinecraftPvpPlugin"));
+    }
+
+@EventHandler
     public void Click(PlayerInteractEvent event){
         Player player = event.getPlayer();
         ItemStack item = event.getItem();
@@ -55,27 +75,45 @@ abstract public class Gadget extends ItemStack implements Listener {
                 && event.getAction() != Action.PHYSICAL
                 && !PlayersUsingGadget.contains(player)
         ) {
-
-            PlayersUsingGadget.add(player);
-            activate(event);
-
-            if (item.getAmount() == 1) {
-                player.getInventory().setItemInHand(null);
+            if (SwitchLike && activating) {
+                RemoveOneItemInHand(player);
+                PlayersUsingGadget.remove(player);
+                onDeactivate(event);
+                activating = false;
             }
+
             else {
-                player.getInventory().setItemInHand(instance(item.getAmount() - 1));
+                PlayersUsingGadget.add(player);
+                onActivate(event);
+                activating = true;
             }
 
-            new java.util.Timer().schedule(
+            if (!SwitchLike) {
+                RemoveOneItemInHand(player);
+
+                new java.util.Timer().schedule(
                     new java.util.TimerTask() {
                         @Override
                         public void run() {
                             PlayersUsingGadget.remove(player);
-                            deactivate(event);
+                            onDeactivate(event);
+                            activating = false;
                         }
                     },
                     duration * 1000
-            );
+                );
+            }
+        }
+    }
+
+    void RemoveOneItemInHand(Player player) {
+        ItemStack item = player.getItemInHand();
+
+        if (item.getAmount() == 1) {
+            player.getInventory().setItemInHand(null);
+        }
+        else {
+            player.getInventory().setItemInHand(instance(item.getAmount() - 1));
         }
     }
 

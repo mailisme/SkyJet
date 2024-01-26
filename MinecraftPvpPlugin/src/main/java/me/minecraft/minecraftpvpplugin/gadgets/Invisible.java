@@ -14,7 +14,7 @@ public class Invisible extends Gadget {
         super(Material.STAINED_GLASS_PANE, "虛影斗篷", 5);
     }
 
-    public void activate(PlayerInteractEvent event) {
+    public void onActivate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         player.addPotionEffect(Effect.InvisibleEffect);
         player.getInventory().setHelmet(null);
@@ -23,7 +23,7 @@ public class Invisible extends Gadget {
         player.getInventory().setBoots(null);
     }
 
-    public void deactivate(PlayerInteractEvent event) {
+    public void onDeactivate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         player.getInventory().setHelmet(Items.IronHelmet);
         player.getInventory().setChestplate(Items.IronChestplate);

@@ -13,7 +13,7 @@ public class Rebound extends Gadget implements Listener {
     public Rebound() {
         super(Material.WOOD_DOOR, "反射之盾", 10);
     }
-    public void activate(PlayerInteractEvent event) {
+    public void onActivate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         player.sendMessage("start");
     }
@@ -27,7 +27,7 @@ public class Rebound extends Gadget implements Listener {
         }
     }
 
-    public void deactivate(PlayerInteractEvent event) {
+    public void onDeactivate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         player.sendMessage("stop");
     }
