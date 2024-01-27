@@ -61,6 +61,9 @@ abstract public class Gadget extends ItemStack implements Listener {
         meta.setDisplayName(name);
         this.setItemMeta(meta);
 
+        System.out.println(getServer().getPluginManager());
+        System.out.println(getServer().getPluginManager().getPlugin("MinecraftPvpPlugin"));
+
         getServer().getPluginManager().registerEvents(this, getServer().getPluginManager().getPlugin("MinecraftPvpPlugin"));
     }
 

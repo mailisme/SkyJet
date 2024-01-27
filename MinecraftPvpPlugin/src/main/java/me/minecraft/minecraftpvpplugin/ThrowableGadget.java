@@ -1,13 +1,16 @@
 package me.minecraft.minecraftpvpplugin;
 
 import org.bukkit.Material;
-import org.bukkit.entity.Player;
+import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+
+import java.util.Objects;
 
 import static org.bukkit.Bukkit.getServer;
 
@@ -15,17 +18,26 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
     public Material material;
     public String name;
 
+    Container ProjectileType;
+
     protected abstract void onThrow(ProjectileLaunchEvent event);
-    protected abstract void onHit(ProjectileHitEvent event);
+    protected abstract void onHitEntity(EntityDamageByEntityEvent event);
+    protected abstract void onHitObject(ProjectileHitEvent event);
+
 
     public ThrowableGadget(Material material, String name) {
-//        if (
-//                material != Material.FISHING_ROD
-//                && material != Material.EXP_BOTTLE
-//                && material != Material.POTION
-//        )
         this.material = material;
         this.name = name;
+
+        switch (material) {
+            case Material.SNOW_BALL -> ProjectileType = new Container<Snowball>();
+            case Material.EGG -> ProjectileType = new Container<Egg>();
+            case Material.EXP_BOTTLE -> ProjectileType = new Container<ThrownExpBottle>();
+            case Material.ARROW -> ProjectileType = new Container<Arrow>();
+            case Material.FISHING_ROD -> ProjectileType = new Container<FishHook>();
+            case Material.FIREBALL -> ProjectileType = new Container<Fireball>();
+            case Material.POTION -> ProjectileType = new
+        }
 
         this.setType(material);
 
@@ -37,19 +49,28 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
     }
 
     @EventHandler
-    void Throw(ProjectileLaunchEvent event) {
-        System.out.println("asdfgfd");
-        if (event.getEntity() instanceof Player)  {
-            return;
-        }
-        else {
-            onThrow(event);
+    public void Throw(ProjectileLaunchEvent event) {
+        if (event.getEntity().getShooter() instanceof Player) {
+            if (event.getEntity() instanceof Snowball) {
+                onThrow(event);
+            }
         }
     }
 
     @EventHandler
-    void Hit(ProjectileHitEvent event) {
-        onHit(event);
+    public void HitEntity(EntityDamageByEntityEvent event) {
+        if (event.getDamager() instanceof ItemStack item) {
+            if (Objects.equals(item.getItemMeta().getDisplayName(), name)) {
+                onHitEntity(event);
+            }
+        }
+    }
+
+    public void HitObject(ProjectileHitEvent event) {
+        ItemStack item = (ItemStack) event.getEntity();
+        if (Objects.equals(item.getItemMeta().getDisplayName(), name)) {
+            onHitObject(event);
+        }
     }
 
     public ItemStack instance(int amount) {
