@@ -1,5 +1,6 @@
 package me.minecraft.minecraftpvpplugin;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
@@ -12,6 +13,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.Objects;
 
+import static org.bukkit.Bukkit.getBukkitVersion;
 import static org.bukkit.Bukkit.getServer;
 
 abstract public class ThrowableGadget extends ItemStack implements Listener {
@@ -55,7 +57,7 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
         if (event.getEntity().getShooter() instanceof Player) {
             System.out.println(ProjectileType);
             System.out.println(event.getEntity().getClass());
-            if (event.getEntity().getClass() == ProjectileType) {
+            if (event.getEntity().getClass().equals(ProjectileType)) {
                 System.out.println("Class yes");
                 onThrow(event);
             }
