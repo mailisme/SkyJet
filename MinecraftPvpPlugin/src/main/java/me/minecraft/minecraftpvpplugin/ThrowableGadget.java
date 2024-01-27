@@ -18,7 +18,7 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
     public Material material;
     public String name;
 
-    Container ProjectileType;
+    Class<?> ProjectileType;
 
     protected abstract void onThrow(ProjectileLaunchEvent event);
     protected abstract void onHitEntity(EntityDamageByEntityEvent event);
@@ -30,14 +30,14 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
         this.name = name;
 
         switch (material) {
-            case Material.SNOW_BALL -> ProjectileType = new Container<Snowball>();
-            case Material.EGG -> ProjectileType = new Container<Egg>();
-            case Material.EXP_BOTTLE -> ProjectileType = new Container<ThrownExpBottle>();
-            case Material.ARROW -> ProjectileType = new Container<Arrow>();
-            case Material.FISHING_ROD -> ProjectileType = new Container<FishHook>();
-            case Material.FIREBALL -> ProjectileType = new Container<Fireball>();
-            case Material.POTION -> ProjectileType = new Container<ThrownPotion>();
-            case Material.ENDER_PEARL -> ProjectileType = new Container<EnderPearl>();
+            case Material.SNOW_BALL -> ProjectileType = Snowball.class;
+            case Material.EGG -> ProjectileType = Egg.class;
+            case Material.EXP_BOTTLE -> ProjectileType = ThrownExpBottle.class;
+            case Material.ARROW -> ProjectileType = Arrow.class;
+            case Material.FISHING_ROD -> ProjectileType = FishHook.class;
+            case Material.FIREBALL -> ProjectileType = Fireball.class;
+            case Material.POTION -> ProjectileType = ThrownPotion.class;
+            case Material.ENDER_PEARL -> ProjectileType = EnderPearl.class;
             default -> throw new Exception("no this item");
         }
 
@@ -53,7 +53,10 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
     @EventHandler
     public void Throw(ProjectileLaunchEvent event) {
         if (event.getEntity().getShooter() instanceof Player) {
-            if (event.getEntity().getClass()==ProjectileType.getContainedType()) {
+            System.out.println(ProjectileType);
+            System.out.println(event.getEntity().getClass());
+            if (event.getEntity().getClass() == ProjectileType) {
+                System.out.println("Class yes");
                 onThrow(event);
             }
         }
