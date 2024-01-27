@@ -1,3 +1,4 @@
+me\minecraft\minecraftpvpplugin\Container$1.class
 me\minecraft\minecraftpvpplugin\ThrowableGadget.class
 me\minecraft\minecraftpvpplugin\gadgets\Freeze.class
 me\minecraft\minecraftpvpplugin\Gadgets.class
@@ -8,11 +9,13 @@ me\minecraft\minecraftpvpplugin\gadgets\Speed.class
 me\minecraft\minecraftpvpplugin\gadgets\Anchor.class
 me\minecraft\minecraftpvpplugin\GuiEvent.class
 me\minecraft\minecraftpvpplugin\PvpPlace.class
+me\minecraft\minecraftpvpplugin\ThrowableGadget$1.class
 me\minecraft\minecraftpvpplugin\gadgets\Invisible.class
 me\minecraft\minecraftpvpplugin\Gadget$1.class
 me\minecraft\minecraftpvpplugin\MinecraftPvpPlugin.class
 me\minecraft\minecraftpvpplugin\Effect.class
 me\minecraft\minecraftpvpplugin\Gadget.class
+me\minecraft\minecraftpvpplugin\Container.class
 me\minecraft\minecraftpvpplugin\PvpPlace$1.class
 me\minecraft\minecraftpvpplugin\gadgets\Damage.class
 me\minecraft\minecraftpvpplugin\Items.class

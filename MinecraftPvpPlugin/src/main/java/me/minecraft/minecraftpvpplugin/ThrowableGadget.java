@@ -25,7 +25,7 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
     protected abstract void onHitObject(ProjectileHitEvent event);
 
 
-    public ThrowableGadget(Material material, String name) {
+    public ThrowableGadget(Material material, String name) throws Exception {
         this.material = material;
         this.name = name;
 
@@ -36,7 +36,9 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
             case Material.ARROW -> ProjectileType = new Container<Arrow>();
             case Material.FISHING_ROD -> ProjectileType = new Container<FishHook>();
             case Material.FIREBALL -> ProjectileType = new Container<Fireball>();
-            case Material.POTION -> ProjectileType = new
+            case Material.POTION -> ProjectileType = new Container<ThrownPotion>();
+            case Material.ENDER_PEARL -> ProjectileType = new Container<EnderPearl>();
+            default -> throw new Exception("no this item");
         }
 
         this.setType(material);
@@ -51,7 +53,7 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
     @EventHandler
     public void Throw(ProjectileLaunchEvent event) {
         if (event.getEntity().getShooter() instanceof Player) {
-            if (event.getEntity() instanceof Snowball) {
+            if (event.getEntity().getClass()==ProjectileType.getContainedType()) {
                 onThrow(event);
             }
         }
@@ -65,7 +67,7 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
             }
         }
     }
-
+    @EventHandler
     public void HitObject(ProjectileHitEvent event) {
         ItemStack item = (ItemStack) event.getEntity();
         if (Objects.equals(item.getItemMeta().getDisplayName(), name)) {

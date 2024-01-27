@@ -9,7 +9,7 @@ import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.event.entity.ProjectileLaunchEvent;
 
 public class Freeze extends ThrowableGadget {
-    public Freeze() {
+    public Freeze() throws Exception {
         super(Material.SNOW_BALL, "冷陸氣團");
     }
 

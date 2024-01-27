@@ -10,5 +10,13 @@ public class Gadgets {
     static ItemStack Speed = new Speed().instance(1);
     static ItemStack Rebound = new Rebound().instance(1);
     static ItemStack Anchor = new Anchor().instance(1);
-    static ItemStack Freeze = new Freeze().instance(1);
+    static ItemStack Freeze;
+
+    static {
+        try {
+            Freeze = new Freeze().instance(1);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
