@@ -22,7 +22,7 @@ import java.util.List;
 
 public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
 
-    static List<World> PVPWorlds = new ArrayList<World>();
+    public static List<World> PVPWorlds = new ArrayList<World>();
 
     @Override
     public void onEnable() {
@@ -176,5 +176,9 @@ public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
         for (PotionEffect effect :player.getActivePotionEffects ()){
             player.removePotionEffect (effect.getType ());
         }
+    }
+
+    public static boolean IsInPvp(Player player) {
+        return PVPWorlds.contains(player.getWorld());
     }
 }

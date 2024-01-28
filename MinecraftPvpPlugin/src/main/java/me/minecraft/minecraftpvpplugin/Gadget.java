@@ -73,7 +73,7 @@ abstract public class Gadget extends ItemStack implements Listener {
         ItemStack item = event.getItem();
 
         if (event.getItem() != null
-                && MinecraftPvpPlugin.PVPWorlds.contains(player.getWorld())
+                && MinecraftPvpPlugin.IsInPvp(player)
                 && Objects.equals(item.getItemMeta().getDisplayName(), name)
                 && event.getAction() != Action.PHYSICAL
                 && !PlayersUsingGadget.contains(player)
