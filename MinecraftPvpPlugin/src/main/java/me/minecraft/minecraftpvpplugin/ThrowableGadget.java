@@ -49,7 +49,7 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
         meta.setDisplayName(name);
         this.setItemMeta(meta);
 
-        getServer().getPluginManager().registerEvents(this, getServer().getPluginManager().getPlugin("MinecraftPvpPlugin"));
+        getServer().getPluginManager().registerEvents(this, MinecraftPvpPlugin.instance);
     }
 
     @EventHandler

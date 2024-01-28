@@ -64,10 +64,10 @@ abstract public class Gadget extends ItemStack implements Listener {
         System.out.println(getServer().getPluginManager());
         System.out.println(getServer().getPluginManager().getPlugin("MinecraftPvpPlugin"));
 
-        getServer().getPluginManager().registerEvents(this, getServer().getPluginManager().getPlugin("MinecraftPvpPlugin"));
+        getServer().getPluginManager().registerEvents(this, MinecraftPvpPlugin.instance);
     }
 
-@EventHandler
+    @EventHandler
     public void Click(PlayerInteractEvent event){
         Player player = event.getPlayer();
         ItemStack item = event.getItem();

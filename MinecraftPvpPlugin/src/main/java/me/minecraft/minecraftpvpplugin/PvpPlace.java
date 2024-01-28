@@ -22,12 +22,7 @@ public class PvpPlace implements Listener {
         for (int WorldIndex = 0; WorldIndex < world_of_players.length; WorldIndex++) {
             World PVPWorld = MinecraftPvpPlugin.PVPWorlds.get(WorldIndex);
 
-            if (world_of_players[WorldIndex][0] == null) {
-                player.teleport(new Location(PVPWorld, 118.5, 98, 54.5));
-                world_of_players[WorldIndex][0] = player;
-                FoundEmptyPlayerSlot = true;
-                break;
-            } else if (world_of_players[WorldIndex][1] == null) {
+            if (world_of_players[WorldIndex][1] == null && world_of_players[WorldIndex][0] != null) {
                 player.teleport(new Location(PVPWorld, 118.5, 98.0, 84.5, (float) 180, 0));
                 world_of_players[WorldIndex][1] = player;
                 GameStart(WorldIndex);
@@ -36,11 +31,30 @@ public class PvpPlace implements Listener {
             }
         }
 
-        if (FoundEmptyPlayerSlot) {
-            MinecraftPvpPlugin.ToPVP(player);
+        if (!FoundEmptyPlayerSlot) {
+            for (int WorldIndex = 0; WorldIndex < world_of_players.length; WorldIndex++) {
+                World PVPWorld = MinecraftPvpPlugin.PVPWorlds.get(WorldIndex);
+
+                if (world_of_players[WorldIndex][0] == null) {
+                    player.teleport(new Location(PVPWorld, 118.5, 98, 54.5));
+                    world_of_players[WorldIndex][0] = player;
+                    FoundEmptyPlayerSlot = true;
+                    break;
+                } else if (world_of_players[WorldIndex][1] == null) {
+                    player.teleport(new Location(PVPWorld, 118.5, 98.0, 84.5, (float) 180, 0));
+                    world_of_players[WorldIndex][1] = player;
+                    GameStart(WorldIndex);
+                    FoundEmptyPlayerSlot = true;
+                    break;
+                }
+            }
+        }
+
+        if (!FoundEmptyPlayerSlot) {
+            player.sendMessage("Server is full :(");
         }
         else {
-            player.sendMessage("Server is full :(");
+            MinecraftPvpPlugin.ToPVP(player);
         }
     }
 
@@ -67,13 +81,13 @@ public class PvpPlace implements Listener {
                     this.cancel();
                 }
 
-                LeftSeconds -= 1;
-            }
-        };
+            LeftSeconds -= 1;
+        }
+    };
 
-        Timer t = new Timer();
-        t.schedule(CountDown, 0, 1000);
-    }
+    Timer t = new Timer();
+    t.schedule(CountDown, 0, 1000);
+}
 
 
     // Marks input Player as loser, and the opponent of the Player as winner. Remove them from the players list and teleport them back to lobby.

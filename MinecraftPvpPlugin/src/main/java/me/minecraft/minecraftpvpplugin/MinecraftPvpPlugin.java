@@ -23,9 +23,12 @@ import java.util.List;
 public final class MinecraftPvpPlugin extends JavaPlugin implements Listener{
 
     public static List<World> PVPWorlds = new ArrayList<World>();
+    public static JavaPlugin instance;
 
     @Override
     public void onEnable() {
+        instance = this;
+
         // Plugin startup logic
         System.out.println("MAGIC PVP v.0.0.0");
         getServer().getPluginManager().registerEvents(this, this);
