@@ -1,6 +1,8 @@
 package me.minecraft.minecraftpvpplugin.gadgets;
 
+import me.minecraft.minecraftpvpplugin.Effect;
 import me.minecraft.minecraftpvpplugin.ThrowableGadget;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
@@ -15,19 +17,19 @@ public class Freeze extends ThrowableGadget {
 
     @Override
     public void onThrow(ProjectileLaunchEvent event){
-        Player player = (Player) event.getEntity().getShooter();
-        player.sendMessage("throw");
+
     }
 
     @Override
     public void onHitEntity(EntityDamageByEntityEvent event){
         Player player = (Player) event.getEntity();
-        player.sendMessage("get hit");
+        player.sendMessage("u get hit");
+        player.addPotionEffect(Effect.FreezeEffect);
     }
 
     @Override
     public void onHitObject(ProjectileHitEvent event) {
         Player player = (Player) event.getEntity().getShooter();
-        player.sendMessage("you hit something");
+        player.sendMessage("you hit " + event.getEntity().getName());
     }
 }
