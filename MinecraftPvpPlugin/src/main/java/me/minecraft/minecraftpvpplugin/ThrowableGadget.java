@@ -20,7 +20,7 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
     public Material material;
     public String name;
 
-    Class<?> ProjectileType;
+    EntityType ProjectileType;
 
     protected abstract void onThrow(ProjectileLaunchEvent event);
     protected abstract void onHitEntity(EntityDamageByEntityEvent event);
@@ -32,14 +32,14 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
         this.name = name;
 
         switch (material) {
-            case Material.SNOW_BALL -> ProjectileType = Snowball.class;
-            case Material.EGG -> ProjectileType = Egg.class;
-            case Material.EXP_BOTTLE -> ProjectileType = ThrownExpBottle.class;
-            case Material.ARROW -> ProjectileType = Arrow.class;
-            case Material.FISHING_ROD -> ProjectileType = FishHook.class;
-            case Material.FIREBALL -> ProjectileType = Fireball.class;
-            case Material.POTION -> ProjectileType = ThrownPotion.class;
-            case Material.ENDER_PEARL -> ProjectileType = EnderPearl.class;
+            case Material.SNOW_BALL -> ProjectileType = EntityType.SNOWBALL;
+            case Material.EGG -> ProjectileType = EntityType.EGG;
+            case Material.EXP_BOTTLE -> ProjectileType = EntityType.THROWN_EXP_BOTTLE;
+            case Material.ARROW -> ProjectileType = EntityType.ARROW;
+            case Material.FISHING_ROD -> ProjectileType = EntityType.FISHING_HOOK;
+            case Material.FIREBALL -> ProjectileType = EntityType.FIREBALL;
+            case Material.POTION -> ProjectileType = EntityType.SPLASH_POTION;
+            case Material.ENDER_PEARL -> ProjectileType = EntityType.ENDER_PEARL;
             default -> throw new Exception("no this item");
         }
 
@@ -55,10 +55,7 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
     @EventHandler
     public void Throw(ProjectileLaunchEvent event) {
         if (event.getEntity().getShooter() instanceof Player) {
-            System.out.println(ProjectileType);
-            System.out.println(event.getEntity().getClass());
-            if (event.getEntity().getClass().equals(ProjectileType)) {
-                System.out.println("Class yes");
+            if (event.getEntity().getType().equals(ProjectileType)) {
                 onThrow(event);
             }
         }
@@ -66,16 +63,16 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
 
     @EventHandler
     public void HitEntity(EntityDamageByEntityEvent event) {
-        if (event.getDamager() instanceof ItemStack item) {
-            if (Objects.equals(item.getItemMeta().getDisplayName(), name)) {
+        if (event.getDamager() instanceof Entity) {
+            if (event.getDamager().getType() == ProjectileType) {
                 onHitEntity(event);
             }
         }
     }
     @EventHandler
     public void HitObject(ProjectileHitEvent event) {
-        ItemStack item = (ItemStack) event.getEntity();
-        if (Objects.equals(item.getItemMeta().getDisplayName(), name)) {
+        Entity damager = event.getEntity();
+        if (damager.getType() == ProjectileType) {
             onHitObject(event);
         }
     }
