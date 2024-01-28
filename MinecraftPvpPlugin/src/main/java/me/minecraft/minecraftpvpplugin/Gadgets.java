@@ -19,4 +19,5 @@ public class Gadgets {
             throw new RuntimeException(e);
         }
     }
+    static ItemStack KnockBack = new KnockBack().instance(1);
 }

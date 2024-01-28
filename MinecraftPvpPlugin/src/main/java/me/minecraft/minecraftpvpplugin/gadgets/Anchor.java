@@ -12,7 +12,7 @@ public class Anchor extends Gadget {
     Map<Player, Location> AnviledLocation = new HashMap<Player, Location>();
 
     public Anchor() {
-        super(Material.ANVIL, "時空之錨", 15);
+        super(Material.ANVIL, "時空之錨",true);
     }
 
     @Override

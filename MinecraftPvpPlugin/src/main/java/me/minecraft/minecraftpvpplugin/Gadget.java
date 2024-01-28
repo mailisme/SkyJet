@@ -34,10 +34,9 @@ abstract public class Gadget extends ItemStack implements Listener {
     protected abstract void onDeactivate(PlayerInteractEvent event);
 
 
-    public Gadget(Material material, String name, long duration, boolean SwitchLike) {
+    public Gadget(Material material, String name, boolean SwitchLike) {
         this.material = material;
         this.name = name;
-        this.duration = duration;
         this.SwitchLike = SwitchLike;
 
         this.setType(material);
@@ -46,7 +45,7 @@ abstract public class Gadget extends ItemStack implements Listener {
         meta.setDisplayName(name);
         this.setItemMeta(meta);
 
-        getServer().getPluginManager().registerEvents(this, getServer().getPluginManager().getPlugin("MinecraftPvpPlugin"));
+        getServer().getPluginManager().registerEvents(this, MinecraftPvpPlugin.instance);
     }
 
     public Gadget(Material material, String name, long duration) {
