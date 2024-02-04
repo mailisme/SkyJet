@@ -29,13 +29,18 @@
 | 回收再利用        | 讓道具有50%的機率用完後繼續存在，5%機率讓敵人撿到                                            |
 | 苦力怕             |按住Shift可以隱形靠近敵人，放開會爆炸                                                         |
 
+## Discord 伺服器
+https://discord.gg/mKd46Gbybg
 
+## 如何加入 Minecraft 伺服器
+打開 Minecraft 1.8.x 版本，用 Discord 伺服器 **#最新伺服器連結** 頻道的連結加入伺服器。  
+因為我們很窮，還沒有穩定的IP跟網址，伺服器也家用電腦，不會時時刻刻在開，大多都是我們有在開 Dev Stream 的時候才會開伺服器，想加入 Dev Stream 一起測試可以看 **#開發時程表** 頻道。
 ## 如何貢獻PVP地圖
 
-1. 裝 Java 21、Java JDK 21
+1. 裝 **Java 21、Java JDK 21**
 2. `git clone https://github.com/mailisme/MinecraftPvpPlugin.git -b world` (如果之前就有 clone git 的 repo 最好先備份起來)
 3. 進入 `MinecraftPvpPlugin/MinecraftServer` -> 執行 `start.bat`
-4. 打開 Minecraft 1.8.x 版本，多人 -> 連上 `localhost` 伺服器
+4. 打開 Minecraft **1.8.x** 版本，多人 -> 連上 `localhost` 伺服器
 5. 進入大廳後，握著鑽石劍點右鍵，會有一個選單出現，請點上面唯一一個選項(應該是斧頭)，以傳送到PVP世界
 6. 更改地圖
 7. 當你告一個段落，將`MinecraftServer/PVP1/region`裡的所有檔案利用 Github UI 上傳至 `world` branch 的 `MinecraftServer/PVP1/region`，並取一個適當的commit名稱
