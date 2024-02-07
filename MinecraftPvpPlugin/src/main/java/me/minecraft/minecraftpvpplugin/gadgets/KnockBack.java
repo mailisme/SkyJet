@@ -24,11 +24,11 @@ public class KnockBack extends Gadget {
         List<Entity> nearBy = player.getNearbyEntities(6, 6, 6);
 
         for (Entity e : nearBy) {
+            System.out.println(e);
             Vector EntityPos = e.getLocation().toVector();
             Vector PlayerPos = player.getLocation().toVector();
-            e.setVelocity(EntityPos.subtract(PlayerPos).normalize().multiply(2).add(new Vector(0, 0.7, 0)));
+            e.setVelocity(EntityPos.subtract(PlayerPos).setY(0).normalize().multiply(2).add(new Vector(0, 0.7, 0)));
         }
-
     }
 
     @Override

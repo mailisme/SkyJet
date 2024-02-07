@@ -15,6 +15,7 @@ public class PvpPlace implements Listener {
     // Two lists so that the Players with the index 0 is at PVP0 world.
     static Player[][] world_of_players = new Player[3][2];
 
+    static RandomSpawnGadget randomSpawnGadget = new RandomSpawnGadget();
     // Adds Player to players list, and teleports them to the right world.
     public static void AddPlayer(Player player) {
         boolean FoundEmptyPlayerSlot = false;
@@ -59,13 +60,14 @@ public class PvpPlace implements Listener {
     }
 
     public static void GameStart(int WorldIndex){
+        World PVPWorld = MinecraftPvpPlugin.PVPWorlds.get(WorldIndex);
+
+        randomSpawnGadget.AddSpawnerToWorld(PVPWorld);
 
         TimerTask CountDown = new TimerTask() {
             int LeftSeconds = 3;
             @Override
             public void run() {
-                World PVPWorld = MinecraftPvpPlugin.PVPWorlds.get(WorldIndex);
-
                 world_of_players[WorldIndex][0].teleport(new Location(PVPWorld, 118.5, 98, 54.5));
                 world_of_players[WorldIndex][1].teleport(new Location(PVPWorld, 118.5, 98.0, 84.5, (float) 180, 0));
 
@@ -81,13 +83,13 @@ public class PvpPlace implements Listener {
                     this.cancel();
                 }
 
-            LeftSeconds -= 1;
-        }
-    };
+                LeftSeconds -= 1;
+            }
+        };
 
-    Timer t = new Timer();
-    t.schedule(CountDown, 0, 1000);
-}
+        Timer t = new Timer();
+        t.schedule(CountDown, 0, 1000);
+    }
 
 
     // Marks input Player as loser, and the opponent of the Player as winner. Remove them from the players list and teleport them back to lobby.
@@ -120,7 +122,11 @@ public class PvpPlace implements Listener {
                     world_of_players[WorldIndex][0] = null;
                     world_of_players[WorldIndex][1] = null;
 
-                    MinecraftPvpPlugin.PVPWorlds.get(WorldIndex).getEntities().forEach((e) -> {
+                    World world = MinecraftPvpPlugin.PVPWorlds.get(WorldIndex);
+
+                    randomSpawnGadget.DeleteSpawnerFromWorld(world);
+
+                    world.getEntities().forEach((e) -> {
                         if (e instanceof Item) {
                             e.remove();
                         }

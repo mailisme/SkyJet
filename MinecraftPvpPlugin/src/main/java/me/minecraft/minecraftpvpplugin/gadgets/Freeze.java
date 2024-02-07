@@ -16,7 +16,7 @@ import org.bukkit.util.Vector;
 
 import java.util.*;
 
-public class Freeze extends ThrowableGadget{
+public class Freeze extends ThrowableGadget {
 
     public Freeze() throws Exception {
         super(Material.SNOW_BALL, "冷陸氣團");
@@ -61,11 +61,13 @@ public class Freeze extends ThrowableGadget{
         }
 
         Bukkit.getScheduler().runTaskLater(MinecraftPvpPlugin.instance, () -> {
-            locationMaterialMap.forEach((location, matWithData) -> {
-                IceCenter.getWorld().getBlockAt(location).setType(matWithData.material);
-                IceCenter.getWorld().getBlockAt(location).setData(matWithData.data);
-                locationMaterialMap.remove(location, matWithData);
-            });
+            if (!locationMaterialMap.isEmpty()) {
+                locationMaterialMap.forEach((location, matWithData) -> {
+                    IceCenter.getWorld().getBlockAt(location).setType(matWithData.material);
+                    IceCenter.getWorld().getBlockAt(location).setData(matWithData.data);
+                    locationMaterialMap.remove(location, matWithData);
+                });
+            }
         }, 40);
     }
 }

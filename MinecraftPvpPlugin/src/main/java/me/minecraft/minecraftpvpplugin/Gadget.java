@@ -20,8 +20,6 @@ abstract public class Gadget extends ItemStack implements Listener {
     public String name;
     public long duration; // this will only do any effect when SwitchLike = false
 
-    boolean activating;
-
     // Switch Like:
     //     false: player click -> activate() -> delete item -> wait for `duration` s  -> deactivate()
     //     true: player click -> activate() -> player click -> deactivate() -> delete item
@@ -75,35 +73,36 @@ abstract public class Gadget extends ItemStack implements Listener {
                 && MinecraftPvpPlugin.IsInPvp(player)
                 && Objects.equals(item.getItemMeta().getDisplayName(), name)
                 && event.getAction() != Action.PHYSICAL
-                && !PlayersUsingGadget.contains(player)
         ) {
-            if (SwitchLike && activating) {
-                RemoveOneItemInHand(player);
-                PlayersUsingGadget.remove(player);
-                onDeactivate(event);
-                activating = false;
+            if (SwitchLike) {
+                if (PlayersUsingGadget.contains(player)) {
+                    RemoveOneItemInHand(player);
+                    PlayersUsingGadget.remove(player);
+                    onDeactivate(event);
+                }
+                else {
+                    PlayersUsingGadget.add(player);
+                    onActivate(event);
+                }
             }
 
             else {
-                PlayersUsingGadget.add(player);
-                onActivate(event);
-                activating = true;
-            }
+                if (!PlayersUsingGadget.contains(player)) {
+                    RemoveOneItemInHand(player);
+                    PlayersUsingGadget.add(player);
+                    onActivate(event);
 
-            if (!SwitchLike) {
-                RemoveOneItemInHand(player);
-
-                new java.util.Timer().schedule(
-                    new java.util.TimerTask() {
-                        @Override
-                        public void run() {
-                            PlayersUsingGadget.remove(player);
-                            onDeactivate(event);
-                            activating = false;
-                        }
-                    },
-                    duration * 1000
-                );
+                    new java.util.Timer().schedule(
+                            new java.util.TimerTask() {
+                                @Override
+                                public void run() {
+                                    PlayersUsingGadget.remove(player);
+                                    onDeactivate(event);
+                                }
+                            },
+                            duration * 1000
+                    );
+                }
             }
         }
     }
