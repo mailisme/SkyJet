@@ -21,16 +21,14 @@ public class KnockBack extends Gadget {
     @Override
     protected void onActivate(PlayerInteractEvent event) {
         Player player = (Player) event.getPlayer();
-        float x = player.getLocation().getDirection().normalize().getBlockX();
-        float y = player.getLocation().getDirection().normalize().getBlockY();
         List<Entity> nearBy = player.getNearbyEntities(6, 6, 6);
-        Player Enemy =  (Player) nearBy.get(0);
-        Enemy.setVelocity(getVelocity(x, y, 3));
-    }
-    private Vector getVelocity(double x, double z, double speed) {
-        double y = 0.3333;
-        double multiplier = Math.sqrt((speed*speed) / (x*x + y*y + z*z));
-        return new Vector(x, y, z).multiply(multiplier).setY(y);
+
+        for (Entity e : nearBy) {
+            Vector EntityPos = e.getLocation().toVector();
+            Vector PlayerPos = player.getLocation().toVector();
+            e.setVelocity(EntityPos.subtract(PlayerPos).normalize().multiply(2).add(new Vector(0, 0.7, 0)));
+        }
+
     }
 
     @Override
