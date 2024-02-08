@@ -60,8 +60,10 @@ public class RandomSpawnGadget {
     }
 
     void DeleteSpawnerFromWorld (World world) {
-        Bukkit.getServer().getScheduler().cancelTask(SpawnerIndexes.get(world));
-        SpawnerIndexes.remove(world);
+        if (SpawnerIndexes.containsKey(world)) {
+            Bukkit.getServer().getScheduler().cancelTask(SpawnerIndexes.get(world));
+            SpawnerIndexes.remove(world);
+        }
     }
 
     void SpawnRandomGadget(World world, double x, double y, double z) {

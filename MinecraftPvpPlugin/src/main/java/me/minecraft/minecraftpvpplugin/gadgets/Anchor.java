@@ -1,9 +1,12 @@
 package me.minecraft.minecraftpvpplugin.gadgets;
 
 import me.minecraft.minecraftpvpplugin.Gadget;
+import me.minecraft.minecraftpvpplugin.Locations;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.player.PlayerChangedWorldEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 
 import java.util.*;
@@ -24,7 +27,15 @@ public class Anchor extends Gadget {
     @Override
     public void onDeactivate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
+
         player.teleport(AnviledLocation.get(player));
+        AnviledLocation.remove(player);
+    }
+
+    @Override
+    public void onGameEnd(PlayerChangedWorldEvent event) {
+        Player player = event.getPlayer();
+
         AnviledLocation.remove(player);
     }
 }

@@ -10,10 +10,6 @@ import org.bukkit.util.Vector;
 import java.util.List;
 
 public class KnockBack extends Gadget {
-
-
-
-
     public KnockBack() {
         super(Material.FIREBALL, "地球之心", 20);
     }
@@ -29,10 +25,5 @@ public class KnockBack extends Gadget {
             Vector PlayerPos = player.getLocation().toVector();
             e.setVelocity(EntityPos.subtract(PlayerPos).setY(0).normalize().multiply(2).add(new Vector(0, 0.7, 0)));
         }
-    }
-
-    @Override
-    protected void onDeactivate(PlayerInteractEvent event) {
-
     }
 }

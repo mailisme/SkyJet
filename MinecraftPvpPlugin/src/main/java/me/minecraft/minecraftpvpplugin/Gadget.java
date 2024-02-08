@@ -1,10 +1,12 @@
 package me.minecraft.minecraftpvpplugin;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.player.PlayerChangedWorldEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -28,8 +30,15 @@ abstract public class Gadget extends ItemStack implements Listener {
 
     public List<Player> PlayersUsingGadget = new ArrayList<>();
 
-    protected abstract void onActivate(PlayerInteractEvent event);
-    protected abstract void onDeactivate(PlayerInteractEvent event);
+    protected void onActivate(PlayerInteractEvent event) {
+
+    }
+    protected void onDeactivate(PlayerInteractEvent event) {
+
+    }
+    protected void onGameEnd(PlayerChangedWorldEvent event) {
+
+    }
 
 
     public Gadget(Material material, String name, boolean SwitchLike) {
@@ -96,8 +105,10 @@ abstract public class Gadget extends ItemStack implements Listener {
                             new java.util.TimerTask() {
                                 @Override
                                 public void run() {
-                                    PlayersUsingGadget.remove(player);
-                                    onDeactivate(event);
+                                    if (PlayersUsingGadget.contains(player)) {
+                                        PlayersUsingGadget.remove(player);
+                                        onDeactivate(event);
+                                    }
                                 }
                             },
                             duration * 1000
@@ -107,6 +118,13 @@ abstract public class Gadget extends ItemStack implements Listener {
         }
     }
 
+    @EventHandler
+    public void ChangeWorld(PlayerChangedWorldEvent event) {
+        if (event.getPlayer().getWorld() == Bukkit.getWorld("Lobby")) {
+            PlayersUsingGadget.remove(event.getPlayer());
+            onGameEnd(event);
+        }
+    }
     void RemoveOneItemInHand(Player player) {
         ItemStack item = player.getItemInHand();
 

@@ -23,16 +23,6 @@ public class Freeze extends ThrowableGadget {
     }
 
     @Override
-    public void onThrow(ProjectileLaunchEvent event){
-
-    }
-
-    @Override
-    public void onHitEntity(EntityDamageByEntityEvent event){
-
-    }
-
-    @Override
     public void onHitObject(ProjectileHitEvent event) {
         Player player = (Player) event.getEntity().getShooter();
         Map<Location, MatWithData> locationMaterialMap = new HashMap<>();

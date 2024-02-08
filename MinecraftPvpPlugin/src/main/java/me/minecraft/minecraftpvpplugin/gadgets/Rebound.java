@@ -25,7 +25,7 @@ public class Rebound extends Gadget implements Listener {
             if(PlayersUsingGadget.contains((Player) event.getEntity())){
                 int health = (int) player.getHealth();
                 int hurt = (int) event.getDamage();
-                player.setHealth(health - (double) hurt /2);
+                player.setHealth(health - (double) hurt / 2);
             }
         }
     }

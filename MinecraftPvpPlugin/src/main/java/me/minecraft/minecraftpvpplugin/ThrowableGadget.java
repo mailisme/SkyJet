@@ -8,6 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.event.entity.ProjectileLaunchEvent;
+import org.bukkit.event.player.PlayerChangedWorldEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -22,9 +23,15 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
 
     EntityType ProjectileType;
 
-    protected abstract void onThrow(ProjectileLaunchEvent event);
-    protected abstract void onHitEntity(EntityDamageByEntityEvent event);
-    protected abstract void onHitObject(ProjectileHitEvent event);
+    protected void onThrow(ProjectileLaunchEvent event) {
+
+    }
+    protected void onHitEntity(EntityDamageByEntityEvent event) {
+
+    }
+    protected void onHitObject(ProjectileHitEvent event) {
+
+    }
 
 
     public ThrowableGadget(Material material, String name) throws Exception {
@@ -69,6 +76,7 @@ abstract public class ThrowableGadget extends ItemStack implements Listener {
             }
         }
     }
+
     @EventHandler
     public void HitObject(ProjectileHitEvent event) {
         Entity damager = event.getEntity();
