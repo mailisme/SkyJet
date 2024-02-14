@@ -1,5 +1,11 @@
 [
   {
+    "uuid": "786b47ad-e918-30cb-b480-343d93c9c156",
+    "name": "MAIL__TW",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
     "uuid": "dfeb3c93-3855-4e66-b3d1-25aa25312082",
     "name": "MAIL__TW",
     "level": 4,
@@ -7,6 +13,12 @@
   },
   {
     "uuid": "7bddcbf5-cb89-4cb9-ac25-837980bba3df",
+    "name": "ELEPOT",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "07d5abe9-1d7f-3677-a185-e012876e3b06",
     "name": "ELEPOT",
     "level": 4,
     "bypassesPlayerLimit": false
