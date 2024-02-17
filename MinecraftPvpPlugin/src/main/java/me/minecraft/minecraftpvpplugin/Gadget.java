@@ -29,7 +29,6 @@ abstract public class Gadget extends ItemStack implements Listener {
     public boolean SwitchLike;
 
     public List<Player> PlayersUsingGadget = new ArrayList<>();
-
     protected void onActivate(PlayerInteractEvent event) {
 
     }
