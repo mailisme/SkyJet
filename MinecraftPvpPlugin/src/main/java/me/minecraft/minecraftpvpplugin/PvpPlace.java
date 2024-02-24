@@ -16,6 +16,7 @@ public class PvpPlace implements Listener {
     static Player[][] world_of_players = new Player[3][2];
 
     static RandomSpawnGadget randomSpawnGadget = new RandomSpawnGadget();
+    static GameLoop gameLoop = new GameLoop();
     // Adds Player to players list, and teleports them to the right world.
     public static void AddPlayer(Player player) {
         boolean FoundEmptyPlayerSlot = false;
@@ -75,11 +76,14 @@ public class PvpPlace implements Listener {
                 world_of_players[WorldIndex][1].sendTitle("The game will start in", String.valueOf(LeftSeconds));
 
                 if (LeftSeconds == 0) {
-                    world_of_players[WorldIndex][0].sendTitle("START", ":D");
-                    world_of_players[WorldIndex][1].sendTitle("START", ":D");
+                    world_of_players[WorldIndex][0].sendTitle("SEARCH FOR GADGETS!", ":D");
+                    world_of_players[WorldIndex][1].sendTitle("SEARCH FOR GADGETS!", ":D");
 
                     MinecraftPvpPlugin.ToPVP(world_of_players[WorldIndex][0]);
                     MinecraftPvpPlugin.ToPVP(world_of_players[WorldIndex][1]);
+
+                    gameLoop.AddGameLoopToWorld(PVPWorld);
+
                     this.cancel();
                 }
 
@@ -125,6 +129,7 @@ public class PvpPlace implements Listener {
                     World world = MinecraftPvpPlugin.PVPWorlds.get(WorldIndex);
 
                     randomSpawnGadget.DeleteSpawnerFromWorld(world);
+                    gameLoop.DeleteGameLoopFromWorld(world);
 
                     world.getEntities().forEach((e) -> {
                         if (e instanceof Item) {
