@@ -10,23 +10,22 @@ import org.bukkit.util.Vector
 
 class Freeze : ThrowableGadget(Material.SNOW_BALL, "冷陸氣團") {
     public override fun onHitObject(event: ProjectileHitEvent) {
-        val player = event.entity.shooter as Player
         val locationMaterialMap: MutableMap<Location, MatWithData> = HashMap()
 
-        val IceCenter = event.entity.location
-        val EntityVelocity = event.entity.velocity
-        IceCenter.add(EntityVelocity.normalize())
-        val CenterBlock = IceCenter.block
+        val iceCenter = event.entity.location
+        val entityVelocity = event.entity.velocity
+        iceCenter.add(entityVelocity.normalize())
+        val centerBlock = iceCenter.block
 
-        val BlockY = CenterBlock.y
+        val blockY = centerBlock.y
 
         for (i in -3..3) {
             for (j in -3..3) {
                 if (Vector(i, j, 0).length() < 2.7) {
-                    val BlockX = CenterBlock.x + i
-                    val BlockZ = CenterBlock.z + j
+                    val blockX = centerBlock.x + i
+                    val blockZ = centerBlock.z + j
 
-                    val block = IceCenter.world.getBlockAt(BlockX, BlockY, BlockZ)
+                    val block = iceCenter.world.getBlockAt(blockX, blockY, blockZ)
                     if (block.type != Material.ICE) {
                         locationMaterialMap[block.location] = MatWithData(block.type, block.data)
                     }
@@ -36,13 +35,14 @@ class Freeze : ThrowableGadget(Material.SNOW_BALL, "冷陸氣團") {
             }
         }
 
-        Bukkit.getScheduler().runTaskLater(MinecraftPvpPlugin.Companion.instance, {
-            if (!locationMaterialMap.isEmpty()) {
-                locationMaterialMap.forEach { (location: Location, matWithData: MatWithData) ->
-                    IceCenter.world.getBlockAt(location).type = matWithData.material
-                    IceCenter.world.getBlockAt(location).data = matWithData.data
-                    locationMaterialMap.remove(location, matWithData)
-                }
+        Bukkit.getScheduler().runTaskLater(MinecraftPvpPlugin.instance, {
+            locationMaterialMap.forEach { (location: Location, matWithData: MatWithData) ->
+                var block = iceCenter.world.getBlockAt(location)
+
+                block.type = matWithData.material
+                block.data = matWithData.data
+
+                locationMaterialMap.remove(location, matWithData)
             }
         }, 40)
     }

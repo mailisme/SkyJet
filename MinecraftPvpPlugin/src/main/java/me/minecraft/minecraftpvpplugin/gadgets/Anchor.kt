@@ -7,24 +7,15 @@ import org.bukkit.entity.Player
 import org.bukkit.event.player.PlayerChangedWorldEvent
 import org.bukkit.event.player.PlayerInteractEvent
 
-class Anchor : Gadget(Material.ANVIL, "時空之錨", true) {
-    var AnviledLocation: MutableMap<Player, Location> = HashMap()
-
+class Anchor : Gadget(Material.ANVIL, "時空之錨", switchLike = true) {
     public override fun onActivate(event: PlayerInteractEvent) {
         val player = event.player
-        AnviledLocation[player] = player.location
+        addPlayerData(player, "anviledLocation", player.location)
     }
 
     public override fun onDeactivate(event: PlayerInteractEvent) {
         val player = event.player
 
-        player.teleport(AnviledLocation[player])
-        AnviledLocation.remove(player)
-    }
-
-    public override fun onGameEnd(event: PlayerChangedWorldEvent) {
-        val player = event.player
-
-        AnviledLocation.remove(player)
+        player.teleport(getPlayerData(player, "anviledLocation") as Location)
     }
 }

@@ -11,122 +11,126 @@ import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.inventory.ItemStack
 import java.util.*
 
-abstract class Gadget : ItemStack, Listener {
-    var material: Material
-    var name: String
-    var duration: Long = 0 // this will only do any effect when SwitchLike = false
+// Duration will only do any effect when SwitchLike = false
 
-    // Switch Like:
-    //     false: player click -> activate() -> delete item -> wait for `duration` s  -> deactivate()
-    //     true: player click -> activate() -> player click -> deactivate() -> delete item
-    var SwitchLike: Boolean
+// Switch Like:
+//     false: player click -> activate() -> delete item -> wait for `duration` s  -> deactivate()
+//     true: player click -> activate() -> player click -> deactivate() -> delete item
 
-    var PlayersUsingGadget: MutableList<Player> = ArrayList()
-    protected open fun onActivate(event: PlayerInteractEvent) {
-    }
-
-    protected open fun onDeactivate(event: PlayerInteractEvent) {
-    }
-
-    protected open fun onGameEnd(event: PlayerChangedWorldEvent) {
-    }
+abstract class Gadget(var material: Material,
+                      private var name: String,
+                      private var switchLike: Boolean = false,
+                      private var duration: Long? = null) : ItemStack(), Listener {
+    private var playersUsingGadgetData = mutableMapOf<Player, MutableMap<String, Any>>()
+    protected open fun onActivate(event: PlayerInteractEvent) {}
+    protected open fun onDeactivate(event: PlayerInteractEvent) {}
+    protected open fun onGameEnd(event: PlayerChangedWorldEvent) {}
 
 
-    constructor(material: Material, name: String, SwitchLike: Boolean) {
-        this.material = material
-        this.name = name
-        this.SwitchLike = SwitchLike
-
+    init {
         this.type = material
 
         val meta = this.itemMeta
         meta.displayName = name
         this.setItemMeta(meta)
 
-        Bukkit.getServer().pluginManager.registerEvents(this, MinecraftPvpPlugin.Companion.instance)
+        if (!switchLike && duration == null) {
+            throw IllegalArgumentException("Duration must be specified if switchLike = false")
+        }
+
+        Bukkit.getServer().pluginManager.registerEvents(this, MinecraftPvpPlugin.instance)
     }
 
-    constructor(material: Material, name: String, duration: Long) {
-        this.material = material
-        this.name = name
-        this.duration = duration
-        this.SwitchLike = false
 
-        this.type = material
+    private fun waitToDeactivate(player: Player, event: PlayerInteractEvent) {
+        Timer().schedule(
+            object : TimerTask() {
+                override fun run() {
+                    if (playersUsingGadgetData.contains(player)) {
+                        onDeactivate(event)
+                        playersUsingGadgetData.remove(player)
+                    }
+                }
+            },
+            duration!! * 1000
+        )
+    }
 
-        val meta = this.itemMeta
-        meta.displayName = name
-        this.setItemMeta(meta)
+    fun addPlayerData(player: Player, key: String, data: Any) {
+        if (!playersUsingGadgetData.contains(player)) {
+            throw RuntimeException("Cannot add player data to players not using gadget")
+        }
 
-        println(Bukkit.getServer().pluginManager)
-        println(Bukkit.getServer().pluginManager.getPlugin("MinecraftPvpPlugin"))
+        playersUsingGadgetData[player]!![key] = data
+    }
 
-        Bukkit.getServer().pluginManager.registerEvents(this, MinecraftPvpPlugin.Companion.instance)
+    fun getPlayerData(player: Player, key: String): Any {
+        if (!playersUsingGadgetData.contains(player)) {
+            throw RuntimeException("Cannot get player data from players not using gadget")
+        }
+
+        if (!playersUsingGadgetData[player]!!.contains(key)) {
+            throw RuntimeException("This key is not stored in this player")
+        }
+
+        return playersUsingGadgetData[player]!![key]!!
+    }
+
+    fun isPlayerUsingGadget(player: Player): Boolean {
+        return playersUsingGadgetData.contains(player)
     }
 
     @EventHandler
-    fun Click(event: PlayerInteractEvent) {
+    fun onClick(event: PlayerInteractEvent) {
         val player = event.player
         val item = event.item
 
-        if (event.item != null && MinecraftPvpPlugin.Companion.IsInPvp(player) && item.itemMeta.displayName == name && event.action != Action.PHYSICAL
-        ) {
-            if (SwitchLike) {
-                if (PlayersUsingGadget.contains(player)) {
-                    RemoveOneItemInHand(player)
-                    PlayersUsingGadget.remove(player)
-                    onDeactivate(event)
-                } else {
-                    PlayersUsingGadget.add(player)
-                    onActivate(event)
+        if (MinecraftPvpPlugin.IsInPvp(player) && item?.itemMeta?.displayName == name && event.action != Action.PHYSICAL) {
+            if (switchLike) {
+                if (isPlayerUsingGadget(player)) {
+                    removeOneItemInHand(player)
+                    onDeactivate(event);
+                    playersUsingGadgetData.remove(player);
                 }
             } else {
-                if (!PlayersUsingGadget.contains(player)) {
-                    RemoveOneItemInHand(player)
-                    PlayersUsingGadget.add(player)
-                    onActivate(event)
-
-                    Timer().schedule(
-                            object : TimerTask() {
-                                override fun run() {
-                                    if (PlayersUsingGadget.contains(player)) {
-                                        PlayersUsingGadget.remove(player)
-                                        onDeactivate(event)
-                                    }
-                                }
-                            },
-                            duration * 1000
-                    )
+                if (!isPlayerUsingGadget(player)) {
+                    removeOneItemInHand(player)
+                    waitToDeactivate(player, event);
                 }
+            }
+
+            if (!isPlayerUsingGadget(player)) {
+                playersUsingGadgetData[player] = mutableMapOf()
+                onActivate(event)
             }
         }
     }
 
     @EventHandler
-    fun ChangeWorld(event: PlayerChangedWorldEvent) {
+    fun onChangeWorld(event: PlayerChangedWorldEvent) {
         if (event.player.world === Bukkit.getWorld("Lobby")) {
-            PlayersUsingGadget.remove(event.player)
             onGameEnd(event)
+            playersUsingGadgetData.remove(event.player)
         }
     }
 
-    fun RemoveOneItemInHand(player: Player) {
+    private fun removeOneItemInHand(player: Player) {
         val item = player.itemInHand
 
         if (item.amount == 1) {
             player.inventory.itemInHand = null
         } else {
-            player.inventory.itemInHand = instance(item.amount - 1)
+            player.inventory.itemInHand = create(item.amount - 1)
         }
     }
 
-    fun instance(amount: Int): ItemStack {
+    fun create(amount: Int): ItemStack {
         val stack = this.clone()
         stack.amount = amount
         return stack
     }
 
-    fun instance(): ItemStack {
+    fun create(): ItemStack {
         val stack = this.clone()
         stack.amount = 1
         return stack

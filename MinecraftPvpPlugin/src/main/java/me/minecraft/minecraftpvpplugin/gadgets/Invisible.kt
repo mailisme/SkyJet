@@ -6,7 +6,7 @@ import me.minecraft.minecraftpvpplugin.Items
 import org.bukkit.Material
 import org.bukkit.event.player.PlayerInteractEvent
 
-class Invisible : Gadget(Material.STAINED_GLASS_PANE, "虛影斗篷", 5) {
+class Invisible : Gadget(Material.STAINED_GLASS_PANE, "虛影斗篷", duration = 5) {
     public override fun onActivate(event: PlayerInteractEvent) {
         val player = event.player
         player.addPotionEffect(Effect.InvisibleEffect)

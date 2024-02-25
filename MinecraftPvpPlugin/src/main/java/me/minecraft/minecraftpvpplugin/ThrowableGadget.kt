@@ -35,7 +35,7 @@ abstract class ThrowableGadget(var material: Material, var name: String) : ItemS
             Material.FIREBALL -> EntityType.FIREBALL
             Material.POTION -> EntityType.SPLASH_POTION
             Material.ENDER_PEARL -> EntityType.ENDER_PEARL
-            else -> throw Exception("no this item")
+            else -> throw IllegalArgumentException("no this item")
         }
         this.type = material
 
@@ -72,13 +72,13 @@ abstract class ThrowableGadget(var material: Material, var name: String) : ItemS
         }
     }
 
-    fun instance(amount: Int): ItemStack {
+    fun create(amount: Int): ItemStack {
         val stack = this.clone()
         stack.amount = amount
         return stack
     }
 
-    fun instance(): ItemStack {
+    fun create(): ItemStack {
         val stack = this.clone()
         stack.amount = 1
         return stack
