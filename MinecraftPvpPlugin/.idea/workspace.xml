@@ -5,12 +5,117 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17758a80-0c85-4e1c-9ee7-0bf4385df7a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/GameLoop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Effect.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Gadget.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Gadgets.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/GameLoop.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/GuiEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Items.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Locations.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/MatWithData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/MinecraftPvpPlugin.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/PermanentSkill.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/PvpPlace.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/RandomSpawnGadget.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/ShiftSkill.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Skill.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/ThrowableGadget.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Anchor.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Damage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Freeze.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Invisible.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/KnockBack.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Rebound.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Speed.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/skills/Teleport.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/PvpPlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/PvpPlace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MinecraftPvpPlugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MinecraftPvpPlugin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Effect.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Gadget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Gadgets.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/GameLoop.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/GuiEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Items.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Locations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/MatWithData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/MinecraftPvpPlugin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/PermanentSkill.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/PvpPlace.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/RandomSpawnGadget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/ShiftSkill.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Skill.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/ThrowableGadget.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Anchor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Damage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Freeze.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Invisible.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/KnockBack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Rebound.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Speed.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/skills/Teleport.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/Gadget.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/Gadget.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/GameLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/GameLoop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/PermanentSkill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/PermanentSkill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/PvpPlace.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/PvpPlace.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/ShiftSkill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/ShiftSkill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/Skill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/Skill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/skills/Teleport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/skills/Teleport.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/data/villages.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/playerdata/07d5abe9-1d7f-3677-a185-e012876e3b06.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/playerdata/07d5abe9-1d7f-3677-a185-e012876e3b06.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/playerdata/786b47ad-e918-30cb-b480-343d93c9c156.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/playerdata/786b47ad-e918-30cb-b480-343d93c9c156.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/session.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/stats/07d5abe9-1d7f-3677-a185-e012876e3b06.json" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/stats/07d5abe9-1d7f-3677-a185-e012876e3b06.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/stats/786b47ad-e918-30cb-b480-343d93c9c156.json" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/stats/786b47ad-e918-30cb-b480-343d93c9c156.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/session.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/DIM1/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/DIM1/region/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/DIM1/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/DIM1/region/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/DIM1/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/DIM1/region/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/DIM1/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/DIM1/region/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_the_end/session.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/data/villages.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.-1.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.0.-1.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/session.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/data/villages.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/region/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/region/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/session.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP2/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP2/data/villages.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP2/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP2/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP2/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP2/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP2/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP2/region/r.-1.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP2/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP2/region/r.0.0.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP2/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP2/session.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/logs/latest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/plugins/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/plugins/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/server.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/spigot.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/spigot.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/usercache.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +146,13 @@
     "Maven.MinecraftPvpPlugin package.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Shell Script.copy_binary.executor": "Run",
     "Shell Script.run_server.executor": "Run",
-    "git-widget-placeholder": "code",
+    "git-widget-placeholder": "kotlin",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Dev/java/MinecraftPvpPlugin/MinecraftServer",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+    "settings.editor.selected.configurable": "copyright.filetypes.Kotlin"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -157,7 +263,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/GameLoop.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/GameLoop.kt</url>
           <line>15</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
