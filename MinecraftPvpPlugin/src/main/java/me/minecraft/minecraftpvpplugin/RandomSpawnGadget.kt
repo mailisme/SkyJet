@@ -3,11 +3,11 @@ package me.minecraft.minecraftpvpplugin
 import org.bukkit.*
 import java.util.*
 
-class RandomSpawnGadget {
-    var SpawnerIndexes: MutableMap<World, Int> = HashMap()
+class RandomSpawnGadget(private val world: World) {
+    private var spawnerIndex = 0
 
-    fun AddSpawnerToWorld(world: World) {
-        SpawnRandomGadget(world, 118.5, 98.0, 69.5)
+    fun start() {
+        spawnRandomGadget(world, 118.5, 98.0, 69.5)
 
         val rand = Random()
         val spawner = Runnable {
@@ -15,57 +15,52 @@ class RandomSpawnGadget {
                 val r = rand.nextFloat(9f)
 
                 if (r > 8) {
-                    SpawnRandomGadget(world, 124.5, 98.0, 66.5)
+                    spawnRandomGadget(world, 124.5, 98.0, 66.5)
                 } else if (r > 7) {
-                    SpawnRandomGadget(world, 106.5, 101.0, 57.5)
+                    spawnRandomGadget(world, 106.5, 101.0, 57.5)
                 } else if (r > 6) {
-                    SpawnRandomGadget(world, 140.5, 101.0, 50.5)
+                    spawnRandomGadget(world, 140.5, 101.0, 50.5)
                 } else if (r > 5) {
-                    SpawnRandomGadget(world, 86.5, 98.0, 74.5)
+                    spawnRandomGadget(world, 86.5, 98.0, 74.5)
                 } else if (r > 4) {
-                    SpawnRandomGadget(world, 118.5, 98.0, 54.5)
+                    spawnRandomGadget(world, 118.5, 98.0, 54.5)
                 } else if (r > 3) {
-                    SpawnRandomGadget(world, 99.5, 101.0, 52.5)
+                    spawnRandomGadget(world, 99.5, 101.0, 52.5)
                 } else if (r > 2) {
-                    SpawnRandomGadget(world, 107.5, 99.0, 99.5)
+                    spawnRandomGadget(world, 107.5, 99.0, 99.5)
                 } else if (r > 1) {
-                    SpawnRandomGadget(world, 128.5, 101.0, 91.5)
+                    spawnRandomGadget(world, 128.5, 101.0, 91.5)
                 } else {
-                    SpawnRandomGadget(world, 141.5, 100.0, 80.5)
+                    spawnRandomGadget(world, 141.5, 100.0, 80.5)
                 }
             }
         }
 
-        val SpawnerIndex = Bukkit.getServer().scheduler.scheduleSyncRepeatingTask(MinecraftPvpPlugin.Companion.instance, spawner, 0, 20)
-
-        SpawnerIndexes[world] = SpawnerIndex
+        spawnerIndex = Bukkit.getServer().scheduler.scheduleSyncRepeatingTask(MinecraftPvpPlugin.instance, spawner, 0, 20)
     }
 
-    fun DeleteSpawnerFromWorld(world: World) {
-        if (SpawnerIndexes.containsKey(world)) {
-            Bukkit.getServer().scheduler.cancelTask(SpawnerIndexes[world]!!)
-            SpawnerIndexes.remove(world)
-        }
+    fun stop() {
+        Bukkit.getServer().scheduler.cancelTask(spawnerIndex)
     }
 
-    fun SpawnRandomGadget(world: World, x: Double, y: Double, z: Double) {
+    private fun spawnRandomGadget(world: World, x: Double, y: Double, z: Double) {
         val rand = Random()
         val r = rand.nextFloat(7f)
 
         val gadget = if (r > 6) {
-            Gadgets.Anchor
+            Gadgets.anchor
         } else if (r > 5) {
-            Gadgets.Damage
+            Gadgets.damage
         } else if (r > 4) {
-            Gadgets.Freeze
+            Gadgets.freeze
         } else if (r > 3) {
-            Gadgets.Invisible
+            Gadgets.invisible
         } else if (r > 2) {
-            Gadgets.KnockBack
+            Gadgets.knockBack
         } else if (r > 1) {
-            Gadgets.Rebound
+            Gadgets.rebound
         } else {
-            Gadgets.Speed
+            Gadgets.speed
         }
 
         world.dropItem(Location(world, x, y, z), gadget)

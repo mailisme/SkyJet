@@ -17,84 +17,69 @@ import org.bukkit.plugin.java.JavaPlugin
 
 class MinecraftPvpPlugin : JavaPlugin(), Listener {
     override fun onEnable() {
-        instance = this
-
         // Plugin startup logic
-        println("MAGIC PVP v.0.0.0")
+        logger.info("SKYJET PVP v.3.0.0")
         server.pluginManager.registerEvents(this, this)
-        val lobbyWorld = Bukkit.createWorld(WorldCreator("Lobby"))
 
-        for (i in 0..2) {
-            val world = Bukkit.createWorld(WorldCreator(String.format("PVP%d", i)))
-            world.pvp = true
-            PVPWorlds.add(world)
-        }
+        Worlds.lobby.pvp = false
+        Worlds.pvpWorlds.map { it.pvp = true }
 
-        if (lobbyWorld != null) {
-            logger.info("Lobby world loaded successfully.")
-        } else {
-            logger.warning("Failed to load Lobby world.")
-        }
-        for (world in Bukkit.getWorlds()) {
-            logger.info("Loaded world: " + world.name)
-        }
-
-        lobbyWorld!!.pvp = false
-    }
-
-    @EventHandler
-    fun ClickEvent(event: InventoryClickEvent) {
-        val player = event.whoClicked as Player
-
-        if (event.clickedInventory != null) {
-            if (event.clickedInventory.title.equals(ChatColor.AQUA.toString() + "Join Game", ignoreCase = true)) {
-                when (event.currentItem.type) {
-                    Material.DIAMOND_AXE -> {
-                        PvpPlace.AddPlayer(player)
-                        player.closeInventory()
-                    }
-
-                    else -> {}
-                }
-                event.isCancelled = true
-            }
-        }
+        instance = this
     }
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<String>): Boolean {
         if (command.name.equals("lobby", ignoreCase = true)) {
             val player = sender as Player
-            PvpPlace.RemovePlayer(player)
-            ToLobby(player)
+            PvpPlaceManager.removePlayer(player)
+            onPlayerToLobby(player)
         }
 
         return true
     }
-
+    
     @EventHandler
-    fun Join(event: PlayerJoinEvent) {
-        val player = event.player
-        event.joinMessage = ChatColor.AQUA.toString() + "Welcome " + player.name
-        print(player.name + " join the server")
-        player.teleport(Locations.lobby)
-        ToLobby(player)
+    fun onInventoryClick(event: InventoryClickEvent) {
+        val player = event.whoClicked as Player
+
+        if (event.clickedInventory == null) return
+
+        if (event.clickedInventory.title.equals(ChatColor.AQUA.toString() + "Join Game", ignoreCase = true)) {
+            when (event.currentItem.type) {
+                Material.DIAMOND_AXE -> {
+                    PvpPlaceManager.addPlayer(player)
+                    player.closeInventory()
+                }
+
+                else -> {}
+            }
+
+            event.isCancelled = true
+        }
     }
 
     @EventHandler
-    fun Click(event: PlayerInteractEvent) {
+    fun onPlayerJoin(event: PlayerJoinEvent) {
         val player = event.player
-        if (player.world === Bukkit.getWorld("Lobby")) {
-            val gui = Bukkit.createInventory(player, 9, ChatColor.AQUA.toString() + "Join Game")
-            val StartGame = Items.DiamondPickaxe
-            val menu = arrayOf(StartGame)
-            gui.contents = menu
 
-            if (event.item != null) {
-                if (event.item == Items.DiamondSword) {
-                    if (event.action != Action.PHYSICAL) {
-                        player.openInventory(gui)
-                    }
-                }
+        event.joinMessage = "${ChatColor.AQUA}Welcome ${player.name}"
+        logger.info("${player.name} joined the server")
+        player.teleport(Locations.lobbySpawn)
+        onPlayerToLobby(player)
+    }
+
+    @EventHandler
+    fun onPlayerInteract(event: PlayerInteractEvent) {
+        val player = event.player
+
+        if (player.world == Worlds.lobby) {
+            val gui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}Join Game")
+            val startGameBtn = Items.DiamondPickaxe
+
+            gui.contents = arrayOf(startGameBtn)
+
+            if (event.item == null) return
+            if (event.item == Items.DiamondSword && event.action != Action.PHYSICAL) {
+                player.openInventory(gui)
             }
         }
     }
@@ -102,7 +87,8 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     @EventHandler
     fun onPlayerDropItem(event: PlayerDropItemEvent) {
         val player = event.player
-        if (Bukkit.getWorld("Lobby") === player.world) {
+
+        if (player.world == Worlds.lobby) {
             player.sendMessage("U cant drop any item ok?")
             event.itemDrop.remove()
             player.inventory.setItem(0, event.itemDrop.itemStack)
@@ -110,26 +96,27 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     }
 
     @EventHandler
-    fun PlayerDeathEvent(event: PlayerDeathEvent) {
+    fun onPlayerDeath(event: PlayerDeathEvent) {
         val player = event.entity
+
         player.spigot().respawn()
-        PvpPlace.RemovePlayer(player)
+        PvpPlaceManager.removePlayer(player)
         event.keepInventory = true
     }
 
     @EventHandler
-    fun PlayerQuitEvent(event: PlayerQuitEvent) {
+    fun onPlayerQuit(event: PlayerQuitEvent) {
         val player = event.player
-        if (PVPWorlds.contains(player.world)) {
-            PvpPlace.RemovePlayer(player)
+
+        if (Worlds.isInPvp(player)) {
+            PvpPlaceManager.removePlayer(player)
         }
     }
 
     companion object {
-        var PVPWorlds: MutableList<World> = ArrayList()
         var instance: JavaPlugin? = null
 
-        fun ToLobby(player: Player?) {
+        fun onPlayerToLobby(player: Player?) {
             if (player != null) {
                 println("To Lobby " + player.name)
                 player.inventory.clear()
@@ -143,12 +130,12 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
                 player.inventory.boots = null
                 player.health = 20.0
                 player.foodLevel = 20
-                ClearEffects(player)
+                clearEffects(player)
                 player.gameMode = GameMode.ADVENTURE
             }
         }
 
-        fun ToPVP(player: Player?) {
+        fun onPlayerToPvp(player: Player?) {
             if (player != null) {
                 player.inventory.clear()
                 player.inventory.setItem(0, Items.IronSword)
@@ -157,7 +144,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
                 player.inventory.setItem(8, Items.Gapple)
                 player.health = 20.0
                 player.foodLevel = 20
-                ClearEffects(player)
+                clearEffects(player)
                 player.inventory.helmet = Items.IronHelmet
                 player.inventory.chestplate = Items.IronChestplate
                 player.inventory.leggings = Items.IronLeggings
@@ -166,14 +153,10 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             }
         }
 
-        fun ClearEffects(player: Player) {
+        private fun clearEffects(player: Player) {
             for (effect in player.activePotionEffects) {
                 player.removePotionEffect(effect.type)
             }
-        }
-
-        fun IsInPvp(player: Player): Boolean {
-            return PVPWorlds.contains(player.world)
         }
     }
 }

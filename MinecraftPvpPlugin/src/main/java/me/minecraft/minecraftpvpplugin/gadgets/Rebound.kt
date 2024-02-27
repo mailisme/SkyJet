@@ -7,7 +7,7 @@ import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.entity.EntityDamageByEntityEvent
 
-class Rebound : Gadget(Material.WOOD_DOOR, "反射之盾", duration = 10), Listener {
+object Rebound : Gadget(Material.WOOD_DOOR, "反射之盾", duration = 10), Listener {
     @EventHandler
     fun entityDamageByEntityEvent(event: EntityDamageByEntityEvent) {
         if (event.damager is Player) {

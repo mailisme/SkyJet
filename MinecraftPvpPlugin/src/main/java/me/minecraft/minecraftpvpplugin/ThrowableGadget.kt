@@ -12,21 +12,16 @@ import org.bukkit.event.entity.ProjectileHitEvent
 import org.bukkit.event.entity.ProjectileLaunchEvent
 import org.bukkit.inventory.ItemStack
 
-abstract class ThrowableGadget(var material: Material, var name: String) : ItemStack(), Listener {
-    var ProjectileType: EntityType? = null
+abstract class ThrowableGadget(var material: Material, name: String) : ItemStack(), Listener {
+    private var projectileType: EntityType? = null
 
-    protected fun onThrow(event: ProjectileLaunchEvent?) {
-    }
-
-    protected fun onHitEntity(event: EntityDamageByEntityEvent?) {
-    }
-
-    protected open fun onHitObject(event: ProjectileHitEvent) {
-    }
+    protected fun onThrow(event: ProjectileLaunchEvent) {}
+    protected fun onHitEntity(event: EntityDamageByEntityEvent) {}
+    protected open fun onHitObject(event: ProjectileHitEvent) {}
 
 
     init {
-        ProjectileType = when (material) {
+        projectileType = when (material) {
             Material.SNOW_BALL -> EntityType.SNOWBALL
             Material.EGG -> EntityType.EGG
             Material.EXP_BOTTLE -> EntityType.THROWN_EXP_BOTTLE
@@ -47,27 +42,27 @@ abstract class ThrowableGadget(var material: Material, var name: String) : ItemS
     }
 
     @EventHandler
-    fun Throw(event: ProjectileLaunchEvent) {
+    fun handleThrow(event: ProjectileLaunchEvent) {
         if (event.entity.shooter is Player) {
-            if (event.entity.type == ProjectileType) {
+            if (event.entity.type == projectileType) {
                 onThrow(event)
             }
         }
     }
 
     @EventHandler
-    fun HitEntity(event: EntityDamageByEntityEvent) {
+    fun handleHitEntity(event: EntityDamageByEntityEvent) {
         if (event.damager is Entity) {
-            if (event.damager.type == ProjectileType) {
+            if (event.damager.type == projectileType) {
                 onHitEntity(event)
             }
         }
     }
 
     @EventHandler
-    fun HitObject(event: ProjectileHitEvent) {
+    fun handleHitObject(event: ProjectileHitEvent) {
         val damager: Entity = event.entity
-        if (damager.type == ProjectileType) {
+        if (damager.type == projectileType) {
             onHitObject(event)
         }
     }

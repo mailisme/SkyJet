@@ -1,14 +1,14 @@
 package me.minecraft.minecraftpvpplugin.gadgets
 
-import me.minecraft.minecraftpvpplugin.MatWithData
 import me.minecraft.minecraftpvpplugin.MinecraftPvpPlugin
 import me.minecraft.minecraftpvpplugin.ThrowableGadget
 import org.bukkit.*
 import org.bukkit.entity.Player
 import org.bukkit.event.entity.ProjectileHitEvent
 import org.bukkit.util.Vector
+class MatWithData(var material: Material, var data: Byte)
 
-class Freeze : ThrowableGadget(Material.SNOW_BALL, "冷陸氣團") {
+object Freeze : ThrowableGadget(Material.SNOW_BALL, "冷陸氣團") {
     public override fun onHitObject(event: ProjectileHitEvent) {
         val locationMaterialMap: MutableMap<Location, MatWithData> = HashMap()
 
@@ -37,7 +37,7 @@ class Freeze : ThrowableGadget(Material.SNOW_BALL, "冷陸氣團") {
 
         Bukkit.getScheduler().runTaskLater(MinecraftPvpPlugin.instance, {
             locationMaterialMap.forEach { (location: Location, matWithData: MatWithData) ->
-                var block = iceCenter.world.getBlockAt(location)
+                val block = iceCenter.world.getBlockAt(location)
 
                 block.type = matWithData.material
                 block.data = matWithData.data

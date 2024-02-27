@@ -1,5 +1,6 @@
 package me.minecraft.minecraftpvpplugin
 
+import jdk.jpackage.internal.Log
 import org.bukkit.Bukkit
 import org.bukkit.Material
 import org.bukkit.entity.Player
@@ -10,6 +11,7 @@ import org.bukkit.event.player.PlayerChangedWorldEvent
 import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.inventory.ItemStack
 import java.util.*
+import java.util.logging.Logger
 
 // Duration will only do any effect when SwitchLike = false
 
@@ -17,15 +19,14 @@ import java.util.*
 //     false: player click -> activate() -> delete item -> wait for `duration` s  -> deactivate()
 //     true: player click -> activate() -> player click -> deactivate() -> delete item
 
-abstract class Gadget(var material: Material,
-                      private var name: String,
-                      private var switchLike: Boolean = false,
-                      private var duration: Long? = null) : ItemStack(), Listener {
+abstract class Gadget(val material: Material,
+                      private val name: String,
+                      private val switchLike: Boolean = false,
+                      private val duration: Long? = null) : ItemStack(), Listener {
     private var playersUsingGadgetData = mutableMapOf<Player, MutableMap<String, Any>>()
     protected open fun onActivate(event: PlayerInteractEvent) {}
     protected open fun onDeactivate(event: PlayerInteractEvent) {}
     protected open fun onGameEnd(event: PlayerChangedWorldEvent) {}
-
 
     init {
         this.type = material
@@ -41,39 +42,12 @@ abstract class Gadget(var material: Material,
         Bukkit.getServer().pluginManager.registerEvents(this, MinecraftPvpPlugin.instance)
     }
 
-
-    private fun waitToDeactivate(player: Player, event: PlayerInteractEvent) {
-        Timer().schedule(
-            object : TimerTask() {
-                override fun run() {
-                    if (playersUsingGadgetData.contains(player)) {
-                        onDeactivate(event)
-                        playersUsingGadgetData.remove(player)
-                    }
-                }
-            },
-            duration!! * 1000
-        )
-    }
-
     fun addPlayerData(player: Player, key: String, data: Any) {
-        if (!playersUsingGadgetData.contains(player)) {
-            throw RuntimeException("Cannot add player data to players not using gadget")
-        }
-
-        playersUsingGadgetData[player]!![key] = data
+        playersUsingGadgetData[player]?.set(key, data)
     }
 
-    fun getPlayerData(player: Player, key: String): Any {
-        if (!playersUsingGadgetData.contains(player)) {
-            throw RuntimeException("Cannot get player data from players not using gadget")
-        }
-
-        if (!playersUsingGadgetData[player]!!.contains(key)) {
-            throw RuntimeException("This key is not stored in this player")
-        }
-
-        return playersUsingGadgetData[player]!![key]!!
+    fun getPlayerData(player: Player, key: String): Any? {
+        return playersUsingGadgetData[player]?.get(key)
     }
 
     fun isPlayerUsingGadget(player: Player): Boolean {
@@ -81,21 +55,21 @@ abstract class Gadget(var material: Material,
     }
 
     @EventHandler
-    fun onClick(event: PlayerInteractEvent) {
+    fun handleClick(event: PlayerInteractEvent) {
         val player = event.player
         val item = event.item
 
-        if (MinecraftPvpPlugin.IsInPvp(player) && item?.itemMeta?.displayName == name && event.action != Action.PHYSICAL) {
+        if (Worlds.isInPvp(player) && item?.itemMeta?.displayName == name && event.action != Action.PHYSICAL) {
             if (switchLike) {
                 if (isPlayerUsingGadget(player)) {
                     removeOneItemInHand(player)
-                    onDeactivate(event);
-                    playersUsingGadgetData.remove(player);
+                    onDeactivate(event)
+                    playersUsingGadgetData.remove(player)
                 }
             } else {
                 if (!isPlayerUsingGadget(player)) {
                     removeOneItemInHand(player)
-                    waitToDeactivate(player, event);
+                    waitToDeactivate(player, event)
                 }
             }
 
@@ -107,7 +81,7 @@ abstract class Gadget(var material: Material,
     }
 
     @EventHandler
-    fun onChangeWorld(event: PlayerChangedWorldEvent) {
+    fun handleChangeWorld(event: PlayerChangedWorldEvent) {
         if (event.player.world === Bukkit.getWorld("Lobby")) {
             onGameEnd(event)
             playersUsingGadgetData.remove(event.player)
@@ -122,6 +96,20 @@ abstract class Gadget(var material: Material,
         } else {
             player.inventory.itemInHand = create(item.amount - 1)
         }
+    }
+
+    private fun waitToDeactivate(player: Player, event: PlayerInteractEvent) {
+        Timer().schedule(
+            object : TimerTask() {
+                override fun run() {
+                    if (playersUsingGadgetData.contains(player)) {
+                        onDeactivate(event)
+                        playersUsingGadgetData.remove(player)
+                    }
+                }
+            },
+            duration!! * 1000
+        )
     }
 
     fun create(amount: Int): ItemStack {

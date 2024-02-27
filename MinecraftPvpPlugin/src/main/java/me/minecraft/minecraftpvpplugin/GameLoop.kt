@@ -1,82 +1,44 @@
 package me.minecraft.minecraftpvpplugin
 
 import org.bukkit.World
+import org.bukkit.entity.Player
 import java.util.*
 
-class GameLoop {
-    var GameLoops: MutableMap<World, Timer> = HashMap()
+class GameLoop(var world: World, private val pvpTime: Long, private val noPvpTime: Long) {
+    private val timer = Timer()
 
-    fun AddGameLoopToWorld(world: World) {
-        val t = Timer()
-
+    fun start() {
         world.pvp = false
-        val SetPvp: TimerTask = object : TimerTask() {
+
+        val setPvp: TimerTask = object : TimerTask() {
             override fun run() {
-                val _t = Timer()
-
-                val CountDown: TimerTask = object : TimerTask() {
-                    var LeftSeconds: Int = 3
-                    override fun run() {
-                        for (player in world.players) {
-                            if (LeftSeconds <= 0) {
-                                player.sendTitle("START", ":D")
-                                world.pvp = true
-
-                                _t.cancel()
-                            } else {
-                                player.sendTitle("PVP will start in", LeftSeconds.toString())
-                            }
+                world.players.forEach {
+                    object : Countdown(it, "PVP will start in", "START") {
+                        override fun onCountdownEnd() {
+                            world.pvp = true
                         }
-
-                        LeftSeconds -= 1
                     }
                 }
-
-                _t.schedule(CountDown, 0, 1000)
             }
         }
 
-        val SetNoPvp: TimerTask = object : TimerTask() {
+        val setNoPvp: TimerTask = object : TimerTask() {
             override fun run() {
-                val _t = Timer()
-
-                val CountDown: TimerTask = object : TimerTask() {
-                    var LeftSeconds: Int = 3
-                    override fun run() {
-                        for (player in world.players) {
-                            if (LeftSeconds <= 0) {
-                                player.sendTitle("SEARCH FOR GADGETS!", ":D")
-                                world.pvp = false
-
-                                _t.cancel()
-                            } else {
-                                player.sendTitle("PVP will end in", LeftSeconds.toString())
-                            }
+                world.players.forEach {
+                    object : Countdown(it, "PVP will end in", "SEARCH FOR GADGETS!") {
+                        override fun onCountdownEnd() {
+                            world.pvp = false
                         }
-
-                        LeftSeconds -= 1
                     }
                 }
-
-                _t.schedule(CountDown, 0, 1000)
             }
         }
 
-        t.schedule(SetPvp, (PvpTime - 3) * 1000, (PvpTime + NoPvpTime) * 1000)
-        t.schedule(SetNoPvp, (PvpTime + NoPvpTime - 3) * 1000, (PvpTime + NoPvpTime) * 1000)
-
-        GameLoops[world] = t
+        timer.schedule(setPvp, (pvpTime - 3) * 1000, (pvpTime + noPvpTime) * 1000)
+        timer.schedule(setNoPvp, (pvpTime + noPvpTime - 3) * 1000, (pvpTime + noPvpTime) * 1000)
     }
 
-    fun DeleteGameLoopFromWorld(world: World) {
-        if (GameLoops.containsKey(world)) {
-            GameLoops[world]!!.cancel()
-            GameLoops.remove(world)
-        }
-    }
-
-    companion object {
-        var PvpTime: Long = 30
-        var NoPvpTime: Long = 30
+    fun stop() {
+        timer.cancel()
     }
 }
