@@ -1,6 +1,9 @@
 package me.minecraft.minecraftpvpplugin
 
-import org.bukkit.*
+import org.bukkit.Bukkit
+import org.bukkit.ChatColor
+import org.bukkit.GameMode
+import org.bukkit.Material
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
@@ -36,7 +39,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         return true
     }
-    
+
     @EventHandler
     fun onInventoryClick(event: InventoryClickEvent) {
         val player = event.whoClicked as Player
@@ -73,12 +76,12 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         if (player.world == Worlds.lobby) {
             val gui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}Join Game")
-            val startGameBtn = Items.DiamondPickaxe
+            val startGameBtn = Items.diamondPickaxe
 
             gui.contents = arrayOf(startGameBtn)
 
             if (event.item == null) return
-            if (event.item == Items.DiamondSword && event.action != Action.PHYSICAL) {
+            if (event.item == Items.diamondSword && event.action != Action.PHYSICAL) {
                 player.openInventory(gui)
             }
         }
@@ -120,10 +123,10 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             if (player != null) {
                 println("To Lobby " + player.name)
                 player.inventory.clear()
-                Items.SwordItemMeta.displayName = ChatColor.AQUA.toString() + "Join"
-                Items.SwordItemMeta.spigot().isUnbreakable = true
-                Items.DiamondSword.setItemMeta(Items.SwordItemMeta)
-                player.inventory.setItem(0, Items.DiamondSword)
+                Items.swordItemMeta.displayName = ChatColor.AQUA.toString() + "Join"
+                Items.swordItemMeta.spigot().isUnbreakable = true
+                Items.diamondSword.setItemMeta(Items.swordItemMeta)
+                player.inventory.setItem(0, Items.diamondSword)
                 player.inventory.helmet = null
                 player.inventory.chestplate = null
                 player.inventory.leggings = null
@@ -138,17 +141,17 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         fun onPlayerToPvp(player: Player?) {
             if (player != null) {
                 player.inventory.clear()
-                player.inventory.setItem(0, Items.IronSword)
-                player.inventory.setItem(1, Items.FishingRod)
+                player.inventory.setItem(0, Items.ironSword)
+                player.inventory.setItem(1, Items.fishingRod)
 
-                player.inventory.setItem(8, Items.Gapple)
+                player.inventory.setItem(8, Items.gapple)
                 player.health = 20.0
                 player.foodLevel = 20
                 clearEffects(player)
-                player.inventory.helmet = Items.IronHelmet
-                player.inventory.chestplate = Items.IronChestplate
-                player.inventory.leggings = Items.IronLeggings
-                player.inventory.boots = Items.IronBoots
+                player.inventory.helmet = Items.ironHelmet
+                player.inventory.chestplate = Items.ironChestplate
+                player.inventory.leggings = Items.ironLeggings
+                player.inventory.boots = Items.ironBoots
                 player.gameMode = GameMode.ADVENTURE
             }
         }

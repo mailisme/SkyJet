@@ -9,7 +9,7 @@ import org.bukkit.event.player.PlayerInteractEvent
 object Invisible : Gadget(Material.STAINED_GLASS_PANE, "虛影斗篷", duration = 5) {
     public override fun onActivate(event: PlayerInteractEvent) {
         val player = event.player
-        player.addPotionEffect(Effect.InvisibleEffect)
+        player.addPotionEffect(Effect.invisibleEffect)
         player.inventory.helmet = null
         player.inventory.chestplate = null
         player.inventory.leggings = null
@@ -18,9 +18,9 @@ object Invisible : Gadget(Material.STAINED_GLASS_PANE, "虛影斗篷", duration 
 
     public override fun onDeactivate(event: PlayerInteractEvent) {
         val player = event.player
-        player.inventory.helmet = Items.IronHelmet
-        player.inventory.chestplate = Items.IronChestplate
-        player.inventory.leggings = Items.IronLeggings
-        player.inventory.boots = Items.IronBoots
+        player.inventory.helmet = Items.ironHelmet
+        player.inventory.chestplate = Items.ironChestplate
+        player.inventory.leggings = Items.ironLeggings
+        player.inventory.boots = Items.ironBoots
     }
 }

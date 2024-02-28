@@ -1,6 +1,8 @@
 package me.minecraft.minecraftpvpplugin
 
-import org.bukkit.*
+import org.bukkit.Bukkit
+import org.bukkit.Location
+import org.bukkit.World
 import java.util.*
 
 class RandomSpawnGadget(private val world: World) {
@@ -36,7 +38,8 @@ class RandomSpawnGadget(private val world: World) {
             }
         }
 
-        spawnerIndex = Bukkit.getServer().scheduler.scheduleSyncRepeatingTask(MinecraftPvpPlugin.instance, spawner, 0, 20)
+        spawnerIndex =
+            Bukkit.getServer().scheduler.scheduleSyncRepeatingTask(MinecraftPvpPlugin.instance, spawner, 0, 20)
     }
 
     fun stop() {

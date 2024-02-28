@@ -1,6 +1,5 @@
 package me.minecraft.minecraftpvpplugin
 
-import jdk.jpackage.internal.Log
 import org.bukkit.Bukkit
 import org.bukkit.Material
 import org.bukkit.entity.Player
@@ -11,7 +10,6 @@ import org.bukkit.event.player.PlayerChangedWorldEvent
 import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.inventory.ItemStack
 import java.util.*
-import java.util.logging.Logger
 
 // Duration will only do any effect when SwitchLike = false
 
@@ -19,10 +17,12 @@ import java.util.logging.Logger
 //     false: player click -> activate() -> delete item -> wait for `duration` s  -> deactivate()
 //     true: player click -> activate() -> player click -> deactivate() -> delete item
 
-abstract class Gadget(val material: Material,
-                      private val name: String,
-                      private val switchLike: Boolean = false,
-                      private val duration: Long? = null) : ItemStack(), Listener {
+abstract class Gadget(
+    val material: Material,
+    private val name: String,
+    private val switchLike: Boolean = false,
+    private val duration: Long? = null
+) : ItemStack(), Listener {
     private var playersUsingGadgetData = mutableMapOf<Player, MutableMap<String, Any>>()
     protected open fun onActivate(event: PlayerInteractEvent) {}
     protected open fun onDeactivate(event: PlayerInteractEvent) {}

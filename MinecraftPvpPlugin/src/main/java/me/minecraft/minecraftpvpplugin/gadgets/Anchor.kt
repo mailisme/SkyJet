@@ -3,8 +3,6 @@ package me.minecraft.minecraftpvpplugin.gadgets
 import me.minecraft.minecraftpvpplugin.Gadget
 import org.bukkit.Location
 import org.bukkit.Material
-import org.bukkit.entity.Player
-import org.bukkit.event.player.PlayerChangedWorldEvent
 import org.bukkit.event.player.PlayerInteractEvent
 
 object Anchor : Gadget(Material.ANVIL, "時空之錨", switchLike = true) {

@@ -1,7 +1,6 @@
 package me.minecraft.minecraftpvpplugin
 
 import me.minecraft.minecraftpvpplugin.gadgets.*
-import org.bukkit.inventory.ItemStack
 
 object Gadgets {
     val invisible = Invisible.create(1)

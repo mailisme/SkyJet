@@ -11,7 +11,8 @@ import org.bukkit.inventory.ItemStack
 import java.time.Instant
 
 open class Skill(//important
-        var material: Material?, var name: String?) : ItemStack(), Listener {
+    var material: Material?, var name: String?
+) : ItemStack(), Listener {
     var DelayMap: MutableMap<Player, Long> = HashMap()
     var delay: Long? = null
 

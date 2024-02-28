@@ -3,10 +3,12 @@ package me.minecraft.minecraftpvpplugin
 import org.bukkit.entity.Player
 import java.util.*
 
-open class Countdown(player: Player,
-                     countdownMessage: String,
-                     countdownEndMessage: String,
-                     countdownEndSubMessage: String = ":D") {
+open class Countdown(
+    player: Player,
+    countdownMessage: String,
+    countdownEndMessage: String,
+    countdownEndSubMessage: String = ":D"
+) {
     init {
         val countdown: TimerTask = object : TimerTask() {
             var leftSeconds: Int = 3

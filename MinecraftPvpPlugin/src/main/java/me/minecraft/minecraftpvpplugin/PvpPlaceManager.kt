@@ -1,6 +1,8 @@
 package me.minecraft.minecraftpvpplugin
 
-import org.bukkit.*
+import org.bukkit.ChatColor
+import org.bukkit.Location
+import org.bukkit.World
 import org.bukkit.entity.Entity
 import org.bukkit.entity.Item
 import org.bukkit.entity.Player

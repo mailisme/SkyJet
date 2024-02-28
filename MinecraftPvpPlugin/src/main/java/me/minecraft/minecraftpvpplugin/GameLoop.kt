@@ -1,7 +1,6 @@
 package me.minecraft.minecraftpvpplugin
 
 import org.bukkit.World
-import org.bukkit.entity.Player
 import java.util.*
 
 class GameLoop(var world: World, private val pvpTime: Long, private val noPvpTime: Long) {
