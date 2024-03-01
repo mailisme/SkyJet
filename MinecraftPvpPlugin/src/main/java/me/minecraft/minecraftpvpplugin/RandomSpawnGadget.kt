@@ -7,12 +7,14 @@ import java.util.*
 
 class RandomSpawnGadget(private val world: World) {
     private var spawnerIndex = 0
+    private var rand = Random()
 
     fun start() {
         spawnRandomGadget(world, 118.5, 98.0, 69.5)
 
-        val rand = Random()
         val spawner = Runnable {
+            print("spawner")
+
             if (rand.nextFloat() > 0.9) {
                 val r = rand.nextFloat(9f)
 
@@ -38,8 +40,7 @@ class RandomSpawnGadget(private val world: World) {
             }
         }
 
-        spawnerIndex =
-            Bukkit.getServer().scheduler.scheduleSyncRepeatingTask(MinecraftPvpPlugin.instance, spawner, 0, 20)
+        spawnerIndex = Bukkit.getServer().scheduler.scheduleSyncRepeatingTask(MinecraftPvpPlugin.instance, spawner, 0, 20)
     }
 
     fun stop() {
@@ -47,6 +48,8 @@ class RandomSpawnGadget(private val world: World) {
     }
 
     private fun spawnRandomGadget(world: World, x: Double, y: Double, z: Double) {
+        print("spawn")
+
         val rand = Random()
         val r = rand.nextFloat(7f)
 

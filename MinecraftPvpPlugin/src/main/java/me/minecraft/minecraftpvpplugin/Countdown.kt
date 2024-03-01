@@ -1,33 +1,35 @@
 package me.minecraft.minecraftpvpplugin
 
+import org.bukkit.Bukkit
 import org.bukkit.entity.Player
 import java.util.*
 
 open class Countdown(
-    player: Player,
+    players: List<Player>,
     countdownMessage: String,
     countdownEndMessage: String,
     countdownEndSubMessage: String = ":D"
 ) {
+    private var counterIndex = 0
+
     init {
-        val countdown: TimerTask = object : TimerTask() {
-            var leftSeconds: Int = 3
-            override fun run() {
-                player.sendTitle(countdownMessage, leftSeconds.toString())
-                onCountdown()
+        var leftSeconds = 3
 
-                if (leftSeconds == 0) {
-                    player.sendTitle(countdownEndMessage, countdownEndSubMessage)
-                    onCountdownEnd()
-                    this.cancel()
-                }
+        val countdown = Runnable {
+            players.forEach{ it.sendTitle(countdownMessage, leftSeconds.toString()) }
+            onCountdown()
 
-                leftSeconds -= 1
+            if (leftSeconds <= 0) {
+                players.forEach { it.sendTitle(countdownEndMessage, countdownEndSubMessage) }
+                onCountdownEnd()
+                print(counterIndex)
+                Bukkit.getServer().scheduler.cancelTask(counterIndex)
             }
+
+            leftSeconds -= 1
         }
 
-        val timer = Timer()
-        timer.schedule(countdown, 0, 1000)
+        counterIndex = Bukkit.getServer().scheduler.scheduleSyncRepeatingTask(MinecraftPvpPlugin.instance, countdown, 0, 20)
     }
 
     open fun onCountdown() {}

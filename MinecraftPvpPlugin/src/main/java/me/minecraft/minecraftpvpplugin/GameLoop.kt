@@ -1,21 +1,23 @@
 package me.minecraft.minecraftpvpplugin
 
 import org.bukkit.World
+import java.sql.Time
 import java.util.*
 
 class GameLoop(var world: World, private val pvpTime: Long, private val noPvpTime: Long) {
-    private val timer = Timer()
+    private lateinit var timer: Timer
+
 
     fun start() {
+        timer = Timer()
+
         world.pvp = false
 
         val setPvp: TimerTask = object : TimerTask() {
             override fun run() {
-                world.players.forEach {
-                    object : Countdown(it, "PVP will start in", "START") {
-                        override fun onCountdownEnd() {
-                            world.pvp = true
-                        }
+                object : Countdown(world.players, "PVP will start in", "START") {
+                    override fun onCountdownEnd() {
+                        world.pvp = true
                     }
                 }
             }
@@ -23,11 +25,9 @@ class GameLoop(var world: World, private val pvpTime: Long, private val noPvpTim
 
         val setNoPvp: TimerTask = object : TimerTask() {
             override fun run() {
-                world.players.forEach {
-                    object : Countdown(it, "PVP will end in", "SEARCH FOR GADGETS!") {
-                        override fun onCountdownEnd() {
-                            world.pvp = false
-                        }
+                object : Countdown(world.players, "PVP will end in", "SEARCH FOR GADGETS!") {
+                    override fun onCountdownEnd() {
+                        world.pvp = false
                     }
                 }
             }

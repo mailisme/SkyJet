@@ -60,21 +60,18 @@ object PvpPlaceManager : Listener {
         val place = pvpPlaces[world]!!
         val playerSlots = place.playerSlots
 
+        object : Countdown(world.players, "The game will start in", "SEARCH FOR GADGETS!") {
+            override fun onCountdown() {
+                playerSlots[0]!!.teleport(Location(world, 118.5, 98.0, 54.5))
+                playerSlots[1]!!.teleport(Location(world, 118.5, 98.0, 84.5, 180f, 0f))
+            }
 
+            override fun onCountdownEnd() {
+                MinecraftPvpPlugin.onPlayerToPvp(playerSlots[0])
+                MinecraftPvpPlugin.onPlayerToPvp(playerSlots[1])
 
-        for (player in playerSlots) {
-            object : Countdown(player!!, "The game will start in", "SEARCH FOR GADGETS!") {
-                override fun onCountdown() {
-                    playerSlots[0]!!.teleport(Location(world, 118.5, 98.0, 54.5))
-                    playerSlots[1]!!.teleport(Location(world, 118.5, 98.0, 84.5, 180f, 0f))
-                }
-
-                override fun onCountdownEnd() {
-                    MinecraftPvpPlugin.onPlayerToPvp(playerSlots[0])
-                    MinecraftPvpPlugin.onPlayerToPvp(playerSlots[1])
-
-                    place.gameLoop.start()
-                }
+                place.gameLoop.start()
+                place.randomSpawnGadget.start()
             }
         }
     }
@@ -104,7 +101,7 @@ object PvpPlaceManager : Listener {
                         onPlayerWin(anotherPlayer)
 
                         anotherPlayer.teleport(Locations.lobbySpawn)
-                        MinecraftPvpPlugin.onPlayerToLobby(player)
+                        MinecraftPvpPlugin.onPlayerToLobby(anotherPlayer)
                     }
 
                     playerSlots[0] = null

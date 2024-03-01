@@ -43,9 +43,9 @@ object Freeze : ThrowableGadget(Material.SNOW_BALL, "冷陸氣團") {
 
                 block.type = matWithData.material
                 block.data = matWithData.data
-
-                locationMaterialMap.remove(location, matWithData)
             }
+
+            locationMaterialMap.clear()
         }, 40)
     }
 }
