@@ -1,74 +1,52 @@
 package me.minecraft.minecraftpvpplugin
 
-import org.bukkit.Bukkit
+import me.minecraft.minecraftpvpplugin.helpers.RunEvery
+import me.minecraft.minecraftpvpplugin.helpers.WeightedRandomChooser
+import me.minecraft.minecraftpvpplugin.refs.Gadgets
 import org.bukkit.Location
 import org.bukkit.World
+import org.bukkit.inventory.ItemStack
 import java.util.*
 
 class RandomSpawnGadget(private val world: World) {
-    private var spawnerIndex = 0
     private var rand = Random()
+    private lateinit var spawner: RunEvery
+
+    private val randomSpawnLocationChooser = WeightedRandomChooser<Location>()
+        .addChoice(Location(world, 124.5, 98.0, 66.5))
+        .addChoice(Location(world, 140.5, 101.0, 50.5))
+        .addChoice(Location(world, 86.5, 98.0, 74.5))
+        .addChoice(Location(world, 118.5, 98.0, 54.5))
+        .addChoice(Location(world, 99.5, 101.0, 52.5))
+        .addChoice(Location(world, 107.5, 99.0, 99.5))
+        .addChoice(Location(world, 128.5, 101.0, 91.5))
+        .addChoice(Location(world, 141.5, 100.0, 80.5))
+
+    private val randomGadgetChooser = WeightedRandomChooser<ItemStack>()
+        .addChoice(Gadgets.anchor)
+        .addChoice(Gadgets.damage)
+        .addChoice(Gadgets.freeze)
+        .addChoice(Gadgets.invisible)
+        .addChoice(Gadgets.knockBack)
+        .addChoice(Gadgets.rebound)
+        .addChoice(Gadgets.speed)
+
 
     fun start() {
-        spawnRandomGadget(world, 118.5, 98.0, 69.5)
+        spawnRandomGadget(Location(world, 118.5, 98.0, 69.5))
 
-        val spawner = Runnable {
-            print("spawner")
-
+        spawner = RunEvery(1) {
             if (rand.nextFloat() > 0.9) {
-                val r = rand.nextFloat(9f)
-
-                if (r > 8) {
-                    spawnRandomGadget(world, 124.5, 98.0, 66.5)
-                } else if (r > 7) {
-                    spawnRandomGadget(world, 106.5, 101.0, 57.5)
-                } else if (r > 6) {
-                    spawnRandomGadget(world, 140.5, 101.0, 50.5)
-                } else if (r > 5) {
-                    spawnRandomGadget(world, 86.5, 98.0, 74.5)
-                } else if (r > 4) {
-                    spawnRandomGadget(world, 118.5, 98.0, 54.5)
-                } else if (r > 3) {
-                    spawnRandomGadget(world, 99.5, 101.0, 52.5)
-                } else if (r > 2) {
-                    spawnRandomGadget(world, 107.5, 99.0, 99.5)
-                } else if (r > 1) {
-                    spawnRandomGadget(world, 128.5, 101.0, 91.5)
-                } else {
-                    spawnRandomGadget(world, 141.5, 100.0, 80.5)
-                }
+                spawnRandomGadget(randomSpawnLocationChooser.choose())
             }
         }
-
-        spawnerIndex = Bukkit.getServer().scheduler.scheduleSyncRepeatingTask(MinecraftPvpPlugin.instance, spawner, 0, 20)
     }
 
     fun stop() {
-        Bukkit.getServer().scheduler.cancelTask(spawnerIndex)
+        spawner.cancel()
     }
 
-    private fun spawnRandomGadget(world: World, x: Double, y: Double, z: Double) {
-        print("spawn")
-
-        val rand = Random()
-        val r = rand.nextFloat(7f)
-
-        val gadget = if (r > 6) {
-            Gadgets.anchor
-        } else if (r > 5) {
-            Gadgets.damage
-        } else if (r > 4) {
-            Gadgets.freeze
-        } else if (r > 3) {
-            Gadgets.invisible
-        } else if (r > 2) {
-            Gadgets.knockBack
-        } else if (r > 1) {
-            Gadgets.rebound
-        } else {
-            Gadgets.speed
-        }
-
-        world.dropItem(Location(world, x, y, z), gadget)
+    private fun spawnRandomGadget(location: Location) {
+        world.dropItem(location, randomGadgetChooser.choose())
     }
 }

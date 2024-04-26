@@ -24,7 +24,7 @@ open class Skill(//important
         meta.displayName = name
         this.setItemMeta(meta)
 
-        Bukkit.getServer().pluginManager.registerEvents(this, MinecraftPvpPlugin.Companion.instance)
+        Bukkit.getPluginManager().registerEvents(this, MinecraftPvpPlugin.instance)
     }
 
 

@@ -1,8 +1,7 @@
 package me.minecraft.minecraftpvpplugin.gadgets
 
-import me.minecraft.minecraftpvpplugin.MinecraftPvpPlugin
+import me.minecraft.minecraftpvpplugin.helpers.RunAfter
 import me.minecraft.minecraftpvpplugin.ThrowableGadget
-import org.bukkit.Bukkit
 import org.bukkit.Location
 import org.bukkit.Material
 import org.bukkit.event.entity.ProjectileHitEvent
@@ -37,7 +36,7 @@ object Freeze : ThrowableGadget(Material.SNOW_BALL, "冷陸氣團") {
             }
         }
 
-        Bukkit.getScheduler().runTaskLater(MinecraftPvpPlugin.instance, {
+        RunAfter(2) {
             locationMaterialMap.forEach { (location: Location, matWithData: MatWithData) ->
                 val block = iceCenter.world.getBlockAt(location)
 
@@ -46,6 +45,6 @@ object Freeze : ThrowableGadget(Material.SNOW_BALL, "冷陸氣團") {
             }
 
             locationMaterialMap.clear()
-        }, 40)
+        }
     }
 }

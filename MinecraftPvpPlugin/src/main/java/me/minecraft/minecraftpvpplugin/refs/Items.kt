@@ -1,4 +1,4 @@
-package me.minecraft.minecraftpvpplugin
+package me.minecraft.minecraftpvpplugin.refs
 
 import org.bukkit.Material
 import org.bukkit.inventory.ItemStack

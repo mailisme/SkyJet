@@ -1,5 +1,7 @@
 package me.minecraft.minecraftpvpplugin
 
+import me.minecraft.minecraftpvpplugin.helpers.RunAfter
+import me.minecraft.minecraftpvpplugin.refs.Worlds
 import org.bukkit.Bukkit
 import org.bukkit.Material
 import org.bukkit.entity.Player
@@ -9,7 +11,6 @@ import org.bukkit.event.block.Action
 import org.bukkit.event.player.PlayerChangedWorldEvent
 import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.inventory.ItemStack
-import java.util.*
 
 // Duration will only do any effect when SwitchLike = false
 
@@ -39,7 +40,7 @@ abstract class Gadget(
             throw IllegalArgumentException("Duration must be specified if switchLike = false")
         }
 
-        Bukkit.getServer().pluginManager.registerEvents(this, MinecraftPvpPlugin.instance)
+        Bukkit.getPluginManager().registerEvents(this, MinecraftPvpPlugin.instance)
     }
 
     fun addPlayerData(player: Player, key: String, data: Any) {
@@ -99,28 +100,17 @@ abstract class Gadget(
     }
 
     private fun waitToDeactivate(player: Player, event: PlayerInteractEvent) {
-        Timer().schedule(
-            object : TimerTask() {
-                override fun run() {
-                    if (playersUsingGadgetData.contains(player)) {
-                        onDeactivate(event)
-                        playersUsingGadgetData.remove(player)
-                    }
-                }
-            },
-            duration!! * 1000
-        )
+        RunAfter(duration!!) {
+            if (playersUsingGadgetData.contains(player)) {
+                onDeactivate(event)
+                playersUsingGadgetData.remove(player)
+            }
+        }
     }
 
-    fun create(amount: Int): ItemStack {
+    fun create(amount: Int = 1): ItemStack {
         val stack = this.clone()
         stack.amount = amount
-        return stack
-    }
-
-    fun create(): ItemStack {
-        val stack = this.clone()
-        stack.amount = 1
         return stack
     }
 }

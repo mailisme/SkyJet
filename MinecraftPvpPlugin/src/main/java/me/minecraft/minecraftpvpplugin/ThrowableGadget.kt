@@ -38,7 +38,7 @@ abstract class ThrowableGadget(var material: Material, name: String) : ItemStack
         meta.displayName = name
         this.setItemMeta(meta)
 
-        Bukkit.getServer().pluginManager.registerEvents(this, MinecraftPvpPlugin.Companion.instance)
+        Bukkit.getPluginManager().registerEvents(this, MinecraftPvpPlugin.instance)
     }
 
     @EventHandler
@@ -67,15 +67,9 @@ abstract class ThrowableGadget(var material: Material, name: String) : ItemStack
         }
     }
 
-    fun create(amount: Int): ItemStack {
+    fun create(amount: Int = 1): ItemStack {
         val stack = this.clone()
         stack.amount = amount
-        return stack
-    }
-
-    fun create(): ItemStack {
-        val stack = this.clone()
-        stack.amount = 1
         return stack
     }
 }
