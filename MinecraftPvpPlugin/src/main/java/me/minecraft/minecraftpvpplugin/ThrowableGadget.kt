@@ -33,6 +33,7 @@ abstract class ThrowableGadget(var material: Material, name: String) : ItemStack
             else -> throw IllegalArgumentException("no this item")
         }
         this.type = material
+        this.amount = 1
 
         val meta = this.itemMeta
         meta.displayName = name
@@ -65,11 +66,5 @@ abstract class ThrowableGadget(var material: Material, name: String) : ItemStack
         if (damager.type == projectileType) {
             onHitObject(event)
         }
-    }
-
-    fun create(amount: Int = 1): ItemStack {
-        val stack = this.clone()
-        stack.amount = amount
-        return stack
     }
 }

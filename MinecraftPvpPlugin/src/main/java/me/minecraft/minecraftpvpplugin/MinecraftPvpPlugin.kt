@@ -55,8 +55,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             when (event.currentItem.type) {
                 Material.DIAMOND_AXE -> {
                     val selectGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}Select skill")
-                    val instantHeal = Skills.instantHeal
-                    selectGui.contents = arrayOf(instantHeal)
+                    selectGui.contents = Skills.skills
                     player.openInventory(selectGui)
                 }
 
@@ -65,14 +64,12 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
             event.isCancelled = true
         }
-        if (event.clickedInventory.title.equals(ChatColor.AQUA.toString() + "Select skill", ignoreCase = true)) {
-            when (event.currentItem.type) {
-                Skills.instantHeal.type -> {
-                    PvpPlaceManager.addPlayer(player, Skills.instantHeal)
-                    player.closeInventory()
-                }
 
-                else -> {}
+        if (event.clickedInventory.title.equals(ChatColor.AQUA.toString() + "Select skill", ignoreCase = true)) {
+            Skills.skills.forEach {
+                if (it.name == event.currentItem.itemMeta.displayName) {
+                    PvpPlaceManager.addPlayer(PvpPlayer(player, it))
+                }
             }
 
             event.isCancelled = true
@@ -138,43 +135,41 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     companion object {
         var instance: JavaPlugin? = null
 
-        fun onPlayerToLobby(player: Player?) {
-            if (player != null) {
-                println("To Lobby " + player.name)
-                player.inventory.clear()
-                Items.swordItemMeta.displayName = ChatColor.AQUA.toString() + "Join"
-                Items.swordItemMeta.spigot().isUnbreakable = true
-                Items.diamondSword.setItemMeta(Items.swordItemMeta)
-                player.inventory.setItem(0, Items.diamondSword)
-                player.inventory.helmet = null
-                player.inventory.chestplate = null
-                player.inventory.leggings = null
-                player.inventory.boots = null
-                player.health = 20.0
-                player.foodLevel = 20
-                clearEffects(player)
-                player.gameMode = GameMode.ADVENTURE
-            }
+        fun onPlayerToLobby(player: Player) {
+            println("To Lobby " + player.name)
+            player.inventory.clear()
+            Items.swordItemMeta.displayName = ChatColor.AQUA.toString() + "Join"
+            Items.swordItemMeta.spigot().isUnbreakable = true
+            Items.diamondSword.setItemMeta(Items.swordItemMeta)
+            player.inventory.setItem(0, Items.diamondSword)
+            player.inventory.helmet = null
+            player.inventory.chestplate = null
+            player.inventory.leggings = null
+            player.inventory.boots = null
+            player.health = 20.0
+            player.foodLevel = 20
+            clearEffects(player)
+            player.gameMode = GameMode.ADVENTURE
         }
 
-        fun onPlayerToPvp(player: Player?, item: ItemStack? = null) {
-            if (player != null) {
-                item?.let { player.inventory.setItem(2, it) }
-                player.inventory.clear()
-                player.inventory.setItem(0, Items.ironSword)
-                player.inventory.setItem(1, Items.fishingRod)
-                player.inventory.setItem(2, item)
+        fun onPlayerToPvp(pvpPlayer: PvpPlayer) {
+            val player = pvpPlayer.player
+            val skillItem = pvpPlayer.skill
 
-                player.inventory.setItem(8, Items.gapple)
-                player.health = 20.0
-                player.foodLevel = 20
-                clearEffects(player)
-                player.inventory.helmet = Items.ironHelmet
-                player.inventory.chestplate = Items.ironChestplate
-                player.inventory.leggings = Items.ironLeggings
-                player.inventory.boots = Items.ironBoots
-                player.gameMode = GameMode.ADVENTURE
-            }
+            player.inventory.clear()
+            player.inventory.setItem(0, Items.ironSword)
+            player.inventory.setItem(1, Items.fishingRod)
+            player.inventory.setItem(2, skillItem)
+
+            player.inventory.setItem(8, Items.gapple)
+            player.health = 20.0
+            player.foodLevel = 20
+            clearEffects(player)
+            player.inventory.helmet = Items.ironHelmet
+            player.inventory.chestplate = Items.ironChestplate
+            player.inventory.leggings = Items.ironLeggings
+            player.inventory.boots = Items.ironBoots
+            player.gameMode = GameMode.ADVENTURE
         }
 
         private fun clearEffects(player: Player) {

@@ -10,11 +10,13 @@ import org.bukkit.entity.Entity
 import org.bukkit.entity.Item
 import org.bukkit.entity.Player
 import org.bukkit.event.Listener
-import org.bukkit.inventory.ItemStack
 import java.util.function.Consumer
 
+class PvpPlayer(val player: Player, val skill: Skill)
+
 class PvpPlace(world: World) {
-    val playerSlots = mutableListOf<Player?>(null, null)
+    val playerSlots = mutableListOf<PvpPlayer?>(null, null)
+    var started = false
     val gameLoop = GameLoop(world, 30, 30)
     val randomSpawnGadget = RandomSpawnGadget(world)
 }
@@ -27,15 +29,17 @@ object PvpPlaceManager : Listener {
     }.toMutableMap()
 
     // Adds Player to players list, and teleports them to the right world.
-    fun addPlayer(player: Player, item: ItemStack) {
+    fun addPlayer(pvpPlayer: PvpPlayer) {
+        val player = pvpPlayer.player
+
         pvpPlaces.forEach { (world, place) ->
             val playerSlots = place.playerSlots
 
             if (playerSlots[1] == null && playerSlots[0] != null) {
                 player.teleport(Location(world, 118.5, 98.0, 84.5, 180f, 0f))
-                playerSlots[1] = player
+                playerSlots[1] = pvpPlayer
                 startGame(world)
-                MinecraftPvpPlugin.onPlayerToPvp(player, item)
+                MinecraftPvpPlugin.onPlayerToPvp(pvpPlayer)
                 return
             }
         }
@@ -45,13 +49,13 @@ object PvpPlaceManager : Listener {
 
             if (playerSlots[0] == null) {
                 player.teleport(Location(world, 118.5, 98.0, 54.5))
-                playerSlots[0] = player
-                MinecraftPvpPlugin.onPlayerToPvp(player, item)
+                playerSlots[0] = pvpPlayer
+                MinecraftPvpPlugin.onPlayerToPvp(pvpPlayer)
                 return
             } else if (playerSlots[1] == null) {
                 player.teleport(Location(world, 118.5, 98.0, 84.5, 180f, 0f))
-                playerSlots[1] = player
-                MinecraftPvpPlugin.onPlayerToPvp(player, item)
+                playerSlots[1] = pvpPlayer
+                MinecraftPvpPlugin.onPlayerToPvp(pvpPlayer)
                 startGame(world)
                 return
             }
@@ -66,15 +70,16 @@ object PvpPlaceManager : Listener {
 
         object : Countdown(world.players, "The game will start in", "SEARCH FOR GADGETS!") {
             override fun onCountdown() {
-                playerSlots[0]!!.teleport(Location(world, 118.5, 98.0, 54.5))
-                playerSlots[1]!!.teleport(Location(world, 118.5, 98.0, 84.5, 180f, 0f))
+                playerSlots[0]?.player?.teleport(Location(world, 118.5, 98.0, 54.5))
+                playerSlots[1]?.player?.teleport(Location(world, 118.5, 98.0, 84.5, 180f, 0f))
             }
 
             override fun onCountdownEnd() {
-                MinecraftPvpPlugin.onPlayerToPvp(playerSlots[0])
-                MinecraftPvpPlugin.onPlayerToPvp(playerSlots[1])
+                playerSlots[0]?.let { MinecraftPvpPlugin.onPlayerToPvp(it) }
+                playerSlots[1]?.let { MinecraftPvpPlugin.onPlayerToPvp(it) }
                 place.gameLoop.start()
                 place.randomSpawnGadget.start()
+                place.started = true
             }
         }
     }
@@ -86,14 +91,14 @@ object PvpPlaceManager : Listener {
             val playerSlots = place.playerSlots
 
             for (playerIndex in playerSlots.indices) {
-                if (playerSlots[playerIndex] === player) {
+                if (playerSlots[playerIndex]?.player === player) {
                     val anotherPlayerIndex = if (playerIndex == 0) {
                         1
                     } else {
                         0
                     }
 
-                    val anotherPlayer = playerSlots[anotherPlayerIndex]
+                    val anotherPlayer = playerSlots[anotherPlayerIndex]?.player
 
 
                     player.teleport(Locations.lobbySpawn)
@@ -116,18 +121,21 @@ object PvpPlaceManager : Listener {
                         }
                     })
 
-                    place.randomSpawnGadget.stop()
-                    place.gameLoop.stop()
+                    if (place.started) {
+                        place.randomSpawnGadget.stop()
+                        place.gameLoop.stop()
+                        place.started = false
+                    }
                 }
             }
         }
     }
 
-    private fun onPlayerLose(player: Player?) {
-        player?.sendTitle(ChatColor.AQUA.toString() + "You Lose", ChatColor.DARK_BLUE.toString() + ":(")
+    private fun onPlayerLose(player: Player) {
+        player.sendTitle(ChatColor.AQUA.toString() + "You Lose", ChatColor.DARK_BLUE.toString() + ":(")
     }
 
-    private fun onPlayerWin(player: Player?) {
-        player?.sendTitle(ChatColor.GOLD.toString() + "You Win !!", ChatColor.RED.toString() + ":D")
+    private fun onPlayerWin(player: Player) {
+        player.sendTitle(ChatColor.GOLD.toString() + "You Win !!", ChatColor.RED.toString() + ":D")
     }
 }

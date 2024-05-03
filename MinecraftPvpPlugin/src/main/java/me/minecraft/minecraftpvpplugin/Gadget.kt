@@ -31,6 +31,7 @@ abstract class Gadget(
 
     init {
         this.type = material
+        this.amount = 1
 
         val meta = this.itemMeta
         meta.displayName = name
@@ -95,7 +96,7 @@ abstract class Gadget(
         if (item.amount == 1) {
             player.inventory.itemInHand = null
         } else {
-            player.inventory.itemInHand = create(item.amount - 1)
+            item.amount -= 1
         }
     }
 
@@ -106,11 +107,5 @@ abstract class Gadget(
                 playersUsingGadgetData.remove(player)
             }
         }
-    }
-
-    fun create(amount: Int = 1): ItemStack {
-        val stack = this.clone()
-        stack.amount = amount
-        return stack
     }
 }
