@@ -10,6 +10,7 @@ import org.bukkit.entity.Entity
 import org.bukkit.entity.Item
 import org.bukkit.entity.Player
 import org.bukkit.event.Listener
+import org.bukkit.inventory.ItemStack
 import java.util.function.Consumer
 
 class PvpPlace(world: World) {
@@ -26,7 +27,7 @@ object PvpPlaceManager : Listener {
     }.toMutableMap()
 
     // Adds Player to players list, and teleports them to the right world.
-    fun addPlayer(player: Player) {
+    fun addPlayer(player: Player, item: ItemStack) {
         pvpPlaces.forEach { (world, place) ->
             val playerSlots = place.playerSlots
 
@@ -34,7 +35,7 @@ object PvpPlaceManager : Listener {
                 player.teleport(Location(world, 118.5, 98.0, 84.5, 180f, 0f))
                 playerSlots[1] = player
                 startGame(world)
-                MinecraftPvpPlugin.onPlayerToPvp(player)
+                MinecraftPvpPlugin.onPlayerToPvp(player, item)
                 return
             }
         }
@@ -45,12 +46,12 @@ object PvpPlaceManager : Listener {
             if (playerSlots[0] == null) {
                 player.teleport(Location(world, 118.5, 98.0, 54.5))
                 playerSlots[0] = player
-                MinecraftPvpPlugin.onPlayerToPvp(player)
+                MinecraftPvpPlugin.onPlayerToPvp(player, item)
                 return
             } else if (playerSlots[1] == null) {
                 player.teleport(Location(world, 118.5, 98.0, 84.5, 180f, 0f))
                 playerSlots[1] = player
-                MinecraftPvpPlugin.onPlayerToPvp(player)
+                MinecraftPvpPlugin.onPlayerToPvp(player, item)
                 startGame(world)
                 return
             }
@@ -72,7 +73,6 @@ object PvpPlaceManager : Listener {
             override fun onCountdownEnd() {
                 MinecraftPvpPlugin.onPlayerToPvp(playerSlots[0])
                 MinecraftPvpPlugin.onPlayerToPvp(playerSlots[1])
-
                 place.gameLoop.start()
                 place.randomSpawnGadget.start()
             }

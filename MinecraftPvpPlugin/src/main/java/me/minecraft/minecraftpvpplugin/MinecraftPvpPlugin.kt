@@ -2,6 +2,7 @@ package me.minecraft.minecraftpvpplugin
 
 import me.minecraft.minecraftpvpplugin.refs.Items
 import me.minecraft.minecraftpvpplugin.refs.Locations
+import me.minecraft.minecraftpvpplugin.refs.Skills
 import me.minecraft.minecraftpvpplugin.refs.Worlds
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
@@ -19,6 +20,7 @@ import org.bukkit.event.player.PlayerDropItemEvent
 import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.event.player.PlayerQuitEvent
+import org.bukkit.inventory.ItemStack
 import org.bukkit.plugin.java.JavaPlugin
 
 class MinecraftPvpPlugin : JavaPlugin(), Listener {
@@ -53,8 +55,8 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             when (event.currentItem.type) {
                 Material.DIAMOND_AXE -> {
                     val selectGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}Select skill")
-                    val skill = Items.diamondPickaxe
-                    selectGui.contents = arrayOf(skill)
+                    val instantHeal = Skills.instantHeal
+                    selectGui.contents = arrayOf(instantHeal)
                     player.openInventory(selectGui)
                 }
 
@@ -65,8 +67,8 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         }
         if (event.clickedInventory.title.equals(ChatColor.AQUA.toString() + "Select skill", ignoreCase = true)) {
             when (event.currentItem.type) {
-                Material.DIAMOND_AXE -> {
-                    PvpPlaceManager.addPlayer(player)
+                Skills.instantHeal.type -> {
+                    PvpPlaceManager.addPlayer(player, Skills.instantHeal)
                     player.closeInventory()
                 }
 
@@ -155,11 +157,13 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             }
         }
 
-        fun onPlayerToPvp(player: Player?) {
+        fun onPlayerToPvp(player: Player?, item: ItemStack? = null) {
             if (player != null) {
+                item?.let { player.inventory.setItem(2, it) }
                 player.inventory.clear()
                 player.inventory.setItem(0, Items.ironSword)
                 player.inventory.setItem(1, Items.fishingRod)
+                player.inventory.setItem(2, item)
 
                 player.inventory.setItem(8, Items.gapple)
                 player.health = 20.0
