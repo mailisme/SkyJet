@@ -52,6 +52,20 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         if (event.clickedInventory.title.equals(ChatColor.AQUA.toString() + "Join Game", ignoreCase = true)) {
             when (event.currentItem.type) {
                 Material.DIAMOND_AXE -> {
+                    val selectGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}Select skill")
+                    val skill = Items.diamondPickaxe
+                    selectGui.contents = arrayOf(skill)
+                    player.openInventory(selectGui)
+                }
+
+                else -> {}
+            }
+
+            event.isCancelled = true
+        }
+        if (event.clickedInventory.title.equals(ChatColor.AQUA.toString() + "Select skill", ignoreCase = true)) {
+            when (event.currentItem.type) {
+                Material.DIAMOND_AXE -> {
                     PvpPlaceManager.addPlayer(player)
                     player.closeInventory()
                 }
@@ -78,14 +92,14 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         val player = event.player
 
         if (player.world == Worlds.lobby) {
-            val gui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}Join Game")
-            val startGameBtn = Items.diamondPickaxe
+            val startGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}Join Game")
+            val joinGameBtn = Items.diamondPickaxe
 
-            gui.contents = arrayOf(startGameBtn)
+            startGui.contents = arrayOf(joinGameBtn)
 
             if (event.item == null) return
             if (event.item == Items.diamondSword && event.action != Action.PHYSICAL) {
-                player.openInventory(gui)
+                player.openInventory(startGui)
             }
         }
     }
