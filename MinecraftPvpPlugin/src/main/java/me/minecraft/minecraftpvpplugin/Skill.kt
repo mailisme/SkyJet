@@ -11,7 +11,7 @@ import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.inventory.ItemStack
 import java.time.Instant
 
-open class Skill(val material: Material, val name: String, private val coolDownSeconds: Long) : ItemStack(), Listener {
+open class Skill(val material: Material, val name: String, private val coolDownSeconds: Long = 0) : ItemStack(), Listener {
     private var coolDownFinishTimestampMap: MutableMap<Player, Long> = HashMap()
     protected open fun onClick(event: PlayerInteractEvent) {}
     init {

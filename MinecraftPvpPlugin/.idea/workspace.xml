@@ -5,15 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17758a80-0c85-4e1c-9ee7-0bf4385df7a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/skills/createCoolDown.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/skills/AllDie.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/skills/Recycle.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/skills/InstantHeal.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/skills/InstantHeal.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Skill.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/Skill.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/refs/Effects.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/refs/Effects.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/refs/Items.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/refs/Items.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/refs/Skills.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/refs/Skills.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/skills/InstantHeal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/skills/InstantHeal.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/data/villages.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat_old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/playerdata/786b47ad-e918-30cb-b480-343d93c9c156.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/playerdata/786b47ad-e918-30cb-b480-343d93c9c156.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.-1.-1.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.-1.0.mca" afterDir="false" />
@@ -101,7 +105,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Shell Script.copy_binary.executor&quot;: &quot;Run&quot;,
     &quot;Shell Script.run_server.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;kotlin&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;world&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
