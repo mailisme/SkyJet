@@ -51,4 +51,4 @@
 5. ~~remove item~~
 6. 目前用劍在進PVP的時候如果有方塊在可及範圍內就會偵測不到(not very important)
 7. ~~鑽石劍耐用度恢復~~
-change test test test test test test test test
+change test test test test test test test test test
