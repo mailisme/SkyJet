@@ -51,7 +51,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         if (event.clickedInventory == null) return
 
-        if (event.clickedInventory.title.equals(ChatColor.AQUA.toString() + "Join Game!!!", ignoreCase = true)) {
+        if (event.clickedInventory.title.equals(ChatColor.AQUA.toString() + "Join Game", ignoreCase = true)) {
             when (event.currentItem.type) {
                 Material.DIAMOND_AXE -> {
                     val selectGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}Select skill")
@@ -80,7 +80,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     fun onPlayerJoin(event: PlayerJoinEvent) {
         val player = event.player
 
-        event.joinMessage = "${ChatColor.AQUA}Welcome ${player.name}"
+        event.joinMessage = "${ChatColor.AQUA}Welcome ${player.name}!!!! LALALALA"
         logger.info("${player.name} joined the server")
         player.teleport(Locations.lobbySpawn)
         onPlayerToLobby(player)
