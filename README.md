@@ -52,4 +52,4 @@
 6. 目前用劍在進PVP的時候如果有方塊在可及範圍內就會偵測不到(not very important)
 7. ~~鑽石劍耐用度恢復~~
 (以下每一個test表示我自動pull又失敗一次了)
-change test test test test test test test test test test test test test test test test test
+change test test test test test test test test test test test test test test
