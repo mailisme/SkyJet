@@ -80,7 +80,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     fun onPlayerJoin(event: PlayerJoinEvent) {
         val player = event.player
 
-        event.joinMessage = "${ChatColor.AQUA}Welcome ${player.name}!!!! LALALALA"
+        event.joinMessage = "${ChatColor.AQUA}Welcome ${player.name}!!!! LALALALA no.."
         logger.info("${player.name} joined the server")
         player.teleport(Locations.lobbySpawn)
         onPlayerToLobby(player)
