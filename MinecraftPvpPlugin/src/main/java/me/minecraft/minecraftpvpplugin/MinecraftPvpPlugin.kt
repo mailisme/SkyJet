@@ -51,7 +51,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         if (event.clickedInventory == null) return
 
-        if (event.clickedInventory.title.equals(ChatColor.AQUA.toString() + "Join Game", ignoreCase = true)) {
+        if (event.clickedInventory.title.equals(ChatColor.AQUA.toString() + "Join Game!!!", ignoreCase = true)) {
             when (event.currentItem.type) {
                 Material.DIAMOND_AXE -> {
                     val selectGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}Select skill")
