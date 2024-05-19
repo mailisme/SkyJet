@@ -16,5 +16,11 @@
     "name": "ELEPOT",
     "level": 4,
     "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "bc3a2fd3-f7e4-4807-be68-bcf821faf902",
+    "name": "skying_dark780",
+    "level": 4,
+    "bypassesPlayerLimit": false
   }
 ]
