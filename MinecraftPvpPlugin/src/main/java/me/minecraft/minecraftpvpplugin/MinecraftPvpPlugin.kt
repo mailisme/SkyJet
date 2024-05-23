@@ -20,17 +20,29 @@ import org.bukkit.event.player.PlayerDropItemEvent
 import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.event.player.PlayerQuitEvent
-import org.bukkit.inventory.ItemStack
 import org.bukkit.plugin.java.JavaPlugin
+import java.util.logging.Level
 
 class MinecraftPvpPlugin : JavaPlugin(), Listener {
     override fun onEnable() {
+        logger.level = Level.ALL
+
         // Plugin startup logic
         logger.info("SKYJET PVP v.3.0.0")
         server.pluginManager.registerEvents(this, this)
 
         Worlds.lobby.pvp = false
-        Worlds.pvpWorlds.map { it.pvp = true }
+
+        Worlds.lobby.setGameRuleValue("doMobSpawning", "false")
+        Worlds.lobby.setGameRuleValue("doDaylightCycle", "true")
+        Worlds.lobby.setGameRuleValue("doWeatherCycle", "true")
+
+        Worlds.pvpWorlds.map {
+            it.pvp = true
+            it.setGameRuleValue("doMobSpawning", "false")
+            it.setGameRuleValue("doDaylightCycle", "false")
+            it.setGameRuleValue("doWeatherCycle", "false")
+        }
 
         instance = this
     }
@@ -80,7 +92,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     fun onPlayerJoin(event: PlayerJoinEvent) {
         val player = event.player
 
-        event.joinMessage = "${ChatColor.AQUA}Welcome ${player.name}!!!! LALALALA no.. no again.. bad why???? hope"
+        event.joinMessage = "${ChatColor.AQUA}Welcome ${player.name}!"
         logger.info("${player.name} joined the server")
         player.teleport(Locations.lobbySpawn)
         onPlayerToLobby(player)
