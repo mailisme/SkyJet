@@ -1,86 +1,173 @@
-[01:19:21] [Server thread/INFO]: skying_dark780 lost connection: Disconnected
-[01:19:21] [Server thread/INFO]: skying_dark780 left the game.
-[02:37:39] [User Authenticator #47/INFO]: UUID of player blackangle is ab9d51e7-bdfe-40dd-a930-a8a551af9325
-[02:37:39] [Server thread/INFO]: blackangle join the server
-[02:37:39] [Server thread/INFO]: blackangle join the server
-[02:37:39] [Server thread/INFO]: blackangle[/127.158.237.182:54149] logged in with entity id 276050 at ([Lobby]110.5, 74.0, 95.5)
-[02:48:48] [Server thread/INFO]: blackangle lost connection: Disconnected
-[02:48:48] [Server thread/INFO]: blackangle left the game.
-[02:48:57] [User Authenticator #48/INFO]: UUID of player blackangle is ab9d51e7-bdfe-40dd-a930-a8a551af9325
-[02:48:57] [Server thread/INFO]: blackangle join the server
-[02:48:57] [Server thread/INFO]: blackangle join the server
-[02:48:57] [Server thread/INFO]: blackangle[/127.158.237.182:45289] logged in with entity id 280741 at ([Lobby]110.5, 74.0, 95.5)
-[03:31:56] [Server thread/INFO]: blackangle issued server command: /fill 181 104 168
-[03:32:26] [Server thread/INFO]: blackangle issued server command: /fill 181 104 168 175 114 174 air
-[03:32:26] [Server thread/INFO]: [blackangle: 322 blocks filled]
-[03:33:30] [Server thread/INFO]: blackangle issued server command: /fill 145 114 168
-[03:33:52] [Server thread/INFO]: blackangle issued server command: /fill 145 114 168 211 114 174 air
-[03:33:52] [Server thread/INFO]: [blackangle: 362 blocks filled]
-[03:34:06] [Server thread/INFO]: blackangle issued server command: /fill 145 114 168 air
-[03:34:27] [Server thread/INFO]: blackangle issued server command: /fill 145 114 168 211 104 174 air
-[03:34:27] [Server thread/INFO]: [blackangle: 4190 blocks filled]
-[03:35:12] [Server thread/INFO]: blackangle issued server command: /fill 175 114 162
-[03:35:37] [Server thread/INFO]: blackangle issued server command: /fill 181 104 167
-[03:35:45] [Server thread/INFO]: blackangle issued server command: /fill 181 104 167
-[03:35:59] [Server thread/INFO]: blackangle issued server command: /fill 181 104 167 175 114 162 air
-[03:35:59] [Server thread/INFO]: [blackangle: 430 blocks filled]
-[03:36:20] [Server thread/INFO]: blackangle issued server command: /fill 181 104 167 175 114 158 air
-[03:36:20] [Server thread/INFO]: [blackangle: 308 blocks filled]
-[03:43:20] [Server thread/INFO]: blackangle issued server command: /fill 108 104 175
-[03:44:27] [Server thread/INFO]: blackangle issued server command: /fill 108 104 175 182 114 181 aire
-[03:44:27] [Server thread/INFO]: [blackangle: There is no such block with name minecraft:aire]
-[03:44:30] [Server thread/INFO]: blackangle issued server command: /fill 108 104 175 182 114 181 air
-[03:44:30] [Server thread/INFO]: [blackangle: 5605 blocks filled]
-[03:45:17] [Server thread/INFO]: blackangle issued server command: /fill 108 104 175 182 114 181 minecraft:quartz_block 1
-[03:45:17] [Server thread/INFO]: [blackangle: 5775 blocks filled]
-[03:46:03] [Server thread/INFO]: blackangle issued server command: /fill 188 104 175 182 114 181 minecraft:quartz_block 1
-[03:46:03] [Server thread/INFO]: [blackangle: 58 blocks filled]
-[03:46:13] [Server thread/INFO]: blackangle issued server command: /fill 188 104 175 182 114 181 air
-[03:46:13] [Server thread/INFO]: [blackangle: 539 blocks filled]
-[03:49:31] [Server thread/INFO]: blackangle issued server command: /fill 182 104 175
-[03:50:00] [Server thread/INFO]: blackangle issued server command: /fill 182 104 175 212 115 184
-[03:50:05] [Server thread/INFO]: blackangle issued server command: /fill 182 104 175 212 115 184 air
-[03:50:05] [Server thread/INFO]: [blackangle: 2608 blocks filled]
-[04:01:13] [Server thread/INFO]: blackangle issued server command: /fill 181 114 175 minecraft:quartz_block 1
-[04:01:38] [Server thread/INFO]: blackangle issued server command: /fill 181 114 175 213 114 185 minecraft:quartz_block 1
-[04:01:38] [Server thread/INFO]: [blackangle: 261 blocks filled]
-[04:03:33] [Server thread/INFO]: blackangle issued server command: /fill 214 114 168 air
-[04:03:53] [Server thread/INFO]: blackangle issued server command: /fill 214 114 168 air
-[04:04:07] [Server thread/INFO]: blackangle issued server command: /fill 214 114 168 213 104 173 air
-[04:04:07] [Server thread/INFO]: [blackangle: 128 blocks filled]
-[04:07:20] [Server thread/INFO]: blackangle lost connection: Disconnected
-[04:07:20] [Server thread/INFO]: blackangle left the game.
-[11:16:52] [User Authenticator #49/INFO]: Disconnecting /127.88.155.52:57985: Failed to verify username!
-[11:16:52] [User Authenticator #49/ERROR]: Username 'ELEPOT' tried to join with an invalid session
-[11:16:52] [Server thread/INFO]: /127.88.155.52:57985 lost connection: Failed to verify username!
-[11:16:59] [User Authenticator #50/INFO]: UUID of player ELEPOT is 7bddcbf5-cb89-4cb9-ac25-837980bba3df
-[11:16:59] [Server thread/INFO]: ELEPOT join the server
-[11:16:59] [Server thread/INFO]: ELEPOT join the server
-[11:16:59] [Server thread/INFO]: ELEPOT[/127.88.155.52:35659] logged in with entity id 308818 at ([Lobby]110.5, 74.0, 95.5)
-[11:18:13] [Server thread/INFO]: ELEPOT lost connection: Disconnected
-[11:18:13] [Server thread/INFO]: ELEPOT left the game.
-[11:31:26] [User Authenticator #51/INFO]: UUID of player ELEPOT is 7bddcbf5-cb89-4cb9-ac25-837980bba3df
-[11:31:26] [Server thread/INFO]: ELEPOT join the server
-[11:31:26] [Server thread/INFO]: ELEPOT join the server
-[11:31:26] [Server thread/INFO]: ELEPOT[/127.88.155.52:37273] logged in with entity id 310932 at ([Lobby]110.5, 74.0, 95.5)
-[11:33:26] [Server thread/INFO]: ELEPOT lost connection: Disconnected
-[11:33:26] [Server thread/INFO]: ELEPOT left the game.
-[11:33:29] [User Authenticator #52/INFO]: UUID of player ELEPOT is 7bddcbf5-cb89-4cb9-ac25-837980bba3df
-[11:33:29] [Server thread/INFO]: ELEPOT join the server
-[11:33:29] [Server thread/INFO]: ELEPOT join the server
-[11:33:29] [Server thread/INFO]: ELEPOT[/127.88.155.52:46419] logged in with entity id 312056 at ([Lobby]110.5, 74.0, 95.5)
-[11:33:40] [Server thread/INFO]: ELEPOT lost connection: Disconnected
-[11:33:40] [Server thread/INFO]: ELEPOT left the game.
-[11:55:44] [User Authenticator #53/INFO]: UUID of player ELEPOT is 7bddcbf5-cb89-4cb9-ac25-837980bba3df
-[11:55:44] [Server thread/INFO]: ELEPOT join the server
-[11:55:44] [Server thread/INFO]: ELEPOT join the server
-[11:55:44] [Server thread/INFO]: ELEPOT[/127.88.155.52:51771] logged in with entity id 312381 at ([Lobby]110.5, 74.0, 95.5)
-[11:56:03] [Server thread/INFO]: ELEPOT lost connection: Disconnected
-[11:56:03] [Server thread/INFO]: ELEPOT left the game.
-[11:59:35] [Thread-2/INFO]: Stopping server
-[11:59:35] [Thread-2/INFO]: Saving players
-[11:59:35] [Thread-2/INFO]: Saving worlds
-[11:59:35] [Thread-2/INFO]: Saving chunks for level 'Lobby'/Overworld
-[11:59:35] [Thread-2/INFO]: Saving chunks for level 'Lobby_nether'/Nether
-[11:59:35] [Thread-2/INFO]: Saving chunks for level 'Lobby_the_end'/The End
-[11:59:35] [Thread-2/INFO]: Saving chunks for level 'PVP1'/Overworld
+[20:25:29] [Server thread/INFO]: Starting minecraft server version 1.8.8
+[20:25:29] [Server thread/INFO]: Loading properties
+[20:25:29] [Server thread/INFO]: Default game type: SURVIVAL
+[20:25:29] [Server thread/INFO]: This server is running CraftBukkit version git-Spigot-21fe707-741a1bd (MC: 1.8.8) (Implementing API version 1.8.8-R0.1-SNAPSHOT)
+[20:25:29] [Server thread/INFO]: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+[20:25:29] [Server thread/INFO]: Debug logging is disabled
+[20:25:29] [Server thread/INFO]: Using 4 threads for Netty based IO
+[20:25:29] [Server thread/INFO]: Server Ping Player Sample Count: 12
+
+[20:25:29] [Server thread/INFO]: Generating keypair
+[20:25:29] [Server thread/INFO]: Starting Minecraft server on *:25565
+[20:25:29] [Server thread/INFO]: Using default channel type
+[20:25:29] [Server thread/INFO]: Set PluginClassLoader as parallel capable
+[20:25:29] [Server thread/INFO]: [MinecraftPvpPlugin] Loading MinecraftPvpPlugin v1.0-SNAPSHOT
+[20:25:29] [Server thread/INFO]: **** Beginning UUID conversion, this may take A LONG time ****
+[20:25:29] [Server thread/INFO]: Preparing level "Lobby"
+[20:25:29] [Server thread/INFO]: -------- World Settings For [Lobby] --------
+[20:25:29] [Server thread/INFO]: Item Despawn Rate: 6000
+[20:25:29] [Server thread/INFO]: Item Merge Radius: 2.5
+[20:25:29] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[20:25:29] [Server thread/INFO]: View Distance: 10
+[20:25:29] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[20:25:29] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[20:25:29] [Server thread/INFO]: Anti X-Ray: true
+[20:25:29] [Server thread/INFO]: 	Engine Mode: 1
+[20:25:29] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[20:25:29] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[20:25:29] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[20:25:29] [Server thread/INFO]: Experience Merge Radius: 3.0
+[20:25:29] [Server thread/INFO]: Mob Spawn Range: 4
+[20:25:29] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[20:25:29] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[20:25:29] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[20:25:29] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[20:25:29] [Server thread/INFO]: Max TNT Explosions: 100
+[20:25:29] [Server thread/INFO]: Sending up to 10 chunks per packet
+[20:25:29] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[20:25:29] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Cane Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Melon Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Max Entity Collisions: 8
+[20:25:29] [Server thread/INFO]: Random Lighting Updates: false
+[20:25:29] [Server thread/INFO]: Structure Info Saving: true
+[20:25:29] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[20:25:29] [Server thread/INFO]: Clear tick list: false
+[20:25:29] [Server thread/INFO]: -------- World Settings For [Lobby_nether] --------
+[20:25:29] [Server thread/INFO]: Item Despawn Rate: 6000
+[20:25:29] [Server thread/INFO]: Item Merge Radius: 2.5
+[20:25:29] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[20:25:29] [Server thread/INFO]: View Distance: 10
+[20:25:29] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[20:25:29] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[20:25:29] [Server thread/INFO]: Anti X-Ray: true
+[20:25:29] [Server thread/INFO]: 	Engine Mode: 1
+[20:25:29] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[20:25:29] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[20:25:29] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[20:25:29] [Server thread/INFO]: Experience Merge Radius: 3.0
+[20:25:29] [Server thread/INFO]: Mob Spawn Range: 4
+[20:25:29] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[20:25:29] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[20:25:29] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[20:25:29] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[20:25:29] [Server thread/INFO]: Max TNT Explosions: 100
+[20:25:29] [Server thread/INFO]: Sending up to 10 chunks per packet
+[20:25:29] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[20:25:29] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Cane Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Melon Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Max Entity Collisions: 8
+[20:25:29] [Server thread/INFO]: Random Lighting Updates: false
+[20:25:29] [Server thread/INFO]: Structure Info Saving: true
+[20:25:29] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[20:25:29] [Server thread/INFO]: Clear tick list: false
+[20:25:29] [Server thread/INFO]: -------- World Settings For [Lobby_the_end] --------
+[20:25:29] [Server thread/INFO]: Item Despawn Rate: 6000
+[20:25:29] [Server thread/INFO]: Item Merge Radius: 2.5
+[20:25:29] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[20:25:29] [Server thread/INFO]: View Distance: 10
+[20:25:29] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[20:25:29] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[20:25:29] [Server thread/INFO]: Anti X-Ray: true
+[20:25:29] [Server thread/INFO]: 	Engine Mode: 1
+[20:25:29] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[20:25:29] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[20:25:29] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[20:25:29] [Server thread/INFO]: Experience Merge Radius: 3.0
+[20:25:29] [Server thread/INFO]: Mob Spawn Range: 4
+[20:25:29] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[20:25:29] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[20:25:29] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[20:25:29] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[20:25:29] [Server thread/INFO]: Max TNT Explosions: 100
+[20:25:29] [Server thread/INFO]: Sending up to 10 chunks per packet
+[20:25:29] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[20:25:29] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Cane Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Melon Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[20:25:29] [Server thread/INFO]: Max Entity Collisions: 8
+[20:25:29] [Server thread/INFO]: Random Lighting Updates: false
+[20:25:29] [Server thread/INFO]: Structure Info Saving: true
+[20:25:29] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[20:25:29] [Server thread/INFO]: Clear tick list: false
+[20:25:29] [Server thread/INFO]: Preparing start region for level 0 (Seed: -4444818278965242618)
+[20:25:29] [Server thread/INFO]: Preparing start region for level 1 (Seed: 7365026278184994534)
+[20:25:30] [Server thread/INFO]: Preparing start region for level 2 (Seed: 7365026278184994534)
+[20:25:30] [Server thread/INFO]: [MinecraftPvpPlugin] Enabling MinecraftPvpPlugin v1.0-SNAPSHOT
+[20:25:30] [Server thread/INFO]: MAGIC PVP v.0.0.0
+
+[20:25:30] [Server thread/INFO]: -------- World Settings For [PVP1] --------
+[20:25:30] [Server thread/INFO]: Item Despawn Rate: 6000
+[20:25:30] [Server thread/INFO]: Item Merge Radius: 2.5
+[20:25:30] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[20:25:30] [Server thread/INFO]: View Distance: 10
+[20:25:30] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[20:25:30] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[20:25:30] [Server thread/INFO]: Anti X-Ray: true
+[20:25:30] [Server thread/INFO]: 	Engine Mode: 1
+[20:25:30] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[20:25:30] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[20:25:30] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[20:25:30] [Server thread/INFO]: Experience Merge Radius: 3.0
+[20:25:30] [Server thread/INFO]: Mob Spawn Range: 4
+[20:25:30] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[20:25:30] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[20:25:30] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[20:25:30] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[20:25:30] [Server thread/INFO]: Max TNT Explosions: 100
+[20:25:30] [Server thread/INFO]: Sending up to 10 chunks per packet
+[20:25:30] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[20:25:30] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[20:25:30] [Server thread/INFO]: Cane Growth Modifier: 100%
+[20:25:30] [Server thread/INFO]: Melon Growth Modifier: 100%
+[20:25:30] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[20:25:30] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[20:25:30] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[20:25:30] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[20:25:30] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[20:25:30] [Server thread/INFO]: Max Entity Collisions: 8
+[20:25:30] [Server thread/INFO]: Random Lighting Updates: false
+[20:25:30] [Server thread/INFO]: Structure Info Saving: true
+[20:25:30] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[20:25:30] [Server thread/INFO]: Clear tick list: false
+[20:25:30] [Server thread/INFO]: Preparing start region for level 3 (Seed: -5227594981380140816)
+[20:25:30] [Server thread/INFO]: [MinecraftPvpPlugin] Lobby world loaded successfully.
+[20:25:30] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: Lobby
+[20:25:30] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: Lobby_nether
+[20:25:30] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: Lobby_the_end
+[20:25:30] [Server thread/INFO]: [MinecraftPvpPlugin] Loaded world: PVP1
+[20:25:30] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[20:25:30] [Server thread/INFO]: Done (1.104s)! For help, type "help" or "?"
+[20:25:41] [User Authenticator #1/INFO]: UUID of player ELEPOT is 7bddcbf5-cb89-4cb9-ac25-837980bba3df
+[20:25:41] [Server thread/INFO]: ELEPOT join the server
+[20:25:41] [Server thread/INFO]: ELEPOT join the server
+[20:25:41] [Server thread/INFO]: ELEPOT[/127.0.0.1:61685] logged in with entity id 253 at ([Lobby]110.5, 74.0, 95.5)
+[20:26:09] [Server thread/INFO]: [@: Teleported ELEPOT to 117.5, 113.0, 69.5]
+[20:26:11] [Server thread/INFO]: ELEPOT lost connection: Disconnected
+[20:26:11] [Server thread/INFO]: ELEPOT left the game.
