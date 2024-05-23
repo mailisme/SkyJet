@@ -32,18 +32,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.MinecraftPvpPlugin [package].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Shell Script.CopyFile.executor": "Run",
-    "Shell Script.RunServer.executor": "Run",
-    "git-widget-placeholder": "kotlin",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Dev/java/MinecraftPvpPlugin/MinecraftServer"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.MinecraftPvpPlugin [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Shell Script.CopyFile.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.RunServer.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;kotlin&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Dev/java/MinecraftPvpPlugin/MinecraftServer&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Shell Script.RunServer">
     <configuration default="true" type="CompoundRunConfigurationType">
       <toRun name="MinecraftPvpPlugin [package]" type="MavenRunConfiguration" />
