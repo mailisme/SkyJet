@@ -16,6 +16,16 @@ class WeightedRandomChooser<E> {
         return this
     }
 
+    fun addChoices(results: List<E>, weightSum: Double = 1.0): WeightedRandomChooser<E> {
+        if (weightSum <= 0) return this
+        val individualWeight = weightSum / results.size
+
+        for (result in results) {
+            addChoice(result, individualWeight)
+        }
+        return this
+    }
+
     fun choose(): E {
         val value = Random.nextDouble() * total
         return map.higherEntry(value).value
