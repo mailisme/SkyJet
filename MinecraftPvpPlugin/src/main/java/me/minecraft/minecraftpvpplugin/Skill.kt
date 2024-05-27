@@ -46,15 +46,6 @@ open class Skill(val material: Material, val name: String, private val coolDownS
                 coolDownFinishTimestampMap[player] = currTimestamp + coolDownSeconds
                 onClick(event)
             }
-
-//            coolDownFinishTimestampMap[player]?.let {
-//                if (currTimestamp > it) {
-//                    coolDownFinishTimestampMap[player] = currTimestamp + coolDownSeconds
-//                    onClick(event)
-//                } else {
-//                    player.sendMessage("再等" + (it - System.currentTimeMillis() / 1000) + "秒")
-//                }
-//            }
         }
     }
 }

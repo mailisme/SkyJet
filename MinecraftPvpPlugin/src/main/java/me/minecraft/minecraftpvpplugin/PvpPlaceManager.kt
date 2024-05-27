@@ -22,24 +22,22 @@ class PvpPlace(world: World) {
 }
 
 object PvpPlaceManager : Listener {
-    private var pvpPlaces: MutableMap<World, PvpPlace> = buildMap {
+    private var pvpPlaces = buildMap {
         for (world in Worlds.pvpWorlds) {
             put(world, PvpPlace(world))
         }
     }.toMutableMap()
 
     // Adds Player to players list, and teleports them to the right world.
-    fun addPlayer(pvpPlayer: PvpPlayer) {
-        val player = pvpPlayer.player
-
+    fun addPlayer(player: Player, skill: Skill) {
         pvpPlaces.forEach { (world, place) ->
             val playerSlots = place.playerSlots
 
             if (playerSlots[1] == null && playerSlots[0] != null) {
-                player.teleport(Location(world, 118.5, 98.0, 84.5, 180f, 0f))
-                playerSlots[1] = pvpPlayer
+                player.teleport(Locations.PvpSpawn1(world))
+                playerSlots[1] = PvpPlayer(player, skill)
                 startGame(world)
-                MinecraftPvpPlugin.onPlayerToPvp(pvpPlayer)
+                MinecraftPvpPlugin.onPlayerToPvp(player, skill)
                 return
             }
         }
@@ -48,14 +46,14 @@ object PvpPlaceManager : Listener {
             val playerSlots = place.playerSlots
 
             if (playerSlots[0] == null) {
-                player.teleport(Location(world, 118.5, 98.0, 54.5))
-                playerSlots[0] = pvpPlayer
-                MinecraftPvpPlugin.onPlayerToPvp(pvpPlayer)
+                player.teleport(Locations.PvpSpawn0(world))
+                playerSlots[0] = PvpPlayer(player, skill)
+                MinecraftPvpPlugin.onPlayerToPvp(player, skill)
                 return
             } else if (playerSlots[1] == null) {
-                player.teleport(Location(world, 118.5, 98.0, 84.5, 180f, 0f))
-                playerSlots[1] = pvpPlayer
-                MinecraftPvpPlugin.onPlayerToPvp(pvpPlayer)
+                player.teleport(Locations.PvpSpawn1(world))
+                playerSlots[1] = PvpPlayer(player, skill)
+                MinecraftPvpPlugin.onPlayerToPvp(player, skill)
                 startGame(world)
                 return
             }
@@ -75,8 +73,8 @@ object PvpPlaceManager : Listener {
             }
 
             override fun onCountdownEnd() {
-                playerSlots[0]?.let { MinecraftPvpPlugin.onPlayerToPvp(it) }
-                playerSlots[1]?.let { MinecraftPvpPlugin.onPlayerToPvp(it) }
+                playerSlots[0]?.let { MinecraftPvpPlugin.onPlayerToPvp(it.player, it.skill) }
+                playerSlots[1]?.let { MinecraftPvpPlugin.onPlayerToPvp(it.player, it.skill) }
                 place.gameLoop.start()
                 place.randomSpawnGadget.start()
                 place.started = true

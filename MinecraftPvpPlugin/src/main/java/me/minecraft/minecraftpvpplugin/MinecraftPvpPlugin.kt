@@ -20,10 +20,12 @@ import org.bukkit.event.player.PlayerDropItemEvent
 import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.event.player.PlayerQuitEvent
+import org.bukkit.inventory.ItemStack
 import org.bukkit.plugin.java.JavaPlugin
 import java.util.logging.Level
 
 class MinecraftPvpPlugin : JavaPlugin(), Listener {
+
     override fun onEnable() {
         logger.level = Level.ALL
 
@@ -43,6 +45,8 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             it.setGameRuleValue("doDaylightCycle", "false")
             it.setGameRuleValue("doWeatherCycle", "false")
         }
+
+
 
         instance = this
     }
@@ -80,7 +84,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         if (event.clickedInventory.title.equals(ChatColor.AQUA.toString() + "Select skill", ignoreCase = true)) {
             Skills.skills.forEach {
                 if (it.name == event.currentItem.itemMeta.displayName) {
-                    PvpPlaceManager.addPlayer(PvpPlayer(player, it))
+                    PvpPlaceManager.addPlayer(player, it)
                 }
             }
 
@@ -164,10 +168,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             player.gameMode = GameMode.ADVENTURE
         }
 
-        fun onPlayerToPvp(pvpPlayer: PvpPlayer) {
-            val player = pvpPlayer.player
-            val skillItem = pvpPlayer.skill
-
+        fun onPlayerToPvp(player: Player, skillItem: ItemStack) {
             player.inventory.clear()
             player.inventory.setItem(0, Items.ironSword)
             player.inventory.setItem(1, Items.fishingRod)
