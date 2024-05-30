@@ -6,13 +6,13 @@ import org.bukkit.util.Vector
 
 object Locations {
     val lobbySpawn = Location(Worlds.lobby, 110.5, 74.0, 95.5)
-    val pvpBorder0 = Vector(37, 97, -7)
-    val pvpBorder1 = Vector(195, 138, 152)
+    private val pvpBorder0 = Vector(37, 97, -7)
+    private val pvpBorder1 = Vector(195, 138, 152)
 
     val pvpGadgetSpawnPoints = buildList {
-        for (y in pvpBorder0.y.toInt() .. Locations.pvpBorder1.y.toInt()) {
-            for (x in pvpBorder0.x.toInt() .. Locations.pvpBorder1.x.toInt()) {
-                for (z in pvpBorder0.z.toInt() .. Locations.pvpBorder1.z.toInt()) {
+        for (y in pvpBorder0.y.toInt() .. pvpBorder1.y.toInt()) {
+            for (x in pvpBorder0.x.toInt() .. pvpBorder1.x.toInt()) {
+                for (z in pvpBorder0.z.toInt() .. pvpBorder1.z.toInt()) {
                     val block = Worlds.pvpWorlds[0].getBlockAt(x, y, z)
                     val blockAbove = Worlds.pvpWorlds[0].getBlockAt(x, y + 1, z)
 
