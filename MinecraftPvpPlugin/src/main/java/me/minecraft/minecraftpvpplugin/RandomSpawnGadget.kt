@@ -1,5 +1,6 @@
 package me.minecraft.minecraftpvpplugin
 
+import me.minecraft.minecraftpvpplugin.helpers.RunAperiodically
 import me.minecraft.minecraftpvpplugin.helpers.RunEvery
 import me.minecraft.minecraftpvpplugin.helpers.WeightedRandomChooser
 import me.minecraft.minecraftpvpplugin.refs.Gadgets
@@ -10,7 +11,7 @@ import org.bukkit.inventory.ItemStack
 import org.bukkit.util.Vector
 
 class RandomSpawnGadget(private val world: World) {
-    private lateinit var spawner: RunEvery
+    private lateinit var spawner: RunAperiodically
 
     private val randomSpawnLocationChooser = WeightedRandomChooser<Vector>().addChoices(Locations.pvpGadgetSpawnPoints)
 
@@ -25,9 +26,12 @@ class RandomSpawnGadget(private val world: World) {
 
 
     fun start() {
+        println("start spawning")
+
         spawnRandomGadget(Location(world, 118.5, 98.0, 69.5))
 
-        spawner = RunEvery(10) {
+        spawner = RunAperiodically(2, 5) {
+            println("spawn gadget")
             spawnRandomGadget(randomSpawnLocationChooser.choose().toLocation(world))
         }
     }
