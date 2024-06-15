@@ -6,7 +6,7 @@ import me.minecraft.minecraftpvpplugin.refs.Items
 import org.bukkit.Material
 import org.bukkit.event.player.PlayerInteractEvent
 
-object Invisible : Gadget(Material.STAINED_GLASS_PANE, "虛影斗篷", duration = 5) {
+object Invisible : Gadget(Material.STAINED_GLASS_PANE, "虛影斗篷", duration = 5.0) {
     public override fun onActivate(event: PlayerInteractEvent) {
         val player = event.player
         player.addPotionEffect(Effects.invisibleEffect)
@@ -18,6 +18,7 @@ object Invisible : Gadget(Material.STAINED_GLASS_PANE, "虛影斗篷", duration 
 
     public override fun onDeactivate(event: PlayerInteractEvent) {
         val player = event.player
+        player.removePotionEffect(Effects.invisibleEffect.type)
         player.inventory.helmet = Items.ironHelmet
         player.inventory.chestplate = Items.ironChestplate
         player.inventory.leggings = Items.ironLeggings

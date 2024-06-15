@@ -4,7 +4,7 @@ import me.minecraft.minecraftpvpplugin.helpers.Countdown
 import me.minecraft.minecraftpvpplugin.helpers.RunEvery
 import org.bukkit.World
 
-class GameLoop(var world: World, private val pvpTime: Long, private val noPvpTime: Long) {
+class GameLoop(var world: World, private val pvpTime: Double, private val noPvpTime: Double) {
     private lateinit var setPvp: RunEvery
     private lateinit var setNoPvp: RunEvery
 

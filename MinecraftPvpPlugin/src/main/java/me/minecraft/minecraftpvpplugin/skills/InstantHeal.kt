@@ -1,19 +1,19 @@
 package me.minecraft.minecraftpvpplugin.skills
 
-import me.minecraft.minecraftpvpplugin.MinecraftPvpPlugin
 import me.minecraft.minecraftpvpplugin.Skill
-import org.bukkit.Bukkit
 import org.bukkit.Material
-import org.bukkit.entity.Entity
 import org.bukkit.event.EventHandler
-import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerInteractEvent
-import org.bukkit.inventory.ItemStack
 import kotlin.random.Random
 
-object InstantHeal : Skill(Material.EMERALD, "瞬間治癒", 5) {
-    public override fun onClick(event: PlayerInteractEvent) {
+object InstantHeal : Skill(Material.EMERALD, "瞬間治癒", 5.0) {
+    @EventHandler
+    fun handleClick(event: PlayerInteractEvent) {
         val player = event.player
+
+        if (!super.isClickEventClickingMyself(event)) return
+        if (!super.isTriggerActivateSuccessful(player)) return
+
         val rand = Random.nextInt(5, 10)
 
         if (player.health + rand > 20) {

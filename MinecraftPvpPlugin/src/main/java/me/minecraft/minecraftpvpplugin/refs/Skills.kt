@@ -4,8 +4,5 @@ import me.minecraft.minecraftpvpplugin.Skill
 import me.minecraft.minecraftpvpplugin.skills.*
 
 object Skills {
-    val instantHeal = InstantHeal
-    val allDie = AllDie
-
-    val skills = arrayOf<Skill>(instantHeal, allDie)
+    val skills = arrayOf<Skill>(InstantHeal, AllDie, Creeper)
 }

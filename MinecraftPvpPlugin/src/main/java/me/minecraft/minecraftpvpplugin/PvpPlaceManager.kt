@@ -12,12 +12,13 @@ import org.bukkit.entity.Player
 import org.bukkit.event.Listener
 import java.util.function.Consumer
 
+// TODO: MAKE THE PLAYER DATA STRUCTURE BETTER
 class PvpPlayer(val player: Player, val skill: Skill)
 
 class PvpPlace(world: World) {
     val playerSlots = mutableListOf<PvpPlayer?>(null, null)
     var started = false
-    val gameLoop = GameLoop(world, 30, 30)
+    val gameLoop = GameLoop(world, 30.0, 30.0)
     val randomSpawnGadget = RandomSpawnGadget(world)
 }
 
@@ -119,6 +120,8 @@ object PvpPlaceManager : Listener {
                         }
                     })
 
+
+
                     if (place.started) {
                         place.randomSpawnGadget.stop()
                         place.gameLoop.stop()
@@ -135,5 +138,13 @@ object PvpPlaceManager : Listener {
 
     private fun onPlayerWin(player: Player) {
         player.sendTitle(ChatColor.GOLD.toString() + "You Win !!", ChatColor.RED.toString() + ":D")
+    }
+
+    fun getPlayerSkill(player: Player): Skill? {
+        return pvpPlaces[player.world]?.playerSlots?.find {it?.player == player}?.skill
+    }
+
+    fun getOpponent(player: Player): Player? {
+        return pvpPlaces[player.world]?.playerSlots?.find {it?.player != player}?.player
     }
 }

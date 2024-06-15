@@ -4,16 +4,20 @@ import me.minecraft.minecraftpvpplugin.Skill
 import me.minecraft.minecraftpvpplugin.refs.Effects
 import me.minecraft.minecraftpvpplugin.refs.Items
 import org.bukkit.Material
+import org.bukkit.entity.EntityType
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.entity.EntityDamageEvent
-import org.bukkit.potion.PotionEffect
-import org.bukkit.potion.PotionEffectType
 
 object AllDie : Skill(Material.BONE, "同歸於盡"){
     @EventHandler
-    public fun onDamage(event: EntityDamageEvent) {
+    public fun handleDamage(event: EntityDamageEvent) {
+        if (event.entityType != EntityType.PLAYER) return
+
         val player: Player = event.entity as Player
+
+        if (!super.isTriggerActivateSuccessful(player)) return
+
         if (player.health < 15 && player.health > 10) {
             player.addPotionEffect(Effects.AllDie1)
             player.inventory.helmet = Items.ironHelmet

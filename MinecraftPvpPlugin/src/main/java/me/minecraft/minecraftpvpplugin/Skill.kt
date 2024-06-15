@@ -7,13 +7,20 @@ import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.block.Action
+import org.bukkit.event.player.PlayerChangedWorldEvent
 import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.inventory.ItemStack
 import java.time.Instant
+import kotlin.math.roundToLong
 
-open class Skill(val material: Material, val name: String, private val coolDownSeconds: Long = 0) : ItemStack(), Listener {
-    private var coolDownFinishTimestampMap: MutableMap<Player, Long> = HashMap()
-    protected open fun onClick(event: PlayerInteractEvent) {}
+
+abstract class Skill(
+    val material: Material,
+    val name: String,
+    private val coolDownSeconds: Double = 0.0,
+    private val switchLike: Boolean = false,
+) : ItemStack(), Listener {
+
     init {
         this.type = material
         this.amount = 1
@@ -25,27 +32,60 @@ open class Skill(val material: Material, val name: String, private val coolDownS
         Bukkit.getPluginManager().registerEvents(this, MinecraftPvpPlugin.instance)
     }
 
+
+    private var coolDownFinishTimestampMap: MutableMap<Player, Long> = HashMap()
+
+    private var playersActivating = mutableListOf<Player>()
+
+    private val coolDownMilliSeconds = (coolDownSeconds * 1000).roundToLong()
+
     @EventHandler
-    fun handleClick(event: PlayerInteractEvent) {
-        val player = event.player
-        val item = event.item
-        val currTimestamp = Instant.now().epochSecond
+    fun handleChangeWorld(event: PlayerChangedWorldEvent) {
+        if (event.player.world === Bukkit.getWorld("Lobby")) {
+            playersActivating.remove(event.player)
+        }
+    }
 
+    fun isTriggerActivateSuccessful(player: Player): Boolean {
+        if (!hasSkill(player)) return false
+        if (isActivating(player)) return false
 
-        if (Worlds.isInPvp(player) && item?.itemMeta?.displayName == name && event.action != Action.PHYSICAL) {
-            if (coolDownFinishTimestampMap.containsKey(player)) {
-                if (currTimestamp > coolDownFinishTimestampMap[player]!!) {
-                    coolDownFinishTimestampMap[player] = currTimestamp + coolDownSeconds
-                    onClick(event)
-                } else {
-                    player.sendMessage("再等" + (coolDownFinishTimestampMap[player]!! - System.currentTimeMillis() / 1000) + "秒")
-                }
-            }
+        val currTimestamp = System.currentTimeMillis()
 
-            else {
-                coolDownFinishTimestampMap[player] = currTimestamp + coolDownSeconds
-                onClick(event)
+        if (coolDownFinishTimestampMap.containsKey(player)) {
+            print(coolDownFinishTimestampMap[player])
+
+            if (currTimestamp <= coolDownFinishTimestampMap[player]!!) {
+                val leftTime = coolDownFinishTimestampMap[player]!! - currTimestamp
+                print(leftTime)
+                player.sendMessage(String.format("再等 %.1f 秒",  leftTime / 1000.0))
+                return false
             }
         }
+
+        coolDownFinishTimestampMap[player] = currTimestamp + coolDownMilliSeconds
+
+        if (switchLike) playersActivating.add(player)
+        return true
+    }
+
+    fun isTriggerDeactivateSuccessful(player: Player): Boolean {
+        if (!hasSkill(player)) return false
+        if (!switchLike) return false
+        if (!isActivating(player)) return false
+
+        playersActivating.remove(player)
+        return true
+    }
+    fun isClickEventClickingMyself(event: PlayerInteractEvent): Boolean {
+        return event.item?.itemMeta?.displayName == name && event.action != Action.PHYSICAL
+    }
+
+    fun hasSkill(player: Player): Boolean {
+        return Worlds.isInPvp(player) && PvpPlaceManager.getPlayerSkill(player) == this
+    }
+
+    fun isActivating(player: Player): Boolean {
+        return playersActivating.contains(player)
     }
 }

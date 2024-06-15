@@ -26,12 +26,11 @@ class RandomSpawnGadget(private val world: World) {
 
 
     fun start() {
-        println("start spawning")
+        repeat(15) {
+            spawnRandomGadget(randomSpawnLocationChooser.choose().toLocation(world))
+        }
 
-        spawnRandomGadget(Location(world, 118.5, 98.0, 69.5))
-
-        spawner = RunAperiodically(2, 5) {
-            println("spawn gadget")
+        spawner = RunAperiodically(3.0, 6.0) {
             spawnRandomGadget(randomSpawnLocationChooser.choose().toLocation(world))
         }
     }

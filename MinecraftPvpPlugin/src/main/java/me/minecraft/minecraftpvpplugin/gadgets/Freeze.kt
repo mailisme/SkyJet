@@ -36,7 +36,7 @@ object Freeze : ThrowableGadget(Material.SNOW_BALL, "冷陸氣團") {
             }
         }
 
-        RunAfter(2) {
+        RunAfter(2.0) {
             locationMaterialMap.forEach { (location: Location, matWithData: MatWithData) ->
                 val block = iceCenter.world.getBlockAt(location)
 

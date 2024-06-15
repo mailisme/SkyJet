@@ -6,7 +6,7 @@ import org.bukkit.entity.Player
 import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.util.Vector
 
-object KnockBack : Gadget(Material.FIREBALL, "地球之心", duration = 20) {
+object KnockBack : Gadget(Material.FIREBALL, "地球之心", duration = 20.0) {
     override fun onActivate(event: PlayerInteractEvent) {
         val player = event.player as Player
         val nearByEntities = player.getNearbyEntities(6.0, 6.0, 6.0)

@@ -44,6 +44,8 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             it.setGameRuleValue("doMobSpawning", "false")
             it.setGameRuleValue("doDaylightCycle", "false")
             it.setGameRuleValue("doWeatherCycle", "false")
+            it.setGameRuleValue("mobGriefing", "false")
+            it.setGameRuleValue("fireTick", "false")
         }
 
 
@@ -62,12 +64,12 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     }
 
     @EventHandler
-    fun onInventoryClick(event: InventoryClickEvent) {
+    fun handleInventoryClick(event: InventoryClickEvent) {
         val player = event.whoClicked as Player
 
         if (event.clickedInventory == null) return
 
-        if (event.clickedInventory.title.equals(ChatColor.AQUA.toString() + "Join Game", ignoreCase = true)) {
+        if (event.clickedInventory.title.equals("${ChatColor.AQUA}Join Game", ignoreCase = true)) {
             when (event.currentItem.type) {
                 Material.DIAMOND_AXE -> {
                     val selectGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}Select skill")
@@ -81,7 +83,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             event.isCancelled = true
         }
 
-        if (event.clickedInventory.title.equals(ChatColor.AQUA.toString() + "Select skill", ignoreCase = true)) {
+        if (event.clickedInventory.title.equals("${ChatColor.AQUA}Select skill", ignoreCase = true)) {
             Skills.skills.forEach {
                 if (it.name == event.currentItem.itemMeta.displayName) {
                     PvpPlaceManager.addPlayer(player, it)
@@ -93,7 +95,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     }
 
     @EventHandler
-    fun onPlayerJoin(event: PlayerJoinEvent) {
+    fun handlePlayerJoin(event: PlayerJoinEvent) {
         val player = event.player
 
         event.joinMessage = "${ChatColor.AQUA}Welcome ${player.name}!"
@@ -103,24 +105,24 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     }
 
     @EventHandler
-    fun onPlayerInteract(event: PlayerInteractEvent) {
+    fun handlePlayerInteract(event: PlayerInteractEvent) {
         val player = event.player
 
         if (player.world == Worlds.lobby) {
-            val startGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}Join Game")
-            val joinGameBtn = Items.diamondPickaxe
-
-            startGui.contents = arrayOf(joinGameBtn)
-
             if (event.item == null) return
             if (event.item == Items.diamondSword && event.action != Action.PHYSICAL) {
+                val startGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}Join Game")
+                val joinGameBtn = Items.diamondPickaxe
+
+                startGui.contents = arrayOf(joinGameBtn)
+
                 player.openInventory(startGui)
             }
         }
     }
 
     @EventHandler
-    fun onPlayerDropItem(event: PlayerDropItemEvent) {
+    fun handlePlayerDropItem(event: PlayerDropItemEvent) {
         val player = event.player
 
         if (player.world == Worlds.lobby) {
@@ -131,7 +133,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     }
 
     @EventHandler
-    fun onPlayerDeath(event: PlayerDeathEvent) {
+    fun handlePlayerDeath(event: PlayerDeathEvent) {
         val player = event.entity
 
         player.spigot().respawn()
@@ -140,7 +142,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     }
 
     @EventHandler
-    fun onPlayerQuit(event: PlayerQuitEvent) {
+    fun handlePlayerQuit(event: PlayerQuitEvent) {
         val player = event.player
 
         if (Worlds.isInPvp(player)) {
@@ -154,7 +156,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         fun onPlayerToLobby(player: Player) {
             println("To Lobby " + player.name)
             player.inventory.clear()
-            Items.swordItemMeta.displayName = ChatColor.AQUA.toString() + "Join"
+            Items.swordItemMeta.displayName = "${ChatColor.AQUA}Join"
             Items.swordItemMeta.spigot().isUnbreakable = true
             Items.diamondSword.setItemMeta(Items.swordItemMeta)
             player.inventory.setItem(0, Items.diamondSword)

@@ -12,7 +12,7 @@ import org.bukkit.event.player.PlayerChangedWorldEvent
 import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.inventory.ItemStack
 
-// Duration will only do any effect when SwitchLike = false
+// Duration will only take an effect when SwitchLike = false
 
 // Switch Like:
 //     false: player click -> activate() -> delete item -> wait for `duration` s  -> deactivate()
@@ -21,13 +21,16 @@ import org.bukkit.inventory.ItemStack
 abstract class Gadget(
     val material: Material,
     private val name: String,
+    private val duration: Double? = null,
     private val switchLike: Boolean = false,
-    private val duration: Long? = null
 ) : ItemStack(), Listener {
-    private var playersUsingGadgetData = mutableMapOf<Player, MutableMap<String, Any>>()
-    protected open fun onActivate(event: PlayerInteractEvent) {}
-    protected open fun onDeactivate(event: PlayerInteractEvent) {}
-    protected open fun onGameEnd(event: PlayerChangedWorldEvent) {}
+
+    // Can be used to store information about individual players that is activating this gadget
+    private var playersActivatingData = mutableMapOf<Player, MutableMap<String, Any>>()
+
+    open fun onActivate(event: PlayerInteractEvent) {}
+    open fun onDeactivate(event: PlayerInteractEvent) {}
+    open fun onGameEnd(event: PlayerChangedWorldEvent) {}
 
     init {
         this.type = material
@@ -45,15 +48,15 @@ abstract class Gadget(
     }
 
     fun addPlayerData(player: Player, key: String, data: Any) {
-        playersUsingGadgetData[player]?.set(key, data)
+        playersActivatingData[player]?.set(key, data)
     }
 
     fun getPlayerData(player: Player, key: String): Any? {
-        return playersUsingGadgetData[player]?.get(key)
+        return playersActivatingData[player]?.get(key)
     }
 
-    fun isPlayerUsingGadget(player: Player): Boolean {
-        return playersUsingGadgetData.contains(player)
+    fun isActivating(player: Player): Boolean {
+        return playersActivatingData.contains(player)
     }
 
     @EventHandler
@@ -61,22 +64,24 @@ abstract class Gadget(
         val player = event.player
         val item = event.item
 
+        // TODO: Make if nest more readable
+
         if (Worlds.isInPvp(player) && item?.itemMeta?.displayName == name && event.action != Action.PHYSICAL) {
             if (switchLike) {
-                if (isPlayerUsingGadget(player)) {
+                if (isActivating(player)) {
                     removeOneItemInHand(player)
                     onDeactivate(event)
-                    playersUsingGadgetData.remove(player)
+                    playersActivatingData.remove(player)
                 }
             } else {
-                if (!isPlayerUsingGadget(player)) {
+                if (!isActivating(player)) {
                     removeOneItemInHand(player)
                     waitToDeactivate(player, event)
                 }
             }
 
-            if (!isPlayerUsingGadget(player)) {
-                playersUsingGadgetData[player] = mutableMapOf()
+            if (!isActivating(player)) {
+                playersActivatingData[player] = mutableMapOf()
                 onActivate(event)
             }
         }
@@ -86,7 +91,7 @@ abstract class Gadget(
     fun handleChangeWorld(event: PlayerChangedWorldEvent) {
         if (event.player.world === Bukkit.getWorld("Lobby")) {
             onGameEnd(event)
-            playersUsingGadgetData.remove(event.player)
+            playersActivatingData.remove(event.player)
         }
     }
 
@@ -102,9 +107,9 @@ abstract class Gadget(
 
     private fun waitToDeactivate(player: Player, event: PlayerInteractEvent) {
         RunAfter(duration!!) {
-            if (playersUsingGadgetData.contains(player)) {
+            if (playersActivatingData.contains(player)) {
                 onDeactivate(event)
-                playersUsingGadgetData.remove(player)
+                playersActivatingData.remove(player)
             }
         }
     }
