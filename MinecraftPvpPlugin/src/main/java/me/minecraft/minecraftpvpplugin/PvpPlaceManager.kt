@@ -12,6 +12,10 @@ import org.bukkit.entity.Player
 import org.bukkit.event.Listener
 import java.util.function.Consumer
 
+import org.jetbrains.kotlinx.dataframe.*
+import org.jetbrains.kotlinx.dataframe.api.*
+import org.jetbrains.kotlinx.dataframe.io.*
+
 // TODO: MAKE THE PLAYER DATA STRUCTURE BETTER
 class PvpPlayer(val player: Player, val skill: Skill)
 
@@ -91,14 +95,8 @@ object PvpPlaceManager : Listener {
 
             for (playerIndex in playerSlots.indices) {
                 if (playerSlots[playerIndex]?.player === player) {
-                    val anotherPlayerIndex = if (playerIndex == 0) {
-                        1
-                    } else {
-                        0
-                    }
 
-                    val anotherPlayer = playerSlots[anotherPlayerIndex]?.player
-
+                    val anotherPlayer = getOpponent(player)
 
                     player.teleport(Locations.lobbySpawn)
                     MinecraftPvpPlugin.onPlayerToLobby(player)
@@ -141,10 +139,30 @@ object PvpPlaceManager : Listener {
     }
 
     fun getPlayerSkill(player: Player): Skill? {
-        return pvpPlaces[player.world]?.playerSlots?.find {it?.player == player}?.skill
+        for ((world, pvpPlace) in pvpPlaces) {
+            for (playerSlot in pvpPlace.playerSlots) {
+                if (playerSlot?.player == player) {
+                    return playerSlot.skill
+                }
+            }
+        }
+
+        return null
     }
 
     fun getOpponent(player: Player): Player? {
-        return pvpPlaces[player.world]?.playerSlots?.find {it?.player != player}?.player
+        for ((world, pvpPlace) in pvpPlaces) {
+            for (playerSlot in pvpPlace.playerSlots) {
+                if (playerSlot?.player == player) {
+                    for (opponentPlayerSlot in pvpPlace.playerSlots) {
+                        if (opponentPlayerSlot?.player != player && opponentPlayerSlot?.player != null) {
+                            return opponentPlayerSlot.player
+                        }
+                    }
+                }
+            }
+        }
+
+        return null
     }
 }
