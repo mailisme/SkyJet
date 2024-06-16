@@ -11,7 +11,7 @@ object InstantHeal : Skill(Material.EMERALD, "瞬間治癒", 5.0) {
     fun handleClick(event: PlayerInteractEvent) {
         val player = event.player
 
-        if (!super.isClickEventClickingMyself(event)) return
+        if (!super.isClickEventClickingItself(event)) return
         if (!super.isTriggerActivateSuccessful(player)) return
 
         val rand = Random.nextInt(5, 10)

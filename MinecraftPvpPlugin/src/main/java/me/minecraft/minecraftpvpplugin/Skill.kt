@@ -10,7 +10,6 @@ import org.bukkit.event.block.Action
 import org.bukkit.event.player.PlayerChangedWorldEvent
 import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.inventory.ItemStack
-import java.time.Instant
 import kotlin.math.roundToLong
 
 
@@ -77,7 +76,7 @@ abstract class Skill(
         playersActivating.remove(player)
         return true
     }
-    fun isClickEventClickingMyself(event: PlayerInteractEvent): Boolean {
+    fun isClickEventClickingItself(event: PlayerInteractEvent): Boolean {
         return event.item?.itemMeta?.displayName == name && event.action != Action.PHYSICAL
     }
 
