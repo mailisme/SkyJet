@@ -17,6 +17,7 @@ abstract class Skill(
     val material: Material,
     val name: String,
     private val coolDownSeconds: Double = 0.0,
+    private val ignoreCoolDownSeconds: Double = 0.0,
     private val switchLike: Boolean = false,
 ) : ItemStack(), Listener {
 
@@ -38,6 +39,8 @@ abstract class Skill(
 
     private val coolDownMilliSeconds = (coolDownSeconds * 1000).roundToLong()
 
+    private val ignoreCoolDownMilliSeconds = (ignoreCoolDownSeconds * 1000).roundToLong()
+
     @EventHandler
     fun handleChangeWorld(event: PlayerChangedWorldEvent) {
         if (event.player.world === Bukkit.getWorld("Lobby")) {
@@ -54,7 +57,8 @@ abstract class Skill(
         if (coolDownFinishTimestampMap.containsKey(player)) {
             print(coolDownFinishTimestampMap[player])
 
-            if (currTimestamp <= coolDownFinishTimestampMap[player]!!) {
+            if (currTimestamp <= coolDownFinishTimestampMap[player]!! &&
+                currTimestamp >= coolDownFinishTimestampMap[player]!! - (coolDownMilliSeconds - ignoreCoolDownMilliSeconds)) {
                 val leftTime = coolDownFinishTimestampMap[player]!! - currTimestamp
                 print(leftTime)
                 player.sendMessage(String.format("再等 %.1f 秒",  leftTime / 1000.0))
@@ -62,7 +66,13 @@ abstract class Skill(
             }
         }
 
-        coolDownFinishTimestampMap[player] = currTimestamp + coolDownMilliSeconds
+        else {
+            coolDownFinishTimestampMap[player] = currTimestamp + coolDownMilliSeconds
+        }
+
+        if (currTimestamp >= coolDownFinishTimestampMap[player]!! - (coolDownMilliSeconds - ignoreCoolDownMilliSeconds)) {
+            coolDownFinishTimestampMap[player] = currTimestamp + coolDownMilliSeconds
+        }
 
         if (switchLike) playersActivating.add(player)
         return true
