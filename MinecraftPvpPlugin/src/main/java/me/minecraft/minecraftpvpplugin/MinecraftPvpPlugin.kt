@@ -46,6 +46,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             it.setGameRuleValue("doWeatherCycle", "false")
             it.setGameRuleValue("mobGriefing", "false")
             it.setGameRuleValue("fireTick", "false")
+            it.setGameRuleValue("commandBlockOutput", "false")
         }
 
 
