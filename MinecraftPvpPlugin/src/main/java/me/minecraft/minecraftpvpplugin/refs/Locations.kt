@@ -5,7 +5,7 @@ import org.bukkit.World
 import org.bukkit.util.Vector
 
 object Locations {
-    val lobbySpawn = Location(Worlds.lobby, 110.5, 74.0, 95.5)
+    val lobbySpawn = Location(Worlds.lobby, 178.0, 104.5, 114.0)
     private val pvpBorder0 = Vector(37, 97, -7)
     private val pvpBorder1 = Vector(195, 138, 152)
 
