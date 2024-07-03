@@ -6,23 +6,27 @@
   <component name="ChangeListManager">
     <list default="true" id="6f9183d3-5ec1-46d4-ab0b-9ce0fee0d644" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/PvpPlaceManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/PvpPlaceManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/Skill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/Skill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/refs/Skills.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/refs/Skills.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/skills/AllDie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/skills/AllDie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/skills/Creeper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/skills/Creeper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/skills/InstantHeal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/skills/InstantHeal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/skills/Recycle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/skills/Recycle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/data/villages.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/level.dat_old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/playerdata/07d5abe9-1d7f-3677-a185-e012876e3b06.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/playerdata/07d5abe9-1d7f-3677-a185-e012876e3b06.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/playerdata/143d57ce-2044-3720-a2a9-e6c7df7db3ed.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/playerdata/143d57ce-2044-3720-a2a9-e6c7df7db3ed.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/playerdata/786b47ad-e918-30cb-b480-343d93c9c156.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/playerdata/786b47ad-e918-30cb-b480-343d93c9c156.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/playerdata/7c26e4cd-9b5a-363a-b204-d92f4ce7279d.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/playerdata/7c26e4cd-9b5a-363a-b204-d92f4ce7279d.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.-1.-1.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.-1.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.0.-1.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/region/r.0.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/session.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/stats/07d5abe9-1d7f-3677-a185-e012876e3b06.json" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/stats/07d5abe9-1d7f-3677-a185-e012876e3b06.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/stats/143d57ce-2044-3720-a2a9-e6c7df7db3ed.json" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/stats/143d57ce-2044-3720-a2a9-e6c7df7db3ed.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/stats/786b47ad-e918-30cb-b480-343d93c9c156.json" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/stats/786b47ad-e918-30cb-b480-343d93c9c156.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/stats/7c26e4cd-9b5a-363a-b204-d92f4ce7279d.json" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/stats/7c26e4cd-9b5a-363a-b204-d92f4ce7279d.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.-1.-1.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.-1.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby_nether/DIM-1/region/r.0.-1.mca" afterDir="false" />
@@ -44,15 +48,11 @@
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.-1.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.0.-1.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.0.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.1.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/region/r.1.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP0/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP0/session.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/data/villages.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/level.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/level.dat_old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/region/r.-1.-1.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/region/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/region/r.0.-1.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/region/r.0.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP1/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP1/session.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/PVP2/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/PVP2/data/villages.dat" afterDir="false" />
@@ -64,6 +64,7 @@
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/bukkit.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/bukkit.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/logs/latest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/ops.json" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/ops.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MinecraftServer/plugins/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/plugins/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/server.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/spigot.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/spigot.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/usercache.json" afterDir="false" />
