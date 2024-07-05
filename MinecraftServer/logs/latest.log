@@ -1,660 +1,252 @@
-[19:17:53] [Server thread/INFO]: Starting minecraft server version 1.8.8
-[19:17:53] [Server thread/INFO]: Loading properties
-[19:17:53] [Server thread/INFO]: Default game type: SURVIVAL
-[19:17:53] [Server thread/INFO]: This server is running CraftBukkit version git-Spigot-21fe707-741a1bd (MC: 1.8.8) (Implementing API version 1.8.8-R0.1-SNAPSHOT)
-[19:17:53] [Server thread/INFO]: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
-[19:17:53] [Server thread/INFO]: Debug logging is disabled
-[19:17:53] [Server thread/INFO]: Using 4 threads for Netty based IO
-[19:17:53] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:20:37] [Server thread/INFO]: Starting minecraft server version 1.8.8
+[17:20:37] [Server thread/INFO]: Loading properties
+[17:20:37] [Server thread/INFO]: Default game type: SURVIVAL
+[17:20:37] [Server thread/INFO]: This server is running CraftBukkit version git-Spigot-21fe707-741a1bd (MC: 1.8.8) (Implementing API version 1.8.8-R0.1-SNAPSHOT)
+[17:20:37] [Server thread/INFO]: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+[17:20:37] [Server thread/INFO]: Debug logging is disabled
+[17:20:37] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:20:37] [Server thread/INFO]: Server Ping Player Sample Count: 12
 
-[19:17:53] [Server thread/INFO]: Generating keypair
-[19:17:53] [Server thread/INFO]: Starting Minecraft server on *:25565
-[19:17:53] [Server thread/INFO]: Using default channel type
-[19:17:53] [Server thread/INFO]: Set PluginClassLoader as parallel capable
-[19:17:53] [Server thread/INFO]: [MinecraftPvpPlugin] Loading MinecraftPvpPlugin v1.0-SNAPSHOT
-[19:17:53] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[19:17:53] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
-[19:17:53] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[19:17:53] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
-[19:17:53] [Server thread/INFO]: **** Beginning UUID conversion, this may take A LONG time ****
-[19:17:53] [Server thread/INFO]: Preparing level "Lobby"
-[19:17:53] [Server thread/INFO]: -------- World Settings For [Lobby] --------
-[19:17:53] [Server thread/INFO]: Item Despawn Rate: 6000
-[19:17:53] [Server thread/INFO]: Arrow Despawn Rate: 1200
-[19:17:53] [Server thread/INFO]: Item Merge Radius: 2.5
-[19:17:53] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
-[19:17:53] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
-[19:17:53] [Server thread/INFO]: Structure Info Saving: true
-[19:17:53] [Server thread/INFO]: Cactus Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Cane Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Melon Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Mushroom Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Sapling Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Wheat Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: NetherWart Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Sending up to 10 chunks per packet
-[19:17:53] [Server thread/INFO]: Max TNT Explosions: 100
-[19:17:53] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
-[19:17:53] [Server thread/INFO]: Mob Spawn Range: 4
-[19:17:53] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
-[19:17:53] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
-[19:17:53] [Server thread/INFO]: Max Entity Collisions: 8
-[19:17:53] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
-[19:17:53] [Server thread/INFO]: Random Lighting Updates: false
-[19:17:53] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
-[19:17:53] [Server thread/INFO]: Anti X-Ray: true
-[19:17:53] [Server thread/INFO]: 	Engine Mode: 1
-[19:17:53] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
-[19:17:53] [Server thread/INFO]: 	Replace Blocks: [1, 5]
-[19:17:53] [Server thread/INFO]: Chunks to Grow per Tick: 650
-[19:17:53] [Server thread/INFO]: Clear tick list: false
-[19:17:53] [Server thread/INFO]: Experience Merge Radius: 3.0
-[19:17:53] [Server thread/INFO]: View Distance: 10
-[19:17:53] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
-[19:17:53] [Server thread/INFO]: -------- World Settings For [Lobby_nether] --------
-[19:17:53] [Server thread/INFO]: Item Despawn Rate: 6000
-[19:17:53] [Server thread/INFO]: Arrow Despawn Rate: 1200
-[19:17:53] [Server thread/INFO]: Item Merge Radius: 2.5
-[19:17:53] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
-[19:17:53] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
-[19:17:53] [Server thread/INFO]: Structure Info Saving: true
-[19:17:53] [Server thread/INFO]: Cactus Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Cane Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Melon Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Mushroom Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Sapling Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Wheat Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: NetherWart Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Sending up to 10 chunks per packet
-[19:17:53] [Server thread/INFO]: Max TNT Explosions: 100
-[19:17:53] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
-[19:17:53] [Server thread/INFO]: Mob Spawn Range: 4
-[19:17:53] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
-[19:17:53] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
-[19:17:53] [Server thread/INFO]: Max Entity Collisions: 8
-[19:17:53] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
-[19:17:53] [Server thread/INFO]: Random Lighting Updates: false
-[19:17:53] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
-[19:17:53] [Server thread/INFO]: Anti X-Ray: true
-[19:17:53] [Server thread/INFO]: 	Engine Mode: 1
-[19:17:53] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
-[19:17:53] [Server thread/INFO]: 	Replace Blocks: [1, 5]
-[19:17:53] [Server thread/INFO]: Chunks to Grow per Tick: 650
-[19:17:53] [Server thread/INFO]: Clear tick list: false
-[19:17:53] [Server thread/INFO]: Experience Merge Radius: 3.0
-[19:17:53] [Server thread/INFO]: View Distance: 10
-[19:17:53] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
-[19:17:53] [Server thread/INFO]: -------- World Settings For [Lobby_the_end] --------
-[19:17:53] [Server thread/INFO]: Item Despawn Rate: 6000
-[19:17:53] [Server thread/INFO]: Arrow Despawn Rate: 1200
-[19:17:53] [Server thread/INFO]: Item Merge Radius: 2.5
-[19:17:53] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
-[19:17:53] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
-[19:17:53] [Server thread/INFO]: Structure Info Saving: true
-[19:17:53] [Server thread/INFO]: Cactus Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Cane Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Melon Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Mushroom Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Sapling Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Wheat Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: NetherWart Growth Modifier: 100%
-[19:17:53] [Server thread/INFO]: Sending up to 10 chunks per packet
-[19:17:53] [Server thread/INFO]: Max TNT Explosions: 100
-[19:17:53] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
-[19:17:53] [Server thread/INFO]: Mob Spawn Range: 4
-[19:17:53] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
-[19:17:53] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
-[19:17:53] [Server thread/INFO]: Max Entity Collisions: 8
-[19:17:53] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
-[19:17:53] [Server thread/INFO]: Random Lighting Updates: false
-[19:17:53] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
-[19:17:53] [Server thread/INFO]: Anti X-Ray: true
-[19:17:53] [Server thread/INFO]: 	Engine Mode: 1
-[19:17:53] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
-[19:17:53] [Server thread/INFO]: 	Replace Blocks: [1, 5]
-[19:17:53] [Server thread/INFO]: Chunks to Grow per Tick: 650
-[19:17:53] [Server thread/INFO]: Clear tick list: false
-[19:17:53] [Server thread/INFO]: Experience Merge Radius: 3.0
-[19:17:53] [Server thread/INFO]: View Distance: 10
-[19:17:53] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
-[19:17:53] [Server thread/INFO]: Preparing start region for level 0 (Seed: -4444818278965242618)
-[19:17:54] [Thread-5/INFO]: UUID of player MAIL__TW is 786b47ad-e918-30cb-b480-343d93c9c156
-[19:17:54] [Server thread/INFO]: Preparing start region for level 1 (Seed: 7365026278184994534)
-[19:17:54] [Server thread/INFO]: Preparing start region for level 2 (Seed: 7365026278184994534)
-[19:17:55] [Server thread/INFO]: [MinecraftPvpPlugin] Enabling MinecraftPvpPlugin v1.0-SNAPSHOT
-[19:17:55] [Server thread/INFO]: [MinecraftPvpPlugin] SKYJET PVP v.3.0.0
-[19:17:55] [Server thread/INFO]: -------- World Settings For [PVP0] --------
-[19:17:55] [Server thread/INFO]: Item Despawn Rate: 6000
-[19:17:55] [Server thread/INFO]: Arrow Despawn Rate: 1200
-[19:17:55] [Server thread/INFO]: Item Merge Radius: 2.5
-[19:17:55] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
-[19:17:55] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
-[19:17:55] [Server thread/INFO]: Structure Info Saving: true
-[19:17:55] [Server thread/INFO]: Cactus Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Cane Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Melon Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Mushroom Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Sapling Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Wheat Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: NetherWart Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Sending up to 10 chunks per packet
-[19:17:55] [Server thread/INFO]: Max TNT Explosions: 100
-[19:17:55] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
-[19:17:55] [Server thread/INFO]: Mob Spawn Range: 4
-[19:17:55] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
-[19:17:55] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
-[19:17:55] [Server thread/INFO]: Max Entity Collisions: 8
-[19:17:55] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
-[19:17:55] [Server thread/INFO]: Random Lighting Updates: false
-[19:17:55] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
-[19:17:55] [Server thread/INFO]: Anti X-Ray: true
-[19:17:55] [Server thread/INFO]: 	Engine Mode: 1
-[19:17:55] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
-[19:17:55] [Server thread/INFO]: 	Replace Blocks: [1, 5]
-[19:17:55] [Server thread/INFO]: Chunks to Grow per Tick: 650
-[19:17:55] [Server thread/INFO]: Clear tick list: false
-[19:17:55] [Server thread/INFO]: Experience Merge Radius: 3.0
-[19:17:55] [Server thread/INFO]: View Distance: 10
-[19:17:55] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
-[19:17:55] [Server thread/INFO]: Preparing start region for level 3 (Seed: -5227594981380140816)
-[19:17:55] [Server thread/INFO]: -------- World Settings For [PVP1] --------
-[19:17:55] [Server thread/INFO]: Item Despawn Rate: 6000
-[19:17:55] [Server thread/INFO]: Arrow Despawn Rate: 1200
-[19:17:55] [Server thread/INFO]: Item Merge Radius: 2.5
-[19:17:55] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
-[19:17:55] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
-[19:17:55] [Server thread/INFO]: Structure Info Saving: true
-[19:17:55] [Server thread/INFO]: Cactus Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Cane Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Melon Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Mushroom Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Sapling Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Wheat Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: NetherWart Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Sending up to 10 chunks per packet
-[19:17:55] [Server thread/INFO]: Max TNT Explosions: 100
-[19:17:55] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
-[19:17:55] [Server thread/INFO]: Mob Spawn Range: 4
-[19:17:55] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
-[19:17:55] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
-[19:17:55] [Server thread/INFO]: Max Entity Collisions: 8
-[19:17:55] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
-[19:17:55] [Server thread/INFO]: Random Lighting Updates: false
-[19:17:55] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
-[19:17:55] [Server thread/INFO]: Anti X-Ray: true
-[19:17:55] [Server thread/INFO]: 	Engine Mode: 1
-[19:17:55] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
-[19:17:55] [Server thread/INFO]: 	Replace Blocks: [1, 5]
-[19:17:55] [Server thread/INFO]: Chunks to Grow per Tick: 650
-[19:17:55] [Server thread/INFO]: Clear tick list: false
-[19:17:55] [Server thread/INFO]: Experience Merge Radius: 3.0
-[19:17:55] [Server thread/INFO]: View Distance: 10
-[19:17:55] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
-[19:17:55] [Server thread/INFO]: Preparing start region for level 4 (Seed: -5227594981380140816)
-[19:17:55] [Server thread/INFO]: -------- World Settings For [PVP2] --------
-[19:17:55] [Server thread/INFO]: Item Despawn Rate: 6000
-[19:17:55] [Server thread/INFO]: Arrow Despawn Rate: 1200
-[19:17:55] [Server thread/INFO]: Item Merge Radius: 2.5
-[19:17:55] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
-[19:17:55] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
-[19:17:55] [Server thread/INFO]: Structure Info Saving: true
-[19:17:55] [Server thread/INFO]: Cactus Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Cane Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Melon Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Mushroom Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Sapling Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Wheat Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: NetherWart Growth Modifier: 100%
-[19:17:55] [Server thread/INFO]: Sending up to 10 chunks per packet
-[19:17:55] [Server thread/INFO]: Max TNT Explosions: 100
-[19:17:55] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
-[19:17:55] [Server thread/INFO]: Mob Spawn Range: 4
-[19:17:55] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
-[19:17:55] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
-[19:17:55] [Server thread/INFO]: Max Entity Collisions: 8
-[19:17:55] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
-[19:17:55] [Server thread/INFO]: Random Lighting Updates: false
-[19:17:55] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
-[19:17:55] [Server thread/INFO]: Anti X-Ray: true
-[19:17:55] [Server thread/INFO]: 	Engine Mode: 1
-[19:17:55] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
-[19:17:55] [Server thread/INFO]: 	Replace Blocks: [1, 5]
-[19:17:55] [Server thread/INFO]: Chunks to Grow per Tick: 650
-[19:17:55] [Server thread/INFO]: Clear tick list: false
-[19:17:55] [Server thread/INFO]: Experience Merge Radius: 3.0
-[19:17:55] [Server thread/INFO]: View Distance: 10
-[19:17:55] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
-[19:17:55] [Server thread/INFO]: Preparing start region for level 5 (Seed: -5227594981380140816)
-[19:17:56] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[19:17:56] [Server thread/INFO]: Done (2.281s)! For help, type "help" or "?"
-[19:17:56] [Server thread/INFO]: [MinecraftPvpPlugin] MAIL__TW joined the server
-[19:17:56] [Server thread/INFO]: To Lobby MAIL__TW
+[17:20:37] [Server thread/INFO]: Generating keypair
+[17:20:37] [Server thread/INFO]: Starting Minecraft server on *:25565
+[17:20:37] [Server thread/INFO]: Using default channel type
+[17:20:37] [Server thread/INFO]: Set PluginClassLoader as parallel capable
+[17:20:37] [Server thread/INFO]: [MinecraftPvpPlugin] Loading MinecraftPvpPlugin v1.0-SNAPSHOT
+[17:20:37] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[17:20:37] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[17:20:37] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[17:20:37] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[17:20:37] [Server thread/INFO]: **** Beginning UUID conversion, this may take A LONG time ****
+[17:20:37] [Server thread/INFO]: Preparing level "Lobby"
+[17:20:37] [Server thread/INFO]: -------- World Settings For [Lobby] --------
+[17:20:37] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:20:37] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[17:20:37] [Server thread/INFO]: Clear tick list: false
+[17:20:37] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:20:37] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[17:20:37] [Server thread/INFO]: Anti X-Ray: true
+[17:20:37] [Server thread/INFO]: 	Engine Mode: 1
+[17:20:37] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[17:20:37] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[17:20:37] [Server thread/INFO]: Mob Spawn Range: 4
+[17:20:37] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:20:37] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[17:20:37] [Server thread/INFO]: Random Lighting Updates: false
+[17:20:37] [Server thread/INFO]: Structure Info Saving: true
+[17:20:37] [Server thread/INFO]: Max Entity Collisions: 8
+[17:20:37] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:20:37] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Max TNT Explosions: 100
+[17:20:37] [Server thread/INFO]: Sending up to 10 chunks per packet
+[17:20:37] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[17:20:37] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:20:37] [Server thread/INFO]: View Distance: 10
+[17:20:37] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:20:37] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:20:37] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:20:37] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:20:37] [Server thread/INFO]: -------- World Settings For [Lobby_nether] --------
+[17:20:37] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:20:37] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[17:20:37] [Server thread/INFO]: Clear tick list: false
+[17:20:37] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:20:37] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[17:20:37] [Server thread/INFO]: Anti X-Ray: true
+[17:20:37] [Server thread/INFO]: 	Engine Mode: 1
+[17:20:37] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[17:20:37] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[17:20:37] [Server thread/INFO]: Mob Spawn Range: 4
+[17:20:37] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:20:37] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[17:20:37] [Server thread/INFO]: Random Lighting Updates: false
+[17:20:37] [Server thread/INFO]: Structure Info Saving: true
+[17:20:37] [Server thread/INFO]: Max Entity Collisions: 8
+[17:20:37] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:20:37] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Max TNT Explosions: 100
+[17:20:37] [Server thread/INFO]: Sending up to 10 chunks per packet
+[17:20:37] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[17:20:37] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:20:37] [Server thread/INFO]: View Distance: 10
+[17:20:37] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:20:37] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:20:37] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:20:37] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:20:37] [Server thread/INFO]: -------- World Settings For [Lobby_the_end] --------
+[17:20:37] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:20:37] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[17:20:37] [Server thread/INFO]: Clear tick list: false
+[17:20:37] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:20:37] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[17:20:37] [Server thread/INFO]: Anti X-Ray: true
+[17:20:37] [Server thread/INFO]: 	Engine Mode: 1
+[17:20:37] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[17:20:37] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[17:20:37] [Server thread/INFO]: Mob Spawn Range: 4
+[17:20:37] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:20:37] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[17:20:37] [Server thread/INFO]: Random Lighting Updates: false
+[17:20:37] [Server thread/INFO]: Structure Info Saving: true
+[17:20:37] [Server thread/INFO]: Max Entity Collisions: 8
+[17:20:37] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:20:37] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:20:37] [Server thread/INFO]: Max TNT Explosions: 100
+[17:20:37] [Server thread/INFO]: Sending up to 10 chunks per packet
+[17:20:37] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[17:20:37] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:20:37] [Server thread/INFO]: View Distance: 10
+[17:20:37] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:20:37] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:20:37] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:20:37] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:20:37] [Server thread/INFO]: Preparing start region for level 0 (Seed: -4444818278965242618)
+[17:20:38] [Server thread/INFO]: Preparing start region for level 1 (Seed: 7365026278184994534)
+[17:20:38] [Server thread/INFO]: Preparing start region for level 2 (Seed: 7365026278184994534)
+[17:20:38] [Server thread/INFO]: [MinecraftPvpPlugin] Enabling MinecraftPvpPlugin v1.0-SNAPSHOT
+[17:20:38] [Server thread/INFO]: [MinecraftPvpPlugin] SKYJET PVP v.3.0.0
+[17:20:38] [Server thread/INFO]: -------- World Settings For [PVP0] --------
+[17:20:38] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:20:38] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[17:20:38] [Server thread/INFO]: Clear tick list: false
+[17:20:38] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:20:38] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[17:20:38] [Server thread/INFO]: Anti X-Ray: true
+[17:20:38] [Server thread/INFO]: 	Engine Mode: 1
+[17:20:38] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[17:20:38] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[17:20:38] [Server thread/INFO]: Mob Spawn Range: 4
+[17:20:38] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:20:38] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[17:20:38] [Server thread/INFO]: Random Lighting Updates: false
+[17:20:38] [Server thread/INFO]: Structure Info Saving: true
+[17:20:38] [Server thread/INFO]: Max Entity Collisions: 8
+[17:20:38] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:20:38] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:20:38] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:20:38] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:20:38] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:20:38] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:20:38] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:20:38] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:20:38] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:20:38] [Server thread/INFO]: Max TNT Explosions: 100
+[17:20:38] [Server thread/INFO]: Sending up to 10 chunks per packet
+[17:20:38] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[17:20:38] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:20:38] [Server thread/INFO]: View Distance: 10
+[17:20:38] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:20:38] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:20:38] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:20:38] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:20:38] [Server thread/INFO]: Preparing start region for level 3 (Seed: -5227594981380140816)
+[17:20:39] [Server thread/INFO]: -------- World Settings For [PVP1] --------
+[17:20:39] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:20:39] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[17:20:39] [Server thread/INFO]: Clear tick list: false
+[17:20:39] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:20:39] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[17:20:39] [Server thread/INFO]: Anti X-Ray: true
+[17:20:39] [Server thread/INFO]: 	Engine Mode: 1
+[17:20:39] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[17:20:39] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[17:20:39] [Server thread/INFO]: Mob Spawn Range: 4
+[17:20:39] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:20:39] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[17:20:39] [Server thread/INFO]: Random Lighting Updates: false
+[17:20:39] [Server thread/INFO]: Structure Info Saving: true
+[17:20:39] [Server thread/INFO]: Max Entity Collisions: 8
+[17:20:39] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:20:39] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:20:39] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:20:39] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:20:39] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:20:39] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:20:39] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:20:39] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:20:39] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:20:39] [Server thread/INFO]: Max TNT Explosions: 100
+[17:20:39] [Server thread/INFO]: Sending up to 10 chunks per packet
+[17:20:39] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[17:20:39] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:20:39] [Server thread/INFO]: View Distance: 10
+[17:20:39] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:20:39] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:20:39] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:20:39] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:20:39] [Server thread/INFO]: Preparing start region for level 4 (Seed: -5227594981380140816)
+[17:20:39] [Server thread/INFO]: -------- World Settings For [PVP2] --------
+[17:20:39] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:20:39] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[17:20:39] [Server thread/INFO]: Clear tick list: false
+[17:20:39] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:20:39] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[17:20:39] [Server thread/INFO]: Anti X-Ray: true
+[17:20:39] [Server thread/INFO]: 	Engine Mode: 1
+[17:20:39] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[17:20:39] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[17:20:39] [Server thread/INFO]: Mob Spawn Range: 4
+[17:20:39] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:20:39] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[17:20:39] [Server thread/INFO]: Random Lighting Updates: false
+[17:20:39] [Server thread/INFO]: Structure Info Saving: true
+[17:20:39] [Server thread/INFO]: Max Entity Collisions: 8
+[17:20:39] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:20:39] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:20:39] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:20:39] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:20:39] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:20:39] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:20:39] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:20:39] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:20:39] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:20:39] [Server thread/INFO]: Max TNT Explosions: 100
+[17:20:39] [Server thread/INFO]: Sending up to 10 chunks per packet
+[17:20:39] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[17:20:39] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:20:39] [Server thread/INFO]: View Distance: 10
+[17:20:39] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:20:39] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:20:39] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:20:39] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:20:39] [Server thread/INFO]: Preparing start region for level 5 (Seed: -5227594981380140816)
+[17:20:39] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:20:39] [Server thread/INFO]: Done (2.023s)! For help, type "help" or "?"
+[17:20:41] [Thread-5/INFO]: UUID of player MAIL__TW is 786b47ad-e918-30cb-b480-343d93c9c156
+[17:20:41] [Server thread/INFO]: [MinecraftPvpPlugin] MAIL__TW joined the server
+[17:20:41] [Server thread/INFO]: To Lobby MAIL__TW
 
-[19:17:56] [Server thread/INFO]: MAIL__TW[/127.0.0.1:58229] logged in with entity id 277 at ([Lobby]110.5, 74.0, 95.5)
-[19:17:57] [Thread-6/INFO]: UUID of player ELEPOT is 07d5abe9-1d7f-3677-a185-e012876e3b06
-[19:17:57] [Server thread/INFO]: [MinecraftPvpPlugin] ELEPOT joined the server
-[19:17:57] [Server thread/INFO]: To Lobby ELEPOT
-
-[19:17:57] [Server thread/INFO]: ELEPOT[/[0:0:0:0:0:0:0:1]:58230] logged in with entity id 278 at ([Lobby]110.5, 74.0, 95.5)
-[19:18:15] [Server thread/ERROR]: Could not pass event PlayerInteractEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
-org.bukkit.event.EventException: null
-	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:228) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:195) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.BlockPressurePlateBinary.f(BlockPressurePlateBinary.java:57) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.BlockPressurePlateAbstract.a(BlockPressurePlateAbstract.java:100) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.BlockPressurePlateAbstract.a(BlockPressurePlateAbstract.java:93) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.Entity.checkBlockCollisions(Entity.java:761) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.Entity.move(Entity.java:407) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityLiving.g(EntityLiving.java:1395) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityHuman.g(EntityHuman.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityLiving.m(EntityLiving.java:1652) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityHuman.m(EntityHuman.java:393) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityLiving.t_(EntityLiving.java:1487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityHuman.t_(EntityHuman.java:173) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityPlayer.l(EntityPlayer.java:285) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:382) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PacketPlayInFlying.a(SourceFile:126) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PacketPlayInFlying$PacketPlayInPositionLook.a(SourceFile:18) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
-	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at java.lang.Thread.run(Thread.java:1583) [?:?]
-Caused by: java.lang.NullPointerException: Cannot invoke "org.bukkit.inventory.ItemStack.getType()" because "item" is null
-	at me.minecraft.minecraftpvpplugin.skills.Recycle.ItemsUsed(Recycle.kt:18) ~[?:?]
-	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
-	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	... 29 more
-[19:18:15] [Server thread/INFO]: [@: Teleported ELEPOT to 117.5, 113.0, 69.5]
-[19:18:48] [Server thread/INFO]: 1718536695143
-[19:18:48] [Server thread/ERROR]: Could not pass event PlayerInteractEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
-org.bukkit.event.EventException: null
-	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:228) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:195) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.BlockPressurePlateBinary.f(BlockPressurePlateBinary.java:57) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.BlockPressurePlateAbstract.a(BlockPressurePlateAbstract.java:100) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.BlockPressurePlateAbstract.a(BlockPressurePlateAbstract.java:93) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.Entity.checkBlockCollisions(Entity.java:761) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.Entity.move(Entity.java:407) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityLiving.g(EntityLiving.java:1395) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityHuman.g(EntityHuman.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityLiving.m(EntityLiving.java:1652) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityHuman.m(EntityHuman.java:393) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityLiving.t_(EntityLiving.java:1487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityHuman.t_(EntityHuman.java:173) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityPlayer.l(EntityPlayer.java:285) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:382) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PacketPlayInFlying.a(SourceFile:126) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PacketPlayInFlying$PacketPlayInPosition.a(SourceFile:57) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
-	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at java.lang.Thread.run(Thread.java:1583) [?:?]
-Caused by: java.lang.NullPointerException: Cannot invoke "org.bukkit.inventory.ItemStack.getType()" because "item" is null
-	at me.minecraft.minecraftpvpplugin.skills.Recycle.ItemsUsed(Recycle.kt:18) ~[?:?]
-	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
-	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	... 29 more
-[19:18:48] [Server thread/INFO]: [@: Teleported ELEPOT to 118.5, 98.0, 68.5]
-[19:19:33] [Server thread/INFO]: 1718536753286
-[19:19:34] [Server thread/INFO]: 1718536773421
-[19:19:35] [Server thread/INFO]: 1718536774980
-[19:19:36] [Server thread/INFO]: 1718536775585
-[19:19:36] [Server thread/INFO]: 1718536776489
-[19:19:38] [Server thread/INFO]: 1718536728484
-[19:19:38] [Server thread/INFO]: 1718536778099
-[19:19:38] [Server thread/ERROR]: Could not pass event PlayerInteractEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
-org.bukkit.event.EventException: null
-	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:228) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:195) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:191) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1200) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PacketPlayInArmAnimation.a(PacketPlayInArmAnimation.java:18) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PacketPlayInArmAnimation.a(PacketPlayInArmAnimation.java:1) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
-	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at java.lang.Thread.run(Thread.java:1583) [?:?]
-Caused by: java.lang.NullPointerException: Cannot invoke "org.bukkit.inventory.ItemStack.getType()" because "item" is null
-	at me.minecraft.minecraftpvpplugin.skills.Recycle.ItemsUsed(Recycle.kt:18) ~[?:?]
-	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
-	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	... 18 more
-[19:19:38] [Server thread/INFO]: 1718536778199
-[19:19:38] [Server thread/ERROR]: Could not pass event PlayerInteractEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
-org.bukkit.event.EventException: null
-	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:228) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:195) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:191) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1200) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PacketPlayInArmAnimation.a(PacketPlayInArmAnimation.java:18) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PacketPlayInArmAnimation.a(PacketPlayInArmAnimation.java:1) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
-	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at java.lang.Thread.run(Thread.java:1583) [?:?]
-Caused by: java.lang.NullPointerException: Cannot invoke "org.bukkit.inventory.ItemStack.getType()" because "item" is null
-	at me.minecraft.minecraftpvpplugin.skills.Recycle.ItemsUsed(Recycle.kt:18) ~[?:?]
-	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
-	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	... 18 more
-[19:19:38] [Server thread/INFO]: 1718536778399
-[19:19:38] [Server thread/ERROR]: Could not pass event PlayerInteractEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
-org.bukkit.event.EventException: null
-	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:228) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:195) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:191) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1200) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PacketPlayInArmAnimation.a(PacketPlayInArmAnimation.java:18) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PacketPlayInArmAnimation.a(PacketPlayInArmAnimation.java:1) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
-	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at java.lang.Thread.run(Thread.java:1583) [?:?]
-Caused by: java.lang.NullPointerException: Cannot invoke "org.bukkit.inventory.ItemStack.getType()" because "item" is null
-	at me.minecraft.minecraftpvpplugin.skills.Recycle.ItemsUsed(Recycle.kt:18) ~[?:?]
-	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
-	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	... 18 more
-[19:19:41] [Server thread/INFO]: 1718536776892
-[19:19:42] [Server thread/INFO]: 1718536778601
-[19:19:42] [Server thread/ERROR]: Could not pass event PlayerInteractEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
-org.bukkit.event.EventException: null
-	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:228) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:195) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:191) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1200) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PacketPlayInArmAnimation.a(PacketPlayInArmAnimation.java:18) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PacketPlayInArmAnimation.a(PacketPlayInArmAnimation.java:1) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
-	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at java.lang.Thread.run(Thread.java:1583) [?:?]
-Caused by: java.lang.NullPointerException: Cannot invoke "org.bukkit.inventory.ItemStack.getType()" because "item" is null
-	at me.minecraft.minecraftpvpplugin.skills.Recycle.ItemsUsed(Recycle.kt:18) ~[?:?]
-	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
-	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	... 18 more
-[19:19:43] [Server thread/INFO]: 1718536782581
-[19:19:43] [Server thread/ERROR]: Could not pass event PlayerInteractEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
-org.bukkit.event.EventException: null
-	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:228) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:195) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:191) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1200) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PacketPlayInArmAnimation.a(PacketPlayInArmAnimation.java:18) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PacketPlayInArmAnimation.a(PacketPlayInArmAnimation.java:1) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
-	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at java.lang.Thread.run(Thread.java:1583) [?:?]
-Caused by: java.lang.NullPointerException: Cannot invoke "org.bukkit.inventory.ItemStack.getType()" because "item" is null
-	at me.minecraft.minecraftpvpplugin.skills.Recycle.ItemsUsed(Recycle.kt:18) ~[?:?]
-	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
-	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	... 18 more
-[19:19:44] [Server thread/INFO]: 1718536783082
-[19:19:44] [Server thread/INFO]: 1718536784594
-[19:19:46] [Server thread/INFO]: 1718536781724
-[19:19:46] [Server thread/INFO]: 1718536784946
-[19:19:46] [Server thread/INFO]: 1718536786656
-[19:19:46] [Server thread/INFO]: 1718536786255
-[19:19:47] [Server thread/INFO]: 1718536786807
-[19:19:47] [Server thread/INFO]: 1718536786907
-[19:19:47] [Server thread/INFO]: 1718536787008
-[19:19:47] [Server thread/INFO]: 1718536787110
-[19:19:47] [Server thread/INFO]: 1718536787108
-[19:19:47] [Server thread/INFO]: 1718536787209
-[19:19:47] [Server thread/INFO]: 1718536787310
-[19:19:47] [Server thread/INFO]: 1718536787310
-[19:19:47] [Server thread/INFO]: 1718536787462
-[19:19:47] [Server thread/INFO]: 1718536787462
-[19:19:47] [Server thread/INFO]: 1718536787663
-[19:19:47] [Server thread/INFO]: 1718536787663
-[19:19:48] [Server thread/INFO]: 1718536787863
-[19:19:48] [Server thread/INFO]: 1718536788013
-[19:19:48] [Server thread/INFO]: 1718536788165
-[19:19:48] [Server thread/INFO]: 1718536788266
-[19:19:48] [Server thread/INFO]: 1718536788416
-[19:19:48] [Server thread/INFO]: 1718536788566
-[19:19:48] [Server thread/INFO]: 1718536788718
-[19:19:49] [Server thread/INFO]: 1718536788869
-[19:19:49] [Server thread/INFO]: 1718536789070
-[19:19:49] [Server thread/INFO]: 1718536789221
-[19:19:49] [Server thread/INFO]: 1718536789324
-[19:19:49] [Server thread/INFO]: To Lobby MAIL__TW
-
-[19:19:49] [Server thread/INFO]: To Lobby ELEPOT
-
-[19:19:49] [Server thread/INFO]: MAIL__TW was slain by ELEPOT
-[19:20:09] [Server thread/INFO]: [@: Teleported ELEPOT to 117.5, 113.0, 69.5]
-[19:21:05] [Server thread/INFO]: [@: Teleported ELEPOT to 118.5, 98.0, 68.5]
-[19:21:09] [Server thread/INFO]: 1718536870430
-[19:21:09] [Server thread/INFO]: 1287
-[19:21:18] [Server thread/INFO]: [@: Teleported ELEPOT to 117.5, 113.0, 69.5]
-[19:22:19] [Server thread/INFO]: 1718536870430
-[19:22:32] [Server thread/INFO]: [@: Teleported ELEPOT to 118.5, 98.0, 68.5]
-[19:22:33] [Server thread/INFO]: To Lobby ELEPOT
-
-[19:22:33] [Server thread/INFO]: To Lobby MAIL__TW
-
-[19:22:33] [Server thread/INFO]: ELEPOT blew up
-[19:23:00] [Server thread/INFO]: 1718536985714
-[19:23:00] [Server thread/INFO]: 4898
-[19:23:00] [Server thread/INFO]: 1718536985714
-[19:23:00] [Server thread/INFO]: 4849
-[19:23:00] [Server thread/INFO]: 1718536985714
-[19:23:00] [Server thread/INFO]: 4748
-[19:23:01] [Server thread/INFO]: 1718536985714
-[19:23:01] [Server thread/INFO]: 4698
-[19:23:01] [Server thread/INFO]: 1718536985714
-[19:23:01] [Server thread/INFO]: 4597
-[19:23:01] [Server thread/INFO]: 1718536985714
-[19:23:01] [Server thread/INFO]: 4497
-[19:23:01] [Server thread/INFO]: 1718536985714
-[19:23:01] [Server thread/INFO]: 4497
-[19:23:01] [Server thread/INFO]: 1718536985714
-[19:23:01] [Server thread/INFO]: 4397
-[19:23:01] [Server thread/INFO]: 1718536985714
-[19:23:01] [Server thread/INFO]: 4396
-[19:23:01] [Server thread/INFO]: 1718536985714
-[19:23:01] [Server thread/INFO]: 4297
-[19:23:01] [Server thread/INFO]: 1718536985714
-[19:23:01] [Server thread/INFO]: 4197
-[19:23:01] [Server thread/INFO]: 1718536985714
-[19:23:01] [Server thread/INFO]: 4046
-[19:23:01] [Server thread/INFO]: 1718536985714
-[19:23:01] [Server thread/INFO]: 3944
-[19:23:01] [Server thread/INFO]: 1718536985714
-[19:23:01] [Server thread/INFO]: 3742
-[19:23:02] [Server thread/INFO]: 1718536985714
-[19:23:02] [Server thread/INFO]: 3691
-[19:23:02] [Server thread/INFO]: 1718536985714
-[19:23:02] [Server thread/INFO]: 3592
-[19:23:02] [Server thread/INFO]: 1718536985714
-[19:23:02] [Server thread/INFO]: 3541
-[19:23:02] [Server thread/INFO]: 1718536985714
-[19:23:02] [Server thread/INFO]: 3490
-[19:23:02] [Server thread/INFO]: 1718536985714
-[19:23:02] [Server thread/INFO]: 3340
-[19:23:02] [Server thread/INFO]: 1718536985714
-[19:23:02] [Server thread/INFO]: 3290
-[19:23:02] [Server thread/INFO]: 1718536985714
-[19:23:02] [Server thread/INFO]: 3240
-[19:23:02] [Server thread/INFO]: 1718536985714
-[19:23:02] [Server thread/INFO]: 3140
-[19:23:02] [Server thread/INFO]: 1718536985714
-[19:23:02] [Server thread/INFO]: 3090
-[19:23:02] [Server thread/INFO]: 1718536985714
-[19:23:02] [Server thread/INFO]: 2939
-[19:23:02] [Server thread/INFO]: 1718536985714
-[19:23:02] [Server thread/INFO]: 2839
-[19:23:03] [Server thread/INFO]: 1718536985714
-[19:23:03] [Server thread/INFO]: 2686
-[19:23:03] [Server thread/INFO]: 1718536985714
-[19:23:03] [Server thread/INFO]: 2686
-[19:23:03] [Server thread/INFO]: 1718536985714
-[19:23:03] [Server thread/INFO]: 2636
-[19:23:03] [Server thread/INFO]: 1718536985714
-[19:23:03] [Server thread/INFO]: 2484
-[19:23:03] [Server thread/INFO]: 1718536985714
-[19:23:03] [Server thread/INFO]: 2434
-[19:23:03] [Server thread/INFO]: 1718536985714
-[19:23:03] [Server thread/INFO]: 2384
-[19:23:03] [Server thread/INFO]: 1718536985714
-[19:23:03] [Server thread/INFO]: 2283
-[19:23:03] [Server thread/INFO]: 1718536985714
-[19:23:03] [Server thread/INFO]: 2180
-[19:23:03] [Server thread/INFO]: 1718536985714
-[19:23:03] [Server thread/INFO]: 2030
-[19:23:03] [Server thread/INFO]: 1718536985714
-[19:23:03] [Server thread/INFO]: 2030
-[19:23:04] [Server thread/WARN]: ELEPOT moved too quickly! -1.802567103837248,-1.2491870787446828,11.952058186362876 (-1.802567103837248, -1.2491870787446828, 11.952058186362876)
-[19:23:09] [Server thread/INFO]: [@: Teleported MAIL__TW to 117.5, 113.0, 69.5]
-[19:23:22] [Server thread/INFO]: 1718536789475
-[19:23:22] [Server thread/ERROR]: Could not pass event PlayerInteractEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
-org.bukkit.event.EventException: null
-	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:228) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callPlayerInteractEvent(CraftEventFactory.java:195) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.BlockPressurePlateBinary.f(BlockPressurePlateBinary.java:57) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.BlockPressurePlateAbstract.a(BlockPressurePlateAbstract.java:100) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.BlockPressurePlateAbstract.a(BlockPressurePlateAbstract.java:93) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.Entity.checkBlockCollisions(Entity.java:761) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.Entity.move(Entity.java:407) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityLiving.g(EntityLiving.java:1395) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityHuman.g(EntityHuman.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityLiving.m(EntityLiving.java:1652) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityHuman.m(EntityHuman.java:393) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityLiving.t_(EntityLiving.java:1487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityHuman.t_(EntityHuman.java:173) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.EntityPlayer.l(EntityPlayer.java:285) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:382) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PacketPlayInFlying.a(SourceFile:126) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PacketPlayInFlying$PacketPlayInPositionLook.a(SourceFile:18) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
-	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	at java.lang.Thread.run(Thread.java:1583) [?:?]
-Caused by: java.lang.NullPointerException: Cannot invoke "org.bukkit.inventory.ItemStack.getType()" because "item" is null
-	at me.minecraft.minecraftpvpplugin.skills.Recycle.ItemsUsed(Recycle.kt:18) ~[?:?]
-	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
-	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
-	... 29 more
-[19:23:22] [Server thread/INFO]: [@: Teleported ELEPOT to 117.5, 113.0, 69.5]
-[19:23:35] [Server thread/INFO]: 1718537002095
-[19:23:35] [Server thread/INFO]: 1718537015424
-[19:23:36] [Server thread/INFO]: 1718537015978
-[19:23:37] [Server thread/INFO]: 1718537016585
-[19:23:37] [Server thread/INFO]: 1718537017339
-[19:23:38] [Server thread/INFO]: 1718537017640
-[19:23:38] [Server thread/INFO]: 1718536985714
-[19:23:39] [Server thread/INFO]: 1718537018646
-[19:23:39] [Server thread/INFO]: 1718537019050
-[19:23:40] [Server thread/INFO]: 1718537019753
-[19:23:40] [Server thread/INFO]: 1718537020355
-[19:23:41] [Server thread/INFO]: 1718537020556
-[19:23:41] [Server thread/INFO]: 1718537021567
-[19:23:41] [Server thread/INFO]: 1718537021718
-[19:23:41] [Server thread/INFO]: 1718537021867
-[19:23:42] [Server thread/INFO]: 1718537021967
-[19:23:42] [Server thread/INFO]: 1718537022117
-[19:23:42] [Server thread/INFO]: 1718537022269
-[19:23:42] [Server thread/INFO]: 1718537022420
-[19:23:42] [Server thread/INFO]: 1718537022570
-[19:23:42] [Server thread/INFO]: 1718537022671
-[19:23:43] [Server thread/INFO]: 1718537022872
-[19:23:43] [Server thread/INFO]: 1718537023072
-[19:23:43] [Server thread/INFO]: 1718537023275
-[19:23:43] [Server thread/INFO]: 1718537023426
-[19:23:44] [Server thread/INFO]: 1718537023526
-[19:23:44] [Server thread/INFO]: 1718537024279
-[19:23:44] [Server thread/INFO]: To Lobby ELEPOT
-
-[19:23:44] [Server thread/INFO]: To Lobby MAIL__TW
-
-[19:23:44] [Server thread/INFO]: ELEPOT was slain by MAIL__TW
+[17:20:41] [Server thread/INFO]: MAIL__TW[/127.0.0.1:53740] logged in with entity id 472 at ([Lobby]170.8, 104.0, 108.3)
+[17:20:47] [Server thread/INFO]: MAIL__TW lost connection: Disconnected
+[17:20:47] [Server thread/INFO]: MAIL__TW left the game.
+[17:20:52] [Server thread/INFO]: Stopping the server
+[17:20:52] [Server thread/INFO]: Stopping server
+[17:20:52] [Server thread/INFO]: [MinecraftPvpPlugin] Disabling MinecraftPvpPlugin v1.0-SNAPSHOT
+[17:20:52] [Server thread/INFO]: Saving players
+[17:20:52] [Server thread/INFO]: Saving worlds
+[17:20:52] [Server thread/INFO]: Saving chunks for level 'Lobby'/Overworld
+[17:20:52] [Server thread/INFO]: Saving chunks for level 'Lobby_nether'/Nether
+[17:20:52] [Server thread/INFO]: Saving chunks for level 'Lobby_the_end'/The End
+[17:20:52] [Server thread/INFO]: Saving chunks for level 'PVP0'/Overworld
+[17:20:52] [Server thread/INFO]: Saving chunks for level 'PVP1'/Overworld
+[17:20:52] [Server thread/INFO]: Saving chunks for level 'PVP2'/Overworld
