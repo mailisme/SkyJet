@@ -12,10 +12,6 @@ import org.bukkit.entity.Player
 import org.bukkit.event.Listener
 import java.util.function.Consumer
 
-import org.jetbrains.kotlinx.dataframe.*
-import org.jetbrains.kotlinx.dataframe.api.*
-import org.jetbrains.kotlinx.dataframe.io.*
-
 // TODO: MAKE THE PLAYER DATA STRUCTURE BETTER
 class PvpPlayer(val player: Player, val skill: Skill)
 

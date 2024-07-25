@@ -11,7 +11,6 @@ import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.entity.EntityDamageEvent
 import org.bukkit.event.player.PlayerToggleSneakEvent
-import org.bukkit.inventory.meta.FireworkMeta
 
 object Creeper : Skill(Material.MONSTER_EGG, "苦力怕", 60.0, switchLike = true) {
     private val invinciblePlayers = mutableListOf<Player>()
@@ -43,9 +42,7 @@ object Creeper : Skill(Material.MONSTER_EGG, "苦力怕", 60.0, switchLike = tru
             RunAfter(20.0) {
                 explode(player)
             }
-        }
-
-        else {
+        } else {
             explode(player)
         }
     }

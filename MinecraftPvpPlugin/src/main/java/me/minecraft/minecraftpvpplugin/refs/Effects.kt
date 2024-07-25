@@ -1,6 +1,5 @@
 package me.minecraft.minecraftpvpplugin.refs
 
-import me.minecraft.minecraftpvpplugin.skills.AllDie
 import org.bukkit.potion.PotionEffect
 import org.bukkit.potion.PotionEffectType
 

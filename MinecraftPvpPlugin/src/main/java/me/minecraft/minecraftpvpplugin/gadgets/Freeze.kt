@@ -1,7 +1,7 @@
 package me.minecraft.minecraftpvpplugin.gadgets
 
-import me.minecraft.minecraftpvpplugin.helpers.RunAfter
 import me.minecraft.minecraftpvpplugin.ThrowableGadget
+import me.minecraft.minecraftpvpplugin.helpers.RunAfter
 import org.bukkit.Location
 import org.bukkit.Material
 import org.bukkit.event.entity.ProjectileHitEvent

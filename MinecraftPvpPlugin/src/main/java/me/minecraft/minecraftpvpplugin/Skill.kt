@@ -58,15 +58,14 @@ abstract class Skill(
             print(coolDownFinishTimestampMap[player])
 
             if (currTimestamp <= coolDownFinishTimestampMap[player]!! &&
-                currTimestamp >= coolDownFinishTimestampMap[player]!! - (coolDownMilliSeconds - ignoreCoolDownMilliSeconds)) {
+                currTimestamp >= coolDownFinishTimestampMap[player]!! - (coolDownMilliSeconds - ignoreCoolDownMilliSeconds)
+            ) {
                 val leftTime = coolDownFinishTimestampMap[player]!! - currTimestamp
                 print(leftTime)
-                player.sendMessage(String.format("再等 %.1f 秒",  leftTime / 1000.0))
+                player.sendMessage(String.format("再等 %.1f 秒", leftTime / 1000.0))
                 return false
             }
-        }
-
-        else {
+        } else {
             coolDownFinishTimestampMap[player] = currTimestamp + coolDownMilliSeconds
         }
 
@@ -86,6 +85,7 @@ abstract class Skill(
         playersActivating.remove(player)
         return true
     }
+
     fun isClickEventClickingItself(event: PlayerInteractEvent): Boolean {
         return event.item?.itemMeta?.displayName == name && event.action != Action.PHYSICAL
     }

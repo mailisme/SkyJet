@@ -18,8 +18,7 @@ object InstantHeal : Skill(Material.EMERALD, "瞬間治癒", 5.0) {
 
         if (player.health + rand > 20) {
             player.health -= (player.health + rand - 20)
-        }
-        else {
+        } else {
             player.health += rand
         }
     }
