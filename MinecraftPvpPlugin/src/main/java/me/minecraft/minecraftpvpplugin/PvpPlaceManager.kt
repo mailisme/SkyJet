@@ -9,7 +9,6 @@ import org.bukkit.World
 import org.bukkit.entity.Entity
 import org.bukkit.entity.Item
 import org.bukkit.entity.Player
-import org.bukkit.event.Listener
 import java.util.function.Consumer
 
 // TODO: MAKE THE PLAYER DATA STRUCTURE BETTER
@@ -63,7 +62,7 @@ object PvpPlaceManager {
         player.sendMessage("Server is full :(")
     }
 
-    private fun startGame(world: World) {
+    fun startGame(world: World) {
         val place = pvpPlaces[world]!!
         val playerSlots = place.playerSlots
 
