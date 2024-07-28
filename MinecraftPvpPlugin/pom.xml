@@ -139,6 +139,15 @@
           <artifactId>dataframe</artifactId>
           <version>0.8.1</version>
       </dependency>
-
+      <dependency>
+          <groupId>org.jetbrains.kotlin</groupId>
+          <artifactId>kotlin-stdlib</artifactId>
+          <version>2.0.0</version>
+      </dependency>
+      <dependency>
+          <groupId>org.json</groupId>
+          <artifactId>json</artifactId>
+          <version>20240303</version>
+      </dependency>
   </dependencies>
 </project>

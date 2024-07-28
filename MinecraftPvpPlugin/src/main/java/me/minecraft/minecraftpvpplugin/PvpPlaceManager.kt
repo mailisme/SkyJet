@@ -22,7 +22,7 @@ class PvpPlace(world: World) {
     val randomSpawnGadget = RandomSpawnGadget(world)
 }
 
-object PvpPlaceManager : Listener {
+object PvpPlaceManager {
     private var pvpPlaces = buildMap {
         for (world in Worlds.pvpWorlds) {
             put(world, PvpPlace(world))
