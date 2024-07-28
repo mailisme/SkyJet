@@ -73,7 +73,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<String>): Boolean {
         if (command.name.equals("lobby", ignoreCase = true)) {
             val player = sender as Player
-            PvpPlaceManager.removePlayer(player)
+            PvpPlaceManager.removePlayer(player, "leave")
             onPlayerToLobby(player)
         }
 
@@ -168,7 +168,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         val player = event.entity
 
         player.spigot().respawn()
-        PvpPlaceManager.removePlayer(player)
+        PvpPlaceManager.removePlayer(player, "kill")
         event.keepInventory = true
     }
 
@@ -177,7 +177,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         val player = event.player
 
         if (Worlds.isInPvp(player)) {
-            PvpPlaceManager.removePlayer(player)
+            PvpPlaceManager.removePlayer(player, "leave")
         }
     }
 

@@ -16,7 +16,7 @@ class CustomScoreboard(private val objectiveNameBoardFormatMap: HashMap<String, 
     private val manager = Bukkit.getScoreboardManager()
 
     fun load() {
-        val file = File("custom-scoreboard.json")
+        val file = File("Skyjet/scoreboard/custom-scoreboard.json")
 
         if (file.exists()) {
             val reader = FileReader(file)
@@ -25,7 +25,7 @@ class CustomScoreboard(private val objectiveNameBoardFormatMap: HashMap<String, 
     }
 
     fun save() {
-        val file = File("custom-scoreboard.json")
+        val file = File("Skyjet/scoreboard/custom-scoreboard.json")
         val writer = FileWriter(file)
         JSONObject(playerNameBoardDataMap).write(writer)
         writer.close()

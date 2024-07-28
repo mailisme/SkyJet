@@ -10,6 +10,10 @@ import org.bukkit.entity.Entity
 import org.bukkit.entity.Item
 import org.bukkit.entity.Player
 import org.bukkit.event.Listener
+import org.json.JSONObject
+import java.io.File
+import java.io.FileReader
+import java.io.FileWriter
 import java.util.function.Consumer
 
 // TODO: MAKE THE PLAYER DATA STRUCTURE BETTER
@@ -85,7 +89,7 @@ object PvpPlaceManager {
 
 
     // Marks input Player as loser, and the opponent of the Player as winner. Remove them from the players list and teleport them back to lobby.
-    fun removePlayer(player: Player) {
+    fun removePlayer(player: Player, reason: String) {
         pvpPlaces.forEach { (world, place) ->
             val playerSlots = place.playerSlots
 
@@ -114,7 +118,18 @@ object PvpPlaceManager {
                         }
                     })
 
-
+                    if (reason == "kill") {
+                        val file = File("Skyjet/log/log.txt")
+                        val writer = FileWriter(file)
+                        writer.write(player.name+" was killed by "+anotherPlayer?.name+".\n")
+                        writer.close()
+                    }
+                    else{
+                        val file = File("Skyjet/log/log.txt")
+                        val writer = FileWriter(file)
+                        writer.write(player.name+"leave the game.\n")
+                        writer.close()
+                    }
 
                     if (place.started) {
                         place.randomSpawnGadget.stop()
