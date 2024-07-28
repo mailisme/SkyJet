@@ -71,10 +71,15 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     }
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<String>): Boolean {
+        val player = sender as Player
         if (command.name.equals("lobby", ignoreCase = true)) {
             val player = sender as Player
             PvpPlaceManager.removePlayer(player, "leave")
             onPlayerToLobby(player)
+        }
+
+        if (command.name.equals("start", ignoreCase = true) && player.isOp) {
+            PvpPlaceManager.startGame(player.world)
         }
 
         return true
@@ -90,10 +95,10 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         if (event.clickedInventory == null) return
 
-        if (event.clickedInventory.title.equals("${ChatColor.AQUA}Join Game", ignoreCase = true)) {
+        if (event.clickedInventory.title.equals("${ChatColor.AQUA}加入遊戲", ignoreCase = true)) {
             when (event.currentItem.type) {
                 Material.DIAMOND_AXE -> {
-                    val selectGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}Select skill")
+                    val selectGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}請選擇你想賦有的技能")
                     selectGui.contents = Skills.skills
                     player.openInventory(selectGui)
                 }
@@ -104,7 +109,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             event.isCancelled = true
         }
 
-        if (event.clickedInventory.title.equals("${ChatColor.AQUA}Select skill", ignoreCase = true)) {
+        if (event.clickedInventory.title.equals("${ChatColor.AQUA}請選擇你想賦有的技能", ignoreCase = true)) {
             Skills.skills.forEach {
                 if (it.name == event.currentItem.itemMeta.displayName) {
                     PvpPlaceManager.addPlayer(player, it)
@@ -142,7 +147,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         if (player.world == Worlds.lobby) {
             if (event.item == null) return
             if (event.item == Items.diamondSword && event.action != Action.PHYSICAL) {
-                val startGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}Join Game")
+                val startGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}加入遊戲")
                 val joinGameBtn = Items.diamondPickaxe
 
                 startGui.contents = arrayOf(joinGameBtn)

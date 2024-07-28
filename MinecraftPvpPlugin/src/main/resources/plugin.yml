@@ -9,3 +9,7 @@ commands:
       - l
       - LOBBY
       - Lobby
+
+  start:
+    description: (OP Only) forcefully start the game
+    usage: /start
