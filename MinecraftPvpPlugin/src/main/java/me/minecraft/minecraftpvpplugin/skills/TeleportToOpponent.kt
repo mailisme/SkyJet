@@ -1,5 +1,6 @@
 package me.minecraft.minecraftpvpplugin.skills
 
+import me.minecraft.minecraftpvpplugin.LogWriter
 import me.minecraft.minecraftpvpplugin.PvpPlaceManager
 import me.minecraft.minecraftpvpplugin.Skill
 import org.bukkit.Material
@@ -12,6 +13,7 @@ object TeleportToOpponent :
     @EventHandler
     fun handleClick(event: PlayerInteractEvent) {
         val player = event.player
+        LogWriter.LogWriter(player.name+" use 閃電突襲\n")
 
         if (!super.isClickEventClickingItself(event)) return
         if (!super.isTriggerActivateSuccessful(player)) return
@@ -34,5 +36,7 @@ object TeleportToOpponent :
         )
 
         player.teleport(targetLocation)
+
+
     }
 }

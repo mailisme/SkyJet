@@ -119,16 +119,10 @@ object PvpPlaceManager {
                     })
 
                     if (reason == "kill") {
-                        val file = File("Skyjet/log/log.txt")
-                        val writer = FileWriter(file)
-                        writer.write(player.name+" was killed by "+anotherPlayer?.name+".\n")
-                        writer.close()
+                        LogWriter.LogWriter(player.name+" was killed by "+anotherPlayer?.name+".\n")
                     }
                     else{
-                        val file = File("Skyjet/log/log.txt")
-                        val writer = FileWriter(file)
-                        writer.write(player.name+"leave the game.\n")
-                        writer.close()
+                        LogWriter.LogWriter(player.name+" leave the game.\n")
                     }
 
                     if (place.started) {
