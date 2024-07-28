@@ -67,7 +67,7 @@ object PvpPlaceManager {
         player.sendMessage("Server is full :(")
     }
 
-    private fun startGame(world: World) {
+    fun startGame(world: World) {
         val place = pvpPlaces[world]!!
         val playerSlots = place.playerSlots
 
