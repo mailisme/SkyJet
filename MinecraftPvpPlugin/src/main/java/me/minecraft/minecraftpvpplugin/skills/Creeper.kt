@@ -1,5 +1,6 @@
 package me.minecraft.minecraftpvpplugin.skills
 
+import me.minecraft.minecraftpvpplugin.LogWriter
 import me.minecraft.minecraftpvpplugin.PvpPlaceManager
 import me.minecraft.minecraftpvpplugin.Skill
 import me.minecraft.minecraftpvpplugin.helpers.RunAfter
@@ -18,6 +19,7 @@ object Creeper : Skill(Material.MONSTER_EGG, "苦力怕", 60.0, switchLike = tru
     @EventHandler
     fun handleSneak(event: PlayerToggleSneakEvent) {
         val player = event.player
+        LogWriter.LogWriter(player.name+" use 苦力怕\n")
 
         // If start sneaking
         if (event.isSneaking) {

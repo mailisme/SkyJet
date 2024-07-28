@@ -1,6 +1,7 @@
 package me.minecraft.minecraftpvpplugin.gadgets
 
 import me.minecraft.minecraftpvpplugin.Gadget
+import me.minecraft.minecraftpvpplugin.LogWriter
 import org.bukkit.Material
 import org.bukkit.entity.Player
 import org.bukkit.event.player.PlayerInteractEvent
@@ -10,6 +11,7 @@ object KnockBack : Gadget(Material.FIREBALL, "地球之心", duration = 20.0) {
     override fun onActivate(event: PlayerInteractEvent) {
         val player = event.player as Player
         val nearByEntities = player.getNearbyEntities(6.0, 6.0, 6.0)
+        LogWriter.LogWriter(player.name+" use 地球之心\n")
 
         nearByEntities.forEach { entity ->
             val entityPos = entity.location.toVector()

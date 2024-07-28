@@ -1,5 +1,6 @@
 package me.minecraft.minecraftpvpplugin.skills
 
+import me.minecraft.minecraftpvpplugin.LogWriter
 import me.minecraft.minecraftpvpplugin.PvpPlaceManager
 import me.minecraft.minecraftpvpplugin.Skill
 import me.minecraft.minecraftpvpplugin.refs.Gadgets
@@ -12,6 +13,7 @@ object Recycle : Skill(Material.GOLD_RECORD, "回收再利用") {
     @EventHandler
     fun handleClick(event: PlayerInteractEvent) {
         val player = event.player
+        LogWriter.LogWriter(player.name+" use 回收再利用\n")
         if (!super.isTriggerActivateSuccessful(player)) return
         val item = event.item
         if (item.type == Gadgets.anchor.material ||

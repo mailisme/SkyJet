@@ -1,6 +1,7 @@
 package me.minecraft.minecraftpvpplugin.gadgets
 
 import me.minecraft.minecraftpvpplugin.Gadget
+import me.minecraft.minecraftpvpplugin.LogWriter
 import me.minecraft.minecraftpvpplugin.refs.Effects
 import me.minecraft.minecraftpvpplugin.refs.Items
 import org.bukkit.Material
@@ -9,6 +10,7 @@ import org.bukkit.event.player.PlayerInteractEvent
 object Invisible : Gadget(Material.STAINED_GLASS_PANE, "虛影斗篷", duration = 5.0) {
     override fun onActivate(event: PlayerInteractEvent) {
         val player = event.player
+        LogWriter.LogWriter(player.name+" use 虛影斗篷\n")
         player.addPotionEffect(Effects.invisibleEffect)
         player.inventory.helmet = null
         player.inventory.chestplate = null

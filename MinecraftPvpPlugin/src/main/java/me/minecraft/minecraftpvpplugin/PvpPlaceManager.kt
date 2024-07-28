@@ -70,6 +70,7 @@ object PvpPlaceManager {
     fun startGame(world: World) {
         val place = pvpPlaces[world]!!
         val playerSlots = place.playerSlots
+        LogWriter.LogWriter(playerSlots[0]?.player?.name+" fighting w/ "+playerSlots[1]?.player?.name+"\n")
 
         object : Countdown(world.players, "The game will start in", "SEARCH FOR GADGETS!") {
             override fun onCountdown() {

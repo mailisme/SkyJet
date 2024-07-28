@@ -1,5 +1,6 @@
 package me.minecraft.minecraftpvpplugin.skills
 
+import me.minecraft.minecraftpvpplugin.LogWriter
 import me.minecraft.minecraftpvpplugin.Skill
 import me.minecraft.minecraftpvpplugin.refs.Effects
 import me.minecraft.minecraftpvpplugin.refs.Items
@@ -17,6 +18,7 @@ object AllDie : Skill(Material.BONE, "同歸於盡") {
         val player: Player = event.entity as Player
 
         if (!super.isTriggerActivateSuccessful(player)) return
+        LogWriter.LogWriter(player.name+" use 同歸於盡\n")
 
         if (player.health < 15 && player.health > 10) {
             player.addPotionEffect(Effects.AllDie1)

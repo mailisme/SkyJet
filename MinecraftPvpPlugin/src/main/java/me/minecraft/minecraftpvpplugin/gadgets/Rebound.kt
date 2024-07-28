@@ -1,6 +1,7 @@
 package me.minecraft.minecraftpvpplugin.gadgets
 
 import me.minecraft.minecraftpvpplugin.Gadget
+import me.minecraft.minecraftpvpplugin.LogWriter
 import org.bukkit.Material
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
@@ -12,6 +13,7 @@ object Rebound : Gadget(Material.WOOD_DOOR, "反射之盾", duration = 10.0), Li
     fun entityDamageByEntityEvent(event: EntityDamageByEntityEvent) {
         if (event.damager is Player) {
             val player = event.damager as Player
+            LogWriter.LogWriter(player.name+" use 反射之盾\n")
 
             if (isActivating(event.entity as Player)) {
                 val health = player.health.toInt()

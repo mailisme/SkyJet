@@ -1,5 +1,6 @@
 package me.minecraft.minecraftpvpplugin.skills
 
+import me.minecraft.minecraftpvpplugin.LogWriter
 import me.minecraft.minecraftpvpplugin.Skill
 import org.bukkit.Material
 import org.bukkit.event.EventHandler
@@ -10,6 +11,7 @@ object InstantHeal : Skill(Material.EMERALD, "瞬間治癒", 5.0) {
     @EventHandler
     fun handleClick(event: PlayerInteractEvent) {
         val player = event.player
+        LogWriter.LogWriter(player.name+" use 瞬間治癒\n")
 
         if (!super.isClickEventClickingItself(event)) return
         if (!super.isTriggerActivateSuccessful(player)) return
