@@ -1,12 +1,15 @@
 package me.minecraft.minecraftpvpplugin.gadgets
 
 import me.minecraft.minecraftpvpplugin.Gadget
+import org.bukkit.ChatColor
 import org.bukkit.Material
 import org.bukkit.entity.Player
 import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.util.Vector
 
-object KnockBack : Gadget(Material.FIREBALL, "地球之心", duration = 20.0) {
+object KnockBack : Gadget(material = Material.FIREBALL, "地球之心", lore = listOf(
+    "${ChatColor.YELLOW}震走半徑6格內的實體",
+), duration = 0.0) {
     override fun onActivate(event: PlayerInteractEvent) {
         val player = event.player as Player
         val nearByEntities = player.getNearbyEntities(6.0, 6.0, 6.0)

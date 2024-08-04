@@ -15,7 +15,7 @@ import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.block.Action
-import org.bukkit.event.entity.PlayerDeathEvent
+import org.bukkit.event.entity.EntityDamageEvent
 import org.bukkit.event.inventory.InventoryClickEvent
 import org.bukkit.event.player.PlayerDropItemEvent
 import org.bukkit.event.player.PlayerInteractEvent
@@ -23,7 +23,6 @@ import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.event.player.PlayerQuitEvent
 import org.bukkit.inventory.ItemStack
 import org.bukkit.plugin.java.JavaPlugin
-import java.io.File
 import java.util.logging.Level
 
 class MinecraftPvpPlugin : JavaPlugin(), Listener {
@@ -90,10 +89,10 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         if (event.clickedInventory == null) return
 
-        if (event.clickedInventory.title.equals("${ChatColor.AQUA}Join Game", ignoreCase = true)) {
+        if (event.clickedInventory.title.equals("${ChatColor.AQUA}加入遊戲", ignoreCase = true)) {
             when (event.currentItem.type) {
-                Material.DIAMOND_AXE -> {
-                    val selectGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}Select skill")
+                Items.btn1v1.type -> {
+                    val selectGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}請選擇想擁有的技能")
                     selectGui.contents = Skills.skills
                     player.openInventory(selectGui)
                 }
@@ -104,7 +103,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             event.isCancelled = true
         }
 
-        if (event.clickedInventory.title.equals("${ChatColor.AQUA}Select skill", ignoreCase = true)) {
+        if (event.clickedInventory.title.equals("${ChatColor.AQUA}請選擇想擁有的技能", ignoreCase = true)) {
             Skills.skills.forEach {
                 if (it.name == event.currentItem.itemMeta.displayName) {
                     PvpPlaceManager.addPlayer(player, it)
@@ -126,13 +125,13 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         onPlayerToLobby(player)
 
-        if (lobbyScoreboard.havePlayerData(player)) {
-            lobbyScoreboard.increaseScoreboardInt(player, "n")
-        }
-
-        else {
-            lobbyScoreboard.initScoreboard(player, hashMapOf("name" to player.name, "n" to "0"))
-        }
+//        if (lobbyScoreboard.havePlayerData(player)) {
+//            lobbyScoreboard.increaseScoreboardInt(player, "n")
+//        }
+//
+//        else {
+//            lobbyScoreboard.initScoreboard(player, hashMapOf("name" to player.name, "n" to "0"))
+//        }
     }
 
     @EventHandler
@@ -142,8 +141,8 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         if (player.world == Worlds.lobby) {
             if (event.item == null) return
             if (event.item == Items.diamondSword && event.action != Action.PHYSICAL) {
-                val startGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}Join Game")
-                val joinGameBtn = Items.diamondPickaxe
+                val startGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}加入遊戲")
+                val joinGameBtn = Items.btn1v1
 
                 startGui.contents = arrayOf(joinGameBtn)
 
@@ -164,12 +163,15 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     }
 
     @EventHandler
-    fun handlePlayerDeath(event: PlayerDeathEvent) {
-        val player = event.entity
+    fun handleDamage(event: EntityDamageEvent) {
+        val player = event.entity as Player
 
-        player.spigot().respawn()
-        PvpPlaceManager.removePlayer(player)
-        event.keepInventory = true
+        if ((player.health - event.finalDamage) <= 0) {
+            event.isCancelled = true
+            player.health = 20.0
+
+            PvpPlaceManager.removePlayer(player)
+        }
     }
 
     @EventHandler

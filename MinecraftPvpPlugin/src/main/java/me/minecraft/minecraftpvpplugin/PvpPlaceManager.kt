@@ -1,6 +1,7 @@
 package me.minecraft.minecraftpvpplugin
 
 import me.minecraft.minecraftpvpplugin.helpers.Countdown
+import me.minecraft.minecraftpvpplugin.helpers.RunAfter
 import me.minecraft.minecraftpvpplugin.refs.Locations
 import me.minecraft.minecraftpvpplugin.refs.Worlds
 import org.bukkit.ChatColor
@@ -90,36 +91,38 @@ object PvpPlaceManager {
 
             for (playerIndex in playerSlots.indices) {
                 if (playerSlots[playerIndex]?.player === player) {
-
                     val anotherPlayer = getOpponent(player)
-
-                    player.teleport(Locations.lobbySpawn)
-                    MinecraftPvpPlugin.onPlayerToLobby(player)
 
                     if (anotherPlayer != null) {
                         onPlayerLose(player)
                         onPlayerWin(anotherPlayer)
-
-                        anotherPlayer.teleport(Locations.lobbySpawn)
-                        MinecraftPvpPlugin.onPlayerToLobby(anotherPlayer)
                     }
 
-                    playerSlots[0] = null
-                    playerSlots[1] = null
-
-                    world.entities.forEach(Consumer { e: Entity ->
-                        if (e is Item) {
-                            e.remove()
+                    RunAfter(1.0) {
+                        if (anotherPlayer != null) {
+                            anotherPlayer.teleport(Locations.lobbySpawn)
+                            MinecraftPvpPlugin.onPlayerToLobby(anotherPlayer)
                         }
-                    })
 
+                        player.teleport(Locations.lobbySpawn)
+                        MinecraftPvpPlugin.onPlayerToLobby(player)
 
+                        playerSlots[0] = null
+                        playerSlots[1] = null
 
-                    if (place.started) {
-                        place.randomSpawnGadget.stop()
-                        place.gameLoop.stop()
-                        place.started = false
+                        world.entities.forEach(Consumer { e: Entity ->
+                            if (e is Item) {
+                                e.remove()
+                            }
+                        })
+
+                        if (place.started) {
+                            place.randomSpawnGadget.stop()
+                            place.gameLoop.stop()
+                            place.started = false
+                        }
                     }
+
                 }
             }
         }

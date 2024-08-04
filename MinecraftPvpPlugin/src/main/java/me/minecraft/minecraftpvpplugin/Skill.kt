@@ -16,6 +16,7 @@ import kotlin.math.roundToLong
 abstract class Skill(
     val material: Material,
     val name: String,
+    val lore: List<String> = listOf(),
     private val coolDownSeconds: Double = 0.0,
     private val ignoreCoolDownSeconds: Double = 0.0,
     private val switchLike: Boolean = false,
@@ -27,6 +28,7 @@ abstract class Skill(
 
         val meta = this.itemMeta
         meta.displayName = name
+        meta.lore = lore
         this.setItemMeta(meta)
 
         Bukkit.getPluginManager().registerEvents(this, MinecraftPvpPlugin.instance)

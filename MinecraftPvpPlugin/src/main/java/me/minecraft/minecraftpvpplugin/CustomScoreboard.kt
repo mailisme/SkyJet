@@ -20,6 +20,7 @@ class CustomScoreboard(private val objectiveNameBoardFormatMap: HashMap<String, 
 
         if (file.exists()) {
             val reader = FileReader(file)
+
             playerNameBoardDataMap = JSONObject(reader.readText()).toMap() as HashMap<String, HashMap<String, String>>
         }
     }

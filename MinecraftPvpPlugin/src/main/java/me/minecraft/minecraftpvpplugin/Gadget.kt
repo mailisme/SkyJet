@@ -21,6 +21,7 @@ import org.bukkit.inventory.ItemStack
 abstract class Gadget(
     val material: Material,
     private val name: String,
+    private val lore: List<String> = listOf(),
     private val duration: Double? = null,
     private val switchLike: Boolean = false,
 ) : ItemStack(), Listener {
@@ -38,6 +39,7 @@ abstract class Gadget(
 
         val meta = this.itemMeta
         meta.displayName = name
+        meta.lore = lore
         this.setItemMeta(meta)
 
         if (!switchLike && duration == null) {
