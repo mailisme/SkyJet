@@ -8,7 +8,7 @@ import java.io.File
 import java.io.FileReader
 import java.io.FileWriter
 
-class CustomScoreboard(private val objectiveNameBoardFormatMap: HashMap<String, String>) {
+class   CustomScoreboard(private val objectiveNameBoardFormatMap: HashMap<String, String>) {
 
     // Player Name -> Field Name -> Value
     private var playerNameBoardDataMap: HashMap<String, HashMap<String, String>> = hashMapOf()
