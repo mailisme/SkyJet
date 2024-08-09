@@ -22,6 +22,7 @@ class RandomSpawnGadget(private val world: World) {
         .addChoice(Gadgets.knockBack)
         .addChoice(Gadgets.rebound)
         .addChoice(Gadgets.speed)
+        .addChoice(Gadgets.fishing)
 
 
     fun start() {

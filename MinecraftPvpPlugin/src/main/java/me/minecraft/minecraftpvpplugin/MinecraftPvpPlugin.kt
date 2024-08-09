@@ -172,6 +172,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         val player = event.entity as Player
 
         player.spigot().respawn()
+        event.keepInventory = true
         if ((player.health - event.finalDamage) <= 0) {
             event.isCancelled = true
             player.health = 20.0
