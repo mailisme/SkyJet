@@ -91,7 +91,7 @@ object PvpPlaceManager {
 
 
     // Marks input Player as loser, and the opponent of the Player as winner. Remove them from the players list and teleport them back to lobby.
-    fun removePlayer(player: Player, reason: String) {
+    fun removePlayer(player: Player, reason: String, scoreboard: CustomScoreboard) {
         pvpPlaces.forEach { (world, place) ->
             val playerSlots = place.playerSlots
 
@@ -112,6 +112,10 @@ object PvpPlaceManager {
 
                     if (reason == "kill") {
                         LogWriter.LogWriter(player.name+" was killed by "+anotherPlayer?.name+".\n")
+                        val a = (anotherPlayer?.let {
+                            scoreboard.getScoreboard(it, "kill")
+                        })?.toInt()?.plus(1).toString()
+                        anotherPlayer?.let { scoreboard.changeScoreboard(it, "kill", a) }
                     }
                     else{
                         LogWriter.LogWriter(player.name+" leave the game.\n")

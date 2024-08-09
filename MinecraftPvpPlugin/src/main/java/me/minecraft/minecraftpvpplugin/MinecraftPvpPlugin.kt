@@ -73,7 +73,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         val player = sender as Player
         if (command.name.equals("lobby", ignoreCase = true)) {
             val player = sender as Player
-            PvpPlaceManager.removePlayer(player, "leave")
+            PvpPlaceManager.removePlayer(player, "leave", lobbyScoreboard)
             onPlayerToLobby(player)
         }
 
@@ -123,6 +123,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     fun handlePlayerJoin(event: PlayerJoinEvent) {
         val player = event.player
 
+
         event.joinMessage = "${ChatColor.AQUA}Welcome ${player.name}!"
         logger.info("${player.name} joined the server")
 
@@ -130,13 +131,13 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         onPlayerToLobby(player)
 
-//        if (lobbyScoreboard.havePlayerData(player)) {
-//            lobbyScoreboard.increaseScoreboardInt(player, "n")
-//        }
-//
-//        else {
-//            lobbyScoreboard.initScoreboard(player, hashMapOf("name" to player.name, "n" to "0"))
-//        }
+        if (lobbyScoreboard.havePlayerData(player)) {
+            lobbyScoreboard.increaseScoreboardInt(player, "n")
+        }
+
+        else {
+            lobbyScoreboard.initScoreboard(player, hashMapOf("name" to player.name, "n" to "0", "kill" to "0"))
+        }
     }
 
     @EventHandler
@@ -176,7 +177,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             event.isCancelled = true
             player.health = 20.0
 
-            PvpPlaceManager.removePlayer(player, "kill")
+            PvpPlaceManager.removePlayer(player, "kill", lobbyScoreboard)
         }
     }
 
@@ -185,7 +186,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         val player = event.player
 
         if (Worlds.isInPvp(player)) {
-            PvpPlaceManager.removePlayer(player, "leave")
+            PvpPlaceManager.removePlayer(player, "leave", lobbyScoreboard)
         }
     }
 
