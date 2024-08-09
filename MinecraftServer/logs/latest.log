@@ -1,252 +1,818 @@
-[17:20:37] [Server thread/INFO]: Starting minecraft server version 1.8.8
-[17:20:37] [Server thread/INFO]: Loading properties
-[17:20:37] [Server thread/INFO]: Default game type: SURVIVAL
-[17:20:37] [Server thread/INFO]: This server is running CraftBukkit version git-Spigot-21fe707-741a1bd (MC: 1.8.8) (Implementing API version 1.8.8-R0.1-SNAPSHOT)
-[17:20:37] [Server thread/INFO]: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
-[17:20:37] [Server thread/INFO]: Debug logging is disabled
-[17:20:37] [Server thread/INFO]: Using 4 threads for Netty based IO
-[17:20:37] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:00:53] [Server thread/INFO]: Starting minecraft server version 1.8.8
+[17:00:53] [Server thread/INFO]: Loading properties
+[17:00:53] [Server thread/INFO]: Default game type: SURVIVAL
+[17:00:53] [Server thread/INFO]: This server is running CraftBukkit version git-Spigot-21fe707-741a1bd (MC: 1.8.8) (Implementing API version 1.8.8-R0.1-SNAPSHOT)
+[17:00:53] [Server thread/INFO]: Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+[17:00:53] [Server thread/INFO]: Debug logging is disabled
+[17:00:53] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:00:53] [Server thread/INFO]: Server Ping Player Sample Count: 12
 
-[17:20:37] [Server thread/INFO]: Generating keypair
-[17:20:37] [Server thread/INFO]: Starting Minecraft server on *:25565
-[17:20:37] [Server thread/INFO]: Using default channel type
-[17:20:37] [Server thread/INFO]: Set PluginClassLoader as parallel capable
-[17:20:37] [Server thread/INFO]: [MinecraftPvpPlugin] Loading MinecraftPvpPlugin v1.0-SNAPSHOT
-[17:20:37] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[17:20:37] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
-[17:20:37] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[17:20:37] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
-[17:20:37] [Server thread/INFO]: **** Beginning UUID conversion, this may take A LONG time ****
-[17:20:37] [Server thread/INFO]: Preparing level "Lobby"
-[17:20:37] [Server thread/INFO]: -------- World Settings For [Lobby] --------
-[17:20:37] [Server thread/INFO]: Arrow Despawn Rate: 1200
-[17:20:37] [Server thread/INFO]: Chunks to Grow per Tick: 650
-[17:20:37] [Server thread/INFO]: Clear tick list: false
-[17:20:37] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
-[17:20:37] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
-[17:20:37] [Server thread/INFO]: Anti X-Ray: true
-[17:20:37] [Server thread/INFO]: 	Engine Mode: 1
-[17:20:37] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
-[17:20:37] [Server thread/INFO]: 	Replace Blocks: [1, 5]
-[17:20:37] [Server thread/INFO]: Mob Spawn Range: 4
-[17:20:37] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
-[17:20:37] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
-[17:20:37] [Server thread/INFO]: Random Lighting Updates: false
-[17:20:37] [Server thread/INFO]: Structure Info Saving: true
-[17:20:37] [Server thread/INFO]: Max Entity Collisions: 8
-[17:20:37] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
-[17:20:37] [Server thread/INFO]: Cactus Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Cane Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Melon Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Mushroom Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Sapling Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Wheat Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: NetherWart Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Max TNT Explosions: 100
-[17:20:37] [Server thread/INFO]: Sending up to 10 chunks per packet
-[17:20:37] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
-[17:20:37] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
-[17:20:37] [Server thread/INFO]: View Distance: 10
-[17:20:37] [Server thread/INFO]: Item Despawn Rate: 6000
-[17:20:37] [Server thread/INFO]: Item Merge Radius: 2.5
-[17:20:37] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
-[17:20:37] [Server thread/INFO]: Experience Merge Radius: 3.0
-[17:20:37] [Server thread/INFO]: -------- World Settings For [Lobby_nether] --------
-[17:20:37] [Server thread/INFO]: Arrow Despawn Rate: 1200
-[17:20:37] [Server thread/INFO]: Chunks to Grow per Tick: 650
-[17:20:37] [Server thread/INFO]: Clear tick list: false
-[17:20:37] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
-[17:20:37] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
-[17:20:37] [Server thread/INFO]: Anti X-Ray: true
-[17:20:37] [Server thread/INFO]: 	Engine Mode: 1
-[17:20:37] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
-[17:20:37] [Server thread/INFO]: 	Replace Blocks: [1, 5]
-[17:20:37] [Server thread/INFO]: Mob Spawn Range: 4
-[17:20:37] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
-[17:20:37] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
-[17:20:37] [Server thread/INFO]: Random Lighting Updates: false
-[17:20:37] [Server thread/INFO]: Structure Info Saving: true
-[17:20:37] [Server thread/INFO]: Max Entity Collisions: 8
-[17:20:37] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
-[17:20:37] [Server thread/INFO]: Cactus Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Cane Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Melon Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Mushroom Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Sapling Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Wheat Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: NetherWart Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Max TNT Explosions: 100
-[17:20:37] [Server thread/INFO]: Sending up to 10 chunks per packet
-[17:20:37] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
-[17:20:37] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
-[17:20:37] [Server thread/INFO]: View Distance: 10
-[17:20:37] [Server thread/INFO]: Item Despawn Rate: 6000
-[17:20:37] [Server thread/INFO]: Item Merge Radius: 2.5
-[17:20:37] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
-[17:20:37] [Server thread/INFO]: Experience Merge Radius: 3.0
-[17:20:37] [Server thread/INFO]: -------- World Settings For [Lobby_the_end] --------
-[17:20:37] [Server thread/INFO]: Arrow Despawn Rate: 1200
-[17:20:37] [Server thread/INFO]: Chunks to Grow per Tick: 650
-[17:20:37] [Server thread/INFO]: Clear tick list: false
-[17:20:37] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
-[17:20:37] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
-[17:20:37] [Server thread/INFO]: Anti X-Ray: true
-[17:20:37] [Server thread/INFO]: 	Engine Mode: 1
-[17:20:37] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
-[17:20:37] [Server thread/INFO]: 	Replace Blocks: [1, 5]
-[17:20:37] [Server thread/INFO]: Mob Spawn Range: 4
-[17:20:37] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
-[17:20:37] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
-[17:20:37] [Server thread/INFO]: Random Lighting Updates: false
-[17:20:37] [Server thread/INFO]: Structure Info Saving: true
-[17:20:37] [Server thread/INFO]: Max Entity Collisions: 8
-[17:20:37] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
-[17:20:37] [Server thread/INFO]: Cactus Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Cane Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Melon Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Mushroom Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Sapling Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Wheat Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: NetherWart Growth Modifier: 100%
-[17:20:37] [Server thread/INFO]: Max TNT Explosions: 100
-[17:20:37] [Server thread/INFO]: Sending up to 10 chunks per packet
-[17:20:37] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
-[17:20:37] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
-[17:20:37] [Server thread/INFO]: View Distance: 10
-[17:20:37] [Server thread/INFO]: Item Despawn Rate: 6000
-[17:20:37] [Server thread/INFO]: Item Merge Radius: 2.5
-[17:20:37] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
-[17:20:37] [Server thread/INFO]: Experience Merge Radius: 3.0
-[17:20:37] [Server thread/INFO]: Preparing start region for level 0 (Seed: -4444818278965242618)
-[17:20:38] [Server thread/INFO]: Preparing start region for level 1 (Seed: 7365026278184994534)
-[17:20:38] [Server thread/INFO]: Preparing start region for level 2 (Seed: 7365026278184994534)
-[17:20:38] [Server thread/INFO]: [MinecraftPvpPlugin] Enabling MinecraftPvpPlugin v1.0-SNAPSHOT
-[17:20:38] [Server thread/INFO]: [MinecraftPvpPlugin] SKYJET PVP v.3.0.0
-[17:20:38] [Server thread/INFO]: -------- World Settings For [PVP0] --------
-[17:20:38] [Server thread/INFO]: Arrow Despawn Rate: 1200
-[17:20:38] [Server thread/INFO]: Chunks to Grow per Tick: 650
-[17:20:38] [Server thread/INFO]: Clear tick list: false
-[17:20:38] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
-[17:20:38] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
-[17:20:38] [Server thread/INFO]: Anti X-Ray: true
-[17:20:38] [Server thread/INFO]: 	Engine Mode: 1
-[17:20:38] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
-[17:20:38] [Server thread/INFO]: 	Replace Blocks: [1, 5]
-[17:20:38] [Server thread/INFO]: Mob Spawn Range: 4
-[17:20:38] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
-[17:20:38] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
-[17:20:38] [Server thread/INFO]: Random Lighting Updates: false
-[17:20:38] [Server thread/INFO]: Structure Info Saving: true
-[17:20:38] [Server thread/INFO]: Max Entity Collisions: 8
-[17:20:38] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
-[17:20:38] [Server thread/INFO]: Cactus Growth Modifier: 100%
-[17:20:38] [Server thread/INFO]: Cane Growth Modifier: 100%
-[17:20:38] [Server thread/INFO]: Melon Growth Modifier: 100%
-[17:20:38] [Server thread/INFO]: Mushroom Growth Modifier: 100%
-[17:20:38] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
-[17:20:38] [Server thread/INFO]: Sapling Growth Modifier: 100%
-[17:20:38] [Server thread/INFO]: Wheat Growth Modifier: 100%
-[17:20:38] [Server thread/INFO]: NetherWart Growth Modifier: 100%
-[17:20:38] [Server thread/INFO]: Max TNT Explosions: 100
-[17:20:38] [Server thread/INFO]: Sending up to 10 chunks per packet
-[17:20:38] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
-[17:20:38] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
-[17:20:38] [Server thread/INFO]: View Distance: 10
-[17:20:38] [Server thread/INFO]: Item Despawn Rate: 6000
-[17:20:38] [Server thread/INFO]: Item Merge Radius: 2.5
-[17:20:38] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
-[17:20:38] [Server thread/INFO]: Experience Merge Radius: 3.0
-[17:20:38] [Server thread/INFO]: Preparing start region for level 3 (Seed: -5227594981380140816)
-[17:20:39] [Server thread/INFO]: -------- World Settings For [PVP1] --------
-[17:20:39] [Server thread/INFO]: Arrow Despawn Rate: 1200
-[17:20:39] [Server thread/INFO]: Chunks to Grow per Tick: 650
-[17:20:39] [Server thread/INFO]: Clear tick list: false
-[17:20:39] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
-[17:20:39] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
-[17:20:39] [Server thread/INFO]: Anti X-Ray: true
-[17:20:39] [Server thread/INFO]: 	Engine Mode: 1
-[17:20:39] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
-[17:20:39] [Server thread/INFO]: 	Replace Blocks: [1, 5]
-[17:20:39] [Server thread/INFO]: Mob Spawn Range: 4
-[17:20:39] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
-[17:20:39] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
-[17:20:39] [Server thread/INFO]: Random Lighting Updates: false
-[17:20:39] [Server thread/INFO]: Structure Info Saving: true
-[17:20:39] [Server thread/INFO]: Max Entity Collisions: 8
-[17:20:39] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
-[17:20:39] [Server thread/INFO]: Cactus Growth Modifier: 100%
-[17:20:39] [Server thread/INFO]: Cane Growth Modifier: 100%
-[17:20:39] [Server thread/INFO]: Melon Growth Modifier: 100%
-[17:20:39] [Server thread/INFO]: Mushroom Growth Modifier: 100%
-[17:20:39] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
-[17:20:39] [Server thread/INFO]: Sapling Growth Modifier: 100%
-[17:20:39] [Server thread/INFO]: Wheat Growth Modifier: 100%
-[17:20:39] [Server thread/INFO]: NetherWart Growth Modifier: 100%
-[17:20:39] [Server thread/INFO]: Max TNT Explosions: 100
-[17:20:39] [Server thread/INFO]: Sending up to 10 chunks per packet
-[17:20:39] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
-[17:20:39] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
-[17:20:39] [Server thread/INFO]: View Distance: 10
-[17:20:39] [Server thread/INFO]: Item Despawn Rate: 6000
-[17:20:39] [Server thread/INFO]: Item Merge Radius: 2.5
-[17:20:39] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
-[17:20:39] [Server thread/INFO]: Experience Merge Radius: 3.0
-[17:20:39] [Server thread/INFO]: Preparing start region for level 4 (Seed: -5227594981380140816)
-[17:20:39] [Server thread/INFO]: -------- World Settings For [PVP2] --------
-[17:20:39] [Server thread/INFO]: Arrow Despawn Rate: 1200
-[17:20:39] [Server thread/INFO]: Chunks to Grow per Tick: 650
-[17:20:39] [Server thread/INFO]: Clear tick list: false
-[17:20:39] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
-[17:20:39] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
-[17:20:39] [Server thread/INFO]: Anti X-Ray: true
-[17:20:39] [Server thread/INFO]: 	Engine Mode: 1
-[17:20:39] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
-[17:20:39] [Server thread/INFO]: 	Replace Blocks: [1, 5]
-[17:20:39] [Server thread/INFO]: Mob Spawn Range: 4
-[17:20:39] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
-[17:20:39] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
-[17:20:39] [Server thread/INFO]: Random Lighting Updates: false
-[17:20:39] [Server thread/INFO]: Structure Info Saving: true
-[17:20:39] [Server thread/INFO]: Max Entity Collisions: 8
-[17:20:39] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
-[17:20:39] [Server thread/INFO]: Cactus Growth Modifier: 100%
-[17:20:39] [Server thread/INFO]: Cane Growth Modifier: 100%
-[17:20:39] [Server thread/INFO]: Melon Growth Modifier: 100%
-[17:20:39] [Server thread/INFO]: Mushroom Growth Modifier: 100%
-[17:20:39] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
-[17:20:39] [Server thread/INFO]: Sapling Growth Modifier: 100%
-[17:20:39] [Server thread/INFO]: Wheat Growth Modifier: 100%
-[17:20:39] [Server thread/INFO]: NetherWart Growth Modifier: 100%
-[17:20:39] [Server thread/INFO]: Max TNT Explosions: 100
-[17:20:39] [Server thread/INFO]: Sending up to 10 chunks per packet
-[17:20:39] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
-[17:20:39] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
-[17:20:39] [Server thread/INFO]: View Distance: 10
-[17:20:39] [Server thread/INFO]: Item Despawn Rate: 6000
-[17:20:39] [Server thread/INFO]: Item Merge Radius: 2.5
-[17:20:39] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
-[17:20:39] [Server thread/INFO]: Experience Merge Radius: 3.0
-[17:20:39] [Server thread/INFO]: Preparing start region for level 5 (Seed: -5227594981380140816)
-[17:20:39] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[17:20:39] [Server thread/INFO]: Done (2.023s)! For help, type "help" or "?"
-[17:20:41] [Thread-5/INFO]: UUID of player MAIL__TW is 786b47ad-e918-30cb-b480-343d93c9c156
-[17:20:41] [Server thread/INFO]: [MinecraftPvpPlugin] MAIL__TW joined the server
-[17:20:41] [Server thread/INFO]: To Lobby MAIL__TW
+[17:00:53] [Server thread/INFO]: Generating keypair
+[17:00:53] [Server thread/INFO]: Starting Minecraft server on *:25565
+[17:00:53] [Server thread/INFO]: Using default channel type
+[17:00:53] [Server thread/INFO]: Set PluginClassLoader as parallel capable
+[17:00:53] [Server thread/INFO]: [MinecraftPvpPlugin] Loading MinecraftPvpPlugin v1.0-SNAPSHOT
+[17:00:53] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[17:00:53] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[17:00:53] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[17:00:53] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[17:00:53] [Server thread/INFO]: **** Beginning UUID conversion, this may take A LONG time ****
+[17:00:53] [Server thread/INFO]: Preparing level "Lobby"
+[17:00:53] [Server thread/INFO]: -------- World Settings For [Lobby] --------
+[17:00:53] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:00:53] [Server thread/INFO]: View Distance: 10
+[17:00:53] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:00:53] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:00:53] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:00:53] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:00:53] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:00:53] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[17:00:53] [Server thread/INFO]: Anti X-Ray: true
+[17:00:53] [Server thread/INFO]: 	Engine Mode: 1
+[17:00:53] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[17:00:53] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[17:00:53] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:00:53] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:00:53] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:00:53] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:00:53] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:00:53] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:00:53] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:00:53] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:00:53] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:00:53] [Server thread/INFO]: Mob Spawn Range: 4
+[17:00:53] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[17:00:53] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:00:53] [Server thread/INFO]: Structure Info Saving: true
+[17:00:53] [Server thread/INFO]: Max TNT Explosions: 100
+[17:00:53] [Server thread/INFO]: Random Lighting Updates: false
+[17:00:53] [Server thread/INFO]: Max Entity Collisions: 8
+[17:00:53] [Server thread/INFO]: Sending up to 10 chunks per packet
+[17:00:53] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:00:53] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[17:00:53] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[17:00:53] [Server thread/INFO]: Clear tick list: false
+[17:00:54] [Server thread/INFO]: -------- World Settings For [Lobby_nether] --------
+[17:00:54] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:00:54] [Server thread/INFO]: View Distance: 10
+[17:00:54] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:00:54] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:00:54] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:00:54] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:00:54] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:00:54] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[17:00:54] [Server thread/INFO]: Anti X-Ray: true
+[17:00:54] [Server thread/INFO]: 	Engine Mode: 1
+[17:00:54] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[17:00:54] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[17:00:54] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:00:54] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:00:54] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:00:54] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:00:54] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:00:54] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:00:54] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:00:54] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:00:54] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:00:54] [Server thread/INFO]: Mob Spawn Range: 4
+[17:00:54] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[17:00:54] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:00:54] [Server thread/INFO]: Structure Info Saving: true
+[17:00:54] [Server thread/INFO]: Max TNT Explosions: 100
+[17:00:54] [Server thread/INFO]: Random Lighting Updates: false
+[17:00:54] [Server thread/INFO]: Max Entity Collisions: 8
+[17:00:54] [Server thread/INFO]: Sending up to 10 chunks per packet
+[17:00:54] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:00:54] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[17:00:54] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[17:00:54] [Server thread/INFO]: Clear tick list: false
+[17:00:54] [Server thread/INFO]: -------- World Settings For [Lobby_the_end] --------
+[17:00:54] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:00:54] [Server thread/INFO]: View Distance: 10
+[17:00:54] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:00:54] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:00:54] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:00:54] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:00:54] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:00:54] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[17:00:54] [Server thread/INFO]: Anti X-Ray: true
+[17:00:54] [Server thread/INFO]: 	Engine Mode: 1
+[17:00:54] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[17:00:54] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[17:00:54] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:00:54] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:00:54] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:00:54] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:00:54] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:00:54] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:00:54] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:00:54] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:00:54] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:00:54] [Server thread/INFO]: Mob Spawn Range: 4
+[17:00:54] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[17:00:54] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:00:54] [Server thread/INFO]: Structure Info Saving: true
+[17:00:54] [Server thread/INFO]: Max TNT Explosions: 100
+[17:00:54] [Server thread/INFO]: Random Lighting Updates: false
+[17:00:54] [Server thread/INFO]: Max Entity Collisions: 8
+[17:00:54] [Server thread/INFO]: Sending up to 10 chunks per packet
+[17:00:54] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:00:54] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[17:00:54] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[17:00:54] [Server thread/INFO]: Clear tick list: false
+[17:00:54] [Server thread/INFO]: Preparing start region for level 0 (Seed: -4444818278965242618)
+[17:00:54] [Server thread/INFO]: Preparing start region for level 1 (Seed: 7365026278184994534)
+[17:00:54] [Server thread/INFO]: Preparing start region for level 2 (Seed: 7365026278184994534)
+[17:00:54] [Server thread/INFO]: [MinecraftPvpPlugin] Enabling MinecraftPvpPlugin v1.0-SNAPSHOT
+[17:00:54] [Server thread/INFO]: [MinecraftPvpPlugin] SKYJET PVP v.3.0.0
+[17:00:54] [Server thread/INFO]: -------- World Settings For [PVP0] --------
+[17:00:54] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:00:54] [Server thread/INFO]: View Distance: 10
+[17:00:54] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:00:54] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:00:55] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:00:55] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:00:55] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:00:55] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[17:00:55] [Server thread/INFO]: Anti X-Ray: true
+[17:00:55] [Server thread/INFO]: 	Engine Mode: 1
+[17:00:55] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[17:00:55] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[17:00:55] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:00:55] [Server thread/INFO]: Mob Spawn Range: 4
+[17:00:55] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[17:00:55] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:00:55] [Server thread/INFO]: Structure Info Saving: true
+[17:00:55] [Server thread/INFO]: Max TNT Explosions: 100
+[17:00:55] [Server thread/INFO]: Random Lighting Updates: false
+[17:00:55] [Server thread/INFO]: Max Entity Collisions: 8
+[17:00:55] [Server thread/INFO]: Sending up to 10 chunks per packet
+[17:00:55] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:00:55] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[17:00:55] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[17:00:55] [Server thread/INFO]: Clear tick list: false
+[17:00:55] [Server thread/INFO]: Preparing start region for level 3 (Seed: -5227594981380140816)
+[17:00:55] [Server thread/INFO]: -------- World Settings For [PVP1] --------
+[17:00:55] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:00:55] [Server thread/INFO]: View Distance: 10
+[17:00:55] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:00:55] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:00:55] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:00:55] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:00:55] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:00:55] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[17:00:55] [Server thread/INFO]: Anti X-Ray: true
+[17:00:55] [Server thread/INFO]: 	Engine Mode: 1
+[17:00:55] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[17:00:55] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[17:00:55] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:00:55] [Server thread/INFO]: Mob Spawn Range: 4
+[17:00:55] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[17:00:55] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:00:55] [Server thread/INFO]: Structure Info Saving: true
+[17:00:55] [Server thread/INFO]: Max TNT Explosions: 100
+[17:00:55] [Server thread/INFO]: Random Lighting Updates: false
+[17:00:55] [Server thread/INFO]: Max Entity Collisions: 8
+[17:00:55] [Server thread/INFO]: Sending up to 10 chunks per packet
+[17:00:55] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:00:55] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[17:00:55] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[17:00:55] [Server thread/INFO]: Clear tick list: false
+[17:00:55] [Server thread/INFO]: Preparing start region for level 4 (Seed: -5227594981380140816)
+[17:00:55] [Server thread/INFO]: -------- World Settings For [PVP2] --------
+[17:00:55] [Server thread/INFO]: Arrow Despawn Rate: 1200
+[17:00:55] [Server thread/INFO]: View Distance: 10
+[17:00:55] [Server thread/INFO]: Item Despawn Rate: 6000
+[17:00:55] [Server thread/INFO]: Zombie Aggressive Towards Villager: true
+[17:00:55] [Server thread/INFO]: Item Merge Radius: 2.5
+[17:00:55] [Server thread/INFO]: Allow Zombie Pigmen to spawn from portal blocks: true
+[17:00:55] [Server thread/INFO]: Experience Merge Radius: 3.0
+[17:00:55] [Server thread/INFO]: Hopper Transfer: 8 Hopper Check: 8 Hopper Amount: 1
+[17:00:55] [Server thread/INFO]: Anti X-Ray: true
+[17:00:55] [Server thread/INFO]: 	Engine Mode: 1
+[17:00:55] [Server thread/INFO]: 	Hidden Blocks: [14, 15, 16, 21, 48, 49, 54, 56, 73, 74, 82, 129, 130]
+[17:00:55] [Server thread/INFO]: 	Replace Blocks: [1, 5]
+[17:00:55] [Server thread/INFO]: Cactus Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Cane Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Melon Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Mushroom Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Pumpkin Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Sapling Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Wheat Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: NetherWart Growth Modifier: 100%
+[17:00:55] [Server thread/INFO]: Nerfing mobs spawned from spawners: false
+[17:00:55] [Server thread/INFO]: Mob Spawn Range: 4
+[17:00:55] [Server thread/INFO]: Entity Activation Range: An 32 / Mo 32 / Mi 16
+[17:00:55] [Server thread/INFO]: Entity Tracking Range: Pl 48 / An 48 / Mo 48 / Mi 32 / Other 64
+[17:00:55] [Server thread/INFO]: Structure Info Saving: true
+[17:00:55] [Server thread/INFO]: Max TNT Explosions: 100
+[17:00:55] [Server thread/INFO]: Random Lighting Updates: false
+[17:00:55] [Server thread/INFO]: Max Entity Collisions: 8
+[17:00:55] [Server thread/INFO]: Sending up to 10 chunks per packet
+[17:00:55] [Server thread/INFO]: Tile Max Tick Time: 50ms Entity max Tick Time: 50ms
+[17:00:55] [Server thread/INFO]: Custom Map Seeds:  Village: 10387312 Feature: 14357617
+[17:00:55] [Server thread/INFO]: Chunks to Grow per Tick: 650
+[17:00:55] [Server thread/INFO]: Clear tick list: false
+[17:00:55] [Server thread/INFO]: Preparing start region for level 5 (Seed: -5227594981380140816)
+[17:00:55] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[17:00:55] [Server thread/INFO]: Done (2.066s)! For help, type "help" or "?"
+[17:00:57] [Thread-5/INFO]: UUID of player MAIL__TW is 786b47ad-e918-30cb-b480-343d93c9c156
+[17:00:57] [Server thread/INFO]: [MinecraftPvpPlugin] MAIL__TW joined the server
+[17:00:57] [Server thread/INFO]: To Lobby MAIL__TW
 
-[17:20:41] [Server thread/INFO]: MAIL__TW[/127.0.0.1:53740] logged in with entity id 472 at ([Lobby]170.8, 104.0, 108.3)
-[17:20:47] [Server thread/INFO]: MAIL__TW lost connection: Disconnected
-[17:20:47] [Server thread/INFO]: MAIL__TW left the game.
-[17:20:52] [Server thread/INFO]: Stopping the server
-[17:20:52] [Server thread/INFO]: Stopping server
-[17:20:52] [Server thread/INFO]: [MinecraftPvpPlugin] Disabling MinecraftPvpPlugin v1.0-SNAPSHOT
-[17:20:52] [Server thread/INFO]: Saving players
-[17:20:52] [Server thread/INFO]: Saving worlds
-[17:20:52] [Server thread/INFO]: Saving chunks for level 'Lobby'/Overworld
-[17:20:52] [Server thread/INFO]: Saving chunks for level 'Lobby_nether'/Nether
-[17:20:52] [Server thread/INFO]: Saving chunks for level 'Lobby_the_end'/The End
-[17:20:52] [Server thread/INFO]: Saving chunks for level 'PVP0'/Overworld
-[17:20:52] [Server thread/INFO]: Saving chunks for level 'PVP1'/Overworld
-[17:20:52] [Server thread/INFO]: Saving chunks for level 'PVP2'/Overworld
+[17:00:57] [Server thread/INFO]: MAIL__TW[/127.0.0.1:51178] logged in with entity id 468 at ([Lobby]178.0, 104.5, 114.0)
+[17:02:18] [Server thread/INFO]: MAIL__TW issued server command: /l
+[17:02:18] [Server thread/INFO]: To Lobby MAIL__TW
+
+[17:02:24] [Server thread/INFO]: 1723194149157
+[17:02:24] [Server thread/INFO]: 4498
+[17:02:24] [Server thread/INFO]: 1723194149157
+[17:02:24] [Server thread/INFO]: 4307
+[17:02:25] [Server thread/INFO]: 1723194149157
+[17:02:25] [Server thread/INFO]: 3742
+[17:02:34] [Server thread/INFO]: MAIL__TW issued server command: /l
+[17:02:34] [Server thread/INFO]: To Lobby MAIL__TW
+
+[17:02:35] [Server thread/INFO]: To Lobby MAIL__TW
+
+[17:04:30] [Server thread/INFO]: MAIL__TW issued server command: /l
+[17:04:30] [Server thread/INFO]: To Lobby MAIL__TW
+
+[17:05:58] [Server thread/ERROR]: Could not pass event EntityDamageByEntityEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEvent(CraftEventFactory.java:87) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEntityDamageEvent(CraftEventFactory.java:553) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:466) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleLivingEntityDamageEvent(CraftEventFactory.java:585) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.d(EntityLiving.java:1102) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.damageEntity(EntityLiving.java:743) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityHuman.attack(EntityHuman.java:1001) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityPlayer.attack(EntityPlayer.java:1063) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:52) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:11) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.ClassCastException: class org.bukkit.craftbukkit.v1_8_R3.entity.CraftSheep cannot be cast to class org.bukkit.entity.Player (org.bukkit.craftbukkit.v1_8_R3.entity.CraftSheep and org.bukkit.entity.Player are in unnamed module of loader 'app')
+	at me.minecraft.minecraftpvpplugin.MinecraftPvpPlugin.handleDamage(MinecraftPvpPlugin.kt:172) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	... 23 more
+[17:05:58] [Server thread/ERROR]: Could not pass event EntityDamageByEntityEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEvent(CraftEventFactory.java:87) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEntityDamageEvent(CraftEventFactory.java:553) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:466) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleLivingEntityDamageEvent(CraftEventFactory.java:585) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.d(EntityLiving.java:1102) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.damageEntity(EntityLiving.java:743) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityHuman.attack(EntityHuman.java:1001) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityPlayer.attack(EntityPlayer.java:1063) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:52) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:11) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.ClassCastException: class org.bukkit.craftbukkit.v1_8_R3.entity.CraftSheep cannot be cast to class org.bukkit.entity.Player (org.bukkit.craftbukkit.v1_8_R3.entity.CraftSheep and org.bukkit.entity.Player are in unnamed module of loader 'app')
+	at me.minecraft.minecraftpvpplugin.gadgets.Rebound.entityDamageByEntityEvent(Rebound.kt:22) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	... 23 more
+[17:05:59] [Server thread/ERROR]: Could not pass event EntityDamageByEntityEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEvent(CraftEventFactory.java:87) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEntityDamageEvent(CraftEventFactory.java:553) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:466) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleLivingEntityDamageEvent(CraftEventFactory.java:585) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.d(EntityLiving.java:1102) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.damageEntity(EntityLiving.java:743) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityHuman.attack(EntityHuman.java:1001) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityPlayer.attack(EntityPlayer.java:1063) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:52) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:11) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.ClassCastException: class org.bukkit.craftbukkit.v1_8_R3.entity.CraftSheep cannot be cast to class org.bukkit.entity.Player (org.bukkit.craftbukkit.v1_8_R3.entity.CraftSheep and org.bukkit.entity.Player are in unnamed module of loader 'app')
+	at me.minecraft.minecraftpvpplugin.MinecraftPvpPlugin.handleDamage(MinecraftPvpPlugin.kt:172) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	... 23 more
+[17:05:59] [Server thread/ERROR]: Could not pass event EntityDamageByEntityEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEvent(CraftEventFactory.java:87) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEntityDamageEvent(CraftEventFactory.java:553) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:466) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleLivingEntityDamageEvent(CraftEventFactory.java:585) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.d(EntityLiving.java:1102) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.damageEntity(EntityLiving.java:743) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityHuman.attack(EntityHuman.java:1001) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityPlayer.attack(EntityPlayer.java:1063) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:52) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:11) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.ClassCastException: class org.bukkit.craftbukkit.v1_8_R3.entity.CraftSheep cannot be cast to class org.bukkit.entity.Player (org.bukkit.craftbukkit.v1_8_R3.entity.CraftSheep and org.bukkit.entity.Player are in unnamed module of loader 'app')
+	at me.minecraft.minecraftpvpplugin.gadgets.Rebound.entityDamageByEntityEvent(Rebound.kt:22) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	... 23 more
+[17:06:00] [Server thread/ERROR]: Could not pass event EntityDamageByEntityEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEvent(CraftEventFactory.java:87) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEntityDamageEvent(CraftEventFactory.java:553) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:466) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleLivingEntityDamageEvent(CraftEventFactory.java:585) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.d(EntityLiving.java:1102) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.damageEntity(EntityLiving.java:743) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityHuman.attack(EntityHuman.java:1001) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityPlayer.attack(EntityPlayer.java:1063) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:52) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:11) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.ClassCastException: class org.bukkit.craftbukkit.v1_8_R3.entity.CraftSheep cannot be cast to class org.bukkit.entity.Player (org.bukkit.craftbukkit.v1_8_R3.entity.CraftSheep and org.bukkit.entity.Player are in unnamed module of loader 'app')
+	at me.minecraft.minecraftpvpplugin.MinecraftPvpPlugin.handleDamage(MinecraftPvpPlugin.kt:172) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	... 23 more
+[17:06:00] [Server thread/ERROR]: Could not pass event EntityDamageByEntityEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEvent(CraftEventFactory.java:87) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEntityDamageEvent(CraftEventFactory.java:553) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:466) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleLivingEntityDamageEvent(CraftEventFactory.java:585) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.d(EntityLiving.java:1102) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.damageEntity(EntityLiving.java:743) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityHuman.attack(EntityHuman.java:1001) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityPlayer.attack(EntityPlayer.java:1063) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:52) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:11) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.ClassCastException: class org.bukkit.craftbukkit.v1_8_R3.entity.CraftSheep cannot be cast to class org.bukkit.entity.Player (org.bukkit.craftbukkit.v1_8_R3.entity.CraftSheep and org.bukkit.entity.Player are in unnamed module of loader 'app')
+	at me.minecraft.minecraftpvpplugin.gadgets.Rebound.entityDamageByEntityEvent(Rebound.kt:22) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	... 23 more
+[17:06:07] [Server thread/ERROR]: Could not pass event EntityDamageByEntityEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEvent(CraftEventFactory.java:87) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEntityDamageEvent(CraftEventFactory.java:553) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:466) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleLivingEntityDamageEvent(CraftEventFactory.java:585) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.d(EntityLiving.java:1102) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.damageEntity(EntityLiving.java:743) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityHuman.attack(EntityHuman.java:1001) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityPlayer.attack(EntityPlayer.java:1063) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:52) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:11) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.ClassCastException: class org.bukkit.craftbukkit.v1_8_R3.entity.CraftCow cannot be cast to class org.bukkit.entity.Player (org.bukkit.craftbukkit.v1_8_R3.entity.CraftCow and org.bukkit.entity.Player are in unnamed module of loader 'app')
+	at me.minecraft.minecraftpvpplugin.MinecraftPvpPlugin.handleDamage(MinecraftPvpPlugin.kt:172) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	... 23 more
+[17:06:07] [Server thread/ERROR]: Could not pass event EntityDamageByEntityEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEvent(CraftEventFactory.java:87) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEntityDamageEvent(CraftEventFactory.java:553) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:466) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleLivingEntityDamageEvent(CraftEventFactory.java:585) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.d(EntityLiving.java:1102) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.damageEntity(EntityLiving.java:743) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityHuman.attack(EntityHuman.java:1001) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityPlayer.attack(EntityPlayer.java:1063) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:52) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:11) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.ClassCastException: class org.bukkit.craftbukkit.v1_8_R3.entity.CraftCow cannot be cast to class org.bukkit.entity.Player (org.bukkit.craftbukkit.v1_8_R3.entity.CraftCow and org.bukkit.entity.Player are in unnamed module of loader 'app')
+	at me.minecraft.minecraftpvpplugin.gadgets.Rebound.entityDamageByEntityEvent(Rebound.kt:22) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	... 23 more
+[17:06:08] [Server thread/ERROR]: Could not pass event EntityDamageEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEvent(CraftEventFactory.java:87) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEntityDamageEvent(CraftEventFactory.java:553) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:539) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleLivingEntityDamageEvent(CraftEventFactory.java:585) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.d(EntityLiving.java:1102) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.damageEntity(EntityLiving.java:743) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.e(EntityLiving.java:939) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.Block.fallOn(Block.java:640) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.Entity.a(Entity.java:811) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.a(EntityLiving.java:160) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.Entity.move(Entity.java:627) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.g(EntityLiving.java:1395) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.m(EntityLiving.java:1652) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityInsentient.m(EntityInsentient.java:338) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityAgeable.m(EntityAgeable.java:139) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityAnimal.m(EntityAnimal.java:23) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.t_(EntityLiving.java:1487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityInsentient.t_(EntityInsentient.java:193) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.World.entityJoinedWorld(World.java:1607) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.World.g(World.java:1582) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.World.tickEntities(World.java:1425) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.WorldServer.tickEntities(WorldServer.java:597) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:786) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.ClassCastException: class org.bukkit.craftbukkit.v1_8_R3.entity.CraftCow cannot be cast to class org.bukkit.entity.Player (org.bukkit.craftbukkit.v1_8_R3.entity.CraftCow and org.bukkit.entity.Player are in unnamed module of loader 'app')
+	at me.minecraft.minecraftpvpplugin.MinecraftPvpPlugin.handleDamage(MinecraftPvpPlugin.kt:172) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	... 30 more
+[17:06:08] [Server thread/ERROR]: Could not pass event EntityDamageByEntityEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEvent(CraftEventFactory.java:87) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEntityDamageEvent(CraftEventFactory.java:553) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:466) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleLivingEntityDamageEvent(CraftEventFactory.java:585) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.d(EntityLiving.java:1102) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.damageEntity(EntityLiving.java:743) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityHuman.attack(EntityHuman.java:1001) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityPlayer.attack(EntityPlayer.java:1063) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:52) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:11) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.ClassCastException: class org.bukkit.craftbukkit.v1_8_R3.entity.CraftSheep cannot be cast to class org.bukkit.entity.Player (org.bukkit.craftbukkit.v1_8_R3.entity.CraftSheep and org.bukkit.entity.Player are in unnamed module of loader 'app')
+	at me.minecraft.minecraftpvpplugin.MinecraftPvpPlugin.handleDamage(MinecraftPvpPlugin.kt:172) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	... 23 more
+[17:06:08] [Server thread/ERROR]: Could not pass event EntityDamageByEntityEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEvent(CraftEventFactory.java:87) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEntityDamageEvent(CraftEventFactory.java:553) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:466) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleLivingEntityDamageEvent(CraftEventFactory.java:585) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.d(EntityLiving.java:1102) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.damageEntity(EntityLiving.java:743) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityHuman.attack(EntityHuman.java:1001) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityPlayer.attack(EntityPlayer.java:1063) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:52) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:11) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.ClassCastException: class org.bukkit.craftbukkit.v1_8_R3.entity.CraftSheep cannot be cast to class org.bukkit.entity.Player (org.bukkit.craftbukkit.v1_8_R3.entity.CraftSheep and org.bukkit.entity.Player are in unnamed module of loader 'app')
+	at me.minecraft.minecraftpvpplugin.gadgets.Rebound.entityDamageByEntityEvent(Rebound.kt:22) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	... 23 more
+[17:06:32] [Server thread/INFO]: MAIL__TW issued server command: /l
+[17:06:32] [Server thread/INFO]: To Lobby MAIL__TW
+
+[17:06:38] [Server thread/ERROR]: Could not pass event EntityDamageByEntityEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEvent(CraftEventFactory.java:87) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEntityDamageEvent(CraftEventFactory.java:553) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:466) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleLivingEntityDamageEvent(CraftEventFactory.java:585) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.d(EntityLiving.java:1102) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.damageEntity(EntityLiving.java:743) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityRabbit.damageEntity(EntityRabbit.java:230) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityHuman.attack(EntityHuman.java:1001) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityPlayer.attack(EntityPlayer.java:1063) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:52) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:11) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.ClassCastException: class org.bukkit.craftbukkit.v1_8_R3.entity.CraftRabbit cannot be cast to class org.bukkit.entity.Player (org.bukkit.craftbukkit.v1_8_R3.entity.CraftRabbit and org.bukkit.entity.Player are in unnamed module of loader 'app')
+	at me.minecraft.minecraftpvpplugin.MinecraftPvpPlugin.handleDamage(MinecraftPvpPlugin.kt:172) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	... 24 more
+[17:06:38] [Server thread/ERROR]: Could not pass event EntityDamageByEntityEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEvent(CraftEventFactory.java:87) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEntityDamageEvent(CraftEventFactory.java:553) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:466) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleLivingEntityDamageEvent(CraftEventFactory.java:585) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.d(EntityLiving.java:1102) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.damageEntity(EntityLiving.java:743) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityRabbit.damageEntity(EntityRabbit.java:230) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityHuman.attack(EntityHuman.java:1001) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityPlayer.attack(EntityPlayer.java:1063) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:52) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:11) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.ClassCastException: class org.bukkit.craftbukkit.v1_8_R3.entity.CraftRabbit cannot be cast to class org.bukkit.entity.Player (org.bukkit.craftbukkit.v1_8_R3.entity.CraftRabbit and org.bukkit.entity.Player are in unnamed module of loader 'app')
+	at me.minecraft.minecraftpvpplugin.gadgets.Rebound.entityDamageByEntityEvent(Rebound.kt:22) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	... 24 more
+[17:06:39] [Server thread/ERROR]: Could not pass event EntityDamageByEntityEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEvent(CraftEventFactory.java:87) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEntityDamageEvent(CraftEventFactory.java:553) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:466) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleLivingEntityDamageEvent(CraftEventFactory.java:585) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.d(EntityLiving.java:1102) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.damageEntity(EntityLiving.java:743) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityRabbit.damageEntity(EntityRabbit.java:230) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityHuman.attack(EntityHuman.java:1001) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityPlayer.attack(EntityPlayer.java:1063) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:52) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:11) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.ClassCastException: class org.bukkit.craftbukkit.v1_8_R3.entity.CraftRabbit cannot be cast to class org.bukkit.entity.Player (org.bukkit.craftbukkit.v1_8_R3.entity.CraftRabbit and org.bukkit.entity.Player are in unnamed module of loader 'app')
+	at me.minecraft.minecraftpvpplugin.MinecraftPvpPlugin.handleDamage(MinecraftPvpPlugin.kt:172) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	... 24 more
+[17:06:39] [Server thread/ERROR]: Could not pass event EntityDamageByEntityEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEvent(CraftEventFactory.java:87) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEntityDamageEvent(CraftEventFactory.java:553) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:466) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleLivingEntityDamageEvent(CraftEventFactory.java:585) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.d(EntityLiving.java:1102) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.damageEntity(EntityLiving.java:743) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityRabbit.damageEntity(EntityRabbit.java:230) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityHuman.attack(EntityHuman.java:1001) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityPlayer.attack(EntityPlayer.java:1063) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:52) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:11) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.ClassCastException: class org.bukkit.craftbukkit.v1_8_R3.entity.CraftRabbit cannot be cast to class org.bukkit.entity.Player (org.bukkit.craftbukkit.v1_8_R3.entity.CraftRabbit and org.bukkit.entity.Player are in unnamed module of loader 'app')
+	at me.minecraft.minecraftpvpplugin.gadgets.Rebound.entityDamageByEntityEvent(Rebound.kt:22) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	... 24 more
+[17:06:39] [Server thread/ERROR]: Could not pass event EntityDamageByEntityEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEvent(CraftEventFactory.java:87) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEntityDamageEvent(CraftEventFactory.java:553) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:466) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleLivingEntityDamageEvent(CraftEventFactory.java:585) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.d(EntityLiving.java:1102) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.damageEntity(EntityLiving.java:743) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityRabbit.damageEntity(EntityRabbit.java:230) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityHuman.attack(EntityHuman.java:1001) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityPlayer.attack(EntityPlayer.java:1063) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:52) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:11) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.ClassCastException: class org.bukkit.craftbukkit.v1_8_R3.entity.CraftRabbit cannot be cast to class org.bukkit.entity.Player (org.bukkit.craftbukkit.v1_8_R3.entity.CraftRabbit and org.bukkit.entity.Player are in unnamed module of loader 'app')
+	at me.minecraft.minecraftpvpplugin.MinecraftPvpPlugin.handleDamage(MinecraftPvpPlugin.kt:172) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	... 24 more
+[17:06:39] [Server thread/ERROR]: Could not pass event EntityDamageByEntityEvent to MinecraftPvpPlugin v1.0-SNAPSHOT
+org.bukkit.event.EventException: null
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:310) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:62) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.fireEvent(SimplePluginManager.java:502) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:487) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEvent(CraftEventFactory.java:87) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.callEntityDamageEvent(CraftEventFactory.java:553) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:466) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at org.bukkit.craftbukkit.v1_8_R3.event.CraftEventFactory.handleLivingEntityDamageEvent(CraftEventFactory.java:585) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.d(EntityLiving.java:1102) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityLiving.damageEntity(EntityLiving.java:743) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityRabbit.damageEntity(EntityRabbit.java:230) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityHuman.attack(EntityHuman.java:1001) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.EntityPlayer.attack(EntityPlayer.java:1063) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnection.a(PlayerConnection.java:1355) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:52) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PacketPlayInUseEntity.a(SourceFile:11) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.PlayerConnectionUtils$1.run(SourceFile:13) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+	at net.minecraft.server.v1_8_R3.SystemUtils.a(SourceFile:44) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.B(MinecraftServer.java:715) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.DedicatedServer.B(DedicatedServer.java:374) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.A(MinecraftServer.java:654) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at net.minecraft.server.v1_8_R3.MinecraftServer.run(MinecraftServer.java:557) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.lang.ClassCastException: class org.bukkit.craftbukkit.v1_8_R3.entity.CraftRabbit cannot be cast to class org.bukkit.entity.Player (org.bukkit.craftbukkit.v1_8_R3.entity.CraftRabbit and org.bukkit.entity.Player are in unnamed module of loader 'app')
+	at me.minecraft.minecraftpvpplugin.gadgets.Rebound.entityDamageByEntityEvent(Rebound.kt:22) ~[?:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.bukkit.plugin.java.JavaPluginLoader$1.execute(JavaPluginLoader.java:306) ~[spigot.jar:git-Spigot-21fe707-741a1bd]
+	... 24 more
+[17:06:44] [Server thread/INFO]: MAIL__TW lost connection: Disconnected
+[17:06:44] [Server thread/INFO]: MAIL__TW left the game.
