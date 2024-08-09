@@ -11,6 +11,7 @@ import org.bukkit.GameMode
 import org.bukkit.Material
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
+import org.bukkit.entity.EntityType
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
@@ -23,11 +24,10 @@ import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.event.player.PlayerQuitEvent
 import org.bukkit.inventory.ItemStack
 import org.bukkit.plugin.java.JavaPlugin
+import java.io.File
 import java.util.logging.Level
 
 class MinecraftPvpPlugin : JavaPlugin(), Listener {
-    private lateinit var lobbyScoreboard: CustomScoreboard
-
     override fun onEnable() {
         logger.level = Level.ALL
 
@@ -55,9 +55,14 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         lobbyScoreboard = CustomScoreboard(
             hashMapOf(
-                "Test" to """
-                Hello {name}!
-                Visited {n} times
+                "${ChatColor.AQUA}${ChatColor.BOLD}SkyJet" to """
+                ${ChatColor.RESET}${ChatColor.WHITE}================
+                    
+                        
+                ${ChatColor.GRAY}Welcome ${ChatColor.GOLD}{name}!
+                ${ChatColor.RED}Won {kill} times${'\n'}${'\n'}
+                            
+                ${ChatColor.WHITE}================
                 """.trimIndent()
             )
         )
@@ -72,8 +77,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<String>): Boolean {
         val player = sender as Player
         if (command.name.equals("lobby", ignoreCase = true)) {
-            val player = sender as Player
-            PvpPlaceManager.removePlayer(player, "leave", lobbyScoreboard)
+            PvpPlaceManager.removePlayer(player, "leave")
             onPlayerToLobby(player)
         }
 
@@ -131,12 +135,11 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         onPlayerToLobby(player)
 
-        if (lobbyScoreboard.havePlayerData(player)) {
-            lobbyScoreboard.increaseScoreboardInt(player, "n")
+        if (!lobbyScoreboard.havePlayerData(player)) {
+            lobbyScoreboard.initScoreboard(player, hashMapOf("name" to player.name, "kill" to "0"))
         }
-
         else {
-            lobbyScoreboard.initScoreboard(player, hashMapOf("name" to player.name, "n" to "0", "kill" to "0"))
+            lobbyScoreboard.updateScoreboard(player)
         }
     }
 
@@ -170,14 +173,15 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
     @EventHandler
     fun handleDamage(event: EntityDamageEvent) {
+        if (event.entity.type != EntityType.PLAYER) return
+
         val player = event.entity as Player
 
-        player.spigot().respawn()
         if ((player.health - event.finalDamage) <= 0) {
             event.isCancelled = true
             player.health = 20.0
 
-            PvpPlaceManager.removePlayer(player, "kill", lobbyScoreboard)
+            PvpPlaceManager.removePlayer(player, "kill")
         }
     }
 
@@ -186,12 +190,13 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         val player = event.player
 
         if (Worlds.isInPvp(player)) {
-            PvpPlaceManager.removePlayer(player, "leave", lobbyScoreboard)
+            PvpPlaceManager.removePlayer(player, "leave")
         }
     }
 
     companion object {
         var instance: JavaPlugin? = null
+        lateinit var lobbyScoreboard: CustomScoreboard
 
         fun onPlayerToLobby(player: Player) {
             println("To Lobby " + player.name)

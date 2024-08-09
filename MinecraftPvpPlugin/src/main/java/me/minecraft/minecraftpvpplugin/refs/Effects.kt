@@ -10,7 +10,4 @@ object Effects {
     val weakness1 = PotionEffect(PotionEffectType.WEAKNESS, 999999999, 0)
     val weakness2 = PotionEffect(PotionEffectType.WEAKNESS, 999999999, 1)
     val weakness3= PotionEffect(PotionEffectType.WEAKNESS, 999999999, 2)
-//    val AllDie1 = PotionEffect(PotionEffectType.DAM, 999999999, 1)
-//    val AllDie2 = PotionEffect(PotionEffectType.INCREASE_DAMAGE, 999999999, 2)
-//    val AllDie3 = PotionEffect(PotionEffectType.INCREASE_DAMAGE, 999999999, 3)
 }

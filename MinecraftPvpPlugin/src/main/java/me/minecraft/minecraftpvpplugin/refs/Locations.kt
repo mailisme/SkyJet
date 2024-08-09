@@ -13,8 +13,8 @@ object Locations {
         for (y in pvpBorder0.y.toInt()..pvpBorder1.y.toInt()) {
             for (x in pvpBorder0.x.toInt()..pvpBorder1.x.toInt()) {
                 for (z in pvpBorder0.z.toInt()..pvpBorder1.z.toInt()) {
-                    val block = Worlds.pvpWorlds[0].getBlockAt(x, y, z)
-                    val blockAbove = Worlds.pvpWorlds[0].getBlockAt(x, y + 1, z)
+                    val block = Worlds.pvpWorldStandard.getBlockAt(x, y, z)
+                    val blockAbove = Worlds.pvpWorldStandard.getBlockAt(x, y + 1, z)
 
                     if (!block.isEmpty && !block.isLiquid && blockAbove.isEmpty) {
                         add(Vector(x, y + 1, z))

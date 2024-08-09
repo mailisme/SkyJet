@@ -34,8 +34,15 @@ object PvpPlaceManager {
         }
     }.toMutableMap()
 
+    private var totalPlayerCount = 0;
+
     // Adds Player to players list, and teleports them to the right world.
     fun addPlayer(player: Player, skill: Skill) {
+        if (totalPlayerCount >= pvpPlaces.count() * 2) {
+            val world = Worlds.newPvpWorld()
+            pvpPlaces[world] = PvpPlace(world)
+        }
+
         pvpPlaces.forEach { (world, place) ->
             val playerSlots = place.playerSlots
 
@@ -64,14 +71,12 @@ object PvpPlaceManager {
                 return
             }
         }
-
-        player.sendMessage("Server is full :(")
     }
 
     fun startGame(world: World) {
         val place = pvpPlaces[world]!!
         val playerSlots = place.playerSlots
-        LogWriter.LogWriter(playerSlots[0]?.player?.name+" fighting w/ "+playerSlots[1]?.player?.name+"\n")
+        LogWriter.LogWriter(playerSlots[0]?.player?.name+"fighting w/ "+playerSlots[1]?.player?.name+"\n")
 
         object : Countdown(world.players, "The game will start in", "SEARCH FOR GADGETS!") {
             override fun onCountdown() {
@@ -91,37 +96,38 @@ object PvpPlaceManager {
 
 
     // Marks input Player as loser, and the opponent of the Player as winner. Remove them from the players list and teleport them back to lobby.
-    fun removePlayer(player: Player, reason: String, scoreboard: CustomScoreboard) {
+    fun removePlayer(player: Player, reason: String) {
         pvpPlaces.forEach { (world, place) ->
             val playerSlots = place.playerSlots
+            val scoreboard = MinecraftPvpPlugin.lobbyScoreboard
 
             for (playerIndex in playerSlots.indices) {
                 if (playerSlots[playerIndex]?.player === player) {
                     val anotherPlayer = getOpponent(player)
 
-                    if (anotherPlayer != null) {
-                        onPlayerLose(player)
-                        onPlayerWin(anotherPlayer)
-                    }
-
                     RunAfter(1.0) {
+                        totalPlayerCount --
+                        player.teleport(Locations.lobbySpawn)
+                        MinecraftPvpPlugin.onPlayerToLobby(player)
+
                         if (anotherPlayer != null) {
+                            onPlayerWin(anotherPlayer)
+                            onPlayerLose(player)
+
+                            totalPlayerCount --
                             anotherPlayer.teleport(Locations.lobbySpawn)
                             MinecraftPvpPlugin.onPlayerToLobby(anotherPlayer)
                         }
 
-                    if (reason == "kill") {
-                        LogWriter.LogWriter(player.name+" was killed by "+anotherPlayer?.name+".\n")
-                        val a = (anotherPlayer?.let {
-                            scoreboard.getScoreboard(it, "kill")
-                        })?.toInt()?.plus(1).toString()
-                        anotherPlayer?.let { scoreboard.changeScoreboard(it, "kill", a) }
-                    }
-                    else{
-                        LogWriter.LogWriter(player.name+" leave the game.\n")
-                    }
-                        player.teleport(Locations.lobbySpawn)
-                        MinecraftPvpPlugin.onPlayerToLobby(player)
+                        if (reason == "kill") {
+                            LogWriter.LogWriter("${player.name} was killed by ${anotherPlayer?.name}.\n")
+
+                            if (anotherPlayer != null) scoreboard.increaseScoreboardInt(anotherPlayer, "kill", 1)
+                        }
+
+                        else {
+                            LogWriter.LogWriter("${player.name} leave the game.\n")
+                        }
 
                         playerSlots[0] = null
                         playerSlots[1] = null
@@ -138,7 +144,6 @@ object PvpPlaceManager {
                             place.started = false
                         }
                     }
-
                 }
             }
         }

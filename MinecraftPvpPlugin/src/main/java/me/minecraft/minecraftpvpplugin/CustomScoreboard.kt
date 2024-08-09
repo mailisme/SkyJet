@@ -54,7 +54,7 @@ class   CustomScoreboard(private val objectiveNameBoardFormatMap: HashMap<String
         return playerNameBoardDataMap.containsKey(player.name)
     }
 
-    private fun updateScoreboard(player: Player) {
+    fun updateScoreboard(player: Player) {
         val board = manager.newScoreboard
         val fieldNameValueMap = playerNameBoardDataMap[player.name]!!
 
@@ -77,7 +77,7 @@ class   CustomScoreboard(private val objectiveNameBoardFormatMap: HashMap<String
 
             var index = 0
 
-            for (line in formattedBoard.lines().reversed()) {
+            for (line in formattedBoard.split('\n').reversed()) {
                 print(line)
                 objective.getScore(line).score = index
                 index += 1
