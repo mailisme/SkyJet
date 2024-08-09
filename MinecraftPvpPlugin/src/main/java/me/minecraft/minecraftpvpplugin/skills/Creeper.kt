@@ -6,6 +6,7 @@ import me.minecraft.minecraftpvpplugin.Skill
 import me.minecraft.minecraftpvpplugin.helpers.RunAfter
 import me.minecraft.minecraftpvpplugin.refs.Effects
 import me.minecraft.minecraftpvpplugin.refs.Items
+import org.bukkit.ChatColor
 import org.bukkit.Material
 import org.bukkit.entity.EntityType
 import org.bukkit.entity.Player
@@ -13,7 +14,12 @@ import org.bukkit.event.EventHandler
 import org.bukkit.event.entity.EntityDamageEvent
 import org.bukkit.event.player.PlayerToggleSneakEvent
 
-object Creeper : Skill(Material.MONSTER_EGG, "苦力怕", 60.0, switchLike = true) {
+object Creeper : Skill(Material.MONSTER_EGG, "苦力怕", coolDownSeconds = 60.0, switchLike = true, lore = listOf(
+    "${ChatColor.YELLOW}在對手8格外蹲下隱形，接近對手放開爆炸",
+    "${ChatColor.GRAY}冷卻時間：60秒",
+    "${ChatColor.GRAY}蹲下後20秒未放開也會爆炸",
+    "${ChatColor.GRAY}爆炸不會傷害施放者"
+)) {
     private val invinciblePlayers = mutableListOf<Player>()
 
     @EventHandler
@@ -35,7 +41,7 @@ object Creeper : Skill(Material.MONSTER_EGG, "苦力怕", 60.0, switchLike = tru
             if (!super.isTriggerActivateSuccessful(player)) return
 
             player.sendMessage("放開以爆炸")
-            player.addPotionEffect(Effects.invisibleEffect)
+            player.addPotionEffect(Effects.invisible)
             player.inventory.helmet = null
             player.inventory.chestplate = null
             player.inventory.leggings = null
@@ -59,7 +65,7 @@ object Creeper : Skill(Material.MONSTER_EGG, "苦力怕", 60.0, switchLike = tru
     private fun explode(player: Player) {
         if (!super.isTriggerDeactivateSuccessful(player)) return
 
-        player.removePotionEffect(Effects.invisibleEffect.type)
+        player.removePotionEffect(Effects.invisible.type)
         player.inventory.helmet = Items.ironHelmet
         player.inventory.chestplate = Items.ironChestplate
         player.inventory.leggings = Items.ironLeggings

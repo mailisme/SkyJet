@@ -12,7 +12,7 @@ import org.bukkit.event.entity.ProjectileHitEvent
 import org.bukkit.event.entity.ProjectileLaunchEvent
 import org.bukkit.inventory.ItemStack
 
-abstract class ThrowableGadget(var material: Material, name: String) : ItemStack(), Listener {
+abstract class ThrowableGadget(var material: Material, name: String, lore: List<String> = listOf()) : ItemStack(), Listener {
     private var projectileType: EntityType? = null
 
     protected fun onThrow(event: ProjectileLaunchEvent) {}
@@ -37,6 +37,7 @@ abstract class ThrowableGadget(var material: Material, name: String) : ItemStack
 
         val meta = this.itemMeta
         meta.displayName = name
+        meta.lore = lore
         this.setItemMeta(meta)
 
         Bukkit.getPluginManager().registerEvents(this, MinecraftPvpPlugin.instance)
