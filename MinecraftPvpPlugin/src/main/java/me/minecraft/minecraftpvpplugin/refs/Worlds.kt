@@ -32,7 +32,7 @@ data object Worlds {
 
     fun newPvpWorld(): World {
         val worldName = "PVP_${pvpWorlds.count()}"
-        File("SkyJet/PVP_standard/").copyRecursively(File("$worldName/"))
+        File("PVP_standard/").copyRecursively(File("$worldName/"))
         File("$worldName/uid.dat").delete()
         val world = Bukkit.createWorld(WorldCreator(worldName))
         pvpWorlds.addLast(world)
