@@ -1,5 +1,6 @@
 package me.minecraft.minecraftpvpplugin
 
+import me.minecraft.minecraftpvpplugin.MinecraftPvpPlugin.Companion.lobbyScoreboard
 import me.minecraft.minecraftpvpplugin.helpers.Countdown
 import me.minecraft.minecraftpvpplugin.helpers.RunAfter
 import me.minecraft.minecraftpvpplugin.refs.Locations
@@ -16,6 +17,7 @@ import java.io.File
 import java.io.FileReader
 import java.io.FileWriter
 import java.util.function.Consumer
+import kotlin.math.pow
 
 // TODO: MAKE THE PLAYER DATA STRUCTURE BETTER
 class PvpPlayer(val player: Player, val skill: Skill)
@@ -123,6 +125,9 @@ object PvpPlaceManager {
                             LogWriter.LogWriter("${player.name} was killed by ${anotherPlayer?.name}.\n")
 
                             if (anotherPlayer != null) scoreboard.increaseScoreboardInt(anotherPlayer, "kill", 1)
+                            val a =  anotherPlayer?.let { lobbyScoreboard.getScoreboard(it, "kill").toFloat().pow(x=0.6F) }
+                                ?.toInt()
+                            anotherPlayer?.let { lobbyScoreboard.changeScoreboard(it, "level", (a!!).toString()) }
                         }
 
                         else {

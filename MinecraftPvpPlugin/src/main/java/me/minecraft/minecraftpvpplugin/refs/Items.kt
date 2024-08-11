@@ -4,7 +4,7 @@ import org.bukkit.Material
 import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.meta.ItemMeta
 
-object Items {
+object  Items {
     val ironSword: ItemStack = ItemStack(Material.IRON_SWORD)
     val diamondSword: ItemStack = ItemStack(Material.DIAMOND_SWORD)
 
@@ -36,4 +36,5 @@ object Items {
 
     val fishingRod: ItemStack = ItemStack(Material.FISHING_ROD)
     val gapple: ItemStack = ItemStack(Material.GOLDEN_APPLE, 5)
+    val steak: ItemStack = ItemStack(Material.COOKED_BEEF, 64)
 }

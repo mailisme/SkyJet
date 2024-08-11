@@ -26,6 +26,7 @@ import org.bukkit.inventory.ItemStack
 import org.bukkit.plugin.java.JavaPlugin
 import java.io.File
 import java.util.logging.Level
+import kotlin.math.pow
 
 class MinecraftPvpPlugin : JavaPlugin(), Listener {
     override fun onEnable() {
@@ -60,7 +61,8 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
                     
                         
                 ${ChatColor.GRAY}Welcome ${ChatColor.GOLD}{name}!
-                ${ChatColor.RED}Won {kill} times${'\n'}${'\n'}
+                ${ChatColor.RED}Won {kill} times
+                ${ChatColor.AQUA}You are in Level ${ChatColor.RED   }{level}${'\n'}${'\n'}
                             
                 ${ChatColor.WHITE}================
                 """.trimIndent()
@@ -136,7 +138,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         onPlayerToLobby(player)
 
         if (!lobbyScoreboard.havePlayerData(player)) {
-            lobbyScoreboard.initScoreboard(player, hashMapOf("name" to player.name, "kill" to "0"))
+            lobbyScoreboard.initScoreboard(player, hashMapOf("name" to player.name, "kill" to "0", "level" to "1"))
         }
         else {
             lobbyScoreboard.updateScoreboard(player)
@@ -220,7 +222,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             player.inventory.setItem(0, Items.ironSword)
             player.inventory.setItem(1, Items.fishingRod)
             player.inventory.setItem(2, skillItem)
-
+            player.inventory.setItem(7, Items.steak)
             player.inventory.setItem(8, Items.gapple)
             player.health = 20.0
             player.foodLevel = 20
