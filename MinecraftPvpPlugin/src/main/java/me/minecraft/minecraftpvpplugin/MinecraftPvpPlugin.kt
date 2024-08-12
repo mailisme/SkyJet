@@ -79,7 +79,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<String>): Boolean {
         val player = sender as Player
         if (command.name.equals("lobby", ignoreCase = true)) {
-            PvpPlaceManager.removePlayer(player, "leave")
+            if (Worlds.isInPvp(player)) PvpPlaceManager.removePlayer(player, "leave")
             onPlayerToLobby(player)
         }
 
@@ -133,8 +133,6 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         event.joinMessage = "${ChatColor.AQUA}Welcome ${player.name}!"
         logger.info("${player.name} joined the server")
 
-        player.teleport(Locations.lobbySpawn)
-
         onPlayerToLobby(player)
 
         if (!lobbyScoreboard.havePlayerData(player)) {
@@ -149,7 +147,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     fun handlePlayerInteract(event: PlayerInteractEvent) {
         val player = event.player
 
-        if (player.world == Worlds.lobby) {
+        if (Worlds.isInLobby(player)) {
             if (event.item == null) return
             if (event.item == Items.diamondSword && event.action != Action.PHYSICAL) {
                 val startGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}加入遊戲")
@@ -166,7 +164,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     fun handlePlayerDropItem(event: PlayerDropItemEvent) {
         val player = event.player
 
-        if (player.world == Worlds.lobby) {
+        if (Worlds.isInLobby(player)) {
             player.sendMessage("U cant drop any item ok?")
             event.itemDrop.remove()
             player.inventory.setItem(0, event.itemDrop.itemStack)
@@ -202,6 +200,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         fun onPlayerToLobby(player: Player) {
             println("To Lobby " + player.name)
+            player.teleport(Locations.lobbySpawn)
             player.inventory.clear()
             Items.swordItemMeta.displayName = "${ChatColor.AQUA}Join"
             Items.swordItemMeta.spigot().isUnbreakable = true

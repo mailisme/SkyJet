@@ -19,7 +19,6 @@ import java.io.FileWriter
 import java.util.function.Consumer
 import kotlin.math.pow
 
-// TODO: MAKE THE PLAYER DATA STRUCTURE BETTER
 class PvpPlayer(val player: Player, val skill: Skill)
 
 class PvpPlace(world: World) {
@@ -99,91 +98,86 @@ object PvpPlaceManager {
 
     // Marks input Player as loser, and the opponent of the Player as winner. Remove them from the players list and teleport them back to lobby.
     fun removePlayer(player: Player, reason: String) {
-        pvpPlaces.forEach { (world, place) ->
-            val playerSlots = place.playerSlots
-            val scoreboard = MinecraftPvpPlugin.lobbyScoreboard
+        val (world, place, _) = getPvpPlacePlayerFromPlayer(player)
 
-            for (playerIndex in playerSlots.indices) {
-                if (playerSlots[playerIndex]?.player === player) {
-                    val anotherPlayer = getOpponent(player)
+        val playerSlots = place!!.playerSlots
+        val scoreboard = lobbyScoreboard
 
-                    RunAfter(1.0) {
-                        totalPlayerCount --
-                        player.teleport(Locations.lobbySpawn)
-                        MinecraftPvpPlugin.onPlayerToLobby(player)
+        val anotherPlayer = getOpponent(player)
 
-                        if (anotherPlayer != null) {
-                            onPlayerWin(anotherPlayer)
-                            onPlayerLose(player)
+        if (anotherPlayer != null) {
+            onPlayerWin(anotherPlayer)
+            onPlayerLose(player)
+        }
 
-                            totalPlayerCount --
-                            anotherPlayer.teleport(Locations.lobbySpawn)
-                            MinecraftPvpPlugin.onPlayerToLobby(anotherPlayer)
-                        }
+        RunAfter(1.0) {
+            totalPlayerCount -= if (anotherPlayer != null) 2 else 1
 
-                        if (reason == "kill") {
-                            LogWriter.LogWriter("${player.name} was killed by ${anotherPlayer?.name}.\n")
+            player.let { MinecraftPvpPlugin.onPlayerToLobby(it) }
+            anotherPlayer?.let { MinecraftPvpPlugin.onPlayerToLobby(it) }
 
-                            if (anotherPlayer != null) scoreboard.increaseScoreboardInt(anotherPlayer, "kill", 1)
-                            val a =  anotherPlayer?.let { lobbyScoreboard.getScoreboard(it, "kill").toFloat().pow(x=0.6F) }
-                                ?.toInt()
-                            anotherPlayer?.let { lobbyScoreboard.changeScoreboard(it, "level", (a!!).toString()) }
-                        }
+            if (reason == "kill") {
+                LogWriter.LogWriter("${player.name} was killed by ${anotherPlayer?.name}.\n")
 
-                        else {
-                            LogWriter.LogWriter("${player.name} leave the game.\n")
-                        }
+                if (anotherPlayer != null) scoreboard.increaseScoreboardInt(anotherPlayer, "kill", 1)
+                val a =  anotherPlayer?.let { lobbyScoreboard.getScoreboard(it, "kill").toFloat().pow(0.6F).toInt() }
+                anotherPlayer?.let { lobbyScoreboard.changeScoreboard(it, "level", "${a!!}") }
+            }
 
-                        playerSlots[0] = null
-                        playerSlots[1] = null
+            else {
+                LogWriter.LogWriter("${player.name} leave the game.\n")
+            }
 
-                        world.entities.forEach(Consumer { e: Entity ->
-                            if (e is Item) {
-                                e.remove()
-                            }
-                        })
+            playerSlots[0] = null
+            playerSlots[1] = null
 
-                        if (place.started) {
-                            place.randomSpawnGadget.stop()
-                            place.gameLoop.stop()
-                            place.started = false
-                        }
-                    }
+            world!!.entities.forEach(Consumer { e: Entity ->
+                if (e is Item) {
+                    e.remove()
                 }
+            })
+
+            if (place.started) {
+                place.randomSpawnGadget.stop()
+                place.gameLoop.stop()
+                place.started = false
             }
         }
     }
 
     private fun onPlayerLose(player: Player) {
+        player.resetTitle()
         player.sendTitle(ChatColor.AQUA.toString() + "You Lose", ChatColor.DARK_BLUE.toString() + ":(")
     }
 
     private fun onPlayerWin(player: Player) {
+        player.resetTitle()
         player.sendTitle(ChatColor.GOLD.toString() + "You Win !!", ChatColor.RED.toString() + ":D")
     }
 
     fun getPlayerSkill(player: Player): Skill? {
+        val (_, _, pvpPlayer) = getPvpPlacePlayerFromPlayer(player)
+        return pvpPlayer?.skill
+    }
+
+    private fun getPvpPlacePlayerFromPlayer(player: Player): Triple<World?, PvpPlace?, PvpPlayer?> {
         for ((world, pvpPlace) in pvpPlaces) {
             for (playerSlot in pvpPlace.playerSlots) {
                 if (playerSlot?.player == player) {
-                    return playerSlot.skill
+                    return Triple(world, pvpPlace, playerSlot);
                 }
             }
         }
 
-        return null
+        return Triple(null, null, null)
     }
 
     fun getOpponent(player: Player): Player? {
-        for ((world, pvpPlace) in pvpPlaces) {
-            for (playerSlot in pvpPlace.playerSlots) {
-                if (playerSlot?.player == player) {
-                    for (opponentPlayerSlot in pvpPlace.playerSlots) {
-                        if (opponentPlayerSlot?.player != player && opponentPlayerSlot?.player != null) {
-                            return opponentPlayerSlot.player
-                        }
-                    }
-                }
+        val (_, place, _) = getPvpPlacePlayerFromPlayer(player)
+
+        for (opponentPlayerSlot in place!!.playerSlots) {
+            if (opponentPlayerSlot?.player != player && opponentPlayerSlot?.player != null) {
+                return opponentPlayerSlot.player
             }
         }
 
