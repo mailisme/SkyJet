@@ -47,6 +47,7 @@ abstract class Skill(
     fun handleChangeWorld(event: PlayerChangedWorldEvent) {
         if (event.player.world === Bukkit.getWorld("Lobby")) {
             playersActivating.remove(event.player)
+            coolDownFinishTimestampMap.remove(event.player)
         }
     }
 
