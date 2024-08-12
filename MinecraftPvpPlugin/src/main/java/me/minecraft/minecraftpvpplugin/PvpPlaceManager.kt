@@ -110,6 +110,8 @@ object PvpPlaceManager {
             onPlayerLose(player)
         }
 
+        world!!.pvp = false
+
         RunAfter(1.0) {
             totalPlayerCount -= if (anotherPlayer != null) 2 else 1
 
@@ -131,7 +133,7 @@ object PvpPlaceManager {
             playerSlots[0] = null
             playerSlots[1] = null
 
-            world!!.entities.forEach(Consumer { e: Entity ->
+            world.entities.forEach(Consumer { e: Entity ->
                 if (e is Item) {
                     e.remove()
                 }
@@ -142,6 +144,8 @@ object PvpPlaceManager {
                 place.gameLoop.stop()
                 place.started = false
             }
+
+            world.pvp = true
         }
     }
 
