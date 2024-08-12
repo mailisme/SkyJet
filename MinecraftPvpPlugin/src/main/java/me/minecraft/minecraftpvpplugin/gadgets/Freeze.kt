@@ -42,7 +42,7 @@ object Freeze : ThrowableGadget(Material.SNOW_BALL, "冷陸氣團", lore = listO
         }
 
         RunAfter(2.0) {
-            locationMaterialMap.forEach { (location: Location, matWithData: MatWithData) ->
+            for ((location, matWithData) in locationMaterialMap) {
                 val block = iceCenter.world.getBlockAt(location)
 
                 block.type = matWithData.material

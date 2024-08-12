@@ -16,7 +16,7 @@ object KnockBack : Gadget(material = Material.FIREBALL, "地球之心", lore = l
         val nearByEntities = player.getNearbyEntities(6.0, 6.0, 6.0)
         LogWriter.LogWriter(player.name+" use 地球之心\n")
 
-        nearByEntities.forEach { entity ->
+        for (entity in nearByEntities) {
             val entityPos = entity.location.toVector()
             val playerPos = player.location.toVector()
             entity.velocity = entityPos

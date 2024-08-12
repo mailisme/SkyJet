@@ -11,11 +11,6 @@ import org.bukkit.World
 import org.bukkit.entity.Entity
 import org.bukkit.entity.Item
 import org.bukkit.entity.Player
-import org.bukkit.event.Listener
-import org.json.JSONObject
-import java.io.File
-import java.io.FileReader
-import java.io.FileWriter
 import java.util.function.Consumer
 import kotlin.math.pow
 
@@ -44,7 +39,7 @@ object PvpPlaceManager {
             pvpPlaces[world] = PvpPlace(world)
         }
 
-        pvpPlaces.forEach { (world, place) ->
+        for ((world, place) in pvpPlaces) {
             val playerSlots = place.playerSlots
 
             if (playerSlots[1] == null && playerSlots[0] != null) {
@@ -56,7 +51,7 @@ object PvpPlaceManager {
             }
         }
 
-        pvpPlaces.forEach { (world, place) ->
+        for ((world, place) in pvpPlaces) {
             val playerSlots = place.playerSlots
 
             if (playerSlots[0] == null) {
@@ -98,7 +93,7 @@ object PvpPlaceManager {
 
     // Marks input Player as loser, and the opponent of the Player as winner. Remove them from the players list and teleport them back to lobby.
     fun removePlayer(player: Player, reason: String) {
-        val (world, place, _) = getPvpPlacePlayerFromPlayer(player)
+        val (world, place, _) = getPvpPlacePlayerByPlayer(player)
 
         val playerSlots = place!!.playerSlots
         val scoreboard = lobbyScoreboard
@@ -133,11 +128,11 @@ object PvpPlaceManager {
             playerSlots[0] = null
             playerSlots[1] = null
 
-            world.entities.forEach(Consumer { e: Entity ->
+            for (e in world.entities) {
                 if (e is Item) {
                     e.remove()
                 }
-            })
+            }
 
             if (place.started) {
                 place.randomSpawnGadget.stop()
@@ -160,11 +155,11 @@ object PvpPlaceManager {
     }
 
     fun getPlayerSkill(player: Player): Skill? {
-        val (_, _, pvpPlayer) = getPvpPlacePlayerFromPlayer(player)
+        val (_, _, pvpPlayer) = getPvpPlacePlayerByPlayer(player)
         return pvpPlayer?.skill
     }
 
-    private fun getPvpPlacePlayerFromPlayer(player: Player): Triple<World?, PvpPlace?, PvpPlayer?> {
+    private fun getPvpPlacePlayerByPlayer(player: Player): Triple<World?, PvpPlace?, PvpPlayer?> {
         for ((world, pvpPlace) in pvpPlaces) {
             for (playerSlot in pvpPlace.playerSlots) {
                 if (playerSlot?.player == player) {
@@ -177,7 +172,7 @@ object PvpPlaceManager {
     }
 
     fun getOpponent(player: Player): Player? {
-        val (_, place, _) = getPvpPlacePlayerFromPlayer(player)
+        val (_, place, _) = getPvpPlacePlayerByPlayer(player)
 
         for (opponentPlayerSlot in place!!.playerSlots) {
             if (opponentPlayerSlot?.player != player && opponentPlayerSlot?.player != null) {

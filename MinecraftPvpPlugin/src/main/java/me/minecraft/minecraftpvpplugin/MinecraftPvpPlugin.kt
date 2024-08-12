@@ -115,9 +115,9 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         }
 
         if (event.clickedInventory.title.equals("${ChatColor.AQUA}請選擇想擁有的技能", ignoreCase = true)) {
-            Skills.skills.forEach {
-                if (it.name == event.currentItem.itemMeta.displayName) {
-                    PvpPlaceManager.addPlayer(player, it)
+            for (skill in Skills.skills) {
+                if (skill.name == event.currentItem.itemMeta.displayName) {
+                    PvpPlaceManager.addPlayer(player, skill)
                 }
             }
 

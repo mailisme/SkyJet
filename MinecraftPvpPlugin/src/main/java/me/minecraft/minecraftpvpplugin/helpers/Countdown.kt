@@ -11,11 +11,11 @@ open class Countdown(
     private var leftSeconds = 3
 
     private var counter = RunEvery(1.0) {
-        players.forEach { it.sendTitle(countdownMessage, leftSeconds.toString()) }
+        for (player in players) player.sendTitle(countdownMessage, leftSeconds.toString())
         onCountdown()
 
         if (leftSeconds <= 0) {
-            players.forEach { it.sendTitle(countdownEndMessage, countdownEndSubMessage) }
+            for (player in players) player.sendTitle(countdownEndMessage, countdownEndSubMessage)
             onCountdownEnd()
             cancelCounter()
         }
