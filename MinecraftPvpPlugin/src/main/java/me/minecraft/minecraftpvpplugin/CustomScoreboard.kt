@@ -1,9 +1,8 @@
-package me.minecraft.minecraftpvpplugin.scoreboard
+package me.minecraft.minecraftpvpplugin
 
 import org.bukkit.Bukkit
 import org.bukkit.entity.Player
 import org.bukkit.scoreboard.DisplaySlot
-import org.bukkit.scoreboard.Scoreboard
 
 class CustomScoreboard(private val objectiveNameBoardFormatMap: HashMap<String, String>, private val displaySlot: DisplaySlot) {
     private val manager = Bukkit.getScoreboardManager()
@@ -39,7 +38,7 @@ class CustomScoreboard(private val objectiveNameBoardFormatMap: HashMap<String, 
             val entireMatch = matchResult.groupValues[0]
             val fieldName = matchResult.groupValues[1]
 
-            formatted = formatted.replace(entireMatch, CustomScoreboardData.get(player, fieldName))
+            formatted = formatted.replace(entireMatch, DataManager.get(player, fieldName))
         }
 
         return formatted

@@ -4,7 +4,6 @@ import me.minecraft.minecraftpvpplugin.helpers.Countdown
 import me.minecraft.minecraftpvpplugin.helpers.RunAfter
 import me.minecraft.minecraftpvpplugin.refs.Locations
 import me.minecraft.minecraftpvpplugin.refs.Worlds
-import me.minecraft.minecraftpvpplugin.scoreboard.CustomScoreboardData
 import org.bukkit.ChatColor
 import org.bukkit.Location
 import org.bukkit.World
@@ -114,10 +113,10 @@ object PvpPlaceManager {
                 LogWriter.LogWriter("${player.name} was killed by ${anotherPlayer?.name}.\n")
 
                 if (anotherPlayer != null) {
-                    CustomScoreboardData.addInt(anotherPlayer, "kill", 1)
-                    val kills = CustomScoreboardData.get(anotherPlayer, "kill")
+                    DataManager.addInt(anotherPlayer, "kill", 1)
+                    val kills = DataManager.get(anotherPlayer, "kill")
                     val level = kills.toFloat().pow(0.6F).toInt()
-                    CustomScoreboardData.set(anotherPlayer, "level", "$level")
+                    DataManager.set(anotherPlayer, "level", "$level")
                     MinecraftPvpPlugin.mainScoreboard.updateScoreboard(anotherPlayer)
                 }
             }

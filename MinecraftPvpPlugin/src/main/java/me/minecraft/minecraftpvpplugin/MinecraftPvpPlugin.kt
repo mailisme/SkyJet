@@ -5,8 +5,6 @@ import me.minecraft.minecraftpvpplugin.refs.Items
 import me.minecraft.minecraftpvpplugin.refs.Locations
 import me.minecraft.minecraftpvpplugin.refs.Skills
 import me.minecraft.minecraftpvpplugin.refs.Worlds
-import me.minecraft.minecraftpvpplugin.scoreboard.CustomScoreboard
-import me.minecraft.minecraftpvpplugin.scoreboard.CustomScoreboardData
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.GameMode
@@ -70,10 +68,10 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             DisplaySlot.SIDEBAR
         )
 
-        CustomScoreboardData.load()
+        DataManager.load()
 
         RunEvery (300.0) {
-            CustomScoreboardData.save()
+            DataManager.save()
         }
     }
 
@@ -92,7 +90,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     }
 
     override fun onDisable() {
-        CustomScoreboardData.save()
+        DataManager.save()
     }
 
     @EventHandler
@@ -136,8 +134,8 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         onPlayerToLobby(player)
 
-        if (!CustomScoreboardData.hasData(player)) {
-            CustomScoreboardData.initPlayer(player, hashMapOf("name" to player.name, "kill" to "0", "level" to "1"))
+        if (!DataManager.hasData(player)) {
+            DataManager.initPlayer(player, hashMapOf("name" to player.name, "kill" to "0", "level" to "1"))
         }
 
         mainScoreboard.updateScoreboard(player)
