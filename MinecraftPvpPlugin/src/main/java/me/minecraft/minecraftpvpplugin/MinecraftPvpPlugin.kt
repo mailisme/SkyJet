@@ -5,10 +5,11 @@ import me.minecraft.minecraftpvpplugin.refs.Items
 import me.minecraft.minecraftpvpplugin.refs.Locations
 import me.minecraft.minecraftpvpplugin.refs.Skills
 import me.minecraft.minecraftpvpplugin.refs.Worlds
+import me.minecraft.minecraftpvpplugin.scoreboard.CustomScoreboard
+import me.minecraft.minecraftpvpplugin.scoreboard.CustomScoreboardData
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.GameMode
-import org.bukkit.Material
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.EntityType
@@ -24,9 +25,8 @@ import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.event.player.PlayerQuitEvent
 import org.bukkit.inventory.ItemStack
 import org.bukkit.plugin.java.JavaPlugin
-import java.io.File
+import org.bukkit.scoreboard.DisplaySlot
 import java.util.logging.Level
-import kotlin.math.pow
 
 class MinecraftPvpPlugin : JavaPlugin(), Listener {
     override fun onEnable() {
@@ -54,7 +54,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         instance = this
 
-        lobbyScoreboard = CustomScoreboard(
+        mainScoreboard = CustomScoreboard(
             hashMapOf(
                 "${ChatColor.AQUA}${ChatColor.BOLD}SkyJet" to """
                 ${ChatColor.RESET}${ChatColor.WHITE}================
@@ -66,13 +66,14 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
                             
                 ${ChatColor.WHITE}================
                 """.trimIndent()
-            )
+            ),
+            DisplaySlot.SIDEBAR
         )
 
-        lobbyScoreboard.load()
+        CustomScoreboardData.load()
 
         RunEvery (300.0) {
-            lobbyScoreboard.save()
+            CustomScoreboardData.save()
         }
     }
 
@@ -91,7 +92,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     }
 
     override fun onDisable() {
-        lobbyScoreboard.save()
+        CustomScoreboardData.save()
     }
 
     @EventHandler
@@ -135,12 +136,11 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         onPlayerToLobby(player)
 
-        if (!lobbyScoreboard.havePlayerData(player)) {
-            lobbyScoreboard.initScoreboard(player, hashMapOf("name" to player.name, "kill" to "0", "level" to "1"))
+        if (!CustomScoreboardData.hasData(player)) {
+            CustomScoreboardData.initPlayer(player, hashMapOf("name" to player.name, "kill" to "0", "level" to "1"))
         }
-        else {
-            lobbyScoreboard.updateScoreboard(player)
-        }
+
+        mainScoreboard.updateScoreboard(player)
     }
 
     @EventHandler
@@ -196,7 +196,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
     companion object {
         var instance: JavaPlugin? = null
-        lateinit var lobbyScoreboard: CustomScoreboard
+        lateinit var mainScoreboard: CustomScoreboard
 
         fun onPlayerToLobby(player: Player) {
             println("To Lobby " + player.name)

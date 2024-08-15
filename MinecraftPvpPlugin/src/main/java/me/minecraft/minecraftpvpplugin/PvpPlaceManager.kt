@@ -1,17 +1,15 @@
 package me.minecraft.minecraftpvpplugin
 
-import me.minecraft.minecraftpvpplugin.MinecraftPvpPlugin.Companion.lobbyScoreboard
 import me.minecraft.minecraftpvpplugin.helpers.Countdown
 import me.minecraft.minecraftpvpplugin.helpers.RunAfter
 import me.minecraft.minecraftpvpplugin.refs.Locations
 import me.minecraft.minecraftpvpplugin.refs.Worlds
+import me.minecraft.minecraftpvpplugin.scoreboard.CustomScoreboardData
 import org.bukkit.ChatColor
 import org.bukkit.Location
 import org.bukkit.World
-import org.bukkit.entity.Entity
 import org.bukkit.entity.Item
 import org.bukkit.entity.Player
-import java.util.function.Consumer
 import kotlin.math.pow
 
 class PvpPlayer(val player: Player, val skill: Skill)
@@ -96,7 +94,6 @@ object PvpPlaceManager {
         val (world, place, _) = getPvpPlacePlayerByPlayer(player)
 
         val playerSlots = place!!.playerSlots
-        val scoreboard = lobbyScoreboard
 
         val anotherPlayer = getOpponent(player)
 
@@ -116,9 +113,13 @@ object PvpPlaceManager {
             if (reason == "kill") {
                 LogWriter.LogWriter("${player.name} was killed by ${anotherPlayer?.name}.\n")
 
-                if (anotherPlayer != null) scoreboard.increaseScoreboardInt(anotherPlayer, "kill", 1)
-                val a =  anotherPlayer?.let { lobbyScoreboard.getScoreboard(it, "kill").toFloat().pow(0.6F).toInt() }
-                anotherPlayer?.let { lobbyScoreboard.changeScoreboard(it, "level", "${a!!}") }
+                if (anotherPlayer != null) {
+                    CustomScoreboardData.addInt(anotherPlayer, "kill", 1)
+                    val kills = CustomScoreboardData.get(anotherPlayer, "kill")
+                    val level = kills.toFloat().pow(0.6F).toInt()
+                    CustomScoreboardData.set(anotherPlayer, "level", "$level")
+                    MinecraftPvpPlugin.mainScoreboard.updateScoreboard(anotherPlayer)
+                }
             }
 
             else {
