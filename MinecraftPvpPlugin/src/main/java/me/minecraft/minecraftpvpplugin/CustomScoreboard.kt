@@ -7,7 +7,7 @@ import org.bukkit.scoreboard.DisplaySlot
 class CustomScoreboard(private val objectiveNameBoardFormatMap: HashMap<String, String>, private val displaySlot: DisplaySlot) {
     private val manager = Bukkit.getScoreboardManager()
 
-    fun updateScoreboard(player: Player) {
+    fun renderScoreboard(player: Player) {
         if (player.scoreboard == manager.mainScoreboard) {
             player.scoreboard = manager.newScoreboard
         }
@@ -17,30 +17,18 @@ class CustomScoreboard(private val objectiveNameBoardFormatMap: HashMap<String, 
         for ((objectiveFormat, boardFormat) in objectiveNameBoardFormatMap) {
             val objective = player.scoreboard.registerNewObjective(displaySlot.name, "dummy")
 
-            objective.displayName = format(objectiveFormat, player)
+            val formattedObjective = DataManager.format(objectiveFormat, player)
+            val formattedBoard = DataManager.format(boardFormat, player)
+
+            objective.displayName = formattedObjective
             objective.displaySlot = displaySlot
 
             var index = 0
 
-            for (line in format(boardFormat, player).split('\n').reversed()) {
+            for (line in formattedBoard.split('\n').reversed()) {
                 objective.getScore(line).score = index
                 index += 1
             }
         }
-    }
-
-    private fun format(formatter: String, player: Player): String {
-        val matchResults = Regex("\\{([A-Za-z]*)}").findAll(formatter)
-
-        var formatted = formatter
-
-        for (matchResult in matchResults) {
-            val entireMatch = matchResult.groupValues[0]
-            val fieldName = matchResult.groupValues[1]
-
-            formatted = formatted.replace(entireMatch, DataManager.get(player, fieldName))
-        }
-
-        return formatted
     }
 }

@@ -68,6 +68,8 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             DisplaySlot.SIDEBAR
         )
 
+        customTag = CustomTag("K.{kill} {name}")
+
         DataManager.load()
 
         RunEvery (300.0) {
@@ -138,7 +140,8 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             DataManager.initPlayer(player, hashMapOf("name" to player.name, "kill" to "0", "level" to "1"))
         }
 
-        mainScoreboard.updateScoreboard(player)
+        mainScoreboard.renderScoreboard(player)
+        customTag.updateTag(player)
     }
 
     @EventHandler
@@ -195,6 +198,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     companion object {
         var instance: JavaPlugin? = null
         lateinit var mainScoreboard: CustomScoreboard
+        lateinit var customTag: CustomTag
 
         fun onPlayerToLobby(player: Player) {
             println("To Lobby " + player.name)

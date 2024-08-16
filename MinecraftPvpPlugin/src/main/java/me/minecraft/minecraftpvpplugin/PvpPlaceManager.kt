@@ -117,7 +117,8 @@ object PvpPlaceManager {
                     val kills = DataManager.get(anotherPlayer, "kill")
                     val level = kills.toFloat().pow(0.6F).toInt()
                     DataManager.set(anotherPlayer, "level", "$level")
-                    MinecraftPvpPlugin.mainScoreboard.updateScoreboard(anotherPlayer)
+                    MinecraftPvpPlugin.mainScoreboard.renderScoreboard(anotherPlayer)
+                    MinecraftPvpPlugin.customTag.updateTag(anotherPlayer)
                 }
             }
 
