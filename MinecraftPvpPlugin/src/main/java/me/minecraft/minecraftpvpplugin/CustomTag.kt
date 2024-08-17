@@ -21,59 +21,16 @@ class CustomTag(private val tagFormat: String) {
     private var playerUUIDTagMap = hashMapOf<UUID, String>()
 
     init {
-//        val manager = ProtocolLibrary.getProtocolManager()
-//
-//        manager.addPacketListener(object: PacketAdapter(MinecraftPvpPlugin.instance, PacketType.Play.Server.PLAYER_INFO) {
-//
-//            override fun onPacketSending(event: PacketEvent?) {
-//                println("")
-//                val packet = event!!.packet
-//
-//                if (packet.playerInfoAction.read(0) == EnumWrappers.PlayerInfoAction.ADD_PLAYER) {
-//                    println("BON")
-//                    val packetInfoData = packet.playerInfoDataLists.read(0);
-//
-//                    val iterator = packetInfoData.listIterator()
-//
-//                    for (data in iterator) {
-//                        if (data == null) continue
-//                        if (DataManager.hasData(data.profile.uuid)) {
-//                            val uuid = data.profile.uuid
-//                            var formattedTag = DataManager.format(tagFormat, uuid)
-//                            formattedTag = ChatColor.translateAlternateColorCodes('&', formattedTag).take(16)
-//
-//                            iterator.set(PlayerInfoData(
-//                                WrappedGameProfile(uuid, formattedTag),
-//                                data.latency,
-//                                data.gameMode,
-//                                WrappedChatComponent.fromLegacyText(formattedTag)
-//                            ))
-//                        }
-//                    }
-//
-//                    packet.playerInfoDataLists.write(0, packetInfoData)
-//                }
-//            }
-//        })
-
         val actionType = Reflection.getField("{nms}.PacketPlayOutPlayerInfo", EnumPlayerInfoAction::class.java, 0)
         val playerInfo = Reflection.getField("{nms}.PacketPlayOutPlayerInfo", Object::class.java, 1)
 
 
         object : TinyProtocol(MinecraftPvpPlugin.instance) {
-//            override fun onPacketInAsync(sender: Player?, channel: Channel?, packet: Any): Any? {
-//                if (actionType.hasField(packet)) {
-//                    if (actionType.get(packet) == PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER /* Add Player */) {
-//                        println("${playerInfo.get(packet).`class`}")
-//                    }
-//                }
-//
-//                return super.onPacketInAsync(sender, channel, packet)
-//            }
-
             override fun onPacketOutAsync(reciever: Player?, channel: Channel?, packet: Any): Any {
+                // Set the players' tag if they are spawned
+
                 if (actionType.hasField(packet)) {
-                    if (actionType.get(packet) == EnumPlayerInfoAction.ADD_PLAYER /* Add Player */) {
+                    if (actionType.get(packet) == EnumPlayerInfoAction.ADD_PLAYER) {
                         val infos = (playerInfo.get(packet) as ArrayList<PlayerInfoData>)
 
                         for (i in 0..<infos.count()) {
@@ -102,7 +59,12 @@ class CustomTag(private val tagFormat: String) {
 
     fun updateTag(whoseTag: Player) {
         var formattedTag = DataManager.format(tagFormat, whoseTag)
-        formattedTag = ChatColor.translateAlternateColorCodes('&', formattedTag).take(16)
+        formattedTag = ChatColor.translateAlternateColorCodes('&', formattedTag)
+
+        // Truncate the tag down to 16 characters
+        if (formattedTag.length > 16) {
+            formattedTag = formattedTag.take(14) + ".."
+        }
 
         playerUUIDTagMap[whoseTag.uniqueId] = formattedTag
 

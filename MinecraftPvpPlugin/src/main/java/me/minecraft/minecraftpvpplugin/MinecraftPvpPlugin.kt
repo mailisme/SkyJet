@@ -68,7 +68,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             DisplaySlot.SIDEBAR
         )
 
-        customTag = CustomTag("K.{kill} {name}")
+        customTag = CustomTag("${ChatColor.RED}Lv.{level} ${ChatColor.WHITE}{name}")
 
         DataManager.load()
 
