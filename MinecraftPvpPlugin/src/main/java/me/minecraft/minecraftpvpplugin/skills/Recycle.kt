@@ -13,9 +13,10 @@ object Recycle : Skill(Material.GOLD_RECORD, "回收再利用") {
     @EventHandler
     fun handleClick(event: PlayerInteractEvent) {
         val player = event.player
-        LogWriter.LogWriter(player.name+" use 回收再利用\n")
+
         if (!super.isTriggerActivateSuccessful(player)) return
         val item = event.item
+        LogWriter.LogWriter(player.name+" use 回收再利用\n")
         if (item.type == Gadgets.anchor.material ||
             item.type == Gadgets.damage.material ||
             item.type == Gadgets.freeze.material ||

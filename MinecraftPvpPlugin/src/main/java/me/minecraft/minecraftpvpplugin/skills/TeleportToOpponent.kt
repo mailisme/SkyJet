@@ -20,10 +20,12 @@ object TeleportToOpponent :
     @EventHandler
     fun handleClick(event: PlayerInteractEvent) {
         val player = event.player
-        LogWriter.LogWriter(player.name+" use 閃電突襲\n")
+
 
         if (!super.isClickEventClickingItself(event)) return
         if (!super.isTriggerActivateSuccessful(player)) return
+
+        LogWriter.LogWriter(player.name+" use 閃電突襲\n")
 
         val opponentLocation = PvpPlaceManager.getOpponent(player)!!.location
 

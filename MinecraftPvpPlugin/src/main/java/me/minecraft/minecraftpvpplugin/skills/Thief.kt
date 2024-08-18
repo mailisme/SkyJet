@@ -1,5 +1,6 @@
 package me.minecraft.minecraftpvpplugin.skills
 
+import me.minecraft.minecraftpvpplugin.LogWriter
 import me.minecraft.minecraftpvpplugin.PvpPlaceManager
 import me.minecraft.minecraftpvpplugin.Skill
 import me.minecraft.minecraftpvpplugin.refs.Gadgets
@@ -18,6 +19,8 @@ object Thief : Skill(Material.RAW_FISH, "扒手", coolDownSeconds = 10.0, lore =
         val player = event.player
         if (!super.isClickEventClickingItself(event)) return
         if (!super.isTriggerActivateSuccessful(player)) return
+
+        LogWriter.LogWriter(player.name+" use 扒手\n")
 
         val opponent = PvpPlaceManager.getOpponent(player) ?: return
 

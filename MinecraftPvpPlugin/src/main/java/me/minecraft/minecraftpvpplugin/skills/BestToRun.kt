@@ -1,5 +1,6 @@
 package me.minecraft.minecraftpvpplugin.skills
 
+import me.minecraft.minecraftpvpplugin.LogWriter
 import me.minecraft.minecraftpvpplugin.PvpPlaceManager
 import me.minecraft.minecraftpvpplugin.Skill
 import me.minecraft.minecraftpvpplugin.refs.Effects
@@ -27,6 +28,7 @@ object BestToRun : Skill(Material.BONE, "走為上策", lore = listOf(
 
         if (!super.isTriggerActivateSuccessful(player)) return
 
+
         val healthAfterDamage = player.health - event.finalDamage
         if (healthAfterDamage < 15 && healthAfterDamage > 10) {
             player.removePotionEffect(PotionEffectType.WEAKNESS)
@@ -35,6 +37,7 @@ object BestToRun : Skill(Material.BONE, "走為上策", lore = listOf(
             player.inventory.chestplate = Items.diamondChestplate
             player.inventory.leggings = Items.ironLeggings
             player.inventory.boots = Items.ironBoots
+            LogWriter.LogWriter(player.name+" use 走為上策\n")
 
         } else if (healthAfterDamage < 10 && healthAfterDamage > 5) {
             player.removePotionEffect(PotionEffectType.WEAKNESS)
@@ -43,6 +46,7 @@ object BestToRun : Skill(Material.BONE, "走為上策", lore = listOf(
             player.inventory.chestplate = Items.diamondChestplate
             player.inventory.leggings = Items.diamondLeggings
             player.inventory.boots = Items.ironBoots
+            LogWriter.LogWriter(player.name+" use 走為上策\n")
 
         } else if (healthAfterDamage > 0 && healthAfterDamage < 5) {
             player.removePotionEffect(PotionEffectType.WEAKNESS)
@@ -51,6 +55,7 @@ object BestToRun : Skill(Material.BONE, "走為上策", lore = listOf(
             player.inventory.chestplate = Items.diamondChestplate
             player.inventory.leggings = Items.diamondLeggings
             player.inventory.boots = Items.diamondBoots
+            LogWriter.LogWriter(player.name+" use 走為上策\n")
 
         } else if (healthAfterDamage > 15) {
             player.removePotionEffect(PotionEffectType.WEAKNESS)
@@ -58,6 +63,7 @@ object BestToRun : Skill(Material.BONE, "走為上策", lore = listOf(
             player.inventory.chestplate = Items.ironChestplate
             player.inventory.leggings = Items.ironLeggings
             player.inventory.boots = Items.ironBoots
+            LogWriter.LogWriter(player.name+" use 走為上策\n")
         }
     }
 }

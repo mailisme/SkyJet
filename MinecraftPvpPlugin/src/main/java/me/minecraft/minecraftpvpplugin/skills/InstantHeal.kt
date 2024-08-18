@@ -15,11 +15,11 @@ object InstantHeal : Skill(Material.EMERALD, "瞬間治癒", coolDownSeconds = 5
     @EventHandler
     fun handleClick(event: PlayerInteractEvent) {
         val player = event.player
-        LogWriter.LogWriter(player.name+" use 瞬間治癒\n")
 
         if (!super.isClickEventClickingItself(event)) return
         if (!super.isTriggerActivateSuccessful(player)) return
 
+        LogWriter.LogWriter(player.name+" use 瞬間治癒\n")
         player.health += (20 - player.health) * 0.5;
     }
 }

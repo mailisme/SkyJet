@@ -25,11 +25,12 @@ object Creeper : Skill(Material.MONSTER_EGG, "苦力怕", coolDownSeconds = 60.0
     @EventHandler
     fun handleSneak(event: PlayerToggleSneakEvent) {
         val player = event.player
-        LogWriter.LogWriter(player.name+" use 苦力怕\n")
 
         // If start sneaking
         if (event.isSneaking) {
             if (!super.hasSkill(player)) return
+
+            LogWriter.LogWriter(player.name+" use 苦力怕\n")
 
             val distanceBetweenOpponent = player.location.distance(PvpPlaceManager.getOpponent(player)!!.location)
 
