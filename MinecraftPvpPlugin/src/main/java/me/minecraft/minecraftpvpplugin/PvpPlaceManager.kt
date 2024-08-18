@@ -69,7 +69,7 @@ object PvpPlaceManager {
     fun startGame(world: World) {
         val place = pvpPlaces[world]!!
         val playerSlots = place.playerSlots
-        LogWriter.LogWriter(playerSlots[0]?.player?.name+"fighting w/ "+playerSlots[1]?.player?.name+"\n")
+        LogWriter.log("${playerSlots[0]?.player?.name} fighting w/ ${playerSlots[1]?.player?.name}")
 
         object : Countdown(world.players, "The game will start in", "SEARCH FOR GADGETS!") {
             override fun onCountdown() {
@@ -110,7 +110,7 @@ object PvpPlaceManager {
             anotherPlayer?.let { MinecraftPvpPlugin.onPlayerToLobby(it) }
 
             if (reason == "kill") {
-                LogWriter.LogWriter("${player.name} was killed by ${anotherPlayer?.name}.\n")
+                LogWriter.log("${player.name} was killed by ${anotherPlayer?.name}.")
 
                 if (anotherPlayer != null) {
                     DataManager.addInt(anotherPlayer, "kill", 1)
@@ -123,7 +123,7 @@ object PvpPlaceManager {
             }
 
             else {
-                LogWriter.LogWriter("${player.name} leave the game.\n")
+                LogWriter.log("${player.name} left the game.")
             }
 
             playerSlots[0] = null

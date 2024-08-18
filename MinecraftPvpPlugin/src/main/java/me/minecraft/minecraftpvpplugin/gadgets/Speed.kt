@@ -13,12 +13,13 @@ object Speed : Gadget(Material.LEATHER_BOOTS, "風行之靴", lore = listOf(
 ), duration = 10.0) {
     override fun onActivate(event: PlayerInteractEvent) {
         val player = event.player
-        LogWriter.LogWriter(player.name+" use 風行之靴\n")
+        LogWriter.log("${player.name} use 風行之靴")
         player.addPotionEffect(Effects.speed)
     }
 
     override fun onDeactivate(event: PlayerInteractEvent) {
         val player = event.player
+        LogWriter.log("${player.name} 風行之靴 disabled")
         player.removePotionEffect(Effects.speed.type)
     }
 }

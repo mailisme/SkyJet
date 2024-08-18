@@ -13,12 +13,13 @@ object Damage : Gadget(Material.LAPIS_ORE, "劍魂之石", lore = listOf(
 ), duration = 10.0) {
     override fun onActivate(event: PlayerInteractEvent) {
         val player = event.player
-        LogWriter.LogWriter(player.name+" use 劍魂之石\n")
+        LogWriter.log("${player.name} use 劍魂之石")
         player.addPotionEffect(Effects.damage)
     }
 
     override fun onDeactivate(event: PlayerInteractEvent) {
         val player = event.player
+        LogWriter.log("${player.name} 劍魂之石 disabled")
         player.removePotionEffect(Effects.damage.type)
     }
 }

@@ -6,7 +6,6 @@ import org.bukkit.ChatColor
 import org.bukkit.Material
 import org.bukkit.event.EventHandler
 import org.bukkit.event.player.PlayerInteractEvent
-import kotlin.random.Random
 
 object InstantHeal : Skill(Material.EMERALD, "瞬間治癒", coolDownSeconds = 5.0, lore = listOf(
     "${ChatColor.YELLOW}恢復玩家所缺少血量的50%",
@@ -19,7 +18,9 @@ object InstantHeal : Skill(Material.EMERALD, "瞬間治癒", coolDownSeconds = 5
         if (!super.isClickEventClickingItself(event)) return
         if (!super.isTriggerActivateSuccessful(player)) return
 
-        LogWriter.LogWriter(player.name+" use 瞬間治癒\n")
+        val prevHealth = player.health
         player.health += (20 - player.health) * 0.5;
+
+        LogWriter.log("${player.name} $prevHealth use 瞬間治癒成 ${player.health}")
     }
 }

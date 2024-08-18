@@ -16,13 +16,15 @@ object Rebound : Gadget(Material.WOOD_DOOR, "反射之盾", duration = 10.0, lor
     @EventHandler
     fun entityDamageByEntityEvent(event: EntityDamageByEntityEvent) {
         if (event.damager is Player) {
-            val player = event.damager as Player
-            LogWriter.LogWriter(player.name+" use 反射之盾\n")
+            val damager = event.damager as Player
+            val damaged = event.entity as Player
 
-            if (isActivating(event.entity as Player)) {
-                val health = player.health.toInt()
+            LogWriter.log("${damaged.name} use 反射之盾 against ${damager.name}")
+
+            if (isActivating(damaged)) {
+                val health = damager.health.toInt()
                 val hurt = event.finalDamage.toInt()
-                player.health = health - hurt.toDouble() / 2
+                damager.health = health - hurt.toDouble() / 2
             }
         }
     }

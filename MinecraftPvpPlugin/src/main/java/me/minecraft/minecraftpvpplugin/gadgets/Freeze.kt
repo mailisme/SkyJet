@@ -1,5 +1,6 @@
 package me.minecraft.minecraftpvpplugin.gadgets
 
+import me.minecraft.minecraftpvpplugin.LogWriter
 import me.minecraft.minecraftpvpplugin.ThrowableGadget
 import me.minecraft.minecraftpvpplugin.helpers.RunAfter
 import org.bukkit.ChatColor
@@ -17,6 +18,8 @@ object Freeze : ThrowableGadget(Material.SNOW_BALL, "冷陸氣團", lore = listO
 )) {
     public override fun onHitObject(event: ProjectileHitEvent) {
         val locationMaterialMap: MutableMap<Location, MatWithData> = HashMap()
+
+        LogWriter.log("use 冷陸氣團 hit")
 
         val iceCenter = event.entity.location
         val projectileVelocity = event.entity.velocity

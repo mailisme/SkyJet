@@ -30,7 +30,7 @@ object Creeper : Skill(Material.MONSTER_EGG, "苦力怕", coolDownSeconds = 60.0
         if (event.isSneaking) {
             if (!super.hasSkill(player)) return
 
-            LogWriter.LogWriter(player.name+" use 苦力怕\n")
+            LogWriter.log("${player.name} use 苦力怕")
 
             val distanceBetweenOpponent = player.location.distance(PvpPlaceManager.getOpponent(player)!!.location)
 
@@ -65,6 +65,7 @@ object Creeper : Skill(Material.MONSTER_EGG, "苦力怕", coolDownSeconds = 60.0
 
     private fun explode(player: Player) {
         if (!super.isTriggerDeactivateSuccessful(player)) return
+        LogWriter.log("${player.name} use 苦力怕 爆")
 
         player.removePotionEffect(Effects.invisible.type)
         player.inventory.helmet = Items.ironHelmet

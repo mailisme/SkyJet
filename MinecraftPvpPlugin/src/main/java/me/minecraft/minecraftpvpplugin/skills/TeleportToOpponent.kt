@@ -25,7 +25,7 @@ object TeleportToOpponent :
         if (!super.isClickEventClickingItself(event)) return
         if (!super.isTriggerActivateSuccessful(player)) return
 
-        LogWriter.LogWriter(player.name+" use 閃電突襲\n")
+        LogWriter.log("${player.name} use 閃電突襲")
 
         val opponentLocation = PvpPlaceManager.getOpponent(player)!!.location
 
@@ -45,7 +45,5 @@ object TeleportToOpponent :
         )
 
         player.teleport(targetLocation)
-
-
     }
 }

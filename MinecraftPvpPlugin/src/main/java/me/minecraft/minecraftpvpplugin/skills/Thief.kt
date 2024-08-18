@@ -20,14 +20,11 @@ object Thief : Skill(Material.RAW_FISH, "扒手", coolDownSeconds = 10.0, lore =
         if (!super.isClickEventClickingItself(event)) return
         if (!super.isTriggerActivateSuccessful(player)) return
 
-        LogWriter.LogWriter(player.name+" use 扒手\n")
-
         val opponent = PvpPlaceManager.getOpponent(player) ?: return
 
         if (player.location.distance(opponent.location) < 5) {
             var gadgets = opponent.inventory.filterNotNull()
             gadgets = gadgets.filter {
-
                 it.type == Gadgets.anchor.material ||
                 it.type == Gadgets.damage.material ||
                 it.type == Gadgets.freeze.material ||
@@ -40,6 +37,9 @@ object Thief : Skill(Material.RAW_FISH, "扒手", coolDownSeconds = 10.0, lore =
             if (gadgets.isEmpty()) return
 
             val gadget = gadgets.random()
+
+            LogWriter.log("${player.name} use 扒手 to get $gadget")
+
             player.world.dropItem(opponent.location.add(player.location.direction.multiply(1.2)), gadget)
             opponent.inventory.remove(gadget)
         }

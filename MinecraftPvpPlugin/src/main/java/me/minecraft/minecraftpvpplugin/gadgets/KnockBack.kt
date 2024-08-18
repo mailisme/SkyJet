@@ -14,7 +14,7 @@ object KnockBack : Gadget(material = Material.FIREBALL, "地球之心", lore = l
     override fun onActivate(event: PlayerInteractEvent) {
         val player = event.player as Player
         val nearByEntities = player.getNearbyEntities(6.0, 6.0, 6.0)
-        LogWriter.LogWriter(player.name+" use 地球之心\n")
+        LogWriter.log("${player.name} use 地球之心")
 
         for (entity in nearByEntities) {
             val entityPos = entity.location.toVector()

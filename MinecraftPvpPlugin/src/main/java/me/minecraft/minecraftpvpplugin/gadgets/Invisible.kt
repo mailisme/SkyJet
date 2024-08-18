@@ -14,7 +14,7 @@ object Invisible : Gadget(Material.STAINED_GLASS_PANE, "虛影斗篷", lore = li
 ), duration = 5.0) {
     override fun onActivate(event: PlayerInteractEvent) {
         val player = event.player
-        LogWriter.LogWriter(player.name+" use 虛影斗篷\n")
+        LogWriter.log("${player.name} use 虛影斗篷")
         player.addPotionEffect(Effects.invisible)
         player.inventory.helmet = null
         player.inventory.chestplate = null
@@ -24,6 +24,7 @@ object Invisible : Gadget(Material.STAINED_GLASS_PANE, "虛影斗篷", lore = li
 
     override fun onDeactivate(event: PlayerInteractEvent) {
         val player = event.player
+        LogWriter.log("${player.name} 虛影斗篷 disabled")
         player.removePotionEffect(Effects.invisible.type)
         player.inventory.helmet = Items.ironHelmet
         player.inventory.chestplate = Items.ironChestplate

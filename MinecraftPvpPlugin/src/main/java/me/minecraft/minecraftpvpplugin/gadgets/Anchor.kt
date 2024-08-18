@@ -13,12 +13,14 @@ object Anchor : Gadget(Material.ANVIL, "時空之錨", lore = listOf(
 ), switchLike = true) {
     override fun onActivate(event: PlayerInteractEvent) {
         val player = event.player
-        LogWriter.LogWriter(player.name+" use 時空之錨\n")
+        LogWriter.log("${player.name} use 時空之錨 at ${player.location}")
         addPlayerData(player, "anviledLocation", player.location)
     }
 
     override fun onDeactivate(event: PlayerInteractEvent) {
         val player = event.player
-        player.teleport(getPlayerData(player, "anviledLocation") as Location?)
+        val targetLocation = getPlayerData(player, "anviledLocation") as Location?
+        LogWriter.log("${player.name} use 時空之錨 from ${player.location} to $targetLocation \n")
+        player.teleport(targetLocation)
     }
 }
