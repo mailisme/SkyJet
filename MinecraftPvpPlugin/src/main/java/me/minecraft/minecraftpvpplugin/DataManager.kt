@@ -16,8 +16,11 @@ object DataManager {
         val file = File("Skyjet/custom_data/player.json")
 
         if (file.exists()) {
-            val reader = FileReader(file)
-            playerUUIDDataMap = JSONObject(reader.readText()).toMap() as HashMap<String, HashMap<String, String>>
+            val text = FileReader(file).readText()
+
+            if (text != "") {
+                playerUUIDDataMap = JSONObject(text).toMap() as HashMap<String, HashMap<String, String>>
+            }
         }
     }
 

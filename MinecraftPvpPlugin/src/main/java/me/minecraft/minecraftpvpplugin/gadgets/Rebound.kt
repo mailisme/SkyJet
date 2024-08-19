@@ -1,8 +1,10 @@
 package me.minecraft.minecraftpvpplugin.gadgets
 
+import me.minecraft.minecraftpvpplugin.CustomEffect
 import me.minecraft.minecraftpvpplugin.Gadget
 import me.minecraft.minecraftpvpplugin.LogWriter
 import org.bukkit.ChatColor
+import org.bukkit.Effect
 import org.bukkit.Material
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
@@ -19,9 +21,9 @@ object Rebound : Gadget(Material.WOOD_DOOR, "反射之盾", duration = 10.0, lor
             val damager = event.damager as Player
             val damaged = event.entity as Player
 
-            LogWriter.log("${damaged.name} use 反射之盾 against ${damager.name}")
-
             if (isActivating(damaged)) {
+                LogWriter.log("${damaged.name} use 反射之盾 against ${damager.name}")
+
                 val health = damager.health.toInt()
                 val hurt = event.finalDamage.toInt()
                 damager.health = health - hurt.toDouble() / 2
