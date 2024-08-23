@@ -12,8 +12,9 @@ import org.bukkit.util.Vector
 object CustomEffect {
     fun playParticleInSphere(location: Location, effect: Effect, amount: Int, spawnRadius: Float, data: Any? = null, viewRadius: Int = Int.MAX_VALUE) {
         repeat(amount) {
-            location.world.playEffect(
-                location
+            val loc = location.clone()
+            loc.world.playEffect(
+                loc
                     .add(RandomPointInSphere.generate(spawnRadius))
                 , effect, data, viewRadius
             )
@@ -22,8 +23,9 @@ object CustomEffect {
 
     fun playParticleInSphere(player: Player, effect: Effect, amount: Int, spawnRadius: Float, data: Any? = null, viewRadius: Int = Int.MAX_VALUE) {
         repeat(amount) {
+            val loc = player.location.clone()
             player.world.playEffect(
-                player.location
+                loc
                     .add(0.0, 0.9, 0.0)
                     .add(RandomPointInSphere.generate(spawnRadius))
                 , effect, data, viewRadius
