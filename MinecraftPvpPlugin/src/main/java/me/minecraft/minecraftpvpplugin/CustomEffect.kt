@@ -34,11 +34,12 @@ object CustomEffect {
     }
     fun playParticleInSphereWithPackets(location: Location, particleType: EnumParticle, amount: Int, spawnRadius: Float, longDistance: Boolean = true, maxSpeed: Float = 0f) {
         repeat(amount) {
-            val spawn = location
+            val loc = location.clone()
+            val spawn = loc
                 .add(RandomPointInSphere.generate(spawnRadius))
             val particle = PacketPlayOutWorldParticles(particleType, longDistance, spawn.x.toFloat(), spawn.y.toFloat(), spawn.z.toFloat(), 0f, 0f, 0f, maxSpeed, 0, 0, 0)
 
-            for (playerInSameWorld in location.world.players) {
+            for (playerInSameWorld in loc.world.players) {
                 (playerInSameWorld as CraftPlayer).handle.playerConnection.sendPacket(particle)
             }
         }
@@ -46,7 +47,8 @@ object CustomEffect {
 
     fun playParticleInSphereWithPackets(player: Player, particleType: EnumParticle, amount: Int, spawnRadius: Float, longDistance: Boolean = true, maxSpeed: Float = 0f) {
         repeat(amount) {
-            val spawn = player.location
+            val loc = player.location.clone()
+            val spawn = loc
                 .add(0.0, 0.9, 0.0)
                 .add(RandomPointInSphere.generate(spawnRadius))
             val particle = PacketPlayOutWorldParticles(particleType, longDistance, spawn.x.toFloat(), spawn.y.toFloat(), spawn.z.toFloat(), 0f, 0f, 0f, maxSpeed, 0, 0, 0)

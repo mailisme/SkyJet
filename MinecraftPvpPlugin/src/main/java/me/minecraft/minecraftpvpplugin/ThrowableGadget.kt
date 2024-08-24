@@ -15,8 +15,8 @@ import org.bukkit.inventory.ItemStack
 abstract class ThrowableGadget(var material: Material, name: String, lore: List<String> = listOf()) : ItemStack(), Listener {
     private var projectileType: EntityType? = null
 
-    protected fun onThrow(event: ProjectileLaunchEvent) {}
-    protected fun onHitEntity(event: EntityDamageByEntityEvent) {}
+    protected open fun onThrow(event: ProjectileLaunchEvent) {}
+    protected open fun onHitEntity(event: EntityDamageByEntityEvent) {}
     protected open fun onHitObject(event: ProjectileHitEvent) {}
 
 

@@ -17,13 +17,11 @@ object Anchor : Gadget(Material.ANVIL, "時空之錨", lore = listOf(
     "${ChatColor.GRAY}傳送僅能使用一次"
 ), switchLike = true) {
     override fun onActivate(event: PlayerInteractEvent) {
-        println("onActivate")
         val player = event.player
         LogWriter.log("${player.name} use 時空之錨 at ${player.location}")
         addPlayerData(player, "anviledLocation", player.location)
         val a = RunEvery(1.0){
             CustomEffect.playParticleInSphere(getPlayerData(player, "anviledLocation") as Location, Effect.ENDER_SIGNAL, 50, 0.8f, viewRadius = 10)
-            println(getPlayerData(player, "anviledLocation"))
         }
         addPlayerData(player, "anchor stuff", a)
     }

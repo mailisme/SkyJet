@@ -1,10 +1,15 @@
 package me.minecraft.minecraftpvpplugin.gadgets
 
+import me.minecraft.minecraftpvpplugin.CustomEffect
 import me.minecraft.minecraftpvpplugin.Gadget
 import me.minecraft.minecraftpvpplugin.LogWriter
+import me.minecraft.minecraftpvpplugin.helpers.RunEvery
 import me.minecraft.minecraftpvpplugin.refs.Effects
+import net.minecraft.server.v1_8_R3.EnumParticle
 import org.bukkit.ChatColor
+import org.bukkit.Effect
 import org.bukkit.Material
+import org.bukkit.event.player.PlayerChangedWorldEvent
 import org.bukkit.event.player.PlayerInteractEvent
 
 object Damage : Gadget(Material.LAPIS_ORE, "劍魂之石", lore = listOf(
@@ -15,11 +20,22 @@ object Damage : Gadget(Material.LAPIS_ORE, "劍魂之石", lore = listOf(
         val player = event.player
         LogWriter.log("${player.name} use 劍魂之石")
         player.addPotionEffect(Effects.damage)
+        val a = RunEvery(0.1){
+            CustomEffect.playParticleInSphereWithPackets(player, EnumParticle.FLAME, 10, 0.8F,true, 1.0f)
+        }
+        addPlayerData(player, "damage", a)
     }
 
     override fun onDeactivate(event: PlayerInteractEvent) {
         val player = event.player
         LogWriter.log("${player.name} 劍魂之石 disabled")
         player.removePotionEffect(Effects.damage.type)
+        (getPlayerData(player, "damage") as RunEvery).cancel()
+    }
+    override fun onGameEnd(event: PlayerChangedWorldEvent) {
+        val player = event.player
+        if(isActivating(player)) {
+            (getPlayerData(player, "damage") as RunEvery).cancel()
+        }
     }
 }
