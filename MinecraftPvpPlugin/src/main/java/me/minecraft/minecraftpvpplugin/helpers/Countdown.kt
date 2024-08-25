@@ -10,7 +10,7 @@ open class Countdown(
 ) {
     private var leftSeconds = 3
 
-    private var counter = RunEvery(1.0) {
+    private var counter = RunEveryFor(1.0) {
         for (player in players) player.sendTitle(countdownMessage, leftSeconds.toString())
         onCountdown()
 
