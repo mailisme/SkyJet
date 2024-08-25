@@ -1,9 +1,12 @@
 package me.minecraft.minecraftpvpplugin.skills
 
-import me.minecraft.minecraftpvpplugin.LogWriter
-import me.minecraft.minecraftpvpplugin.PvpPlaceManager
-import me.minecraft.minecraftpvpplugin.Skill
+import me.minecraft.minecraftpvpplugin.*
+import me.minecraft.minecraftpvpplugin.helpers.Countdown
+import me.minecraft.minecraftpvpplugin.helpers.RunAfter
+import me.minecraft.minecraftpvpplugin.helpers.RunEvery
 import org.bukkit.ChatColor
+import org.bukkit.Effect
+import org.bukkit.Location
 import org.bukkit.Material
 import org.bukkit.event.EventHandler
 import org.bukkit.event.player.PlayerInteractEvent
@@ -20,6 +23,7 @@ object TeleportToOpponent :
     @EventHandler
     fun handleClick(event: PlayerInteractEvent) {
         val player = event.player
+        val playerName = player.name
 
 
         if (!super.isClickEventClickingItself(event)) return
@@ -27,23 +31,34 @@ object TeleportToOpponent :
 
         LogWriter.log("${player.name} use 閃電突襲")
 
-        val opponentLocation = PvpPlaceManager.getOpponent(player)!!.location
+        val opponent = PvpPlaceManager.getOpponent(player)
+        val opponentLocation = opponent!!.location
 
-        val targetLocation = opponentLocation
-            .subtract(
-                player.location.direction
-                    .multiply(Vector(1, 0, 1))
-                    .normalize()
-                    .multiply(2)
-            )
+        object : Countdown(listOf(player), "Teleport in ", "Here u go") {
+            override fun onCountdown() {
+                CustomEffect.playParticleInSphere(player, Effect.PORTAL, 1000, 0.8f)
+            }
 
-        targetLocation.setDirection(
-            opponentLocation
-                .toVector()
-                .subtract(player.location.toVector())
-                .normalize()
-        )
+            override fun onCountdownEnd() {
+                val targetLocation = opponentLocation
+                    .subtract(
+                        player.location.direction
+                            .multiply(Vector(1, 0, 1))
+                            .normalize()
+                            .multiply(2)
+                    )
 
-        player.teleport(targetLocation)
+                targetLocation.setDirection(
+                    opponentLocation
+                        .toVector()
+                        .subtract(player.location.toVector())
+                        .normalize()
+                )
+
+                player.teleport(targetLocation)
+            }
+        }
+
+        object : Countdown(listOf(opponent), "$playerName is teleporting to u in ", "") {}
     }
 }
