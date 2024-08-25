@@ -222,7 +222,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             player.inventory.setItem(0, Items.ironSword)
             player.inventory.setItem(1, Items.fishingRod)
             player.inventory.setItem(2, skillItem)
-//            player.inventory.setItem(3, Gadgets.speed)
+            player.inventory.setItem(3, Gadgets.knockBack)
             player.inventory.setItem(7, Items.steak)
             player.inventory.setItem(8, Items.gapple)
             player.health = 20.0

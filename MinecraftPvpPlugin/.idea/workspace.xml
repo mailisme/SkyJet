@@ -6,16 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="17758a80-0c85-4e1c-9ee7-0bf4385df7a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Anchor.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Speed.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/Speed.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/refs/Gadgets.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/refs/Gadgets.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/skills/TeleportToOpponent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/skills/TeleportToOpponent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/MinecraftPvpPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/MinecraftPvpPlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/KnockBack.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/minecraft/minecraftpvpplugin/gadgets/KnockBack.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/gadgets/Speed.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/gadgets/Speed.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/skills/TeleportToOpponent$handleClick$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/skills/TeleportToOpponent$handleClick$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/skills/TeleportToOpponent$handleClick$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/skills/TeleportToOpponent$handleClick$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/skills/TeleportToOpponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/minecraft/minecraftpvpplugin/skills/TeleportToOpponent.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/data/idcounts.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/data/idcounts.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MinecraftServer/Lobby/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../MinecraftServer/Lobby/data/villages.dat" afterDir="false" />
