@@ -7,7 +7,6 @@ object Gadgets {
     val damage = Damage
     val speed = Speed
     val rebound = Rebound
-    val anchor = Anchor
     val freeze = Freeze
     val knockBack = KnockBack
 }

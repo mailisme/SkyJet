@@ -8,6 +8,7 @@ import org.bukkit.ChatColor
 import org.bukkit.Effect
 import org.bukkit.Location
 import org.bukkit.Material
+import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.util.Vector
@@ -32,7 +33,6 @@ object TeleportToOpponent :
         LogWriter.log("${player.name} use 閃電突襲")
 
         val opponent = PvpPlaceManager.getOpponent(player)
-        val opponentLocation = opponent!!.location
 
         object : Countdown(listOf(player), "Teleport in ", "Here u go") {
             override fun onCountdown() {
@@ -40,7 +40,7 @@ object TeleportToOpponent :
             }
 
             override fun onCountdownEnd() {
-                val targetLocation = opponentLocation
+                val targetLocation = opponent!!.location
                     .subtract(
                         player.location.direction
                             .multiply(Vector(1, 0, 1))
@@ -49,7 +49,7 @@ object TeleportToOpponent :
                     )
 
                 targetLocation.setDirection(
-                    opponentLocation
+                    opponent.location
                         .toVector()
                         .subtract(player.location.toVector())
                         .normalize()
@@ -59,6 +59,6 @@ object TeleportToOpponent :
             }
         }
 
-        object : Countdown(listOf(opponent), "$playerName is teleporting to u in ", "") {}
+        object : Countdown(listOf(opponent) as List<Player>, "$playerName is teleporting to u in ", "") {}
     }
 }

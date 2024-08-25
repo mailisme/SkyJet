@@ -9,6 +9,7 @@ import org.bukkit.ChatColor
 import org.bukkit.Effect
 import org.bukkit.Material
 import org.bukkit.entity.Player
+import org.bukkit.event.player.PlayerChangedWorldEvent
 import org.bukkit.event.player.PlayerInteractEvent
 
 object Speed : Gadget(Material.LEATHER_BOOTS, "風行之靴", lore = listOf(
@@ -33,5 +34,11 @@ object Speed : Gadget(Material.LEATHER_BOOTS, "風行之靴", lore = listOf(
         LogWriter.log("${player.name} 風行之靴 disabled")
         player.removePotionEffect(Effects.speed.type)
         map[player]?.cancel()
+    }
+    override fun onGameEnd(event: PlayerChangedWorldEvent) {
+        val player = event.player
+        if(isActivating(player)) {
+            map[player]?.cancel()
+        }
     }
 }

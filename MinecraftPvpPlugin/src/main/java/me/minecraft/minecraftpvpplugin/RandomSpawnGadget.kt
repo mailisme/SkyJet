@@ -15,7 +15,6 @@ class RandomSpawnGadget(private val world: World) {
     private val randomSpawnLocationChooser = WeightedRandomChooser<Vector>().addChoices(Locations.pvpGadgetSpawnPoints)
 
     private val randomGadgetChooser = WeightedRandomChooser<ItemStack>()
-        .addChoice(Gadgets.anchor)
         .addChoice(Gadgets.damage)
         .addChoice(Gadgets.freeze)
         .addChoice(Gadgets.invisible)

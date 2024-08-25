@@ -25,7 +25,6 @@ object Thief : Skill(Material.RAW_FISH, "扒手", coolDownSeconds = 10.0, lore =
         if (player.location.distance(opponent.location) < 5) {
             var gadgets = opponent.inventory.filterNotNull()
             gadgets = gadgets.filter {
-                it.type == Gadgets.anchor.material ||
                 it.type == Gadgets.damage.material ||
                 it.type == Gadgets.freeze.material ||
                 it.type == Gadgets.speed.material ||
