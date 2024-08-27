@@ -31,9 +31,9 @@ object TeleportToOpponent :
 
         val opponent = PvpPlaceManager.getOpponent(player)
 
-        object : Countdown(listOf(player), "Teleport in ", "Here u go") {
+        object : Countdown(listOf(player), "Teleport in", "Here u go") {
             override fun onCountdown() {
-                CustomEffect.playParticleInSphere(player, Effect.PORTAL, 1000, 0.8f)
+                CustomEffect.playParticle(player, Effect.PORTAL, 1000, EffectShape.InGaussian, 0.5f)
             }
 
             override fun onCountdownEnd() {
@@ -56,6 +56,6 @@ object TeleportToOpponent :
             }
         }
 
-        object : Countdown(listOf(opponent) as List<Player>, "$playerName is teleporting to u in ", "") {}
+        object : Countdown(listOf(opponent) as List<Player>, "$playerName is teleporting to u in", "") {}
     }
 }

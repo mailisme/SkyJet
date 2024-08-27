@@ -1,9 +1,6 @@
 package me.minecraft.minecraftpvpplugin.skills
 
-import me.minecraft.minecraftpvpplugin.CustomEffect
-import me.minecraft.minecraftpvpplugin.LogWriter
-import me.minecraft.minecraftpvpplugin.PvpPlaceManager
-import me.minecraft.minecraftpvpplugin.Skill
+import me.minecraft.minecraftpvpplugin.*
 import me.minecraft.minecraftpvpplugin.refs.Gadgets
 import net.minecraft.server.v1_8_R3.EnumParticle
 import org.bukkit.ChatColor
@@ -42,8 +39,8 @@ object Thief : Skill(Material.RAW_FISH, "扒手", coolDownSeconds = 10.0, lore =
 
             LogWriter.log("${player.name} use 扒手 to get $gadget")
 
-            CustomEffect.playParticleInSphere(player.location.clone().add(0.0, 2.2, 0.0), Effect.NOTE, 3, 0.4f)
-            CustomEffect.playParticleInSphereWithPackets(opponent.location, EnumParticle.SUSPENDED_DEPTH, 500, 0.8f, true)
+            CustomEffect.playParticle(player.location.clone().add(0.0, 2.2, 0.0), Effect.NOTE, 3, EffectShape.InGaussian, 0.4f)
+            CustomEffect.playParticleWithPackets(opponent.location, EnumParticle.SUSPENDED_DEPTH, 200, EffectShape.InGaussianDisk, 0.5f, true)
             player.world.dropItem(opponent.location.add(opponent.location.direction.multiply(1.2)), gadget)
             opponent.inventory.remove(gadget)
         }

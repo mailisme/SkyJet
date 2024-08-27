@@ -1,6 +1,7 @@
 package me.minecraft.minecraftpvpplugin.gadgets
 
 import me.minecraft.minecraftpvpplugin.CustomEffect
+import me.minecraft.minecraftpvpplugin.EffectShape
 import me.minecraft.minecraftpvpplugin.LogWriter
 import me.minecraft.minecraftpvpplugin.ThrowableGadget
 import me.minecraft.minecraftpvpplugin.helpers.RunAfter
@@ -22,7 +23,7 @@ object Freeze : ThrowableGadget(Material.SNOW_BALL, "冷陸氣團", lore = listO
     "${ChatColor.GRAY}持續時間：2秒"
 )) {
 
-    val map = hashMapOf<Entity, RunEveryFor>()
+    private val snowballParticleTimerMap = hashMapOf<Entity, RunEveryFor>()
 
     public override fun onHitObject(event: ProjectileHitEvent) {
         val locationMaterialMap: MutableMap<Location, MatWithData> = HashMap()
@@ -52,7 +53,7 @@ object Freeze : ThrowableGadget(Material.SNOW_BALL, "冷陸氣團", lore = listO
             }
         }
 
-        (map[event.entity] as RunEveryFor).cancel()
+        (snowballParticleTimerMap[event.entity] as RunEveryFor).cancel()
 
         RunAfter(2.0) {
             for ((location, matWithData) in locationMaterialMap) {
@@ -68,8 +69,8 @@ object Freeze : ThrowableGadget(Material.SNOW_BALL, "冷陸氣團", lore = listO
 
     public override fun onThrow(event: ProjectileLaunchEvent) {
         val item = event.entity
-        map[item] = RunEveryFor(0.1){
-            CustomEffect.playParticleInSphere(item.location, Effect.SNOW_SHOVEL, 50, 0.8f, viewRadius = 10000)
+        snowballParticleTimerMap[item] = RunEveryFor(0.1){
+            CustomEffect.playParticle(item.location, Effect.SNOW_SHOVEL, 50, EffectShape.InBall, 0.8f)
         }
     }
 }

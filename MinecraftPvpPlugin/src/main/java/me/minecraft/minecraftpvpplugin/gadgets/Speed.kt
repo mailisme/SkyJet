@@ -1,6 +1,7 @@
 package me.minecraft.minecraftpvpplugin.gadgets
 
 import me.minecraft.minecraftpvpplugin.CustomEffect
+import me.minecraft.minecraftpvpplugin.EffectShape
 import me.minecraft.minecraftpvpplugin.Gadget
 import me.minecraft.minecraftpvpplugin.LogWriter
 import me.minecraft.minecraftpvpplugin.helpers.RunEveryFor
@@ -17,15 +18,15 @@ object Speed : Gadget(Material.LEATHER_BOOTS, "風行之靴", lore = listOf(
     "${ChatColor.GRAY}持續時間：10秒"
 ), duration = 10.0) {
 
-    val map = hashMapOf<Player, RunEveryFor>()
+    private val playerParticleTimerMap = hashMapOf<Player, RunEveryFor>()
 
     override fun onActivate(event: PlayerInteractEvent) {
         val player = event.player
         LogWriter.log("${player.name} use 風行之靴")
         player.addPotionEffect(Effects.speed)
-        map[player] = RunEveryFor(0.1){
+        playerParticleTimerMap[player] = RunEveryFor(0.1) {
             val loc = player.location.clone().add(0.0, -0.5, 0.0)
-            CustomEffect.playParticleInSphere(loc, Effect.LAVA_POP, 10, 0.8f)
+            CustomEffect.playParticle(loc, Effect.LAVA_POP, 10, EffectShape.InBall, 0.8f)
         }
     }
 
@@ -33,12 +34,12 @@ object Speed : Gadget(Material.LEATHER_BOOTS, "風行之靴", lore = listOf(
         val player = event.player
         LogWriter.log("${player.name} 風行之靴 disabled")
         player.removePotionEffect(Effects.speed.type)
-        map[player]?.cancel()
+        playerParticleTimerMap[player]?.cancel()
     }
     override fun onGameEnd(event: PlayerChangedWorldEvent) {
         val player = event.player
         if(isActivating(player)) {
-            map[player]?.cancel()
+            playerParticleTimerMap[player]?.cancel()
         }
     }
 }

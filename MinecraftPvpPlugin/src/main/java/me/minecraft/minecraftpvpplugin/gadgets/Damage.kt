@@ -1,6 +1,7 @@
 package me.minecraft.minecraftpvpplugin.gadgets
 
 import me.minecraft.minecraftpvpplugin.CustomEffect
+import me.minecraft.minecraftpvpplugin.EffectShape
 import me.minecraft.minecraftpvpplugin.Gadget
 import me.minecraft.minecraftpvpplugin.LogWriter
 import me.minecraft.minecraftpvpplugin.helpers.RunEveryFor
@@ -19,10 +20,10 @@ object Damage : Gadget(Material.LAPIS_ORE, "劍魂之石", lore = listOf(
         val player = event.player
         LogWriter.log("${player.name} use 劍魂之石")
         player.addPotionEffect(Effects.damage)
-        val a = RunEveryFor(0.1){
-            CustomEffect.playParticleInSphereWithPackets(player, EnumParticle.FLAME, 10, 0.8F,true, 1.0f)
+        val particleTimer = RunEveryFor(0.1){
+            CustomEffect.playParticleWithPackets(player, EnumParticle.FLAME, 10, EffectShape.InGaussian, 0.5f,true, 1.0f)
         }
-        addPlayerData(player, "damage", a)
+        addPlayerData(player, "damage", particleTimer)
     }
 
     override fun onDeactivate(event: PlayerInteractEvent) {

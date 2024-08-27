@@ -1,6 +1,7 @@
 package me.minecraft.minecraftpvpplugin.gadgets
 
 import me.minecraft.minecraftpvpplugin.CustomEffect
+import me.minecraft.minecraftpvpplugin.EffectShape
 import me.minecraft.minecraftpvpplugin.Gadget
 import me.minecraft.minecraftpvpplugin.LogWriter
 import me.minecraft.minecraftpvpplugin.helpers.RunEveryFor
@@ -21,7 +22,7 @@ object KnockBack : Gadget(material = Material.FIREBALL, "地球之心", lore = l
         LogWriter.log("${player.name} use 地球之心")
 
         RunEveryFor(0.05, times = 5) {
-            CustomEffect.playParticleInSphereWithPackets(player, EnumParticle.DRIP_LAVA, 500, it, true, 1f)
+            CustomEffect.playParticleWithPackets(player.location.clone().add(0.0, 0.7, 0.0), EnumParticle.DRIP_LAVA, 200, EffectShape.OnCircle, it,true, 1f)
         }
 
         for (entity in nearByEntities) {
