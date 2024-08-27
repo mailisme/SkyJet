@@ -10,7 +10,7 @@ import org.bukkit.entity.Player
 import org.bukkit.util.Vector
 
 object CustomEffect {
-    fun playParticleInSphere(location: Location, effect: Effect, amount: Int, spawnRadius: Float, data: Any? = null, viewRadius: Int = Int.MAX_VALUE) {
+    fun playParticleInSphere(location: Location, effect: Effect, amount: Int, spawnRadius: Float, data: Any? = null, viewRadius: Int = 10000) {
         repeat(amount) {
             val loc = location.clone()
             loc.world.playEffect(
@@ -21,7 +21,7 @@ object CustomEffect {
         }
     }
 
-    fun playParticleInSphere(player: Player, effect: Effect, amount: Int, spawnRadius: Float, data: Any? = null, viewRadius: Int = Int.MAX_VALUE) {
+    fun playParticleInSphere(player: Player, effect: Effect, amount: Int, spawnRadius: Float, data: Any? = null, viewRadius: Int = 10000) {
         repeat(amount) {
             val loc = player.location.clone()
             player.world.playEffect(
@@ -32,6 +32,7 @@ object CustomEffect {
             )
         }
     }
+
     fun playParticleInSphereWithPackets(location: Location, particleType: EnumParticle, amount: Int, spawnRadius: Float, longDistance: Boolean = true, maxSpeed: Float = 0f) {
         repeat(amount) {
             val loc = location.clone()

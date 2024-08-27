@@ -24,7 +24,7 @@ object Rebound : Gadget(Material.WOOD_DOOR, "反射之盾", duration = 10.0, lor
             if (isActivating(damaged)) {
                 LogWriter.log("${damaged.name} use 反射之盾 against ${damager.name}")
 
-                CustomEffect.playParticleInSphere(damaged, Effect.FIREWORKS_SPARK, 100, 0.8f, viewRadius = 10000)
+                CustomEffect.playParticleInSphere(damaged, Effect.FIREWORKS_SPARK, 100, 0.8f)
                 val health = damager.health.toInt()
                 val hurt = event.finalDamage.toInt()
                 damager.health = health - hurt.toDouble() / 2

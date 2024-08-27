@@ -4,6 +4,7 @@ import me.minecraft.minecraftpvpplugin.helpers.RunEveryFor
 import me.minecraft.minecraftpvpplugin.refs.*
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
+import org.bukkit.Effect
 import org.bukkit.GameMode
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
