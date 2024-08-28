@@ -4,7 +4,6 @@ import me.minecraft.minecraftpvpplugin.helpers.RunEveryFor
 import me.minecraft.minecraftpvpplugin.refs.*
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
-import org.bukkit.Effect
 import org.bukkit.GameMode
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
@@ -23,6 +22,7 @@ import org.bukkit.inventory.ItemStack
 import org.bukkit.plugin.java.JavaPlugin
 import org.bukkit.scoreboard.DisplaySlot
 import java.util.logging.Level
+import javax.xml.crypto.Data
 
 class MinecraftPvpPlugin : JavaPlugin(), Listener {
     override fun onEnable() {
@@ -58,7 +58,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
                         
                 ${ChatColor.GRAY}Welcome ${ChatColor.GOLD}{name}!
                 ${ChatColor.RED}Won {kill} times
-                ${ChatColor.AQUA}You are in Level ${ChatColor.RED   }{level}${'\n'}${'\n'}
+                ${ChatColor.AQUA}You are in Level ${ChatColor.RED}{level}${'\n'}${'\n'}
                             
                 ${ChatColor.WHITE}================
                 """.trimIndent()
@@ -66,7 +66,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             DisplaySlot.SIDEBAR
         )
 
-        customTag = CustomTag("${ChatColor.RED}Lv.{level} ${ChatColor.WHITE}{name}")
+        customTag = CustomTag("{shortenedName}${ChatColor.RED}Lv{level}")
 
         DataManager.load()
 
@@ -84,6 +84,29 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         if (command.name.equals("start", ignoreCase = true) && player.isOp) {
             PvpPlaceManager.startGame(player.world)
+        }
+
+        if (command.name.equals("data", ignoreCase = true) && player.isOp) {
+            if (args.size == 3 && args[0] == "get") {
+                sender.sendMessage(DataManager.get(Bukkit.getOfflinePlayer(args[1]).uniqueId, args[2]))
+            }
+
+            if (args.size == 4 && args[0] == "set") {
+                val offlinePlayer = Bukkit.getOfflinePlayer(args[1])
+                val onlinePlayer = Bukkit.getPlayer(args[1])
+
+                DataManager.set(offlinePlayer.uniqueId, args[2], args[3])
+
+                val shortenedLength = 16 - 2 - 2 - DataManager.get(offlinePlayer.uniqueId, "level").length
+                DataManager.set(offlinePlayer.uniqueId, "shortenedName", DataManager.get(offlinePlayer.uniqueId, "name").take(shortenedLength))
+
+                if (onlinePlayer != null) {
+                    mainScoreboard.renderScoreboard(onlinePlayer)
+                    customTag.updateTag(onlinePlayer)
+                }
+            }
+            else sender.sendMessage("usage: /data set <player> <field> <value>" +
+                                    "       /data get <player> <field>")
         }
 
         return true
@@ -134,9 +157,10 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         onPlayerToLobby(player)
 
-        if (!DataManager.hasData(player)) {
-            DataManager.initPlayer(player, hashMapOf("name" to player.name, "kill" to "0", "level" to "1"))
-        }
+        DataManager.initPlayer(player, hashMapOf("name" to player.name, "shortenedName" to "", "kill" to "0", "level" to "1"))
+
+        val shortenedLength = 16 - 2 - 2 - DataManager.get(player, "level").length
+        DataManager.set(player, "shortenedName", DataManager.get(player, "name").take(shortenedLength))
 
         mainScoreboard.renderScoreboard(player)
         customTag.updateTag(player)

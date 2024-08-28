@@ -62,9 +62,7 @@ class CustomTag(private val tagFormat: String) {
         formattedTag = ChatColor.translateAlternateColorCodes('&', formattedTag)
 
         // Truncate the tag down to 16 characters
-        if (formattedTag.length > 16) {
-            formattedTag = formattedTag.take(14) + ".."
-        }
+        formattedTag = formattedTag.take(16)
 
         playerUUIDTagMap[whoseTag.uniqueId] = formattedTag
 

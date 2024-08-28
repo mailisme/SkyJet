@@ -86,7 +86,6 @@ object DataManager {
         playerUUIDDataMap[playerUUID.toString()]!![fieldName] = value
     }
 
-
     fun addInt(player: Player, fieldName: String, amount: Int = 1) {
         set(player, fieldName, (get(player, fieldName).toInt() + amount).toString())
     }
@@ -94,10 +93,10 @@ object DataManager {
         set(playerUUID, fieldName, (get(playerUUID, fieldName).toInt() + amount).toString())
     }
 
-    fun hasData(player: Player): Boolean {
+    private fun hasData(player: Player): Boolean {
         return playerUUIDDataMap.containsKey(player.uniqueId.toString())
     }
-    fun hasData(playerUUID: UUID): Boolean {
+    private fun hasData(playerUUID: UUID): Boolean {
         return playerUUIDDataMap.containsKey(playerUUID.toString())
     }
 }
