@@ -1,6 +1,9 @@
 package me.minecraft.minecraftpvpplugin
 
+import me.minecraft.minecraftpvpplugin.display.CustomScoreboard
+import me.minecraft.minecraftpvpplugin.display.CustomTag
 import me.minecraft.minecraftpvpplugin.helpers.RunEveryFor
+import me.minecraft.minecraftpvpplugin.pvp_place.PvpPlaceManager
 import me.minecraft.minecraftpvpplugin.refs.*
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
@@ -22,7 +25,6 @@ import org.bukkit.inventory.ItemStack
 import org.bukkit.plugin.java.JavaPlugin
 import org.bukkit.scoreboard.DisplaySlot
 import java.util.logging.Level
-import javax.xml.crypto.Data
 
 class MinecraftPvpPlugin : JavaPlugin(), Listener {
     override fun onEnable() {
@@ -37,16 +39,6 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         Worlds.lobby.setGameRuleValue("doMobSpawning", "false")
         Worlds.lobby.setGameRuleValue("doDaylightCycle", "true")
         Worlds.lobby.setGameRuleValue("doWeatherCycle", "true")
-
-        Worlds.pvpWorlds.map {
-            it.pvp = true
-            it.setGameRuleValue("doMobSpawning", "false")
-            it.setGameRuleValue("doDaylightCycle", "false")
-            it.setGameRuleValue("doWeatherCycle", "false")
-            it.setGameRuleValue("mobGriefing", "false")
-            it.setGameRuleValue("fireTick", "false")
-            it.setGameRuleValue("commandBlockOutput", "false")
-        }
 
         instance = this
 
@@ -238,7 +230,6 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         lateinit var customTag: CustomTag
 
         fun onPlayerToLobby(player: Player) {
-            println("To Lobby " + player.name)
             player.teleport(Locations.lobbySpawn)
             player.inventory.clear()
             Items.swordItemMeta.displayName = "${ChatColor.AQUA}Join"

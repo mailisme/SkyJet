@@ -1,7 +1,11 @@
 package me.minecraft.minecraftpvpplugin.skills
 
 import me.minecraft.minecraftpvpplugin.*
+import me.minecraft.minecraftpvpplugin.effect.CustomEffect
+import me.minecraft.minecraftpvpplugin.effect.InGaussian
 import me.minecraft.minecraftpvpplugin.helpers.Countdown
+import me.minecraft.minecraftpvpplugin.helpers.LogWriter
+import me.minecraft.minecraftpvpplugin.pvp_place.PvpPlaceManager
 import org.bukkit.ChatColor
 import org.bukkit.Effect
 import org.bukkit.Material
@@ -33,7 +37,7 @@ object TeleportToOpponent :
 
         object : Countdown(listOf(player), "Teleport in", "Here u go") {
             override fun onCountdown() {
-                CustomEffect.playParticle(player, Effect.PORTAL, 1000, EffectShape.InGaussian, 0.5f)
+                CustomEffect.playParticle(player, Effect.PORTAL, InGaussian(1000, Vector(0.5, 0.5, 0.5)))
             }
 
             override fun onCountdownEnd() {

@@ -1,7 +1,7 @@
 package me.minecraft.minecraftpvpplugin.gadgets
 
 import me.minecraft.minecraftpvpplugin.Gadget
-import me.minecraft.minecraftpvpplugin.LogWriter
+import me.minecraft.minecraftpvpplugin.helpers.LogWriter
 import me.minecraft.minecraftpvpplugin.refs.Effects
 import me.minecraft.minecraftpvpplugin.refs.Items
 import org.bukkit.ChatColor

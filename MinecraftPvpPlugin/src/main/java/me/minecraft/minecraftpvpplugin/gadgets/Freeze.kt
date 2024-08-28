@@ -1,9 +1,9 @@
 package me.minecraft.minecraftpvpplugin.gadgets
 
-import me.minecraft.minecraftpvpplugin.CustomEffect
-import me.minecraft.minecraftpvpplugin.EffectShape
-import me.minecraft.minecraftpvpplugin.LogWriter
+import me.minecraft.minecraftpvpplugin.effect.CustomEffect
+import me.minecraft.minecraftpvpplugin.helpers.LogWriter
 import me.minecraft.minecraftpvpplugin.ThrowableGadget
+import me.minecraft.minecraftpvpplugin.effect.InBall
 import me.minecraft.minecraftpvpplugin.helpers.RunAfter
 import me.minecraft.minecraftpvpplugin.helpers.RunEveryFor
 import org.bukkit.ChatColor
@@ -70,7 +70,7 @@ object Freeze : ThrowableGadget(Material.SNOW_BALL, "冷陸氣團", lore = listO
     public override fun onThrow(event: ProjectileLaunchEvent) {
         val item = event.entity
         snowballParticleTimerMap[item] = RunEveryFor(0.1){
-            CustomEffect.playParticle(item.location, Effect.SNOW_SHOVEL, 50, EffectShape.InBall, 0.8f)
+            CustomEffect.playParticle(item.location, Effect.SNOW_SHOVEL, InBall(50, 0.8f))
         }
     }
 }

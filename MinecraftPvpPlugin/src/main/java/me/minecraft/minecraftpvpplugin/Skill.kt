@@ -1,5 +1,6 @@
 package me.minecraft.minecraftpvpplugin
 
+import me.minecraft.minecraftpvpplugin.pvp_place.PvpPlaceManager
 import me.minecraft.minecraftpvpplugin.refs.Worlds
 import org.bukkit.Bukkit
 import org.bukkit.Material
@@ -58,13 +59,10 @@ abstract class Skill(
         val currTimestamp = System.currentTimeMillis()
 
         if (coolDownFinishTimestampMap.containsKey(player)) {
-            print(coolDownFinishTimestampMap[player])
-
             if (currTimestamp <= coolDownFinishTimestampMap[player]!! &&
                 currTimestamp >= coolDownFinishTimestampMap[player]!! - (coolDownMilliSeconds - ignoreCoolDownMilliSeconds)
             ) {
                 val leftTime = coolDownFinishTimestampMap[player]!! - currTimestamp
-                print(leftTime)
                 player.sendMessage(String.format("再等 %.1f 秒", leftTime / 1000.0))
                 return false
             }

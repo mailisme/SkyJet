@@ -1,9 +1,9 @@
 package me.minecraft.minecraftpvpplugin.skills
 
-import me.minecraft.minecraftpvpplugin.CustomEffect
-import me.minecraft.minecraftpvpplugin.EffectShape
-import me.minecraft.minecraftpvpplugin.LogWriter
+import me.minecraft.minecraftpvpplugin.effect.CustomEffect
+import me.minecraft.minecraftpvpplugin.helpers.LogWriter
 import me.minecraft.minecraftpvpplugin.Skill
+import me.minecraft.minecraftpvpplugin.effect.InGaussian
 import me.minecraft.minecraftpvpplugin.refs.Effects
 import me.minecraft.minecraftpvpplugin.refs.Items
 import org.bukkit.ChatColor
@@ -14,6 +14,7 @@ import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.entity.EntityDamageEvent
 import org.bukkit.potion.PotionEffectType
+import org.bukkit.util.Vector
 
 
 object BestToRun : Skill(Material.BONE, "走為上策", lore = listOf(
@@ -75,7 +76,7 @@ object BestToRun : Skill(Material.BONE, "走為上策", lore = listOf(
         }
 
         if (currEffectLevel != prevEffectLevel) {
-            CustomEffect.playParticle(player, Effect.HAPPY_VILLAGER, 300, EffectShape.InGaussian, 0.5f)
+            CustomEffect.playParticle(player, Effect.HAPPY_VILLAGER, InGaussian(500, Vector(0.5f, 0.5f, 0.5f)))
         }
 
         LogWriter.log("${player.name} use 走為上策 health $healthAfterDamage")

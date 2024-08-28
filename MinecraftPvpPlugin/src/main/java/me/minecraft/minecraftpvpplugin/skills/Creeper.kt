@@ -1,7 +1,7 @@
 package me.minecraft.minecraftpvpplugin.skills
 
-import me.minecraft.minecraftpvpplugin.LogWriter
-import me.minecraft.minecraftpvpplugin.PvpPlaceManager
+import me.minecraft.minecraftpvpplugin.helpers.LogWriter
+import me.minecraft.minecraftpvpplugin.pvp_place.PvpPlaceManager
 import me.minecraft.minecraftpvpplugin.Skill
 import me.minecraft.minecraftpvpplugin.helpers.RunAfter
 import me.minecraft.minecraftpvpplugin.refs.Effects

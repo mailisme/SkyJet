@@ -1,9 +1,9 @@
 package me.minecraft.minecraftpvpplugin.gadgets
 
-import me.minecraft.minecraftpvpplugin.CustomEffect
-import me.minecraft.minecraftpvpplugin.EffectShape
+import me.minecraft.minecraftpvpplugin.effect.CustomEffect
 import me.minecraft.minecraftpvpplugin.Gadget
-import me.minecraft.minecraftpvpplugin.LogWriter
+import me.minecraft.minecraftpvpplugin.effect.InGaussian
+import me.minecraft.minecraftpvpplugin.helpers.LogWriter
 import me.minecraft.minecraftpvpplugin.helpers.RunEveryFor
 import me.minecraft.minecraftpvpplugin.refs.Effects
 import net.minecraft.server.v1_8_R3.EnumParticle
@@ -11,6 +11,7 @@ import org.bukkit.ChatColor
 import org.bukkit.Material
 import org.bukkit.event.player.PlayerChangedWorldEvent
 import org.bukkit.event.player.PlayerInteractEvent
+import org.bukkit.util.Vector
 
 object Damage : Gadget(Material.LAPIS_ORE, "劍魂之石", lore = listOf(
     "${ChatColor.YELLOW}賦予${ChatColor.AQUA}增加攻擊力Ⅰ",
@@ -21,7 +22,7 @@ object Damage : Gadget(Material.LAPIS_ORE, "劍魂之石", lore = listOf(
         LogWriter.log("${player.name} use 劍魂之石")
         player.addPotionEffect(Effects.damage)
         val particleTimer = RunEveryFor(0.1){
-            CustomEffect.playParticleWithPackets(player, EnumParticle.FLAME, 10, EffectShape.InGaussian, 0.5f,true, 1.0f)
+            CustomEffect.playParticleWithPackets(player, EnumParticle.FLAME, InGaussian(10, Vector(0.5, 0.5, 0.5)), true, 1.0f)
         }
         addPlayerData(player, "damage", particleTimer)
     }

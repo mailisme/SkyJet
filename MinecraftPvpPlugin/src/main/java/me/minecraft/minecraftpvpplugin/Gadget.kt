@@ -21,35 +21,35 @@ import org.bukkit.inventory.ItemStack
 abstract class Gadget(
     val material: Material,
     private val name: String,
-    private val lore: List<String> = listOf(),
-    private val duration: Double? = null,
-    private val switchLike: Boolean = false,
-) : ItemStack(), Listener {
+                      private val lore: List<String> = listOf(),
+                      private val duration: Double? = null,
+                      private val switchLike: Boolean = false,
+    ) : ItemStack(), Listener {
 
-    // Can be used to store information about individual players that is activating this gadget
-    private var playersActivatingData = mutableMapOf<Player, MutableMap<String, Any>>()
+        // Can be used to store information about individual players that is activating this gadget
+        private var playersActivatingData = mutableMapOf<Player, MutableMap<String, Any>>()
 
-    open fun onActivate(event: PlayerInteractEvent) {}
-    open fun onDeactivate(event: PlayerInteractEvent) {}
-    open fun onGameEnd(event: PlayerChangedWorldEvent) {}
+        open fun onActivate(event: PlayerInteractEvent) {}
+        open fun onDeactivate(event: PlayerInteractEvent) {}
+        open fun onGameEnd(event: PlayerChangedWorldEvent) {}
 
-    init {
-        this.type = material
-        this.amount = 1
+        init {
+            this.type = material
+            this.amount = 1
 
-        val meta = this.itemMeta
-        meta.displayName = name
-        meta.lore = lore
-        this.setItemMeta(meta)
+            val meta = this.itemMeta
+            meta.displayName = name
+            meta.lore = lore
+            this.setItemMeta(meta)
 
-        if (!switchLike && duration == null) {
-            throw IllegalArgumentException("Duration must be specified if switchLike = false")
+            if (!switchLike && duration == null) {
+                throw IllegalArgumentException("Duration must be specified if switchLike = false")
+            }
+
+            Bukkit.getPluginManager().registerEvents(this, MinecraftPvpPlugin.instance)
         }
 
-        Bukkit.getPluginManager().registerEvents(this, MinecraftPvpPlugin.instance)
-    }
-
-    fun addPlayerData(player: Player, key: String, data: Any) {
+        fun addPlayerData(player: Player, key: String, data: Any) {
         playersActivatingData[player]?.set(key, data)
     }
 

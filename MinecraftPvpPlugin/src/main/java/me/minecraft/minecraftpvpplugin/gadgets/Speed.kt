@@ -1,9 +1,9 @@
 package me.minecraft.minecraftpvpplugin.gadgets
 
-import me.minecraft.minecraftpvpplugin.CustomEffect
-import me.minecraft.minecraftpvpplugin.EffectShape
+import me.minecraft.minecraftpvpplugin.effect.CustomEffect
 import me.minecraft.minecraftpvpplugin.Gadget
-import me.minecraft.minecraftpvpplugin.LogWriter
+import me.minecraft.minecraftpvpplugin.effect.InBall
+import me.minecraft.minecraftpvpplugin.helpers.LogWriter
 import me.minecraft.minecraftpvpplugin.helpers.RunEveryFor
 import me.minecraft.minecraftpvpplugin.refs.Effects
 import org.bukkit.ChatColor
@@ -26,7 +26,7 @@ object Speed : Gadget(Material.LEATHER_BOOTS, "風行之靴", lore = listOf(
         player.addPotionEffect(Effects.speed)
         playerParticleTimerMap[player] = RunEveryFor(0.1) {
             val loc = player.location.clone().add(0.0, -0.5, 0.0)
-            CustomEffect.playParticle(loc, Effect.LAVA_POP, 10, EffectShape.InBall, 0.8f)
+            CustomEffect.playParticle(loc, Effect.LAVA_POP, InBall(10, 0.8f))
         }
     }
 
