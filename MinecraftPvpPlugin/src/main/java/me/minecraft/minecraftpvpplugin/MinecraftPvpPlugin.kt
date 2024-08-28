@@ -66,7 +66,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             DisplaySlot.SIDEBAR
         )
 
-        customTag = CustomTag("{shortenedName}${ChatColor.RED}Lv{level}")
+        customTag = CustomTag("{nameColor}{shortenedName}${ChatColor.RED}Lv{level}")
 
         DataManager.load()
 
@@ -95,9 +95,22 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
                 val offlinePlayer = Bukkit.getOfflinePlayer(args[1])
                 val onlinePlayer = Bukkit.getPlayer(args[1])
 
-                DataManager.set(offlinePlayer.uniqueId, args[2], args[3])
+                if(args[2] != "nameColor") {
+                    DataManager.set(offlinePlayer.uniqueId, args[2], args[3])
+                }
+                else {
+                    args[3] = when (args[3]) {
+                        "owner" -> "&6"
+                        "mod" -> "&4"
+                        "builder" -> "&3"
+                        "media" -> "&c"
+                        else -> args[3]
+                    }
 
-                val shortenedLength = 16 - 2 - 2 - DataManager.get(offlinePlayer.uniqueId, "level").length
+                    DataManager.set(offlinePlayer.uniqueId, args[2], args[3])
+                }
+
+                val shortenedLength = 16 - 2 - 2 - DataManager.get(offlinePlayer.uniqueId, "level").length - DataManager.get(offlinePlayer.uniqueId, "nameColor").length
                 DataManager.set(offlinePlayer.uniqueId, "shortenedName", DataManager.get(offlinePlayer.uniqueId, "name").take(shortenedLength))
 
                 if (onlinePlayer != null) {
@@ -105,6 +118,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
                     customTag.updateTag(onlinePlayer)
                 }
             }
+
             else sender.sendMessage("usage: /data set <player> <field> <value>" +
                                     "       /data get <player> <field>")
         }
@@ -157,10 +171,11 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         onPlayerToLobby(player)
 
-        DataManager.initPlayer(player, hashMapOf("name" to player.name, "shortenedName" to "", "kill" to "0", "level" to "1"))
+        DataManager.initPlayer(player, hashMapOf("name" to player.name, "shortenedName" to "", "kill" to "0", "level" to "1", "nameColor" to ""))
 
-        val shortenedLength = 16 - 2 - 2 - DataManager.get(player, "level").length
+        val shortenedLength = 16 - 2 - 2 - DataManager.get(player, "level").length - DataManager.get(player, "nameColor").length
         DataManager.set(player, "shortenedName", DataManager.get(player, "name").take(shortenedLength))
+
 
         mainScoreboard.renderScoreboard(player)
         customTag.updateTag(player)
