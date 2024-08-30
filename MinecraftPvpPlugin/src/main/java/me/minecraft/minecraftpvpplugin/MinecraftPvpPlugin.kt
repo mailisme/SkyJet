@@ -117,7 +117,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         }
 
         if (command.name.equals("bot", ignoreCase = true)) {
-            SpawnBot.bot(player.location)
+            SpawnBot.bot(player)
         }
 
         return true
