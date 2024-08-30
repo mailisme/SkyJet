@@ -1,5 +1,6 @@
 package me.minecraft.minecraftpvpplugin
 
+import me.minecraft.minecraftpvpplugin.bot.SpawnBot
 import me.minecraft.minecraftpvpplugin.display.CustomScoreboard
 import me.minecraft.minecraftpvpplugin.display.CustomTag
 import me.minecraft.minecraftpvpplugin.helpers.RunEveryFor
@@ -113,6 +114,10 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
             else sender.sendMessage("usage: /data set <player> <field> <value>" +
                                     "       /data get <player> <field>")
+        }
+
+        if (command.name.equals("bot", ignoreCase = true)) {
+            SpawnBot.bot(player.location)
         }
 
         return true
