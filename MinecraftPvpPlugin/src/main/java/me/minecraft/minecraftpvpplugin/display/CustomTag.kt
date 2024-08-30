@@ -9,8 +9,6 @@ import me.minecraft.minecraftpvpplugin.tiny_protocol.TinyProtocol
 import net.minecraft.server.v1_8_R3.PacketPlayOutEntityDestroy
 import net.minecraft.server.v1_8_R3.PacketPlayOutNamedEntitySpawn
 import net.minecraft.server.v1_8_R3.PacketPlayOutPlayerInfo
-import net.minecraft.server.v1_8_R3.PacketPlayOutPlayerInfo.EnumPlayerInfoAction
-import net.minecraft.server.v1_8_R3.PacketPlayOutPlayerInfo.PlayerInfoData
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer
@@ -23,7 +21,7 @@ class CustomTag(private val tagFormat: String) {
     private var playerUUIDTagMap = hashMapOf<UUID, String>()
 
     init {
-        val actionType = Reflection.getField("{nms}.PacketPlayOutPlayerInfo", EnumPlayerInfoAction::class.java, 0)
+        val actionType = Reflection.getField("{nms}.PacketPlayOutPlayerInfo", PacketPlayOutPlayerInfo.EnumPlayerInfoAction::class.java, 0)
         val playerInfo = Reflection.getField("{nms}.PacketPlayOutPlayerInfo", Object::class.java, 1)
 
 
@@ -32,8 +30,8 @@ class CustomTag(private val tagFormat: String) {
                 // Set the players' tag if they are spawned
 
                 if (actionType.hasField(packet)) {
-                    if (actionType.get(packet) == EnumPlayerInfoAction.ADD_PLAYER) {
-                        val infos = (playerInfo.get(packet) as ArrayList<PlayerInfoData>)
+                    if (actionType.get(packet) == PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER) {
+                        val infos = (playerInfo.get(packet) as ArrayList<PacketPlayOutPlayerInfo.PlayerInfoData>)
 
                         for (i in 0..<infos.count()) {
                             val info = infos[i]
@@ -48,6 +46,8 @@ class CustomTag(private val tagFormat: String) {
                                 info.c(),
                                 CraftChatMessage.fromString(tag)[0]
                             )
+
+
                         }
 
                         playerInfo.set(packet, infos)
@@ -76,11 +76,11 @@ class CustomTag(private val tagFormat: String) {
             val connection = (onlinePlayer as CraftPlayer).handle.playerConnection
 
             connection.sendPacket(PacketPlayOutPlayerInfo(
-                EnumPlayerInfoAction.REMOVE_PLAYER, playerHandle
+                PacketPlayOutPlayerInfo.EnumPlayerInfoAction.REMOVE_PLAYER, playerHandle
             ))
 
             connection.sendPacket(PacketPlayOutPlayerInfo(
-                EnumPlayerInfoAction.ADD_PLAYER, playerHandle
+                PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, playerHandle
             ))
 
             if (onlinePlayer != whoseTag) {
