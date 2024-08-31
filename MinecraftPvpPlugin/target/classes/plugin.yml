@@ -13,3 +13,13 @@ commands:
   start:
     description: (OP Only) forcefully start the game
     usage: /start
+
+  data:
+    description: (OP Only) set data
+    usage: /data
+    aliases:
+      -d
+
+  bot:
+    description: (OP Only) botttttt
+    usage: /bot

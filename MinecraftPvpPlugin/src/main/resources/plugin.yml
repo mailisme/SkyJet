@@ -19,3 +19,7 @@ commands:
     usage: /data
     aliases:
       -d
+
+  bot:
+    description: (OP Only) botttttt
+    usage: /bot
