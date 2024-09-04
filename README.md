@@ -1,4 +1,4 @@
-  # Minecraft PVP Plugin
+  # SkyJet
 
 ## 規則
 **道具:**
