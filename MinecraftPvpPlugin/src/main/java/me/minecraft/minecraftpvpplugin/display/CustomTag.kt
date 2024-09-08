@@ -46,8 +46,6 @@ class CustomTag(private val tagFormat: String) {
                                 info.c(),
                                 CraftChatMessage.fromString(tag)[0]
                             )
-
-
                         }
 
                         playerInfo.set(packet, infos)

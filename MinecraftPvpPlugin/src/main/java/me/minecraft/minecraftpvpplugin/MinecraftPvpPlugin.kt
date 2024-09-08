@@ -1,6 +1,7 @@
 package me.minecraft.minecraftpvpplugin
 
-import me.minecraft.minecraftpvpplugin.bot.SpawnBot
+import me.minecraft.minecraftpvpplugin.bot.BotManager
+import me.minecraft.minecraftpvpplugin.bot.BotNPC
 import me.minecraft.minecraftpvpplugin.display.CustomScoreboard
 import me.minecraft.minecraftpvpplugin.display.CustomTag
 import me.minecraft.minecraftpvpplugin.helpers.RunEveryFor
@@ -21,6 +22,7 @@ import org.bukkit.event.inventory.InventoryClickEvent
 import org.bukkit.event.player.PlayerDropItemEvent
 import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.event.player.PlayerJoinEvent
+import org.bukkit.event.player.PlayerMoveEvent
 import org.bukkit.event.player.PlayerQuitEvent
 import org.bukkit.inventory.ItemStack
 import org.bukkit.plugin.java.JavaPlugin
@@ -117,7 +119,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         }
 
         if (command.name.equals("bot", ignoreCase = true)) {
-            SpawnBot.bot(player)
+            BotManager.addBot(player, "BOT", BotNPC(player.location, player, "BOT"))
         }
 
         return true
@@ -126,6 +128,13 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     override fun onDisable() {
         DataManager.save()
     }
+
+//    @EventHandler
+//    fun handlePlayerMove(event: PlayerMoveEvent) {
+//        val player = event.player
+//        if (!BotManager.hasBot(player, "BOT")) return
+//        (BotManager.getBot(player, "BOT") as BotNPC).updatePos(event.player.location)
+//    }
 
     @EventHandler
     fun handleInventoryClick(event: InventoryClickEvent) {

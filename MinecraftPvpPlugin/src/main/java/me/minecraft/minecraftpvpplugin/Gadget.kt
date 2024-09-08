@@ -21,13 +21,13 @@ import org.bukkit.inventory.ItemStack
 abstract class Gadget(
     val material: Material,
     private val name: String,
-                      private val lore: List<String> = listOf(),
-                      private val duration: Double? = null,
-                      private val switchLike: Boolean = false,
-    ) : ItemStack(), Listener {
+    private val lore: List<String> = listOf(),
+    private val duration: Double? = null,
+    private val switchLike: Boolean = false
+) : ItemStack(), Listener {
 
         // Can be used to store information about individual players that is activating this gadget
-        private var playersActivatingData = mutableMapOf<Player, MutableMap<String, Any>>()
+        private var playersActivatingData = hashMapOf<Player, HashMap<String, Any>>()
 
         open fun onActivate(event: PlayerInteractEvent) {}
         open fun onDeactivate(event: PlayerInteractEvent) {}
@@ -83,7 +83,7 @@ abstract class Gadget(
             }
 
             if (!isActivating(player)) {
-                playersActivatingData[player] = mutableMapOf()
+                playersActivatingData[player] = hashMapOf()
                 onActivate(event)
             }
         }

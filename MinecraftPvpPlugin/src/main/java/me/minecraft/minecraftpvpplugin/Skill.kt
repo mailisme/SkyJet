@@ -18,9 +18,9 @@ abstract class Skill(
     val material: Material,
     val name: String,
     val lore: List<String> = listOf(),
-    private val coolDownSeconds: Double = 0.0,
-    private val ignoreCoolDownSeconds: Double = 0.0,
-    private val switchLike: Boolean = false,
+    coolDownSeconds: Double = 0.0,
+    ignoreCoolDownSeconds: Double = 0.0,
+    private val switchLike: Boolean = false
 ) : ItemStack(), Listener {
 
     init {
@@ -36,7 +36,7 @@ abstract class Skill(
     }
 
 
-    private var coolDownFinishTimestampMap: MutableMap<Player, Long> = HashMap()
+    private var coolDownFinishTimestampMap = hashMapOf<Player, Long>()
 
     private var playersActivating = mutableListOf<Player>()
 

@@ -42,7 +42,7 @@ object PvpPlaceManager {
         for (world in Worlds.pvpWorlds) {
             put(world, PvpPlace(world))
         }
-    }.toMutableMap()
+    } as HashMap
 
     private var totalPlayerCount = 0;
 

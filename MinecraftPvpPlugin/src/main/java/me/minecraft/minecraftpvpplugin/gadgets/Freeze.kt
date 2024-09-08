@@ -26,7 +26,7 @@ object Freeze : ThrowableGadget(Material.SNOW_BALL, "冷陸氣團", lore = listO
     private val snowballParticleTimerMap = hashMapOf<Entity, RunEveryFor>()
 
     public override fun onHitObject(event: ProjectileHitEvent) {
-        val locationMaterialMap: MutableMap<Location, MatWithData> = HashMap()
+        val locationMaterialMap = hashMapOf<Location, MatWithData>()
 
         LogWriter.log("use 冷陸氣團 hit")
 
