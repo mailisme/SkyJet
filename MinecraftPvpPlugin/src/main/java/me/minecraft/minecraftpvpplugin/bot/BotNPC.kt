@@ -28,7 +28,7 @@ class BotNPC(
 
         ps.sendPacket(PacketPlayOutPlayerInfo(PacketPlayOutPlayerInfo.EnumPlayerInfoAction.ADD_PLAYER, this))
         ps.sendPacket(PacketPlayOutNamedEntitySpawn(this))
-        ps.sendPacket(PacketPlayOutEntityEquipment(getBukkitEntity().entityId, 0, ItemStack(Items.IRON_SWORD)))
+        ps.sendPacket(PacketPlayOutEntityEquipment(getBukkitEntity().entityId, 0, ItemStack(Items.IRON_SWORD)))a
     }
 
 //    fun updatePos(to: Location) {
