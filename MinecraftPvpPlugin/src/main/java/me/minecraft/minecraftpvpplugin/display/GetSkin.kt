@@ -11,26 +11,21 @@ import java.util.*
 
 
 object GetSkin {
-
-    val MOJANG_API_URL: String = "https://sessionserver.mojang.com/session/minecraft/profile/"
-
     fun getSkinTexture(uuid: UUID): String? {
         try {
-            val url: String = MOJANG_API_URL + uuid.toString().replace("-", "")
-            val connection: HttpURLConnection = URL(url).openConnection() as HttpURLConnection
+            val url = "https://sessionserver.mojang.com/session/minecraft/profile/${uuid.toString().replace("-", "")}"
+            val connection = URL(url).openConnection() as HttpURLConnection
             connection.setRequestMethod("GET")
 
             val reader = BufferedReader(InputStreamReader(connection.getInputStream()))
-            val response = reader.readLine()
+            val response = reader.readText()
             reader.close()
 
-            val parser = JSONParser()
-            val obj = parser.parse(response)
-            val jsonObject: JSONObject = obj as JSONObject
+            val jsonObject = JSONObject(response)
 
-            val properties: JSONArray = jsonObject.get("properties") as JSONArray
+            val properties = jsonObject.get("properties") as JSONArray
             for (property in properties) {
-                val propertyObj: JSONObject = property as JSONObject
+                val propertyObj = property as JSONObject
                 if ("textures" == propertyObj.get("name")) {
                     return propertyObj.get("value") as String
                 }
@@ -43,21 +38,20 @@ object GetSkin {
 
     fun getSkinSignature(uuid: UUID): String? {
         try {
-            val url: String = MOJANG_API_URL + uuid.toString().replace("-", "")
-            val connection: HttpURLConnection = URL(url).openConnection() as HttpURLConnection
+            val url = "https://sessionserver.mojang.com/session/minecraft/profile/${uuid.toString().replace("-", "")}?unsigned=false"
+
+            val connection = URL(url).openConnection() as HttpURLConnection
             connection.setRequestMethod("GET")
 
             val reader = BufferedReader(InputStreamReader(connection.getInputStream()))
-            val response = reader.readLine()
+            val response = reader.readText()
             reader.close()
 
-            val parser = JSONParser()
-            val obj = parser.parse(response)
-            val jsonObject: JSONObject = obj as JSONObject
+            val jsonObject = JSONObject(response)
 
-            val properties: JSONArray = jsonObject.get("properties") as JSONArray
+            val properties = jsonObject.get("properties") as JSONArray
             for (property in properties) {
-                val propertyObj: JSONObject = property as JSONObject
+                val propertyObj = property as JSONObject
                 if ("textures" == propertyObj.get("name")) {
                     return propertyObj.get("signature") as String
                 }
@@ -67,5 +61,4 @@ object GetSkin {
         }
         return null
     }
-
 }
