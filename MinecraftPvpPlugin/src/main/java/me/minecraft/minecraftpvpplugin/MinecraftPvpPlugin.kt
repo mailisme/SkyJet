@@ -145,7 +145,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         if (event.clickedInventory.title.equals("${ChatColor.AQUA}加入遊戲", ignoreCase = true)) {
             when (event.currentItem.type) {
                 Items.btn1v1.type -> {
-                    val selectGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}請選擇想擁有的技能")
+                    val selectGui = Bukkit.createInventory(player, 27, "${ChatColor.AQUA}請選擇想擁有的技能")
                     selectGui.contents = Skills.skills
                     player.openInventory(selectGui)
                 }
@@ -157,8 +157,11 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         }
 
         if (event.clickedInventory.title.equals("${ChatColor.AQUA}請選擇想擁有的技能", ignoreCase = true)) {
-            for (skill in Skills.skills) {
-                if (skill.name == event.currentItem.itemMeta.displayName) {
+            for (skill: Skill? in Skills.skills) {
+                if (skill == null){
+                    event.isCancelled = true
+                }
+                else if (skill!!.name == event.currentItem.itemMeta.displayName) {
                     PvpPlaceManager.addPlayer(player, skill)
                 }
             }
@@ -193,14 +196,21 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         if (Worlds.isInLobby(player)) {
             if (event.item == null) return
-            if (event.item == Items.diamondSword && event.action != Action.PHYSICAL) {
-                val startGui = Bukkit.createInventory(player, 9, "${ChatColor.AQUA}加入遊戲")
+            if (event.item == Items.compass && event.action != Action.PHYSICAL) {
+                val startGui = Bukkit.createInventory(player, 27, "${ChatColor.AQUA}加入遊戲")
                 val joinGameBtn = Items.btn1v1
 
-                startGui.contents = arrayOf(joinGameBtn)
-
+                startGui.contents = arrayOf(
+                    null,null,null,null,null       ,null,null,null,null,
+                    null,null,null,null,joinGameBtn,null,null,null,null,
+                    null,null,null,null,null       ,null,null,null,null
+                )
                 player.openInventory(startGui)
             }
+        }
+        if(event.item == Items.exit && event.action != Action.PHYSICAL) {
+            PvpPlaceManager.removePlayer(player, "leave")
+            println("Test")
         }
     }
 
@@ -248,8 +258,8 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             player.inventory.clear()
             Items.swordItemMeta.displayName = "${ChatColor.AQUA}Join"
             Items.swordItemMeta.spigot().isUnbreakable = true
-            Items.diamondSword.setItemMeta(Items.swordItemMeta)
-            player.inventory.setItem(0, Items.diamondSword)
+            Items.compass.setItemMeta(Items.swordItemMeta)
+            player.inventory.setItem(0, Items.compass)
             player.inventory.helmet = null
             player.inventory.chestplate = null
             player.inventory.leggings = null
@@ -275,6 +285,10 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             player.inventory.leggings = Items.ironLeggings
             player.inventory.boots = Items.ironBoots
             player.gameMode = GameMode.ADVENTURE
+        }
+        fun onPlayerToPvpWaiting(player: Player) {
+            player.inventory.clear()
+            player.inventory.setItem(8, Items.exit)
         }
 
         private fun clearEffects(player: Player) {

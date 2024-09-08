@@ -42,7 +42,7 @@ object PvpPlaceManager {
         for (world in Worlds.pvpWorlds) {
             put(world, PvpPlace(world))
         }
-    } as HashMap
+    }.toMutableMap()
 
     private var totalPlayerCount = 0;
 
@@ -60,7 +60,7 @@ object PvpPlaceManager {
                 player.teleport(Locations.PvpSpawn1(world))
                 playerSlots[1] = PvpPlayer(player, skill)
                 startGame(world)
-                MinecraftPvpPlugin.onPlayerToPvp(player, skill)
+                MinecraftPvpPlugin.onPlayerToPvpWaiting(player)
                 return
             }
         }
@@ -71,12 +71,12 @@ object PvpPlaceManager {
             if (playerSlots[0] == null) {
                 player.teleport(Locations.PvpSpawn0(world))
                 playerSlots[0] = PvpPlayer(player, skill)
-                MinecraftPvpPlugin.onPlayerToPvp(player, skill)
+                MinecraftPvpPlugin.onPlayerToPvpWaiting(player)
                 return
             } else if (playerSlots[1] == null) {
                 player.teleport(Locations.PvpSpawn1(world))
                 playerSlots[1] = PvpPlayer(player, skill)
-                MinecraftPvpPlugin.onPlayerToPvp(player, skill)
+                MinecraftPvpPlugin.onPlayerToPvpWaiting(player)
                 startGame(world)
                 return
             }

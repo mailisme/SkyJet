@@ -1,6 +1,7 @@
 package me.minecraft.minecraftpvpplugin.display
 
 import com.mojang.authlib.GameProfile
+import com.mojang.authlib.properties.Property
 import io.netty.channel.Channel
 import me.minecraft.minecraftpvpplugin.DataManager
 import me.minecraft.minecraftpvpplugin.MinecraftPvpPlugin
@@ -39,9 +40,11 @@ class CustomTag(private val tagFormat: String) {
                             if (!playerUUIDTagMap.containsKey(uuid)) continue
 
                             val tag = playerUUIDTagMap[uuid]
+                            val gameProfile = GameProfile(uuid, tag)
+                            gameProfile.properties.put("textures", Property("textures", GetSkin.getSkinTexture(uuid), GetSkin.getSkinSignature(uuid)))
 
                             infos[i] = PacketPlayOutPlayerInfo().PlayerInfoData(
-                                GameProfile(uuid, tag),
+                                gameProfile,
                                 info.b(),
                                 info.c(),
                                 CraftChatMessage.fromString(tag)[0]
