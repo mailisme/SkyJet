@@ -168,6 +168,28 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
             event.isCancelled = true
         }
+
+        if (event.clickedInventory.title.equals("${ChatColor.AQUA}LeadBoard", ignoreCase = true)) {
+            when (event.currentItem) {
+                Items.itemFrame -> {
+                    val startGui = Bukkit.createInventory(player, 27, "${ChatColor.AQUA}LeadBoard")
+
+                    val gui = arrayOf(
+                        Items.itemFrame         ,null,null,null,null,null,null,null,null,
+                        Items.createHead(player),null,null,null,null,null,null,null,null,
+                        null                    ,null,null,null,null,null,null,null,null
+                    )
+
+
+                    startGui.contents = gui
+                    player.openInventory(startGui)
+                }
+
+                else -> {}
+            }
+
+            event.isCancelled = true
+        }
     }
 
     @EventHandler
@@ -207,6 +229,35 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
                 )
                 player.openInventory(startGui)
             }
+
+            if (event.item == Items.itemFrame && event.action != Action.PHYSICAL) {
+                val startGui = Bukkit.createInventory(player, 27, "${ChatColor.AQUA}LeadBoard")
+
+                val gui = arrayOf(
+                    Items.itemFrame         ,null,null,null,null,null,null,null,null,
+                    Items.createHead(player),null,null,null,null,null,null,null,null,
+                    null                    ,null,null,null,null,null,null,null,null
+                )
+
+
+                startGui.contents = gui
+                player.openInventory(startGui)
+            }
+
+//            i`ll go back to write this part if i want
+//            i guess i wont
+
+//            if (event.item == Items.dispenser && event.action != Action.PHYSICAL) {
+//                val startGui = Bukkit.createInventory(player, 27, "${ChatColor.AQUA}edit kit")
+//                val joinGameBtn = Items.btn1v1
+//
+//                startGui.contents = arrayOf(
+//                    null,null,null,null,null       ,null,null,null,null,
+//                    null,null,null,null,joinGameBtn,null,null,null,null,
+//                    null,null,null,null,null       ,null,null,null,null
+//                )
+//                player.openInventory(startGui)
+//            }
         }
         if(event.item == Items.exit && event.action != Action.PHYSICAL) {
             PvpPlaceManager.removePlayer(player, "leave")
@@ -256,10 +307,18 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         fun onPlayerToLobby(player: Player) {
             player.teleport(Locations.lobbySpawn)
             player.inventory.clear()
-            Items.swordItemMeta.displayName = "${ChatColor.AQUA}Join"
-            Items.swordItemMeta.spigot().isUnbreakable = true
-            Items.compass.setItemMeta(Items.swordItemMeta)
+            Items.compassItemMeta.displayName = "${ChatColor.AQUA}Join"
+            Items.compassItemMeta.spigot().isUnbreakable = true
+            Items.compass.setItemMeta(Items.compassItemMeta)
             player.inventory.setItem(0, Items.compass)
+            Items.dispenserItemMeta.displayName = "${ChatColor.AQUA}Edit Kit"
+            Items.dispenserItemMeta.spigot().isUnbreakable = true
+            Items.dispenser.setItemMeta(Items.dispenserItemMeta)
+            player.inventory.setItem(8, Items.dispenser)
+            Items.itemFrameItemMeta.displayName = "${ChatColor.AQUA}Lead board"
+            Items.itemFrameItemMeta.spigot().isUnbreakable = true
+            Items.itemFrame.setItemMeta(Items.itemFrameItemMeta)
+            player.inventory.setItem(7, Items.itemFrame)
             player.inventory.helmet = null
             player.inventory.chestplate = null
             player.inventory.leggings = null

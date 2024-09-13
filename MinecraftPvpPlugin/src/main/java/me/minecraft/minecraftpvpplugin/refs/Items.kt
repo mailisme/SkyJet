@@ -1,12 +1,18 @@
         package me.minecraft.minecraftpvpplugin.refs
 
+import org.bukkit.Bukkit
 import org.bukkit.Material
+import org.bukkit.entity.Player
 import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.meta.ItemMeta
+import org.bukkit.inventory.meta.SkullMeta
 
-object  Items {
+
+        object  Items {
     val ironSword: ItemStack = ItemStack(Material.IRON_SWORD)
     val compass: ItemStack = ItemStack(Material.COMPASS)
+    val dispenser: ItemStack = ItemStack(Material.DISPENSER)
+    val itemFrame: ItemStack = ItemStack(Material.ITEM_FRAME)
 
     val btn1v1: ItemStack get () {
             val diamondAxe = ItemStack(Material.GOLDEN_APPLE)
@@ -16,7 +22,9 @@ object  Items {
             return diamondAxe
         }
 
-    val swordItemMeta: ItemMeta = compass.itemMeta
+    val compassItemMeta: ItemMeta = compass.itemMeta
+    val dispenserItemMeta: ItemMeta = dispenser.itemMeta
+    val itemFrameItemMeta: ItemMeta = itemFrame.itemMeta
 
     val ironHelmet: ItemStack = ItemStack(Material.IRON_HELMET)
     val ironChestplate: ItemStack = ItemStack(Material.IRON_CHESTPLATE)
@@ -44,4 +52,13 @@ object  Items {
         exit.setItemMeta(meta)
         return exit
     }
+
+    fun createHead(player: Player): ItemStack {
+        val item = ItemStack(Material.SKULL_ITEM)
+        val meta = item.itemMeta as SkullMeta
+        meta.displayName = player.displayName
+        item.setItemMeta(meta)
+        return item
+    }
+
 }
