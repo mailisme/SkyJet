@@ -54,11 +54,10 @@ import org.bukkit.inventory.meta.SkullMeta
     }
 
     fun createHead(player: Player): ItemStack {
-        val item = ItemStack(Material.SKULL_ITEM)
+        val item = ItemStack(Material.SKULL_ITEM, 1, 0, 3)
         val meta = item.itemMeta as SkullMeta
-        meta.displayName = player.displayName
-        item.setItemMeta(meta)
+        meta.owner = player.displayName
+        item.itemMeta = meta
         return item
     }
-
 }

@@ -1,5 +1,6 @@
 package me.minecraft.minecraftpvpplugin
 
+import me.minecraft.minecraftpvpplugin.DataManager.getAllPlayerUUID
 import me.minecraft.minecraftpvpplugin.bot.BotManager
 import me.minecraft.minecraftpvpplugin.bot.BotNPC
 import me.minecraft.minecraftpvpplugin.display.CustomScoreboard
@@ -232,6 +233,13 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
             if (event.item == Items.itemFrame && event.action != Action.PHYSICAL) {
                 val startGui = Bukkit.createInventory(player, 27, "${ChatColor.AQUA}LeadBoard")
+
+
+
+                for (i in getAllPlayerUUID()){
+                    DataManager.get(i, "level")
+                }
+
 
                 val gui = arrayOf(
                     Items.itemFrame         ,null,null,null,null,null,null,null,null,

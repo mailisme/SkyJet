@@ -93,6 +93,13 @@ object DataManager {
         set(playerUUID, fieldName, (get(playerUUID, fieldName).toInt() + amount).toString())
     }
 
+    fun getAllPlayerUUID(): List<UUID> {
+        return playerUUIDDataMap.keys.map {
+            UUID.fromString(it)
+        }
+    }
+
+
     private fun hasData(player: Player): Boolean {
         return playerUUIDDataMap.containsKey(player.uniqueId.toString())
     }
