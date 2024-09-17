@@ -57,6 +57,7 @@ import org.bukkit.inventory.meta.SkullMeta
         val item = ItemStack(Material.SKULL_ITEM, 1, 0, 3)
         val meta = item.itemMeta as SkullMeta
         meta.owner = player.displayName
+        meta.displayName = player.displayName
         item.itemMeta = meta
         return item
     }

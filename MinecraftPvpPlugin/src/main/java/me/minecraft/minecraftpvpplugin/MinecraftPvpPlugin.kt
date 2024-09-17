@@ -1,6 +1,7 @@
 package me.minecraft.minecraftpvpplugin
 
 import me.minecraft.minecraftpvpplugin.DataManager.getAllPlayerUUID
+import me.minecraft.minecraftpvpplugin.DataManager.getLeaderBoard
 import me.minecraft.minecraftpvpplugin.bot.BotManager
 import me.minecraft.minecraftpvpplugin.bot.BotNPC
 import me.minecraft.minecraftpvpplugin.display.CustomScoreboard
@@ -170,15 +171,23 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             event.isCancelled = true
         }
 
-        if (event.clickedInventory.title.equals("${ChatColor.AQUA}LeadBoard", ignoreCase = true)) {
+        if (event.clickedInventory.title.equals("${ChatColor.AQUA}LeaderBoard", ignoreCase = true)) {
             when (event.currentItem) {
                 Items.itemFrame -> {
-                    val startGui = Bukkit.createInventory(player, 27, "${ChatColor.AQUA}LeadBoard")
+                    val startGui = Bukkit.createInventory(player, 27, "${ChatColor.AQUA}LeaderBoard")
+
+                    val list = getLeaderBoard()
+                    var first: ItemStack? = Items.createHead(Bukkit.getPlayer(list[0].first))
+                    var second: ItemStack? = null
+                    var third: ItemStack? = null
+
+                    if (list.size>1) second = Items.createHead(Bukkit.getPlayer(list[1].first))
+                    if (list.size>2) third = Items.createHead(Bukkit.getPlayer(list[2].first))
 
                     val gui = arrayOf(
-                        Items.itemFrame         ,null,null,null,null,null,null,null,null,
-                        Items.createHead(player),null,null,null,null,null,null,null,null,
-                        null                    ,null,null,null,null,null,null,null,null
+                        Items.itemFrame         ,null,null,null,first ,null,null,null,null,
+                        Items.createHead(player),null,null,null,second,null,null,null,null,
+                        null                    ,null,null,null,third ,null,null,null,null
                     )
 
 
@@ -232,21 +241,21 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             }
 
             if (event.item == Items.itemFrame && event.action != Action.PHYSICAL) {
-                val startGui = Bukkit.createInventory(player, 27, "${ChatColor.AQUA}LeadBoard")
+                val startGui = Bukkit.createInventory(player, 27, "${ChatColor.AQUA}LeaderBoard")
 
+                val list = getLeaderBoard()
+                var first: ItemStack? = Items.createHead(Bukkit.getPlayer(list[0].first))
+                var second: ItemStack? = null
+                var third: ItemStack? = null
 
-
-                for (i in getAllPlayerUUID()){
-                    DataManager.get(i, "level")
-                }
-
+                if (list.size>1) second = Items.createHead(Bukkit.getPlayer(list[1].first))
+                if (list.size>2) third = Items.createHead(Bukkit.getPlayer(list[2].first))
 
                 val gui = arrayOf(
-                    Items.itemFrame         ,null,null,null,null,null,null,null,null,
-                    Items.createHead(player),null,null,null,null,null,null,null,null,
-                    null                    ,null,null,null,null,null,null,null,null
+                    Items.itemFrame         ,null,null,null,first ,null,null,null,null,
+                    Items.createHead(player),null,null,null,second,null,null,null,null,
+                    null                    ,null,null,null,third ,null,null,null,null
                 )
-
 
                 startGui.contents = gui
                 player.openInventory(startGui)
@@ -323,7 +332,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             Items.dispenserItemMeta.spigot().isUnbreakable = true
             Items.dispenser.setItemMeta(Items.dispenserItemMeta)
             player.inventory.setItem(8, Items.dispenser)
-            Items.itemFrameItemMeta.displayName = "${ChatColor.AQUA}Lead board"
+            Items.itemFrameItemMeta.displayName = "${ChatColor.AQUA}Leader board"
             Items.itemFrameItemMeta.spigot().isUnbreakable = true
             Items.itemFrame.setItemMeta(Items.itemFrameItemMeta)
             player.inventory.setItem(7, Items.itemFrame)

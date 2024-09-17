@@ -7,6 +7,7 @@ import java.io.FileReader
 import java.io.FileWriter
 import java.util.*
 import kotlin.collections.HashMap
+import kotlin.jvm.internal.Intrinsics.Kotlin
 
 object DataManager {
     // Player UUID String -> Field Name -> Value
@@ -97,6 +98,20 @@ object DataManager {
         return playerUUIDDataMap.keys.map {
             UUID.fromString(it)
         }
+    }
+
+    fun getLeaderBoard(): List<Pair<UUID, Int>> {
+        val level: HashMap<UUID, Int> = hashMapOf()
+        for (i in getAllPlayerUUID()){
+            val lvl = get(i, "kill")
+            level.put(i, lvl.toInt())
+        }
+        var lvlList = level.toList()
+        lvlList = lvlList.sortedWith(compareBy(
+            { it.second },
+            { it.first }
+        )).reversed()
+        return lvlList
     }
 
 
