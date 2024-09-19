@@ -106,11 +106,13 @@ object DataManager {
             val lvl = get(i, "kill")
             level.put(i, lvl.toInt())
         }
+
         var lvlList = level.toList()
         lvlList = lvlList.sortedWith(compareBy(
             { it.second },
             { it.first }
         )).reversed()
+
         return lvlList
     }
 

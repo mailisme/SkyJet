@@ -1,6 +1,5 @@
 package me.minecraft.minecraftpvpplugin
 
-import me.minecraft.minecraftpvpplugin.DataManager.getAllPlayerUUID
 import me.minecraft.minecraftpvpplugin.DataManager.getLeaderBoard
 import me.minecraft.minecraftpvpplugin.bot.BotManager
 import me.minecraft.minecraftpvpplugin.bot.BotNPC
@@ -24,7 +23,6 @@ import org.bukkit.event.inventory.InventoryClickEvent
 import org.bukkit.event.player.PlayerDropItemEvent
 import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.event.player.PlayerJoinEvent
-import org.bukkit.event.player.PlayerMoveEvent
 import org.bukkit.event.player.PlayerQuitEvent
 import org.bukkit.inventory.ItemStack
 import org.bukkit.plugin.java.JavaPlugin
@@ -144,62 +142,38 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         if (event.clickedInventory == null) return
 
-        if (event.clickedInventory.title.equals("${ChatColor.AQUA}加入遊戲", ignoreCase = true)) {
-            when (event.currentItem.type) {
-                Items.btn1v1.type -> {
-                    val selectGui = Bukkit.createInventory(player, 27, "${ChatColor.AQUA}請選擇想擁有的技能")
-                    selectGui.contents = Skills.skills
-                    player.openInventory(selectGui)
-                }
+        var eventCancelled = true;
 
-                else -> {}
-            }
-
-            event.isCancelled = true
-        }
-
-        if (event.clickedInventory.title.equals("${ChatColor.AQUA}請選擇想擁有的技能", ignoreCase = true)) {
-            for (skill: Skill? in Skills.skills) {
-                if (skill == null){
-                    event.isCancelled = true
-                }
-                else if (skill!!.name == event.currentItem.itemMeta.displayName) {
-                    PvpPlaceManager.addPlayer(player, skill)
+        when (event.clickedInventory.title) {
+            UIGrids.joinGameTitle -> {
+                when {
+                    event.currentItem.isSimilar(Items.btn1v1) -> {
+                        val gui = Bukkit.createInventory(player, 27, UIGrids.selectSkillTitle)
+                        gui.contents = UIGrids.selectSkill
+                        player.openInventory(gui)
+                    } else -> {}
                 }
             }
 
-            event.isCancelled = true
-        }
-
-        if (event.clickedInventory.title.equals("${ChatColor.AQUA}LeaderBoard", ignoreCase = true)) {
-            when (event.currentItem) {
-                Items.itemFrame -> {
-                    val startGui = Bukkit.createInventory(player, 27, "${ChatColor.AQUA}LeaderBoard")
-
-                    val list = getLeaderBoard()
-                    var first: ItemStack? = Items.createHead(Bukkit.getPlayer(list[0].first))
-                    var second: ItemStack? = null
-                    var third: ItemStack? = null
-
-                    if (list.size>1) second = Items.createHead(Bukkit.getPlayer(list[1].first))
-                    if (list.size>2) third = Items.createHead(Bukkit.getPlayer(list[2].first))
-
-                    val gui = arrayOf(
-                        Items.itemFrame         ,null,null,null,first ,null,null,null,null,
-                        Items.createHead(player),null,null,null,second,null,null,null,null,
-                        null                    ,null,null,null,third ,null,null,null,null
-                    )
-
-
-                    startGui.contents = gui
-                    player.openInventory(startGui)
+            UIGrids.selectSkillTitle -> {
+                for (skill: Skill? in Skills.skills) {
+                    if (skill!!.name == event.currentItem.itemMeta.displayName) {
+                        PvpPlaceManager.addPlayer(player, skill)
+                    }
                 }
-
-                else -> {}
             }
 
-            event.isCancelled = true
+            UIGrids.leaderBoardTitle -> {
+                when (event.currentItem) {
+                    Items.itemFrame -> openLeaderboard(player)
+                    else -> {}
+                }
+            }
+
+            else -> { eventCancelled = false }
         }
+
+        event.isCancelled = eventCancelled
     }
 
     @EventHandler
@@ -228,37 +202,24 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         if (Worlds.isInLobby(player)) {
             if (event.item == null) return
-            if (event.item == Items.compass && event.action != Action.PHYSICAL) {
-                val startGui = Bukkit.createInventory(player, 27, "${ChatColor.AQUA}加入遊戲")
-                val joinGameBtn = Items.btn1v1
+            if (event.action == Action.PHYSICAL) return
 
-                startGui.contents = arrayOf(
-                    null,null,null,null,null       ,null,null,null,null,
-                    null,null,null,null,joinGameBtn,null,null,null,null,
-                    null,null,null,null,null       ,null,null,null,null
-                )
-                player.openInventory(startGui)
-            }
+            when {
+                event.item.isSimilar(Items.join) -> {
+                    val startGui = Bukkit.createInventory(player, 27, UIGrids.joinGameTitle)
+                    startGui.contents = UIGrids.joinGame
+                    player.openInventory(startGui)
+                }
 
-            if (event.item == Items.itemFrame && event.action != Action.PHYSICAL) {
-                val startGui = Bukkit.createInventory(player, 27, "${ChatColor.AQUA}LeaderBoard")
+                event.item.isSimilar(Items.leaderBoard) -> {
+                    openLeaderboard(player)
+                }
 
-                val list = getLeaderBoard()
-                var first: ItemStack? = Items.createHead(Bukkit.getPlayer(list[0].first))
-                var second: ItemStack? = null
-                var third: ItemStack? = null
+                event.item.isSimilar(Items.exit) -> {
+                    PvpPlaceManager.removePlayer(player, "leave")
+                }
 
-                if (list.size>1) second = Items.createHead(Bukkit.getPlayer(list[1].first))
-                if (list.size>2) third = Items.createHead(Bukkit.getPlayer(list[2].first))
-
-                val gui = arrayOf(
-                    Items.itemFrame         ,null,null,null,first ,null,null,null,null,
-                    Items.createHead(player),null,null,null,second,null,null,null,null,
-                    null                    ,null,null,null,third ,null,null,null,null
-                )
-
-                startGui.contents = gui
-                player.openInventory(startGui)
+                else -> {}
             }
 
 //            i`ll go back to write this part if i want
@@ -268,17 +229,9 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 //                val startGui = Bukkit.createInventory(player, 27, "${ChatColor.AQUA}edit kit")
 //                val joinGameBtn = Items.btn1v1
 //
-//                startGui.contents = arrayOf(
-//                    null,null,null,null,null       ,null,null,null,null,
-//                    null,null,null,null,joinGameBtn,null,null,null,null,
-//                    null,null,null,null,null       ,null,null,null,null
-//                )
+//                startGui.contents = UIGrids.joinGame
 //                player.openInventory(startGui)
 //            }
-        }
-        if(event.item == Items.exit && event.action != Action.PHYSICAL) {
-            PvpPlaceManager.removePlayer(player, "leave")
-            println("Test")
         }
     }
 
@@ -313,7 +266,35 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
 
         if (Worlds.isInPvp(player)) {
             PvpPlaceManager.removePlayer(player, "leave")
+            onPlayerToLobby(player)
         }
+    }
+
+    private fun openLeaderboard(player: Player) {
+        val startGui = Bukkit.createInventory(player, 27, UIGrids.leaderBoardTitle)
+
+        val leaderboard = getLeaderBoard()
+        val topPlayersHeads = arrayOfNulls<ItemStack?>(3)
+
+        leaderboard.take(3).forEachIndexed { index, pair ->
+            val topPlayer = Bukkit.getPlayer(pair.first)
+            val namePrefix = when (index) {
+                0 -> "${ChatColor.AQUA}1st"
+                1 -> "${ChatColor.GOLD}2nd"
+                2 -> "${ChatColor.GRAY}3rd"
+                else -> ""
+            }
+            topPlayersHeads[index] = Items.createHead(topPlayer, "$namePrefix ${topPlayer.displayName}")
+        }
+
+        val gui = arrayOf(
+            Items.itemFrame         ,null,null,null,topPlayersHeads[0] ,null,null,null,null,
+            Items.createHead(player),null,null,null,topPlayersHeads[1] ,null,null,null,null,
+            null                    ,null,null,null,topPlayersHeads[2] ,null,null,null,null,
+        )
+
+        startGui.contents = gui
+        player.openInventory(startGui)
     }
 
     companion object {
@@ -324,18 +305,9 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         fun onPlayerToLobby(player: Player) {
             player.teleport(Locations.lobbySpawn)
             player.inventory.clear()
-            Items.compassItemMeta.displayName = "${ChatColor.AQUA}Join"
-            Items.compassItemMeta.spigot().isUnbreakable = true
-            Items.compass.setItemMeta(Items.compassItemMeta)
-            player.inventory.setItem(0, Items.compass)
-            Items.dispenserItemMeta.displayName = "${ChatColor.AQUA}Edit Kit"
-            Items.dispenserItemMeta.spigot().isUnbreakable = true
-            Items.dispenser.setItemMeta(Items.dispenserItemMeta)
-            player.inventory.setItem(8, Items.dispenser)
-            Items.itemFrameItemMeta.displayName = "${ChatColor.AQUA}Leader board"
-            Items.itemFrameItemMeta.spigot().isUnbreakable = true
-            Items.itemFrame.setItemMeta(Items.itemFrameItemMeta)
-            player.inventory.setItem(7, Items.itemFrame)
+            player.inventory.setItem(0, Items.join)
+            player.inventory.setItem(8, Items.editKit)
+            player.inventory.setItem(7, Items.leaderBoard)
             player.inventory.helmet = null
             player.inventory.chestplate = null
             player.inventory.leggings = null
@@ -362,6 +334,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             player.inventory.boots = Items.ironBoots
             player.gameMode = GameMode.ADVENTURE
         }
+
         fun onPlayerToPvpWaiting(player: Player) {
             player.inventory.clear()
             player.inventory.setItem(8, Items.exit)

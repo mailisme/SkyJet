@@ -46,33 +46,43 @@ object BestToRun : Skill(Material.BONE, "走為上策", lore = listOf(
 
         player.removePotionEffect(PotionEffectType.WEAKNESS)
 
-        if (healthAfterDamage > 15) {
-            player.inventory.helmet = Items.ironHelmet
-            player.inventory.chestplate = Items.ironChestplate
-            player.inventory.leggings = Items.ironLeggings
-            player.inventory.boots = Items.ironBoots
-            currEffectLevel = -1
-        } else if (healthAfterDamage > 10) {
-            player.addPotionEffect(Effects.weakness1)
-            player.inventory.helmet = Items.ironHelmet
-            player.inventory.chestplate = Items.diamondChestplate
-            player.inventory.leggings = Items.ironLeggings
-            player.inventory.boots = Items.ironBoots
-            currEffectLevel = 0
-        } else if (healthAfterDamage > 5) {
-            player.addPotionEffect(Effects.weakness2)
-            player.inventory.helmet = Items.ironHelmet
-            player.inventory.chestplate = Items.diamondChestplate
-            player.inventory.leggings = Items.diamondLeggings
-            player.inventory.boots = Items.ironBoots
-            currEffectLevel = 1
-        } else {
-            player.addPotionEffect(Effects.weakness3)
-            player.inventory.helmet = Items.diamondHelmet
-            player.inventory.chestplate = Items.diamondChestplate
-            player.inventory.leggings = Items.diamondLeggings
-            player.inventory.boots = Items.diamondBoots
-            currEffectLevel = 2
+        currEffectLevel = when (healthAfterDamage) {
+            in 0.0..5.0 -> {
+                player.addPotionEffect(Effects.weakness3)
+                player.inventory.helmet = Items.diamondHelmet
+                player.inventory.chestplate = Items.diamondChestplate
+                player.inventory.leggings = Items.diamondLeggings
+                player.inventory.boots = Items.diamondBoots
+                2
+            }
+
+            in 5.0 .. 10.0 -> {
+                player.addPotionEffect(Effects.weakness2)
+                player.inventory.helmet = Items.ironHelmet
+                player.inventory.chestplate = Items.diamondChestplate
+                player.inventory.leggings = Items.diamondLeggings
+                player.inventory.boots = Items.ironBoots
+                1
+            }
+
+            in 10.0 .. 15.0 -> {
+                player.addPotionEffect(Effects.weakness1)
+                player.inventory.helmet = Items.ironHelmet
+                player.inventory.chestplate = Items.diamondChestplate
+                player.inventory.leggings = Items.ironLeggings
+                player.inventory.boots = Items.ironBoots
+                0
+            }
+
+            in 15.0 .. 20.0 -> {
+                player.inventory.helmet = Items.ironHelmet
+                player.inventory.chestplate = Items.ironChestplate
+                player.inventory.leggings = Items.ironLeggings
+                player.inventory.boots = Items.ironBoots
+                -1
+            }
+
+            else -> 0
         }
 
         if (currEffectLevel != prevEffectLevel) {
