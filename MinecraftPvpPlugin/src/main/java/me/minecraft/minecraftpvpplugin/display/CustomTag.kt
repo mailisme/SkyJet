@@ -41,9 +41,6 @@ class CustomTag(private val tagFormat: String) {
 
                             val tag = playerUUIDTagMap[uuid]
                             val gameProfile = GameProfile(uuid, tag)
-//                            println(GetSkin.getSkinTexture(uuid))
-//                            println(GetSkin.getSkinSignature(uuid))
-//                            println(uuid)
                             gameProfile.properties.put("textures", Property("textures", GetSkin.getSkinSignature(uuid), GetSkin.getSkinTexture(uuid)))
 
                             infos[i] = PacketPlayOutPlayerInfo().PlayerInfoData(

@@ -1,8 +1,6 @@
 package me.minecraft.minecraftpvpplugin
 
 import me.minecraft.minecraftpvpplugin.DataManager.getLeaderBoard
-import me.minecraft.minecraftpvpplugin.bot.BotManager
-import me.minecraft.minecraftpvpplugin.bot.BotNPC
 import me.minecraft.minecraftpvpplugin.display.CustomScoreboard
 import me.minecraft.minecraftpvpplugin.display.CustomTag
 import me.minecraft.minecraftpvpplugin.helpers.RunEveryFor
@@ -118,23 +116,12 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
                                     "       /data get <player> <field>")
         }
 
-        if (command.name.equals("bot", ignoreCase = true)) {
-            BotManager.addBot(player, "BOT", BotNPC(player.location, player, "BOT"))
-        }
-
         return true
     }
 
     override fun onDisable() {
         DataManager.save()
     }
-
-//    @EventHandler
-//    fun handlePlayerMove(event: PlayerMoveEvent) {
-//        val player = event.player
-//        if (!BotManager.hasBot(player, "BOT")) return
-//        (BotManager.getBot(player, "BOT") as BotNPC).updatePos(event.player.location)
-//    }
 
     @EventHandler
     fun handleInventoryClick(event: InventoryClickEvent) {
@@ -200,38 +187,25 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
     fun handlePlayerInteract(event: PlayerInteractEvent) {
         val player = event.player
 
-        if (Worlds.isInLobby(player)) {
-            if (event.item == null) return
-            if (event.action == Action.PHYSICAL) return
+        if (event.item == null) return
+        if (event.action == Action.PHYSICAL) return
 
-            when {
-                event.item.isSimilar(Items.join) -> {
-                    val startGui = Bukkit.createInventory(player, 27, UIGrids.joinGameTitle)
-                    startGui.contents = UIGrids.joinGame
-                    player.openInventory(startGui)
-                }
-
-                event.item.isSimilar(Items.leaderBoard) -> {
-                    openLeaderboard(player)
-                }
-
-                event.item.isSimilar(Items.exit) -> {
-                    PvpPlaceManager.removePlayer(player, "leave")
-                }
-
-                else -> {}
+        when {
+            Worlds.isInLobby(player) && event.item.isSimilar(Items.join) -> {
+                val startGui = Bukkit.createInventory(player, 27, UIGrids.joinGameTitle)
+                startGui.contents = UIGrids.joinGame
+                player.openInventory(startGui)
             }
 
-//            i`ll go back to write this part if i want
-//            i guess i wont
+            Worlds.isInLobby(player) && event.item.isSimilar(Items.leaderBoard) -> {
+                openLeaderboard(player)
+            }
 
-//            if (event.item == Items.dispenser && event.action != Action.PHYSICAL) {
-//                val startGui = Bukkit.createInventory(player, 27, "${ChatColor.AQUA}edit kit")
-//                val joinGameBtn = Items.btn1v1
-//
-//                startGui.contents = UIGrids.joinGame
-//                player.openInventory(startGui)
-//            }
+            event.item.isSimilar(Items.exit) -> {
+                PvpPlaceManager.removePlayer(player, "leave")
+            }
+
+            else -> {}
         }
     }
 
@@ -306,8 +280,7 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
             player.teleport(Locations.lobbySpawn)
             player.inventory.clear()
             player.inventory.setItem(0, Items.join)
-            player.inventory.setItem(8, Items.editKit)
-            player.inventory.setItem(7, Items.leaderBoard)
+            player.inventory.setItem(8, Items.leaderBoard)
             player.inventory.helmet = null
             player.inventory.chestplate = null
             player.inventory.leggings = null

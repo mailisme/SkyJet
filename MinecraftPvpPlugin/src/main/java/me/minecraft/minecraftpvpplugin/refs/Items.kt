@@ -36,7 +36,6 @@ import org.bukkit.inventory.meta.SkullMeta
     val btn1v1 = namedItemStackGUI(ItemStack(Material.REDSTONE), "1對1")
 
     val join = namedItemStackGUI(compass, "Join")
-    val editKit = namedItemStackGUI(dispenser, "Edit Kit")
     val leaderBoard = namedItemStackGUI(itemFrame, "Leader Board")
 
     fun createHead(player: Player, name: String = player.displayName): ItemStack {
