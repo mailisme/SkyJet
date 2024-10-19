@@ -1,5 +1,17 @@
   # SkyJet
 
+## 此專案將不再更新（沒意外的話）
+**自己開服教學：**
+1. 下載檔案
+2. 解壓縮
+3. 安裝Java21
+4. 進入MinecraftServer資料夾
+5. 點start.bat(linux點start.sh)
+6. [下載並安裝ngrok](https://askie.today/ngrok-localhost-server-settings/)
+7. 打開cmd
+8. 跑```ngrok tcp 25565```
+9. 複製ip給朋友一起玩！！！
+
 ## 規則
 **道具:**
 
