@@ -1,6 +1,6 @@
   # SkyJet
 
-## 此專案將不再更新
+## 此專案將不再更新（吧
 **自己開服教學：**
 1. [下載檔案](https://github.com/mailisme/SkyJet/releases/tag/v2.5.0)
 2. 解壓縮
@@ -11,6 +11,8 @@
 7. 打開cmd
 8. 跑```ngrok tcp 25565```
 9. 複製ip給朋友一起玩！！！
+
+###### BTW 加一下[DC](https://discord.gg/vaxF8QSMUT)
 
 ## 規則
 **道具:**
