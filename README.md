@@ -7,7 +7,7 @@
 3. 安裝Java21
 4. 進入MinecraftServer資料夾
 5. 點start.bat(linux點start.sh)
-6. [下載並安裝ngrok](https://askie.today/ngrok-localhost-server-settings/)
+6. [下載並安裝ngrok (linux)](https://askie.today/ngrok-localhost-server-settings/)[ngrok(windows&mac)](https://israynotarray.com/other/20230210/1090666501/)
 7. 打開cmd
 8. 跑```ngrok tcp 25565```
 9. 複製ip給朋友一起玩！！！
