@@ -1,6 +1,6 @@
   # SkyJet
 
-## 此專案將不再更新（吧
+## ~~此專案將不再更新（吧~~
 **自己開服教學：**
 1. [下載檔案](https://github.com/mailisme/SkyJet/releases/tag/v2.5.0)
 2. 解壓縮
