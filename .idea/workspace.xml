@@ -4,22 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89862d3e-4a9c-414c-b112-b2eae03bcafc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="17758a80-0c85-4e1c-9ee7-0bf4385df7a6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MinecraftPvpPlugin/src/main/java/me/minecraft/minecraftpvpplugin/Skill.kt" beforeDir="false" afterPath="$PROJECT_DIR$/MinecraftPvpPlugin/src/main/java/me/minecraft/minecraftpvpplugin/Skill.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MinecraftPvpPlugin/src/main/java/me/minecraft/minecraftpvpplugin/refs/Skills.kt" beforeDir="false" afterPath="$PROJECT_DIR$/MinecraftPvpPlugin/src/main/java/me/minecraft/minecraftpvpplugin/refs/Skills.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MinecraftPvpPlugin/src/main/java/me/minecraft/minecraftpvpplugin/skills/InstantHeal.kt" beforeDir="false" afterPath="$PROJECT_DIR$/MinecraftPvpPlugin/src/main/java/me/minecraft/minecraftpvpplugin/skills/InstantHeal.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MinecraftPvpPlugin/src/main/java/me/minecraft/minecraftpvpplugin/skills/Recycle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/MinecraftPvpPlugin/src/main/java/me/minecraft/minecraftpvpplugin/skills/Recycle.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MinecraftPvpPlugin/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MinecraftPvpPlugin/target/MinecraftPvpPlugin-1.0-SNAPSHOT-shaded.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MinecraftPvpPlugin/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MinecraftPvpPlugin/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MinecraftPvpPlugin/target/classes/me/minecraft/minecraftpvpplugin/PvpPlace.class" beforeDir="false" afterPath="$PROJECT_DIR$/MinecraftPvpPlugin/target/classes/me/minecraft/minecraftpvpplugin/PvpPlace.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MinecraftPvpPlugin/target/classes/me/minecraft/minecraftpvpplugin/PvpPlaceManager$startGame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/MinecraftPvpPlugin/target/classes/me/minecraft/minecraftpvpplugin/PvpPlaceManager$startGame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MinecraftPvpPlugin/target/classes/me/minecraft/minecraftpvpplugin/PvpPlaceManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/MinecraftPvpPlugin/target/classes/me/minecraft/minecraftpvpplugin/PvpPlaceManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MinecraftPvpPlugin/target/classes/me/minecraft/minecraftpvpplugin/PvpPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/MinecraftPvpPlugin/target/classes/me/minecraft/minecraftpvpplugin/PvpPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MinecraftPvpPlugin/target/classes/me/minecraft/minecraftpvpplugin/skills/Recycle.class" beforeDir="false" afterPath="$PROJECT_DIR$/MinecraftPvpPlugin/target/classes/me/minecraft/minecraftpvpplugin/skills/Recycle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MinecraftPvpPlugin/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MinecraftPvpPlugin/target/original-MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MinecraftServer/plugins/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MinecraftServer/plugins/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MinecraftPvpPlugin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MinecraftPvpPlugin/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,62 +17,49 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Class" />
         <option value="Kotlin Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="kotlin" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
-  <component name="ProjectId" id="2fxkAQcXNAzLJIxEzQ31qMZ7whl" />
+  <component name="ProjectId" id="2aDw31mzRm8xfkoEEJe6uIonrsv" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.MinecraftPvpPlugin [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.MinecraftPvpPlugin [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.MinecraftPvpPlugin.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Shell Script.copy_files.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.start_server.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;kotlin&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.MinecraftPvpPlugin package.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Shell Script.copy_binary.executor": "Run",
+    "Shell Script.run_server.executor": "Run",
+    "git-widget-placeholder": "kotlin",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/jack2/CODE/SkyJet/MinecraftPvpPlugin",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+    <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="me.minecraft.minecraftpvpplugin" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.start_server">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="MinecraftPvpPlugin" />
-      <shortenClasspath name="NONE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="MinecraftPvpPlugin" />
-      <shortenClasspath name="NONE" />
-      <option name="filePath" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MinecraftPvpPlugin [package]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+  <component name="RunManager" selected="Shell Script.run_server">
+    <configuration name="MinecraftPvpPlugin package" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -108,43 +83,19 @@
               <list />
             </option>
             <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$/MinecraftPvpPlugin" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration default="true" type="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <option name="AUTO_RESTART" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="ShConfigurationType">
-      <option name="SCRIPT_TEXT" value="" />
-      <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
-      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/MinecraftServer/start.bat" />
-      <option name="SCRIPT_OPTIONS" value="" />
-      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
-      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
-      <option name="INTERPRETER_PATH" value="powershell.exe" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="EXECUTE_IN_TERMINAL" value="true" />
-      <option name="EXECUTE_SCRIPT_FILE" value="true" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="copy_files" type="ShConfigurationType" singleton="false">
-      <option name="SCRIPT_TEXT" value="Copy-Item MinecraftPvpPlugin/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar MinecraftServer/plugins/MinecraftPvpPlugin-1.0-SNAPSHOT.jar" />
-      <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
-      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/MinecraftServer/start.bat" />
+    <configuration name="copy_binary" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="Copy-Item MinecraftPvpPlugin/target/MinecraftPvpPlugin-1.0-SNAPSHOT.jar MinecraftServer/plugins" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
       <option name="SCRIPT_OPTIONS" value="" />
       <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="false" />
-      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
       <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
       <option name="INTERPRETER_PATH" value="powershell.exe" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -153,38 +104,38 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start_server" type="ShConfigurationType" singleton="false">
+    <configuration name="run_server" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
-      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/MinecraftServer/start.bat" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/MinecraftServer/start.sh" />
       <option name="SCRIPT_OPTIONS" value="" />
       <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="false" />
       <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/MinecraftServer" />
       <option name="INDEPENDENT_INTERPRETER_PATH" value="false" />
-      <option name="INTERPRETER_PATH" value="$PROJECT_DIR$/../../../../../Windows/System32/WindowsPowerShell/v1.0/powershell.exe" />
+      <option name="INTERPRETER_PATH" value="$PROJECT_DIR$/../../../../Windows/System32/WindowsPowerShell/v1.0/powershell.exe" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="EXECUTE_IN_TERMINAL" value="false" />
       <option name="EXECUTE_SCRIPT_FILE" value="true" />
       <envs />
       <method v="2">
-        <option name="RunConfigurationTask" enabled="true" run_configuration_name="MinecraftPvpPlugin [compile]" run_configuration_type="MavenRunConfiguration" />
-        <option name="RunConfigurationTask" enabled="true" run_configuration_name="copy_files" run_configuration_type="ShConfigurationType" />
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="MinecraftPvpPlugin package" run_configuration_type="MavenRunConfiguration" />
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="copy_binary" run_configuration_type="ShConfigurationType" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Maven.MinecraftPvpPlugin [package]" />
-      <item itemvalue="Shell Script.copy_files" />
-      <item itemvalue="Shell Script.start_server" />
+      <item itemvalue="Maven.MinecraftPvpPlugin package" />
+      <item itemvalue="Shell Script.run_server" />
+      <item itemvalue="Shell Script.copy_binary" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="89862d3e-4a9c-414c-b112-b2eae03bcafc" name="Changes" comment="" />
-      <created>1714749972905</created>
+      <changelist id="17758a80-0c85-4e1c-9ee7-0bf4385df7a6" name="Changes" comment="" />
+      <created>1703866254295</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1714749972905</updated>
+      <updated>1703866254295</updated>
     </task>
     <servers />
   </component>

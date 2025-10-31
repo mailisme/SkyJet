@@ -1,0 +1,13 @@
+2025-06-01 19:33:37.8 MAIL__TW fighting w/ null
+2025-06-01 19:33:58.0 MAIL__TW use 風行之靴
+2025-06-01 19:34:02.5 MAIL__TW use 閃電突襲
+2025-06-01 19:34:08.5 use 冷陸氣團 hit
+2025-06-01 19:34:10.4 MAIL__TW 風行之靴 disabled
+2025-06-01 19:34:12.8 use 冷陸氣團 hit
+2025-06-01 19:34:16.2 MAIL__TW use 虛影斗篷
+2025-06-01 19:34:20.9 MAIL__TW use 風行之靴
+2025-06-01 19:34:22.4 MAIL__TW 虛影斗篷 disabled
+2025-06-01 19:34:26.8 MAIL__TW was killed by null.
+2025-10-10 20:42:03.7 MAIL__TW was killed by null.
+2025-10-10 20:45:56.9 MAIL__TW was killed by null.
+2025-10-10 20:47:20.2 MAIL__TW was killed by null.

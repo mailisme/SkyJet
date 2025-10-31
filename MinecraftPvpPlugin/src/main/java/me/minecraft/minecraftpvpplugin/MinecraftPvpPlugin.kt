@@ -1,6 +1,7 @@
 package me.minecraft.minecraftpvpplugin
 
 import me.minecraft.minecraftpvpplugin.DataManager.getLeaderBoard
+import me.minecraft.minecraftpvpplugin.discord_bot.botMain
 import me.minecraft.minecraftpvpplugin.display.CustomScoreboard
 import me.minecraft.minecraftpvpplugin.display.CustomTag
 import me.minecraft.minecraftpvpplugin.helpers.RunEveryFor
@@ -29,11 +30,21 @@ import java.util.logging.Level
 
 class MinecraftPvpPlugin : JavaPlugin(), Listener {
     override fun onEnable() {
+        val discordBotThread = Thread { botMain() }
+        discordBotThread.start()
+
+
+
+
         logger.level = Level.ALL
 
         // Plugin startup logic
         logger.info("SKYJET PVP v.3.0.0")
         server.pluginManager.registerEvents(this, this)
+
+
+
+
 
         Worlds.lobby.pvp = false
 
@@ -66,6 +77,9 @@ class MinecraftPvpPlugin : JavaPlugin(), Listener {
         RunEveryFor (300.0) {
             DataManager.save()
         }
+
+
+
     }
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<String>): Boolean {
